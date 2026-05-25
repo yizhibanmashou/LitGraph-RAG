@@ -1,30 +1,59 @@
-import type { SearchFormula } from '../../types/formula';
+import type { SearchResult } from '../../types/search';
+import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
+import { MathFormula } from '../common/MathFormula';
 
 interface SearchResultsProps {
-  results: SearchFormula[];
+  results: SearchResult[];
   selectedIndex: number;
   onSelect: (id: string) => void;
+  tone?: 'dark' | 'light' | 'nav';
 }
 
-export function SearchResults({ results, selectedIndex, onSelect }: SearchResultsProps) {
+export function SearchResults({ results, selectedIndex, onSelect, tone = 'dark' }: SearchResultsProps) {
   if (!results.length) return null;
 
+  const light = tone === 'light';
+  const nav = tone === 'nav';
+  const copy = getUiCopy(DEFAULT_LANGUAGE);
+
   return (
-    <div className="absolute left-0 right-0 top-14 max-h-[60vh] overflow-auto rounded-md border border-slate-500/30 bg-slate-950/95 p-2 shadow-2xl backdrop-blur">
+    <div
+      className={
+        light
+          ? 'search-results-panel search-results-panel--light absolute left-0 right-0 top-14 max-h-[min(420px,54vh)] overflow-auto rounded-2xl border border-slate-200 bg-white/96 p-2 shadow-[0_24px_60px_rgba(15,23,42,0.14)] backdrop-blur-xl'
+          : nav
+            ? 'search-results-panel search-results-panel--nav absolute left-0 right-0 top-14 max-h-[min(420px,54vh)] overflow-auto rounded-2xl border border-blue-300/14 bg-slate-950/94 p-2 shadow-[0_28px_70px_rgba(2,6,23,0.68)] backdrop-blur-2xl'
+          : 'search-results-panel search-results-panel--dark absolute left-0 right-0 top-14 max-h-[min(360px,48vh)] overflow-auto rounded-2xl border border-cyan-100/14 bg-slate-950/94 p-2 shadow-[0_28px_70px_rgba(2,6,23,0.68)] backdrop-blur-2xl'
+      }
+    >
       {results.map((result, index) => (
         <button
           key={result.id}
           type="button"
           onMouseDown={(event) => event.preventDefault()}
           onClick={() => onSelect(result.id)}
-          className={`block w-full rounded px-3 py-3 text-left transition ${index === selectedIndex ? 'bg-blue-500/20' : 'hover:bg-white/10'}`}
+          className={
+            light
+              ? `block w-full rounded-xl px-3 py-3 text-left transition ${index === selectedIndex ? 'bg-blue-50 text-blue-900 shadow-inner' : 'text-slate-700 hover:bg-slate-50'}`
+              : nav
+                ? `block w-full rounded-xl px-3 py-3 text-left text-slate-200 transition ${index === selectedIndex ? 'bg-blue-400/12 shadow-[inset_0_0_0_1px_rgba(147,197,253,0.18)]' : 'hover:bg-white/7'}`
+              : `block w-full rounded-xl px-3 py-3 text-left text-slate-200 transition ${index === selectedIndex ? 'bg-cyan-300/12 shadow-[inset_0_0_0_1px_rgba(125,211,252,0.18)]' : 'hover:bg-white/7'}`
+          }
         >
           <span className="flex items-center justify-between gap-3">
-            <span className="text-sm font-semibold text-white">{result.label}</span>
-            <span className="text-xs text-slate-400">Ch {result.chapter}</span>
+            <span className={light ? 'text-sm font-semibold text-slate-950' : 'text-sm font-semibold text-white'}>
+              {result.resultType === 'chapter' ? result.title : result.label}
+            </span>
+            <span className={light ? 'rounded-full bg-slate-100 px-2 py-0.5 text-xs font-semibold text-slate-500' : nav ? 'text-xs text-blue-200/65' : 'text-xs text-slate-400'}>
+              {result.resultType === 'chapter' ? copy.search.chapterTag : formatChapterLabel(result.chapter_id, result.chapter)}
+            </span>
           </span>
-          <span className="mt-1 block truncate font-serif text-sm text-slate-200">{result.latex_preview}</span>
-          <span className="mt-1 block truncate text-xs text-slate-400">{result.context}</span>
+          {result.resultType !== 'chapter' && result.latex_preview ? (
+            <MathFormula latex={result.latex_preview} inline className={light ? 'mt-1 text-slate-700 [&_.katex]:text-[0.85em]' : 'mt-1 text-slate-200 [&_.katex]:text-[0.85em]'} />
+          ) : null}
+          <span className={light ? 'mt-1 block truncate text-xs text-slate-500' : nav ? 'mt-1 block truncate text-xs text-slate-500' : 'mt-1 block truncate text-xs text-slate-400'}>
+            {result.resultType === 'chapter' ? `${result.label} · ${result.formula_count} ${copy.search.formulaCount} · ${result.context}` : result.context}
+          </span>
         </button>
       ))}
     </div>

@@ -24,8 +24,37 @@ export function chapterColor(chapter: number): string {
 }
 
 export function formulaChapter(formulaId: string): string {
+  const appendixMatch = formulaId.match(/formula_A(\d+)/i);
+  if (appendixMatch) return `appendix${appendixMatch[1]}`;
   const match = formulaId.match(/formula_(\d+)/);
   return match ? `chapter${match[1]}` : 'chapter1';
+}
+
+export function displayChapterId(chapterId?: string, fallbackChapter?: number | string): string {
+  if (!chapterId) return fallbackChapter ? `Chapter ${fallbackChapter}` : 'Chapter';
+  const appendixMatch = chapterId.match(/^appendix(\d+)$/i);
+  if (appendixMatch) return `Appendix ${appendixMatch[1]}`;
+  const chapterMatch = chapterId.match(/^chapter(\d+)$/i);
+  if (chapterMatch) return `Chapter ${chapterMatch[1]}`;
+  return chapterId;
+}
+
+export function compactChapterId(chapterId?: string, fallbackChapter?: number | string): string {
+  if (!chapterId) return fallbackChapter ? String(fallbackChapter) : 'Chapter';
+  const appendixMatch = chapterId.match(/^appendix(\d+)$/i);
+  if (appendixMatch) return `A${appendixMatch[1]}`;
+  const chapterMatch = chapterId.match(/^chapter(\d+)$/i);
+  if (chapterMatch) return chapterMatch[1];
+  return chapterId;
+}
+
+export function chapterRank(chapterId?: string, fallback = 0): number {
+  if (!chapterId) return fallback;
+  const appendixMatch = chapterId.match(/^appendix(\d+)$/i);
+  if (appendixMatch) return 30 + Number(appendixMatch[1]);
+  const chapterMatch = chapterId.match(/^chapter(\d+)$/i);
+  if (chapterMatch) return Number(chapterMatch[1]);
+  return fallback;
 }
 
 export function rawFormulaNumber(formulaId: string): string {

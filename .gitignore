@@ -10,3 +10,10 @@ vite.config.d.ts
 data/frontend_smoke/
 data/structured/
 docs/
+.env
+.env.local
+.env.*.local
+.superpowers/
+.claude/
+.codex-screenshots/
+tmp/

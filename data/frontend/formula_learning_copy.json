@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "generated_at": "2026-05-21T00:00:00Z",
+  "source": "local-seed-cache",
+  "items": {
+    "formula_2.1": {
+      "en": {
+        "plainMeaning": "This formula gives the probability that allele B appears in exactly j copies in the next generation when the current population has i copies.",
+        "inThisChapter": "In the Wright-Fisher introduction, it defines the one-generation transition probability that later matrix formulas use to track allele-frequency change."
+      },
+      "zh": {
+        "plainMeaning": "这个公式表示：当前群体中等位基因 B 有 i 个拷贝时，下一代中它恰好变成 j 个拷贝的概率。",
+        "inThisChapter": "在 Wright-Fisher 模型的引入部分，它建立了一代之间的转移概率，后面的矩阵公式会用它来追踪等位基因频率变化。"
+      },
+      "model": "manual-seed"
+    },
+    "formula_2.2a": {
+      "en": {
+        "plainMeaning": "This formula updates the whole probability distribution of allele counts by multiplying the current distribution by the transition matrix P.",
+        "inThisChapter": "In this chapter, it turns the single-step probabilities from Formula 2.1 into a compact matrix rule for one generation of neutral drift."
+      },
+      "zh": {
+        "plainMeaning": "这个公式用转移矩阵 P 更新整组等位基因拷贝数的概率分布。",
+        "inThisChapter": "在本章中，它把 Formula 2.1 的单步转移概率整理成一个矩阵更新规则，用来描述一代中性漂变。"
+      },
+      "model": "manual-seed"
+    },
+    "formula_2.2b": {
+      "en": {
+        "plainMeaning": "This formula projects the allele-count distribution t generations forward by applying the same transition matrix repeatedly.",
+        "inThisChapter": "It extends the one-generation update into a multi-generation prediction, showing how neutral drift accumulates over time."
+      },
+      "zh": {
+        "plainMeaning": "这个公式通过反复应用同一个转移矩阵，把等位基因拷贝数分布推进到第 t 代。",
+        "inThisChapter": "它把一代更新推广到多代预测，用来说明中性漂变如何随时间累积。"
+      },
+      "model": "manual-seed"
+    },
+    "formula_10.1a": {
+      "en": {
+        "plainMeaning": "These relationships connect within-species polymorphism and between-species divergence to mutation rate and evolutionary time.",
+        "inThisChapter": "In the overview of divergence-based tests, they set up the neutral expectations that HKA-style comparisons test against observed data."
+      },
+      "zh": {
+        "plainMeaning": "这些关系把物种内多态性和物种间分化分别联系到突变率与演化时间。",
+        "inThisChapter": "在基于分化的检验概览中，它们给出了中性模型下的期望值，供 HKA 等检验与观察数据比较。"
+      },
+      "model": "manual-seed"
+    },
+    "formula_10.2a": {
+      "en": {
+        "plainMeaning": "This formula adds locus-by-locus chi-square contributions into one overall test statistic.",
+        "inThisChapter": "In the HKA and McDonald-Kreitman section, it summarizes how deviations across multiple loci are pooled to evaluate neutrality."
+      },
+      "zh": {
+        "plainMeaning": "这个公式把每个位点的卡方贡献相加，形成一个总体检验统计量。",
+        "inThisChapter": "在 HKA 和 McDonald-Kreitman 检验部分，它用来汇总多个位点的偏离程度，从而评估是否符合中性预期。"
+      },
+      "model": "manual-seed"
+    }
+  }
+}

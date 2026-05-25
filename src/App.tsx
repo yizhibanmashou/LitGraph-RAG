@@ -1,18 +1,23 @@
 import { BrowserRouter, Route, Routes, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import { Search } from 'lucide-react';
-import { StarField } from './components/StarField/StarField';
 import { SearchBar } from './components/SearchBar/SearchBar';
+import { AppErrorBoundary } from './components/common/AppErrorBoundary';
 import { HomePage } from './pages/HomePage';
 import { GraphPage } from './pages/GraphPage';
+import { ChapterPage } from './pages/ChapterPage';
+import { StorylinePage } from './pages/StorylinePage';
 import { useFormulaData } from './hooks/useFormulaData';
 import { useStarFieldStore } from './stores/starFieldStore';
+import { DEFAULT_LANGUAGE, getUiCopy } from './utils/uiCopy';
 
 function AppShell() {
   const data = useFormulaData();
+  const copy = getUiCopy(DEFAULT_LANGUAGE);
   const location = useLocation();
   const setAsleep = useStarFieldStore((state) => state.setAsleep);
-  const isHome = location.pathname === '/';
+  const isHome = location.pathname === '/' || location.pathname.startsWith('/chapter/') || location.pathname.startsWith('/storyline/');
+  const isGraph = location.pathname.startsWith('/graph/');
 
   useEffect(() => {
     setAsleep(!isHome);
@@ -20,24 +25,34 @@ function AppShell() {
 
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <StarField featured={data.featured} searchIndex={data.searchIndex} visible={isHome} />
-      <header className="fixed left-0 right-0 top-0 z-30 flex h-20 items-center justify-between px-6 md:px-10">
-        <a href="/" className="flex items-center gap-3 text-white">
-          <span className="flex h-10 w-10 items-center justify-center rounded-md border border-white/15 bg-white/10">
+      <header className={`fixed left-0 right-0 top-0 z-30 h-20 items-center justify-between px-6 shadow-[0_18px_48px_rgba(2,6,23,0.32)] backdrop-blur-2xl md:px-10 ${isGraph ? 'border-b border-white/[0.07] bg-[#050917]/92 text-slate-100' : 'border-b border-white/[0.06] bg-[#050917]/88 text-slate-100'} ${isHome ? 'hidden' : 'flex'}`}>
+        <a href="/" className="flex items-center gap-3 text-slate-100">
+          <span className={`flex h-10 w-10 items-center justify-center rounded-xl border shadow-[0_0_22px_rgba(59,130,246,0.12)] ${isGraph ? 'border-blue-300/18 bg-blue-500/10 text-blue-200' : 'border-blue-300/18 bg-blue-500/10 text-blue-300'}`}>
             <Search size={18} />
           </span>
           <span>
             <span className="block text-sm font-semibold tracking-wide">LitGraph-RAG</span>
-            <span className="block text-xs text-slate-300">Formula prerequisite atlas</span>
+            <span className={`block text-xs ${isGraph ? 'text-slate-300' : 'text-slate-500'}`}>{copy.app.subtitle}</span>
           </span>
         </a>
-        <SearchBar searchIndex={data.searchIndex} />
+        {isHome ? null : <SearchBar searchIndex={data.searchIndex} chapterNavigator={data.chapterNavigator} size="compact" tone="nav" />}
       </header>
       <main className="relative z-10 min-h-screen">
-        <Routes>
-          <Route path="/" element={<HomePage data={data} />} />
-          <Route path="/graph/:focusFormulaId" element={<GraphPage paths={data.paths} searchIndex={data.searchIndex} />} />
-        </Routes>
+        <AppErrorBoundary>
+          <Routes>
+            <Route path="/" element={<HomePage data={data} />} />
+            <Route path="/chapter/:chapterId" element={<ChapterPage data={data} />} />
+            <Route path="/storyline/:storylineId" element={<StorylinePage data={data} />} />
+            <Route
+              path="/graph/chapter/:chapterId"
+              element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
+            />
+            <Route
+              path="/graph/:focusFormulaId"
+              element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
+            />
+          </Routes>
+        </AppErrorBoundary>
       </main>
     </div>
   );
@@ -45,7 +60,7 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
       <AppShell />
     </BrowserRouter>
   );

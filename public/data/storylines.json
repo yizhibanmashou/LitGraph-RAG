@@ -1,0 +1,798 @@
+{
+  "version": 2,
+  "items": [
+    {
+      "id": "allele-frequency",
+      "title_en": "Evolutionary trajectory of allele frequency p",
+      "title_zh": "等位基因频率 p 的演化轨迹",
+      "symbol": "p",
+      "intro_en": "Sampling, drift, selection, mutation, and diffusion all rewrite how p moves through time.",
+      "intro_zh": "从采样计数到随机漂变，再到选择、突变与扩散近似，追踪 p 的动力学身份。",
+      "backbone_en": "sampling counts -> neutral drift -> deterministic forces -> continuous approximations",
+      "backbone_zh": "采样计数 -> 随机漂变 -> 确定性力量 -> 连续近似",
+      "entity_keys": [
+        "p",
+        "p_0",
+        "p_f",
+        "p_i",
+        "p_j",
+        "p_l",
+        "p_t",
+        "p_{0}",
+        "p_{f}",
+        "p_{i}",
+        "p_{j}",
+        "p_{l}",
+        "p_{t}"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.8",
+          "title": "Formula 2.8",
+          "transition_en": "p first becomes a state variable in a frequency distribution, so sampling is a trackable probability process.",
+          "transition_zh": "先把 p 写成频率分布的状态变量，随机采样成为可追踪的概率过程。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.12",
+          "title": "Formula 2.12",
+          "transition_en": "Drift now asks not only about the next generation, but about fixation and loss times.",
+          "transition_zh": "漂变不再只问下一代，而是追问 p 到达固定或丢失的时间尺度。",
+          "support_formula_ids": [
+            "formula_2.8"
+          ]
+        },
+        {
+          "formula_id": "formula_2.14a",
+          "title": "Formula 2.14a",
+          "transition_en": "The variance recursion turns p's random walk into a finite-population diffusion scale.",
+          "transition_zh": "方差递推把 p 的随机游走量化为有限群体中的扩散宽度。",
+          "support_formula_ids": [
+            "formula_2.12"
+          ]
+        },
+        {
+          "formula_id": "formula_2.15",
+          "title": "Formula 2.15",
+          "transition_en": "The expectation formula gives the neutral baseline against which directional forces are read.",
+          "transition_zh": "期望公式给出中性漂变下 p 的守恒基线，方便识别偏离。",
+          "support_formula_ids": [
+            "formula_2.14a"
+          ]
+        },
+        {
+          "formula_id": "formula_5.6e",
+          "title": "Formula 5.6e",
+          "transition_en": "Selection gradients make p respond to fitness rather than drift alone.",
+          "transition_zh": "加入选择梯度后，p 的变化由随机漂变转向适合度驱动。",
+          "support_formula_ids": [
+            "formula_2.15"
+          ]
+        },
+        {
+          "formula_id": "formula_6.15b",
+          "title": "Formula 6.15b",
+          "transition_en": "The Price framework writes p as an explicit increment that can coevolve with allelic effects.",
+          "transition_zh": "Price 框架把 p 的更新写成显式增量，允许效应值同步变化。",
+          "support_formula_ids": [
+            "formula_5.6e"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "inbreeding-coalescence",
+      "title_en": "Inbreeding coefficient and heterozygosity loss",
+      "title_zh": "近交系数与杂合度流失理论",
+      "symbol": "f, F",
+      "intro_en": "Follow identity by descent from finite-population recursion into effective size and population structure.",
+      "intro_zh": "从近交递推出发，连接有限群体、有效大小与群体分化统计量。",
+      "backbone_en": "inbreeding recursion -> heterozygosity decay -> effective-size correction -> F-statistics",
+      "backbone_zh": "近交递推 -> 杂合度衰减 -> 有效大小修正 -> F 统计量",
+      "entity_keys": [
+        "F",
+        "F_DG",
+        "F_GT",
+        "F_ST",
+        "H",
+        "H_0",
+        "H_t",
+        "\\widehat{F}",
+        "\\widehat{F}_1",
+        "\\widehat{F}_2",
+        "f",
+        "f_0",
+        "f_s",
+        "f_t"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.3",
+          "title": "Formula 2.3",
+          "transition_en": "The recursion expresses identity by descent as a finite-population accumulation process.",
+          "transition_zh": "近交递推把同源同祖概率写成有限群体每代累积的过程。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.4a",
+          "title": "Formula 2.4a",
+          "transition_en": "Rewriting with 1-f turns inbreeding growth into heterozygosity loss.",
+          "transition_zh": "改写为 1-f 后，近交增长直接转化为杂合度的指数式流失。",
+          "support_formula_ids": [
+            "formula_2.3"
+          ]
+        },
+        {
+          "formula_id": "formula_2.5",
+          "title": "Formula 2.5",
+          "transition_en": "Replacing N by Ne admits that real reproductive variance changes drift strength.",
+          "transition_zh": "用 N_e 替代 N，模型承认真实群体的繁殖方差会改变漂变强度。",
+          "support_formula_ids": [
+            "formula_2.4a"
+          ]
+        },
+        {
+          "formula_id": "formula_3.1",
+          "title": "Formula 3.1",
+          "transition_en": "F estimators convert theoretical inbreeding into an observable effective-size signal.",
+          "transition_zh": "样本中的 F 估计量把理论近交转成可观测的有效大小信号。",
+          "support_formula_ids": [
+            "formula_2.5"
+          ]
+        },
+        {
+          "formula_id": "formula_4.17a",
+          "title": "Formula 4.17a",
+          "transition_en": "FST extends identity logic to population structure and divergence.",
+          "transition_zh": "F_ST 把同源同祖思想推广到群体分化，衡量结构化漂变。",
+          "support_formula_ids": [
+            "formula_3.1"
+          ]
+        },
+        {
+          "formula_id": "formula_9.9",
+          "title": "Formula 9.9",
+          "transition_en": "The next step adds a new model constraint to the f, F storyline.",
+          "transition_zh": "下一步为 f, F 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_4.17a"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "coalescent-time",
+      "title_en": "Coalescent theory and retrospective time",
+      "title_zh": "溯祖理论与时间回溯",
+      "symbol": "t, T",
+      "intro_en": "Track how elapsed time becomes fixation time, generation time, and tree depth.",
+      "intro_zh": "把 t/T 从世代计数推进到固定时间、世代间隔与溯祖树深度。",
+      "backbone_en": "fixation time -> conditional loss/fixation -> generation interval -> sweep time",
+      "backbone_zh": "固定时间 -> 条件等待时间 -> 世代间隔 -> 扫荡时间",
+      "entity_keys": [
+        "T",
+        "T_ff",
+        "T_fm",
+        "T_mf",
+        "T_mm",
+        "\\overline{t}_a",
+        "\\overline{t}_f",
+        "\\overline{t}_l",
+        "t"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.11a",
+          "title": "Formula 2.11a",
+          "transition_en": "Drift trajectories are compressed into mean absorption time.",
+          "transition_zh": "先把漂变轨迹压缩成平均吸收时间，时间成为可估计对象。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.11b",
+          "title": "Formula 2.11b",
+          "transition_en": "Separating fixation and loss makes t conditional on the endpoint.",
+          "transition_zh": "区分固定与丢失后，t 开始描述不同终点的条件等待。",
+          "support_formula_ids": [
+            "formula_2.11a"
+          ]
+        },
+        {
+          "formula_id": "formula_2.11d",
+          "title": "Formula 2.11d",
+          "transition_en": "The total mean time recombines endpoint-specific waiting times.",
+          "transition_zh": "总平均时间把两类终点重新合并，形成完整吸收尺度。",
+          "support_formula_ids": [
+            "formula_2.11b"
+          ]
+        },
+        {
+          "formula_id": "formula_3.13",
+          "title": "Formula 3.13",
+          "transition_en": "Generation time T extends time accounting to age-structured populations.",
+          "transition_zh": "世代间隔 T 把时间从等长世代推广到年龄结构群体。",
+          "support_formula_ids": [
+            "formula_2.11d"
+          ]
+        },
+        {
+          "formula_id": "formula_3.14",
+          "title": "Formula 3.14",
+          "transition_en": "Selective sweeps turn T into a retrospective window on allele origin.",
+          "transition_zh": "选择扫荡把 T 变成回看等位基因来源的时间窗口。",
+          "support_formula_ids": [
+            "formula_3.13"
+          ]
+        },
+        {
+          "formula_id": "formula_8.18c",
+          "title": "Formula 8.18c",
+          "transition_en": "The next step adds a new model constraint to the t, T storyline.",
+          "transition_zh": "下一步为 t, T 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_3.14"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "fitness-landscape",
+      "title_en": "Fitness surfaces and adaptive landscapes",
+      "title_zh": "适合度表面与适应性景观",
+      "symbol": "w",
+      "intro_en": "Follow fitness from genotype weights into phenotype gradients and selection response.",
+      "intro_zh": "追踪适合度如何从基因型权重扩展为表型景观与选择响应。",
+      "backbone_en": "relative fitness -> phenotype integration -> local gradient -> Price covariance",
+      "backbone_zh": "相对适合度 -> 表型积分 -> 局部梯度 -> Price 协方差",
+      "entity_keys": [
+        "W",
+        "W_i",
+        "W_ij",
+        "\\overline{W}",
+        "w",
+        "w_AA",
+        "w_Aa",
+        "w_i"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_5.8a",
+          "title": "Formula 5.8a",
+          "transition_en": "Relative fitness normalizes genotype differences into comparable selection strength.",
+          "transition_zh": "相对适合度把基因型差异归一化为可比较的选择强度。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_5.17a",
+          "title": "Formula 5.17a",
+          "transition_en": "As a phenotype function, w depends on trait distributions rather than isolated weights.",
+          "transition_zh": "把 w 写成表型函数后，选择开始依赖性状分布而非单点权重。",
+          "support_formula_ids": [
+            "formula_5.8a"
+          ]
+        },
+        {
+          "formula_id": "formula_5.18b",
+          "title": "Formula 5.18b",
+          "transition_en": "A Taylor expansion supplies the weak-selection bridge to allelic effects.",
+          "transition_zh": "泰勒展开提供弱选择近似，把景观局部斜率接入等位基因效应。",
+          "support_formula_ids": [
+            "formula_5.17a"
+          ]
+        },
+        {
+          "formula_id": "formula_5.20c",
+          "title": "Formula 5.20c",
+          "transition_en": "Normal trait assumptions translate fitness gradients into mean and variance terms.",
+          "transition_zh": "正态表型假设让适合度梯度转化为均值与方差的代数项。",
+          "support_formula_ids": [
+            "formula_5.18b"
+          ]
+        },
+        {
+          "formula_id": "formula_6.2b",
+          "title": "Formula 6.2b",
+          "transition_en": "Price's equation places w inside covariance to measure selection response.",
+          "transition_zh": "Price 方程把 w 放进协方差，直接衡量选择造成的平均变化。",
+          "support_formula_ids": [
+            "formula_5.20c"
+          ]
+        },
+        {
+          "formula_id": "formula_6.5a",
+          "title": "Formula 6.5a",
+          "transition_en": "The next step adds a new model constraint to the w storyline.",
+          "transition_zh": "下一步为 w 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_6.2b"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "linkage-disequilibrium",
+      "title_en": "Linkage disequilibrium and two-locus networks",
+      "title_zh": "连锁不平衡与双基因座网络",
+      "symbol": "D",
+      "intro_en": "Follow D from gamete-frequency excess into decay, recombination, and selection at linked sites.",
+      "intro_zh": "从配子频率偏离出发，追踪 D 在重组、选择与连锁位点中的变化。",
+      "backbone_en": "gamete excess -> recombination decay -> standardized LD -> linked selection",
+      "backbone_zh": "配子偏离 -> 重组衰减 -> 标准化 LD -> 连锁选择",
+      "entity_keys": [
+        "D",
+        "D^2",
+        "D_0",
+        "D_AB",
+        "D_t",
+        "\\widehat{D}"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.18",
+          "title": "Formula 2.18",
+          "transition_en": "D first records non-independence in two-locus gamete frequencies.",
+          "transition_zh": "D 首先把双位点配子频率的非独立性写成一个代数量。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.19",
+          "title": "Formula 2.19",
+          "transition_en": "Adding recombination gives LD a generational decay scale.",
+          "transition_zh": "加入重组率后，D 的期望按世代衰减，连锁开始具有时间尺度。",
+          "support_formula_ids": [
+            "formula_2.18"
+          ]
+        },
+        {
+          "formula_id": "formula_2.21",
+          "title": "Formula 2.21",
+          "transition_en": "Variance separates random fluctuation from persistent linkage signal.",
+          "transition_zh": "方差形式把 D 的随机波动与长期连锁信号区分开。",
+          "support_formula_ids": [
+            "formula_2.19"
+          ]
+        },
+        {
+          "formula_id": "formula_2.22",
+          "title": "Formula 2.22",
+          "transition_en": "r2 standardizes D across allele-frequency backgrounds.",
+          "transition_zh": "r² 标准化 D，使不同等位基因频率下的连锁强度可比较。",
+          "support_formula_ids": [
+            "formula_2.21"
+          ]
+        },
+        {
+          "formula_id": "formula_5.13a",
+          "title": "Formula 5.13a",
+          "transition_en": "Selection recursions make D part of gamete updating under fitness differences.",
+          "transition_zh": "选择递推让 D 参与配子更新，显示重组与适合度的博弈。",
+          "support_formula_ids": [
+            "formula_2.22"
+          ]
+        },
+        {
+          "formula_id": "formula_7.43",
+          "title": "Formula 7.43",
+          "transition_en": "The next step adds a new model constraint to the D storyline.",
+          "transition_zh": "下一步为 D 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_5.13a"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "mutation-balance",
+      "title_en": "Mutation pressure and mutation-drift balance",
+      "title_zh": "突变压力与突变-漂变平衡",
+      "symbol": "\\mu, u",
+      "intro_en": "Follow mutation parameters from deterministic pressure into finite-population equilibrium models.",
+      "intro_zh": "追踪 μ/u 如何从突变压力进入有限群体的平衡与采样模型。",
+      "backbone_en": "mutation pressure -> equilibrium variance -> fixation probability -> sampling spectrum",
+      "backbone_zh": "突变压力 -> 平衡方差 -> 固定概率 -> 采样谱",
+      "entity_keys": [
+        "\\mu",
+        "\\mu_i",
+        "\\mu_k",
+        "\\widehat{u}",
+        "\\widehat{u}_o",
+        "u",
+        "u_f",
+        "v"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.23",
+          "title": "Formula 2.23",
+          "transition_en": "Mutation rate enters heterozygosity recursion and counters drift loss.",
+          "transition_zh": "突变率先进入杂合度递推，抵消纯漂变造成的变异流失。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.26b",
+          "title": "Formula 2.26b",
+          "transition_en": "Equilibrium variance combines mutational input with sampling noise.",
+          "transition_zh": "平衡方差把突变输入与有限群体采样噪声合并。",
+          "support_formula_ids": [
+            "formula_2.23"
+          ]
+        },
+        {
+          "formula_id": "formula_7.2",
+          "title": "Formula 7.2",
+          "transition_en": "Forward and reverse mutation pull allele frequency in opposing directions.",
+          "transition_zh": "正反突变模型让 p 的更新同时受两个突变方向牵引。",
+          "support_formula_ids": [
+            "formula_2.26b"
+          ]
+        },
+        {
+          "formula_id": "formula_7.9",
+          "title": "Formula 7.9",
+          "transition_en": "Fixation probabilities connect new mutants to drift and selection outcomes.",
+          "transition_zh": "固定概率公式把突变产生的新等位基因接入漂变与选择结局。",
+          "support_formula_ids": [
+            "formula_7.2"
+          ]
+        },
+        {
+          "formula_id": "formula_8.22a",
+          "title": "Formula 8.22a",
+          "transition_en": "Sampling spectra combine mutation and Ne into estimable diversity parameters.",
+          "transition_zh": "采样分布把 μ 与 N_e 合并为可由多态数据估计的参数。",
+          "support_formula_ids": [
+            "formula_7.9"
+          ]
+        },
+        {
+          "formula_id": "formula_10.1a",
+          "title": "Formula 10.1a",
+          "transition_en": "The next step adds a new model constraint to the \\mu, u storyline.",
+          "transition_zh": "下一步为 \\mu, u 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_8.22a"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "phenotypic-trait",
+      "title_en": "Phenotypic trait evolution and transmission",
+      "title_zh": "表型性状的演化与传导",
+      "symbol": "z",
+      "intro_en": "Follow z from phenotype distributions into transmission, response, and macro-evolutionary comparison.",
+      "intro_zh": "把表型 z 从分布、传递和响应推进到宏观演化比较。",
+      "backbone_en": "trait density -> transmission value -> response decomposition -> comparative divergence",
+      "backbone_zh": "性状密度 -> 传递值 -> 响应分解 -> 比较分化",
+      "entity_keys": [
+        "\\overline{z}",
+        "\\overline{z}_i",
+        "\\overline{z}_t",
+        "\\sigma_z^2",
+        "z",
+        "z_i",
+        "z_ij",
+        "z_j"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_5.20a",
+          "title": "Formula 5.20a",
+          "transition_en": "The trait density places z in a continuous distribution for selection gradients.",
+          "transition_zh": "表型密度把 z 放入连续分布，为选择梯度提供积分对象。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_6.20a",
+          "title": "Formula 6.20a",
+          "transition_en": "Mean phenotype is split into transmissible value and deviation.",
+          "transition_zh": "平均表型被拆成可传递成分与偏差，连接亲代表现和后代响应。",
+          "support_formula_ids": [
+            "formula_5.20a"
+          ]
+        },
+        {
+          "formula_id": "formula_6.24a",
+          "title": "Formula 6.24a",
+          "transition_en": "Covariance attributes response in z to fitness-related genetic components.",
+          "transition_zh": "协方差形式把 z 的响应归因到适合度相关的遗传成分。",
+          "support_formula_ids": [
+            "formula_6.20a"
+          ]
+        },
+        {
+          "formula_id": "formula_13.12a",
+          "title": "Formula 13.12a",
+          "transition_en": "Individual models express z as genotype, environment, and residual terms.",
+          "transition_zh": "个体层模型把 z 写成基因型、环境与误差的可估计和。",
+          "support_formula_ids": [
+            "formula_6.24a"
+          ]
+        },
+        {
+          "formula_id": "formula_15.11b",
+          "title": "Formula 15.11b",
+          "transition_en": "Time-series response turns z into a cross-generation comparison target.",
+          "transition_zh": "时间序列响应把 z 的变化推向跨世代比较与趋势检验。",
+          "support_formula_ids": [
+            "formula_13.12a"
+          ]
+        },
+        {
+          "formula_id": "formula_18.2",
+          "title": "Formula 18.2",
+          "transition_en": "The next step adds a new model constraint to the z storyline.",
+          "transition_zh": "下一步为 z 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_15.11b"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "additive-genetics",
+      "title_en": "Additive genetic components and breeding value",
+      "title_zh": "加性遗传成分与育种值",
+      "symbol": "G, A",
+      "intro_en": "Follow G and A from genotypic effects into additive variance, breeding value, and prediction.",
+      "intro_zh": "追踪 G/A 如何从基因型效应走向加性方差、育种值与预测方程。",
+      "backbone_en": "breeding value -> additive response -> variance decomposition -> prediction",
+      "backbone_zh": "育种值 -> 加性响应 -> 方差分解 -> 预测",
+      "entity_keys": [
+        "A",
+        "A_i",
+        "A_w",
+        "A_z",
+        "G",
+        "G_i",
+        "G_ij",
+        "\\mathbf{A}",
+        "\\mathbf{G}",
+        "\\overline{A}_z",
+        "\\sigma_A^2"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_6.20a",
+          "title": "Formula 6.20a",
+          "transition_en": "Ai extracts the transmissible additive contribution from phenotype.",
+          "transition_zh": "A_i 把表型均值拆出可传递的加性贡献。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_6.24a",
+          "title": "Formula 6.24a",
+          "transition_en": "Response equations link Az to fitness-associated change.",
+          "transition_zh": "响应方程把 A_z 与适合度相关联，形成选择可改变的遗传均值。",
+          "support_formula_ids": [
+            "formula_6.20a"
+          ]
+        },
+        {
+          "formula_id": "formula_11.5",
+          "title": "Formula 11.5",
+          "transition_en": "Genotypic value G expands locus effects into whole-genotype contribution.",
+          "transition_zh": "基因型值 G 把单个座位效应扩展为全基因型贡献。",
+          "support_formula_ids": [
+            "formula_6.24a"
+          ]
+        },
+        {
+          "formula_id": "formula_11.6a",
+          "title": "Formula 11.6a",
+          "transition_en": "Squared expectations move G into variance decomposition.",
+          "transition_zh": "平方期望把 G 推入方差分解，定位加性与非加性来源。",
+          "support_formula_ids": [
+            "formula_11.5"
+          ]
+        },
+        {
+          "formula_id": "formula_11.8",
+          "title": "Formula 11.8",
+          "transition_en": "Matrix A brings relatedness into scalable breeding-value prediction.",
+          "transition_zh": "矩阵形式把亲缘关系写入 A，使育种值预测可规模化。",
+          "support_formula_ids": [
+            "formula_11.6a"
+          ]
+        },
+        {
+          "formula_id": "formula_13.12a",
+          "title": "Formula 13.12a",
+          "transition_en": "The next step adds a new model constraint to the G, A storyline.",
+          "transition_zh": "下一步为 G, A 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_11.8"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "effective-size",
+      "title_en": "Effective population size as a scale calibrator",
+      "title_zh": "有效群体大小的尺度调校",
+      "symbol": "N_e",
+      "intro_en": "Follow Ne as it calibrates drift, inbreeding, sampling variance, and detectable divergence.",
+      "intro_zh": "追踪 N_e 如何校准漂变、近交、采样方差与可检测的分化尺度。",
+      "backbone_en": "inbreeding size -> variance size -> estimator correction -> divergence bounds",
+      "backbone_zh": "近交有效大小 -> 方差有效大小 -> 估计修正 -> 分化界限",
+      "entity_keys": [
+        "N",
+        "N_e",
+        "N_e,u",
+        "N_em",
+        "N_es",
+        "N_{e,u}",
+        "N_{em}",
+        "N_{es}",
+        "N_{e}",
+        "\\widehat{N}_e",
+        "\\widehat{N}_{e}"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_3.1",
+          "title": "Formula 3.1",
+          "transition_en": "Ne replaces census size to express drift through effective reproductive contribution.",
+          "transition_zh": "N_e 首先替代 N，说明漂变强度由有效繁殖贡献决定。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_3.3",
+          "title": "Formula 3.3",
+          "transition_en": "Offspring variance makes effective size estimable from reproductive output.",
+          "transition_zh": "繁殖方差公式把有效大小从概念变成可由后代数估计的量。",
+          "support_formula_ids": [
+            "formula_3.1"
+          ]
+        },
+        {
+          "formula_id": "formula_3.5",
+          "title": "Formula 3.5",
+          "transition_en": "Multi-generation recursion lets Ne scale long-term lineage sampling.",
+          "transition_zh": "多代递推让 N_e 控制谱系抽样概率的长期尺度。",
+          "support_formula_ids": [
+            "formula_3.3"
+          ]
+        },
+        {
+          "formula_id": "formula_4.17a",
+          "title": "Formula 4.17a",
+          "transition_en": "F estimators connect effective size to observed frequency change.",
+          "transition_zh": "样本 F 估计量把有效大小连接到观测到的频率变化。",
+          "support_formula_ids": [
+            "formula_3.5"
+          ]
+        },
+        {
+          "formula_id": "formula_7.8",
+          "title": "Formula 7.8",
+          "transition_en": "Drift variance turns Ne into the scale of allele-frequency fluctuation.",
+          "transition_zh": "漂变方差公式把 N_e 变成等位基因频率波动的标尺。",
+          "support_formula_ids": [
+            "formula_4.17a"
+          ]
+        },
+        {
+          "formula_id": "formula_12.18b",
+          "title": "Formula 12.18b",
+          "transition_en": "The next step adds a new model constraint to the N_e storyline.",
+          "transition_zh": "下一步为 N_e 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_7.8"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    },
+    {
+      "id": "covariance-correlation",
+      "title_en": "Multi-trait association and phenotypic correlation",
+      "title_zh": "多性状关联与表型相关性",
+      "symbol": "Cov, r",
+      "intro_en": "Follow covariance and r as association becomes resemblance, response, and structured uncertainty.",
+      "intro_zh": "从协方差和相关系数出发，追踪性状关联、亲缘相似与联动响应。",
+      "backbone_en": "standardized LD -> correlation estimator -> genetic covariance -> response coupling",
+      "backbone_zh": "标准化连锁 -> 相关估计 -> 遗传协方差 -> 响应联动",
+      "entity_keys": [
+        "\\sigma_cov",
+        "\\widehat{r_L^2}",
+        "r",
+        "r^2",
+        "r_L^2"
+      ],
+      "steps": [
+        {
+          "formula_id": "formula_2.22",
+          "title": "Formula 2.22",
+          "transition_en": "r2 standardizes D into a comparable correlation scale.",
+          "transition_zh": "r² 将 D 标准化，把连锁强度变成可比较的相关尺度。",
+          "support_formula_ids": []
+        },
+        {
+          "formula_id": "formula_2.29a",
+          "title": "Formula 2.29a",
+          "transition_en": "Expectation formulas show how recombination and mutation reduce association.",
+          "transition_zh": "期望公式说明相关强度如何受重组与突变共同压低。",
+          "support_formula_ids": [
+            "formula_2.22"
+          ]
+        },
+        {
+          "formula_id": "formula_4.14",
+          "title": "Formula 4.14",
+          "transition_en": "Estimators turn observed correlation back into recombination scale.",
+          "transition_zh": "估计式把观测相关反推为重组尺度，连接统计量与生物过程。",
+          "support_formula_ids": [
+            "formula_2.29a"
+          ]
+        },
+        {
+          "formula_id": "formula_7.23",
+          "title": "Formula 7.23",
+          "transition_en": "Genetic covariance writes coupled breeding values as a response slope.",
+          "transition_zh": "遗传协方差把两个育种值的联动写成选择响应的斜率。",
+          "support_formula_ids": [
+            "formula_4.14"
+          ]
+        },
+        {
+          "formula_id": "formula_8.8e",
+          "title": "Formula 8.8e",
+          "transition_en": "Variance matrices generalize association to structured multi-trait uncertainty.",
+          "transition_zh": "方差矩阵把相关性推广到多性状不确定性的整体结构。",
+          "support_formula_ids": [
+            "formula_7.23"
+          ]
+        },
+        {
+          "formula_id": "formula_10.3b",
+          "title": "Formula 10.3b",
+          "transition_en": "The next step adds a new model constraint to the Cov, r storyline.",
+          "transition_zh": "下一步为 Cov, r 加入新的模型限制，使主线进入更具体的问题。",
+          "support_formula_ids": [
+            "formula_8.8e"
+          ]
+        }
+      ],
+      "audit": {
+        "selection": "blueprint_symbol_entity_filter",
+        "excluded_reverse_formula_ids": []
+      }
+    }
+  ]
+}

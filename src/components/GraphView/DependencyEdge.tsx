@@ -1,27 +1,38 @@
-import { BaseEdge, EdgeLabelRenderer, getSmoothStepPath, type EdgeProps } from '@xyflow/react';
+import { BaseEdge, EdgeLabelRenderer, getBezierPath, type EdgeProps } from '@xyflow/react';
 import type { DependencyEdgeData } from '../../types/graph';
+import { DEFAULT_LANGUAGE, getUiCopy } from '../../utils/uiCopy';
+import { MathFormula } from '../common/MathFormula';
 
 export function DependencyEdge(props: EdgeProps) {
-  const [edgePath, labelX, labelY] = getSmoothStepPath(props);
+  const [edgePath, labelX, labelY] = getBezierPath(props);
   const data = props.data as unknown as DependencyEdgeData | undefined;
   const cross = Boolean(data?.crossChapter);
+  const active = Boolean(data?.active);
+  const dimmed = Boolean(data?.dimmed);
+  const labelVisible = Boolean(data?.labelVisible || active);
   const animated = cross || Boolean(props.animated);
+  const label = data?.via || 'via';
+  const mathLabel = /\\|[_^{}]/.test(label) || /^[A-Za-z]$/.test(label);
+  const copy = getUiCopy(DEFAULT_LANGUAGE).graph.edge;
 
   return (
     <>
       <BaseEdge
         path={edgePath}
         markerEnd={props.markerEnd}
-        className={`dependency-edge ${cross ? 'dependency-edge--cross' : ''} ${animated ? 'dependency-edge--animated' : ''}`}
+        className={`dependency-edge ${cross ? 'dependency-edge--cross' : ''} ${animated ? 'dependency-edge--animated' : ''} ${active ? 'dependency-edge--active' : ''} ${dimmed ? 'dependency-edge--dimmed' : ''}`}
         style={{
-          strokeWidth: 1.5,
+          strokeWidth: active ? 3 : cross ? 2.35 : 2.1,
         }}
       />
-      <EdgeLabelRenderer>
-        <div className="edge-label nodrag nopan" style={{ transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)` }}>
-          {data?.via || 'via'}
-        </div>
-      </EdgeLabelRenderer>
+      {labelVisible ? (
+        <EdgeLabelRenderer>
+          <div className={`edge-label nodrag nopan ${active ? 'edge-label--active' : ''}`} title={data?.explanation} style={{ transform: `translate(-50%, -50%) translate(${labelX}px, ${labelY}px)` }}>
+            <span className="edge-label__verb">{copy.uses}</span>
+            {mathLabel ? <MathFormula latex={label} inline className="edge-label__math" /> : <span>{label}</span>}
+          </div>
+        </EdgeLabelRenderer>
+      ) : null}
     </>
   );
 }

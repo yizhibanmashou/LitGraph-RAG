@@ -1,0 +1,5796 @@
+{
+  "chapter_id": "appendix1",
+  "version": 1,
+  "generated_at": "2026-05-25T07:34:53Z",
+  "formulas": [
+    {
+      "id": "formula_A1.1",
+      "latex": "E\\left(\\delta_{x}\\mid x_{t}=x\\right)=m(x)\\delta_{t}+o(\\delta_{t})",
+      "label": "Formula A1.1",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "FOUNDATIONS OF DIFFUSION THEORY",
+      "position": 0,
+      "depth": 0,
+      "context_text": "Consider a continuous random variable, $ x_t $, indexed by continuous time, $ t $. If $ \\delta_x = x_{t+\\delta_t} - x_t $ (the change in $ x_t $ over a very small time interval, $ \\delta_t $) satisfies then $x_t$ is said to be a diffusion process, provided the additional technical restriction that $x_t$ is a Markov process (the transition probabilities depend only on the current value of the process and no other aspects of its history) is satisfied. The functions $m(x)$ and $v(x)$ are defined shortly, while the notation $o(\\delta_t)$ means that any remaining terms are of order $\\delta_t^2$ (or higher), and hence small relative to $\\delta_t$. Formally, $\\lim_{\\delta_t \\to 0} o(\\delta_t)/\\delta_t = 0$, so we can ignore terms of order $\\delta_t^2$ (or higher) when $\\delta_t$ itself is very small. Likewise, the notation $O(x)$ means terms of order $x$, and so for example, $O(x^2) = o(x)$.",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "m",
+        "o",
+        "x_{t}"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A1.2",
+      "latex": "\\sigma^{2}(\\delta_{x}\\mid x_{t}=x)=v(x)\\delta_{t}+o(\\delta_{t})",
+      "label": "Formula A1.2",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "FOUNDATIONS OF DIFFUSION THEORY",
+      "position": 1,
+      "depth": 0,
+      "context_text": "Consider a continuous random variable, $ x_t $, indexed by continuous time, $ t $. If $ \\delta_x = x_{t+\\delta_t} - x_t $ (the change in $ x_t $ over a very small time interval, $ \\delta_t $) satisfies then $x_t$ is said to be a diffusion process, provided the additional technical restriction that $x_t$ is a Markov process (the transition probabilities depend only on the current value of the process and no other aspects of its history) is satisfied. The functions $m(x)$ and $v(x)$ are defined shortly, while the notation $o(\\delta_t)$ means that any remaining terms are of order $\\delta_t^2$ (or higher), and hence small relative to $\\delta_t$. Formally, $\\lim_{\\delta_t \\to 0} o(\\delta_t)/\\delta_t = 0$, so we can ignore terms of order $\\delta_t^2$ (or higher) when $\\delta_t$ itself is very small. Likewise, the notation $O(x)$ means terms of order $x$, and so for example, $O(x^2) = o(x)$.",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\sigma^{2}(\\delta_{x}\\midx_{t}=x)",
+        "o",
+        "v",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "\\delta_{x}",
+        "\\sigma^{2}",
+        "x_{t}"
+      ]
+    },
+    {
+      "id": "formula_A1.3",
+      "latex": "\\begin{array}{r l}{E\\left(\\left|\\delta_{x}\\right|^{k}\\right)=o(\\delta_{t})}&{{}\\mathrm{f o r~}k\\geq3}\\end{array}",
+      "label": "Formula A1.3",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "FOUNDATIONS OF DIFFUSION THEORY",
+      "position": 2,
+      "depth": 0,
+      "context_text": "Consider a continuous random variable, $ x_t $, indexed by continuous time, $ t $. If $ \\delta_x = x_{t+\\delta_t} - x_t $ (the change in $ x_t $ over a very small time interval, $ \\delta_t $) satisfies then $x_t$ is said to be a diffusion process, provided the additional technical restriction that $x_t$ is a Markov process (the transition probabilities depend only on the current value of the process and no other aspects of its history) is satisfied. The functions $m(x)$ and $v(x)$ are defined shortly, while the notation $o(\\delta_t)$ means that any remaining terms are of order $\\delta_t^2$ (or higher), and hence small relative to $\\delta_t$. Formally, $\\lim_{\\delta_t \\to 0} o(\\delta_t)/\\delta_t = 0$, so we can ignore terms of order $\\delta_t^2$ (or higher) when $\\delta_t$ itself is very small. Likewise, the notation $O(x)$ means terms of order $x$, and so for example, $O(x^2) = o(x)$.",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\mathrm{f}",
+        "\\mathrm{o}",
+        "\\mathrm{r}",
+        "f",
+        "k",
+        "l",
+        "o",
+        "r"
+      ],
+      "symbols_defined": [
+        "\\delta_{x}",
+        "k",
+        "l",
+        "r"
+      ]
+    },
+    {
+      "id": "formula_A1.4",
+      "latex": "m(x)=\\lim_{\\delta_{t}\\to0}\\frac{E\\left(x_{t+\\delta_{t}}-x_{t}\\mid x_{t}=x\\right)}{\\delta_{t}}",
+      "label": "Formula A1.4",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "The Infinitesimal Mean, $ m(x) $, and Variance, $ v(x) $",
+      "position": 3,
+      "depth": 1,
+      "context_text": "The infinitesimal mean, $ m(x) $, and infinitesimal variance, $ v(x) $, correspond to the mean and variance of the process (given that it is at x) over a very small time interval. These are formally defined by",
+      "symbols_used": [
+        "\\delta_{t}",
+        "m",
+        "t",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "m",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.5",
+      "latex": "v(x)=\\lim_{\\delta_{t}\\to0}\\frac{E\\big[\\left(x_{t+\\delta_{t}}-x_{t}\\right)^{2}\\mid x_{t}=x\\big]}{\\delta_{t}}",
+      "label": "Formula A1.5",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "The Infinitesimal Mean, $ m(x) $, and Variance, $ v(x) $",
+      "position": 4,
+      "depth": 1,
+      "context_text": "The infinitesimal mean, $ m(x) $, and infinitesimal variance, $ v(x) $, correspond to the mean and variance of the process (given that it is at x) over a very small time interval. These are formally defined by",
+      "symbols_used": [
+        "\\delta_{t}",
+        "t",
+        "v",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "v",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.6",
+      "latex": "\\varphi(x,t,p)=\\sum_{i=1}^{\\infty}f_{i}(x,p)e^{-\\lambda_{i}t}",
+      "label": "Formula A1.6",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "The Kolmogorov Forward Equation",
+      "position": 5,
+      "depth": 0,
+      "context_text": "A derivation of the KFE is given below. When they can be found, closed-form solutions of $ \\varphi(x,t,p) $ are usually complicated (e.g., Example A1.2). The standard approach is to express the solution as a power series:",
+      "symbols_used": [
+        "\\lambda_{i}",
+        "\\varphi",
+        "e",
+        "f_{i}",
+        "p",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "p",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.7",
+      "latex": "\\varphi(x,t+\\delta_{t},p)=\\int\\varphi(x-\\delta_{x},t,p)\\phi(\\delta_{x},x-\\delta_{x},\\delta_{t})d\\delta_{x}",
+      "label": "Formula A1.7",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 6,
+      "depth": 1,
+      "context_text": "For completeness, we present a derivation of Equation A1.6, using the diffusion-approximation assumptions (Equations A1.1a–A1.1c). This section is a bit technical and can be skipped if readers desire. Consider the change from the probability distribution, $ \\varphi(x, t, p) $, at time $ t $ to a new distribution, $ \\varphi(x, t + \\delta_t, p) $, after some very small time interval, $ \\delta_t $. To arrive at $ x $ at time $ t + \\delta_t $, the frequency must have previously been at some value, $ x - \\delta_x $, and then moved by an amount, $ \\delta_x $, over the interval $ \\delta_t $. Let $ \\phi(\\delta_x, x, \\delta_t) $ be the probability of jumping by an amount, $ \\delta_x $, over the time $ \\delta_t $ given the starting point, $ x $. In our case, because we are assuming that there is a move from $ x - \\delta_x $ to $ x $, we consider $ \\phi(\\delta_x, x - \\delta_x, \\delta_t) $. Integrating over all possible jump values yields the Chapman-Kolmogorov equation",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "\\varphi",
+        "d",
+        "p",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\varphi",
+        "p",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.8",
+      "latex": "f(x-a)=f(x)-a\\frac{\\partial f(x)}{\\partial x}+\\frac{a^{2}}{2}\\frac{\\partial^{2}f(x)}{\\partial x^{2}}-\\frac{a^{3}}{6}\\frac{\\partial^{3}f(x)}{\\partial x^{3}}+o(a^{3})",
+      "label": "Formula A1.8",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 7,
+      "depth": 0,
+      "context_text": "To solve the Chapman-Kolmogorov equation, we start by using the Taylor series approximation",
+      "symbols_used": [
+        "a",
+        "a^{2}",
+        "a^{3}",
+        "f",
+        "o",
+        "x",
+        "x^{2}",
+        "x^{3}"
+      ],
+      "symbols_defined": [
+        "a",
+        "f",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.9",
+      "latex": "\\begin{align*}\\varphi(x-\\delta_{x},t)\\phi(\\delta_{x},x-\\delta_{x},\\delta_{t})&=\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})-\\delta_{x}\\frac{\\partial\\big[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})\\big]}{\\partial x}\\\\&+\\frac{\\delta_{x}^{2}}{2}\\frac{\\partial^{2}\\big[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})\\big]}{\\partial x^{2}}-\\frac{\\delta_{x}^{3}}{6}\\frac{\\partial^{3}\\big[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})\\big]}{\\partial x^{3}}+o(\\delta_{x}^{3})\\end{align*}",
+      "label": "Formula A1.9",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 8,
+      "depth": 0,
+      "context_text": "Expanding the function in the integral about $ a = \\delta_{x} $ yields",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\delta_{x}^{3}",
+        "\\phi",
+        "\\varphi",
+        "o",
+        "t",
+        "x",
+        "x^{2}",
+        "x^{3}"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "\\varphi",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.10",
+      "latex": "\\begin{align*}\\int\\varphi(x-\\delta_{x},t)\\phi(\\delta_{x},x-\\delta_{x},\\delta_{t})d\\delta_{x}&\\simeq\\int\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}-\\int\\delta_{x}\\frac{\\partial[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})]}{\\partial x}d\\delta_{x}\\\\+\\int\\frac{\\delta_{x}^{2}}{2}\\frac{\\partial^{2}[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})]}{\\partial x^{2}}d\\delta_{x}-\\int\\frac{\\delta_{x}^{3}}{6}\\frac{\\partial^{3}[\\varphi(x,t)\\phi(\\delta_{x},x,\\delta_{t})]}{\\partial x^{3}}d\\delta_{x}\\end{align*}",
+      "label": "Formula A1.10",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 9,
+      "depth": 1,
+      "context_text": "If we ignoring terms of $ o(\\delta_{x}^{3}) $, i.e., of order $ \\delta_{x}^{4} $ and higher, and integrate, the result is Because integration is done with respect to $ \\delta_{x} $, partials with respect to x can be moved outside of the integrals, as can functions not involving $ \\delta_{x} $, yielding Because $ \\phi(\\delta_x, x, \\delta_t) $ is the probability distribution of moves of size $ \\delta_x $ over the time interval $ \\delta_t $ given we start at position $ x $, we have",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\delta_{x}^{3}",
+        "\\phi",
+        "\\varphi",
+        "d",
+        "t",
+        "x",
+        "x^{2}",
+        "x^{3}"
+      ],
+      "symbols_defined": [
+        "t"
+      ]
+    },
+    {
+      "id": "formula_A1.11",
+      "latex": "\\int\\varphi(x-\\delta_{x},t)\\phi(\\delta_{x},x-\\delta_{x},\\delta_{t})d\\delta_{x}=\\varphi(x,t)\\int\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}-\\frac{\\partial}{\\partial x}\\left(\\varphi(x,t)\\int\\delta_{x}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}\\right)",
+      "label": "Formula A1.11",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 10,
+      "depth": 0,
+      "context_text": "If we ignoring terms of $ o(\\delta_{x}^{3}) $, i.e., of order $ \\delta_{x}^{4} $ and higher, and integrate, the result is Because integration is done with respect to $ \\delta_{x} $, partials with respect to x can be moved outside of the integrals, as can functions not involving $ \\delta_{x} $, yielding Because $ \\phi(\\delta_x, x, \\delta_t) $ is the probability distribution of moves of size $ \\delta_x $ over the time interval $ \\delta_t $ given we start at position $ x $, we have",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "\\varphi",
+        "d",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "\\varphi",
+        "d",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.12",
+      "latex": "+\\frac{1}{2}\\frac{\\partial^{2}}{\\partial x^{2}}\\left(\\varphi(x,t)\\int\\delta_{x}^{2}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}\\right)-\\frac{1}{6}\\frac{\\partial^{3}}{\\partial x^{3}}\\left(\\varphi(x,t)\\int\\delta_{x}^{3}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}\\right)",
+      "label": "Formula A1.12",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 11,
+      "depth": 1,
+      "context_text": "If we ignoring terms of $ o(\\delta_{x}^{3}) $, i.e., of order $ \\delta_{x}^{4} $ and higher, and integrate, the result is Because integration is done with respect to $ \\delta_{x} $, partials with respect to x can be moved outside of the integrals, as can functions not involving $ \\delta_{x} $, yielding Because $ \\phi(\\delta_x, x, \\delta_t) $ is the probability distribution of moves of size $ \\delta_x $ over the time interval $ \\delta_t $ given we start at position $ x $, we have",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\delta_{x}^{3}",
+        "\\phi",
+        "\\varphi",
+        "d",
+        "t",
+        "x",
+        "x^{2}",
+        "x^{3}"
+      ],
+      "symbols_defined": [
+        "t"
+      ]
+    },
+    {
+      "id": "formula_A1.13",
+      "latex": "\\int\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}=1",
+      "label": "Formula A1.13",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 12,
+      "depth": 0,
+      "context_text": "If we ignoring terms of $ o(\\delta_{x}^{3}) $, i.e., of order $ \\delta_{x}^{4} $ and higher, and integrate, the result is Because integration is done with respect to $ \\delta_{x} $, partials with respect to x can be moved outside of the integrals, as can functions not involving $ \\delta_{x} $, yielding Because $ \\phi(\\delta_x, x, \\delta_t) $ is the probability distribution of moves of size $ \\delta_x $ over the time interval $ \\delta_t $ given we start at position $ x $, we have",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "d",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "d",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.14",
+      "latex": "\\int\\delta_{x}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}=E\\left(\\delta_{x}\\mid x_{t}=x\\right)=m(x)\\delta_{t}+o(\\delta_{t})",
+      "label": "Formula A1.14",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 13,
+      "depth": 0,
+      "context_text": "If we ignoring terms of $ o(\\delta_{x}^{3}) $, i.e., of order $ \\delta_{x}^{4} $ and higher, and integrate, the result is Because integration is done with respect to $ \\delta_{x} $, partials with respect to x can be moved outside of the integrals, as can functions not involving $ \\delta_{x} $, yielding Because $ \\phi(\\delta_x, x, \\delta_t) $ is the probability distribution of moves of size $ \\delta_x $ over the time interval $ \\delta_t $ given we start at position $ x $, we have",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "d",
+        "m",
+        "o",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\phi",
+        "d",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.15",
+      "latex": "\\int\\delta_{x}^{2}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}=\\sigma^{2}(\\delta_{x})+[E(\\delta_{x})]^{2}",
+      "label": "Formula A1.15",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 14,
+      "depth": 0,
+      "context_text": "The first identity follows from the fact that the integral over a probability distribution is equal to one, and the second is simply our first diffusion assumption (Equation A1.1a). Next, if we recall that $ E(x^2) = \\sigma_x^2 + [E(x)]^2 $, we have which, using the diffusion approximation (Equations A1.1a and A1.1b), reduces to",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\phi",
+        "\\sigma^{2}(\\delta_{x})",
+        "d",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\phi",
+        "d",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.16",
+      "latex": "\\begin{align*}\\int\\delta_{x}^{2}\\phi(\\delta_{x},x,\\delta_{t})d\\delta_{x}&=[v(x)\\delta_{t}+o(\\delta_{t})]+[m(x)\\delta_{t}+o(\\delta_{t})]^{2}\\\\&=v(x)\\delta_{t}+o(\\delta_{t})\\end{align*}",
+      "label": "Formula A1.16",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 15,
+      "depth": 0,
+      "context_text": "The first identity follows from the fact that the integral over a probability distribution is equal to one, and the second is simply our first diffusion assumption (Equation A1.1a). Next, if we recall that $ E(x^2) = \\sigma_x^2 + [E(x)]^2 $, we have which, using the diffusion approximation (Equations A1.1a and A1.1b), reduces to",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\phi",
+        "d",
+        "m",
+        "o",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\delta_{x}",
+        "\\delta_{x}^{2}",
+        "\\phi",
+        "d",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.17",
+      "latex": "\\varphi(x,t+\\delta_{t})=\\varphi(x,t)-\\frac{\\partial\\left\\{\\left[m(x)\\delta_{t}+o(\\delta_{t})\\right]\\varphi(x,t)\\right\\}}{\\partial x}+\\frac{1}{2}\\frac{\\partial^{2}\\left\\{\\left[v(x)\\delta_{t}+o(\\delta_{t})\\right]\\varphi(x,t)\\right\\}}{\\partial x^{2}}",
+      "label": "Formula A1.17",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 16,
+      "depth": 0,
+      "context_text": "The last step follows because the contribution from the squared change in the mean is $ o(\\delta_t) $, and we sweep all such terms into a single expression. Finally, under the diffusion assumption given by Equation A1.1c, moments of $ \\delta_x^3 $ and higher are negligible. Substituting the approximations given by Equations A1.8d and A1.8e into Equation A1.8b yields",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\varphi",
+        "m",
+        "o",
+        "t",
+        "v",
+        "x",
+        "x^{2}"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\varphi",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.18",
+      "latex": "\\lim_{\\delta_{t}\\to0}\\frac{\\varphi(x,t+\\delta_{t})-\\varphi(x,t)}{\\delta_{t}}=\\frac{\\partial\\varphi(x,t)}{\\partial t}",
+      "label": "Formula A1.18",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 17,
+      "depth": 0,
+      "context_text": "Subtracting $ \\varphi(x,t) $ from both sides, dividing both by $ \\delta_{t} $, and taking the limit at $ \\delta_{t}\\to0 $ gives the left-hand size as",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\varphi",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\varphi",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.19",
+      "latex": "\\lim_{\\delta_{t}\\to0}\\frac{1}{\\delta_{t}}\\left(\\frac{\\partial\\left\\{\\left[m(x)\\delta_{t}+o(\\delta_{t})\\right]\\varphi(x,t)\\right\\}}{\\partial x}\\right)=\\frac{\\partial[m(x)\\varphi(x,t)]}{\\partial x}",
+      "label": "Formula A1.19",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 18,
+      "depth": 0,
+      "context_text": "Likewise, recalling that $ \\lim_{\\delta_t \\to 0} o(\\delta_t)/\\delta_t = 0 $, the last two right-hand-side terms of Equation A1.9 simplify to",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\varphi",
+        "m",
+        "o",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\varphi",
+        "m",
+        "o",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.20",
+      "latex": "\\lim_{\\delta_{t}\\to0}\\frac{1}{\\delta_{t}}\\left(\\frac{\\partial^{2}\\left\\{\\left[v(x)\\delta_{t}+o(\\delta_{t})\\right]\\varphi(x,t)\\right\\}}{\\partial x^{2}}\\right)=\\frac{\\partial^{2}[v(x)\\varphi(x,t)]}{\\partial x^{2}}",
+      "label": "Formula A1.20",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 19,
+      "depth": 0,
+      "context_text": "Likewise, recalling that $ \\lim_{\\delta_t \\to 0} o(\\delta_t)/\\delta_t = 0 $, the last two right-hand-side terms of Equation A1.9 simplify to",
+      "symbols_used": [
+        "\\delta_{t}",
+        "\\varphi",
+        "o",
+        "t",
+        "v",
+        "x",
+        "x^{2}"
+      ],
+      "symbols_defined": [
+        "\\delta_{t}",
+        "\\varphi",
+        "o",
+        "t",
+        "v",
+        "x",
+        "x^{2}"
+      ]
+    },
+    {
+      "id": "formula_A1.21",
+      "latex": "\\frac{\\partial\\varphi(x,t)}{\\partial t}=-\\frac{\\partial[m(x)\\varphi(x,t)]}{\\partial x}+\\frac{\\partial^{2}[v(x)\\varphi(x,t)]}{2\\partial x^{2}}",
+      "label": "Formula A1.21",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Derivation of the Kolmogorov Forward Equation",
+      "position": 20,
+      "depth": 0,
+      "context_text": "Together, these simplifications imply which recovers the Kolmogorov forward equation (Equation A1.6), provided we again recall that $ \\varphi(x,t) $ is really $ \\varphi(x,t,p) $.",
+      "symbols_used": [
+        "\\varphi",
+        "m",
+        "t",
+        "v",
+        "x",
+        "x^{2}"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.22",
+      "latex": "\\frac{\\partial\\varphi(x,t,p)}{\\partial t}=0",
+      "label": "Formula A1.22",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Stationary Distributions",
+      "position": 21,
+      "depth": 0,
+      "context_text": "At equilibrium, a probability density function does not change over time, namely,",
+      "symbols_used": [
+        "\\varphi",
+        "p",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "p",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.23",
+      "latex": "\\frac{\\partial^{2}[v(x)\\varphi(x)]}{2\\partial x^{2}}=\\frac{\\partial[m(x)\\varphi(x)]}{\\partial x}",
+      "label": "Formula A1.23",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Stationary Distributions",
+      "position": 22,
+      "depth": 0,
+      "context_text": "When Equation A1.10a is satisfied, Equation A1.6 becomes and integration of both sides reduces this to the simple differential equation,",
+      "symbols_used": [
+        "\\varphi",
+        "m",
+        "v",
+        "x",
+        "x^{2}"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "v",
+        "x",
+        "x^{2}"
+      ]
+    },
+    {
+      "id": "formula_A1.24",
+      "latex": "\\frac{\\partial[v(x)\\varphi(x)]}{\\partial x}=2m(x)\\varphi(x)",
+      "label": "Formula A1.24",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Stationary Distributions",
+      "position": 23,
+      "depth": 0,
+      "context_text": "When Equation A1.10a is satisfied, Equation A1.6 becomes and integration of both sides reduces this to the simple differential equation,",
+      "symbols_used": [
+        "\\varphi",
+        "m",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "v",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.25",
+      "latex": "\\varphi(x)=\\frac{C}{v(x)G(x)}",
+      "label": "Formula A1.25",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "Stationary Distributions",
+      "position": 24,
+      "depth": 0,
+      "context_text": "Using standard methods for differential equations (e.g., Tenenbaum and Pollard 1963) yields the solution as where G (which is called the scale function in the diffusion literature) is defined by the indefinite integral $$ G(x)=\\exp\\left[-2\\",
+      "symbols_used": [
+        "C",
+        "G",
+        "\\varphi",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.26",
+      "latex": "\\frac{\\partial\\varphi(x,t,p)}{\\partial t}=\\frac{1}{2}v(p)\\frac{\\partial^{2}\\varphi(x,t,p)}{\\partial p^{2}}+m(p)\\frac{\\partial\\varphi(x,t,p)}{\\partial p}",
+      "label": "Formula A1.26",
+      "chapter_id": "appendix1",
+      "section": "FOUNDATIONS OF DIFFUSION THEORY",
+      "subsection": "The Kolmogorov Backward Equation",
+      "position": 25,
+      "depth": 0,
+      "context_text": "While the KFE provides both the full solution of $ \\varphi(x, t, p) $ and, where appropriate, the equilibrium solution, we can obtain much simpler expressions for many quantities of interest when an equilibrium solution does not exist. For example, if one or both of the boundaries are accessible and absorbing, we can compute the fixation probabilities (the probability that the process eventually will reach a specified boundary), the time to reach that boundary (the time to loss or fixation), and the expected value of many other functions of interest. The key to all of these operations is the Kolmogorov backward equation (KBE), which is given by The KBE is derived in a manner similar to the KFE. The KBE starts at the current time, t, and looks backwards in terms of how changes $ \\left(\\partial/\\partial p\\right) $ in the initial starting value, p, are influenced by the current position, x, hence the name. Conversely, the forward equation (Equation A1.6) examines how changes $ \\left(\\partial/\\partial x\\right) $ in the current position, x, are influenced by the starting value, p.",
+      "symbols_used": [
+        "\\varphi",
+        "m",
+        "p",
+        "p^{2}",
+        "t",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\varphi",
+        "p",
+        "t",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.27",
+      "latex": "0=m(p)\\frac{\\partial u(p)}{\\partial p}+\\frac{1}{2}v(p)\\frac{\\partial^{2}u(p)}{\\partial p^{2}}",
+      "label": "Formula A1.27",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Probability of Fixation",
+      "position": 26,
+      "depth": 0,
+      "context_text": "When at least one boundary is absorbing (and accessible), no stationary distribution exists. In such cases, one important descriptor of the process is the probability of reaching one boundary before the other. One can show that the function $ u(p, t) $, the probability of fixation by time t, given that we start at allele frequency p, satisfies the KBE. We are typically interested in the ultimate probability of fixation, $ u(p) = \\lim_{t \\to \\infty} u(p, t) $, in which case the partial derivative of $ u(p) $ with respect to time is zero and, from Equation A1.16, $ u(p) $ satisfies",
+      "symbols_used": [
+        "m",
+        "p",
+        "p^{2}",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "m"
+      ]
+    },
+    {
+      "id": "formula_A1.28",
+      "latex": "u(p)=\\frac{\\int_{0}^{p}G(x)dx}{\\int_{0}^{1}G(x)dx}",
+      "label": "Formula A1.28",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Probability of Fixation",
+      "position": 27,
+      "depth": 0,
+      "context_text": "This has a solution of where $ G(x) $ is defined by Equation A1.12 (Kimura 1962). More generally, for any diffusion (regardless of the nature of the boundaries), the probability that the process reaches a value of b before a value of a, given it starts at p (where $ A < a < p < b < B $, with the diffusion defined over $ A < x < B $), is",
+      "symbols_used": [
+        "G",
+        "d",
+        "p",
+        "u",
+        "x"
+      ],
+      "symbols_defined": [
+        "p",
+        "u"
+      ]
+    },
+    {
+      "id": "formula_A1.29",
+      "latex": "u_{b,a}(p)=\\frac{\\int_{a}^{p}G(x)dx}{\\int_{a}^{b}G(x)dx}",
+      "label": "Formula A1.29",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Probability of Fixation",
+      "position": 28,
+      "depth": 0,
+      "context_text": "This has a solution of where $ G(x) $ is defined by Equation A1.12 (Kimura 1962). More generally, for any diffusion (regardless of the nature of the boundaries), the probability that the process reaches a value of b before a value of a, given it starts at p (where $ A < a < p < b < B $, with the diffusion defined over $ A < x < B $), is",
+      "symbols_used": [
+        "G",
+        "a",
+        "b",
+        "d",
+        "p",
+        "u_{b,a}",
+        "x"
+      ],
+      "symbols_defined": [
+        "a",
+        "b",
+        "p",
+        "u_{b,a}"
+      ]
+    },
+    {
+      "id": "formula_A1.30",
+      "latex": "\\bar{t}_{a,b}=\\int_{0}^{\\infty}\\Pr\\left(a\\leq x_{t}\\leq b\\right)dt=\\int_{0}^{\\infty}\\int_{a}^{b}\\varphi(x,t,p)dx dt",
+      "label": "Formula A1.30",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 29,
+      "depth": 0,
+      "context_text": "The time for a process to reach a specified value (or values) is called the sojourn time. While we are often interested in the sojourn time to an absorbing boundary (the fixation time), the more general problem of the time to first reach a specific value within the interval over which the diffusion is defined is also tractable. Letting $ \\bar{t}_{a,b} $ denote the expected time that a diffusion spends in the interval $ (a,b) $ given it starts at frequency p, then",
+      "symbols_used": [
+        "\\bar{t}_{a,b}",
+        "\\varphi",
+        "a",
+        "b",
+        "d",
+        "p",
+        "t",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "\\bar{t}_{a,b}",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "id": "formula_A1.31",
+      "latex": "h(x,p)=\\int_{0}^{\\infty}\\varphi(x,t,p)dt",
+      "label": "Formula A1.31",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 30,
+      "depth": 0,
+      "context_text": "A very useful approach for solving Equation A1.21, and more general problems, is to consider $ h(x,p) $, the expected amount of time that the process (starting at p) spends in the neighborhood of x before it is eventually absorbed. Formally, this is given by",
+      "symbols_used": [
+        "\\varphi",
+        "d",
+        "h",
+        "p",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "h",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.32",
+      "latex": "\\begin{align*}\\bar t_{a,b}=\\int_a^b h(x,p)dx\\end{align*}",
+      "label": "Formula A1.32",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 31,
+      "depth": 0,
+      "context_text": "Thus, Equation A1.21 can be expressed as",
+      "symbols_used": [
+        "\\bar{t}",
+        "a^b",
+        "d",
+        "h",
+        "p",
+        "t_{a,b}",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\bar{t}",
+        "a",
+        "b",
+        "t_{a,b}"
+      ]
+    },
+    {
+      "id": "formula_A1.33",
+      "latex": "h(x,p)=\\left\\{\\begin{aligned}&\\frac{2[1-u(p)]}{v(x)G(x)}\\int_{a}^{x}G(y)dy&\\text{for}a<x<p\\\\ &\\frac{2u(p)}{v(x)G(x)}\\int_{x}^{b}G(y)dy&\\text{for}p<x<b\\end{aligned}\\right.",
+      "label": "Formula A1.33",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 32,
+      "depth": 1,
+      "context_text": "$ h(x,p) $ is called a Green's function, and it will prove very useful in solving a variety of problems. The general solution for $ h(x,p) $, obtained by Maruyama (1977), is where the fixation probability, $ u(p) $, is provided by Equation A1.17a.",
+      "symbols_used": [
+        "G",
+        "a",
+        "b",
+        "d",
+        "f",
+        "h",
+        "o",
+        "p",
+        "r",
+        "u",
+        "v",
+        "x",
+        "y"
+      ],
+      "symbols_defined": [
+        "h",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.34",
+      "latex": "h_{1}(x,p)=h(x,p)\\frac{u(x)}{u(p)}",
+      "label": "Formula A1.34",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 33,
+      "depth": 0,
+      "context_text": "One can also obtain modified Green’s functions for conditional processes, such as processes leading only to loss or processes leading only to fixation. For example, $ \\bar{t}_{F} $, the expected time to fix allele A (in those populations where it is fixed) is given by replacing $ h(x,p) $ in Equation A1.22b by",
+      "symbols_used": [
+        "h_{1}",
+        "p",
+        "u",
+        "x"
+      ],
+      "symbols_defined": [
+        "h_{1}",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.35",
+      "latex": "h_{0}(x,p)=h(x,p)\\frac{1-u(x)}{1-u(p)}",
+      "label": "Formula A1.35",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 34,
+      "depth": 0,
+      "context_text": "This follows from standard conditional probability arguments (see Ewens 1979, 2004), with $ u(x)/u(p) $ correcting for the fact that we are only considering those sample paths over which the allele of interest (A) is fixed. This occurs with probability $ u(p) $, and hence $ u(x)/u(p) $ is the conditional density. Similarly, $ \\bar{t}_{L} $, the expected time to lose allele A, is obtained by replacing $ h(x,p) $ in Equation A1.22b by",
+      "symbols_used": [
+        "h_{0}",
+        "p",
+        "u",
+        "x"
+      ],
+      "symbols_defined": [
+        "h_{0}",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.36",
+      "latex": "\\bar{t}(p)=u(p)\\bar{t}_{F}(p)+[1-u(p)]\\bar{t}_{L}(p)",
+      "label": "Formula A1.36",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Time to Fixation",
+      "position": 35,
+      "depth": 0,
+      "context_text": "Finally, we note that $ \\bar{t}, \\bar{t}_{F} $, and $ \\bar{t}_{L} $ are related by That is, the expected time to loss or fixation is equal to the expected time to fixation multiplied by the probability of fixation plus the expected time to loss multiplied by the probability of loss.",
+      "symbols_used": [
+        "\\bar{t}_{F}",
+        "\\bar{t}_{L}",
+        "p",
+        "u"
+      ],
+      "symbols_defined": [
+        "\\bar{t}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.37",
+      "latex": "h_{0}(x,p)=\\frac{1-x}{1-p}h(x,p)=\\left\\{\\begin{aligned}&4N_{e}&&for0<x<p\\\\ &4N_{e}\\frac{p(1-x)}{x(1-p)}&&for p<x<1\\end{aligned}\\right.",
+      "label": "Formula A1.37",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 36,
+      "depth": 1,
+      "context_text": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation. The integration of Equation A1.22b then yields an expected conditional time to loss of and an expected conditional time to fixation of",
+      "symbols_used": [
+        "N_{e}",
+        "f",
+        "h_{0}",
+        "o",
+        "p",
+        "r",
+        "x"
+      ],
+      "symbols_defined": [
+        "h_{0}",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.38",
+      "latex": "h_{1}(x,p)=\\frac{x}{p}h(x,p)=\\left\\{\\begin{aligned}&4N_{e}\\frac{x(1-p)}{p(1-x)}&for0<x<p\\\\ &4N_{e}&for p<x<1\\end{aligned}\\right.",
+      "label": "Formula A1.38",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 37,
+      "depth": 1,
+      "context_text": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation. The integration of Equation A1.22b then yields an expected conditional time to loss of and an expected conditional time to fixation of",
+      "symbols_used": [
+        "N_{e}",
+        "f",
+        "h_{1}",
+        "o",
+        "p",
+        "r",
+        "x"
+      ],
+      "symbols_defined": [
+        "h_{1}",
+        "p",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.39",
+      "latex": "\\begin{aligned}\\bar{t}_{L}(p)&=\\int_{0}^{1}h_{0}(x,p)dx=4N_{e}\\int_{0}^{p}dx+4N_{e}\\frac{p}{1-p}\\int_{p}^{1}\\frac{1-x}{x}dx\\\\&=-4N_{e}\\left(\\frac{p}{1-p}\\right)\\ln(p)\\end{aligned}",
+      "label": "Formula A1.39",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 38,
+      "depth": 0,
+      "context_text": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation. The integration of Equation A1.22b then yields an expected conditional time to loss of and an expected conditional time to fixation of",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}_{L}",
+        "d",
+        "h_{0}",
+        "p",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\bar{t}_{L}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.40",
+      "latex": "\\begin{aligned}\\bar{t}_{F}(p)&=\\int_{0}^{1}h_{1}(x,p)dx=4N_{e}\\frac{1-p}{p}\\int_{0}^{p}\\frac{x}{1-x}dx+4N_{e}\\int_{p}^{1}dx\\\\&=-4N_{e}\\left(\\frac{1-p}{p}\\right)\\ln(1-p)\\end{aligned}",
+      "label": "Formula A1.40",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 39,
+      "depth": 0,
+      "context_text": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation. The integration of Equation A1.22b then yields an expected conditional time to loss of and an expected conditional time to fixation of",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}_{F}",
+        "d",
+        "h_{1}",
+        "p",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\bar{t}_{F}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.41",
+      "latex": "\\begin{aligned}\\bar{t}&=u(p)\\bar{t}_{F}(p)+\\left[1-u(p)\\right]\\bar{t}_{L}(p)\\\\&=-4N_{e}\\left[p\\left(\\frac{1-p}{p}\\ln(1-p)\\right)+(1-p)\\left(\\frac{p}{1-p}\\ln(p)\\right)\\right]\\\\&=-4N_{e}\\left[(1-p)\\ln(1-p)+p\\ln(p)\\right]\\\\ \\end{aligned}",
+      "label": "Formula A1.41",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 40,
+      "depth": 0,
+      "context_text": "These results were first obtained by Kimura and Ohta (1969a, 1969b). As a check of consistency, we can apply Equation A1.24, which (as expected) recovers our expression (Equation A1.25) for the unconditional time t.",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}_{F}",
+        "\\bar{t}_{L}",
+        "p",
+        "u"
+      ],
+      "symbols_defined": [
+        "\\bar{t}"
+      ]
+    },
+    {
+      "id": "formula_A1.42",
+      "latex": "(1-p)/p\\simeq1/p=2N,\\quad p/(1-p)\\simeq p=1/(2N)",
+      "label": "Formula A1.42",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 41,
+      "depth": 0,
+      "context_text": "For the special case of a neutral allele introduced as a single copy, $ p = 1/(2N) $, which results in the approximations and",
+      "symbols_used": [
+        "N",
+        "p"
+      ],
+      "symbols_defined": [
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.43",
+      "latex": "\\ln(1-p)\\simeq-p=-1/(2N),\\quad\\ln(p)=-\\ln(1/p)=-\\ln(2N)",
+      "label": "Formula A1.43",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 42,
+      "depth": 0,
+      "context_text": "For the special case of a neutral allele introduced as a single copy, $ p = 1/(2N) $, which results in the approximations and",
+      "symbols_used": [
+        "N",
+        "p"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A1.44",
+      "latex": "\\begin{aligned}\\bar{t}&=-4N_{e}[\\left(1-p\\right)\\ln(1-p)+p\\ln(p)]\\\\&\\simeq-4N_{e}\\left[-1/(2N)-\\ln(2N)/(2N)\\right]\\simeq\\frac{2N_{e}}{N}\\ln(2N)\\end{aligned}",
+      "label": "Formula A1.44",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 43,
+      "depth": 0,
+      "context_text": "If we use these approximations, Equation A1.25 reduces to",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\bar{t}"
+      ]
+    },
+    {
+      "id": "formula_A1.45",
+      "latex": "\\bar{t}_{L}=-4N_{e}\\left(\\frac{p}{1-p}\\right)\\ln(p)\\simeq\\frac{2N_{e}}{N}\\ln(2N)",
+      "label": "Formula A1.45",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 44,
+      "depth": 0,
+      "context_text": "Similarly, Equations A1.27 and A1.28 become and",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}_{L}",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\bar{t}_{L}"
+      ]
+    },
+    {
+      "id": "formula_A1.46",
+      "latex": "\\bar{t}_{F}=-4N_{e}\\left(\\frac{1-p}{p}\\right)\\ln(1-p)\\simeq-4N_{e}(2N)\\left(-\\frac{1}{2N}\\right)=4N_{e}",
+      "label": "Formula A1.46",
+      "chapter_id": "appendix1",
+      "section": "Appendix: Introduction",
+      "subsection": "Time to Fixation",
+      "position": 45,
+      "depth": 0,
+      "context_text": "Similarly, Equations A1.27 and A1.28 become and",
+      "symbols_used": [
+        "N_{e}",
+        "\\bar{t}_{F}",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\bar{t}_{F}"
+      ]
+    },
+    {
+      "id": "formula_A1.47",
+      "latex": "I_{f}(p)=\\int_{0}^{\\infty}f(x_{t})dt",
+      "label": "Formula A1.47",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Expectations of More General Functions",
+      "position": 46,
+      "depth": 0,
+      "context_text": "The expressions for sojourn times are relatively simple examples of computing expected values along a sample path of the diffusion process, and more complex functions can be evaluated in a similar manner. Let $ x_t $, which resides in the open interval $ (0,1) $, denote the values of our random variable along a particular sample path, and suppose that we wish to compute the integral (over all time) of some function $ f $ of $ x_t $",
+      "symbols_used": [
+        "I_{f}",
+        "d",
+        "f",
+        "p",
+        "t",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "I_{f}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.48",
+      "latex": "E[I_{f}(p)]=\\int_{0}^{\\infty}\\int_{0}^{1}f(x)\\varphi(x,t,p)dt dx",
+      "label": "Formula A1.48",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Expectations of More General Functions",
+      "position": 47,
+      "depth": 0,
+      "context_text": "Note that $ x_{t} $ is the realization at a particular time point, and hence the distribution of $ x_{t} $ (and thus ultimately $ I_{f} $) is a function of p, the starting value of our process. Because $ x_{t} $ is a random variable, the integral $ I_{f}(p) $ is also a random variable. Its expected value is given by",
+      "symbols_used": [
+        "I_{f}",
+        "\\varphi",
+        "d",
+        "f",
+        "p",
+        "t",
+        "x"
+      ],
+      "symbols_defined": [
+        "I_{f}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.49",
+      "latex": "E[I_{f}(p)]=\\int_{0}^{1}f(x)h(x,p)dx",
+      "label": "Formula A1.49",
+      "chapter_id": "appendix1",
+      "section": "DIFFUSION APPLICATIONS IN POPULATION GENETICS",
+      "subsection": "Expectations of More General Functions",
+      "position": 48,
+      "depth": 0,
+      "context_text": "Fortunately, we do not have to solve for $ \\varphi(x,t,p) $, as (recalling Equation A1.22a) the general solution is obtained by using the Green's function, as described by Equation A1.22c, with",
+      "symbols_used": [
+        "I_{f}",
+        "d",
+        "f",
+        "h",
+        "p",
+        "x"
+      ],
+      "symbols_defined": [
+        "I_{f}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A1.50",
+      "latex": "m(x)=a\\quad and\\quad v(x)=b",
+      "label": "Formula A1.50",
+      "chapter_id": "appendix1",
+      "section": "APPLICATIONS IN QUANTITATIVE GENETICS",
+      "subsection": "Brownian-motion Models",
+      "position": 49,
+      "depth": 0,
+      "context_text": "For Brownian motion (also called the Wiener process), the diffusion over the interval $ -\\infty < x < \\infty $ is defined as where b > 0. The general solution under Brownian motion starting at $ x_{0} $ is that namely, the distribution of $ x_t $ is normal, with a mean of $ x_0 + at $ and a variance of $ \\sigma_t^2 = bt $. There is no equilibrium solution, as the process converges to a normal distribution with infinite variance (and, if $ a \\neq 0 $, an infinite mean).",
+      "symbols_used": [
+        "a",
+        "b",
+        "d",
+        "m",
+        "n",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "m",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.51",
+      "latex": "x_{t}\\sim\\mathrm{N}(x_{0}+at,bt)",
+      "label": "Formula A1.51",
+      "chapter_id": "appendix1",
+      "section": "APPLICATIONS IN QUANTITATIVE GENETICS",
+      "subsection": "Brownian-motion Models",
+      "position": 50,
+      "depth": 0,
+      "context_text": "For Brownian motion (also called the Wiener process), the diffusion over the interval $ -\\infty < x < \\infty $ is defined as where b > 0. The general solution under Brownian motion starting at $ x_{0} $ is that namely, the distribution of $ x_t $ is normal, with a mean of $ x_0 + at $ and a variance of $ \\sigma_t^2 = bt $. There is no equilibrium solution, as the process converges to a normal distribution with infinite variance (and, if $ a \\neq 0 $, an infinite mean).",
+      "symbols_used": [
+        "N",
+        "\\mathrm{N}",
+        "a",
+        "b",
+        "t",
+        "x_{0}",
+        "x_{t}"
+      ],
+      "symbols_defined": [
+        "x_{t}"
+      ]
+    },
+    {
+      "id": "formula_A1.52",
+      "latex": "m(x)=-ax\\quad and\\quad v(x)=b",
+      "label": "Formula A1.52",
+      "chapter_id": "appendix1",
+      "section": "APPLICATIONS IN QUANTITATIVE GENETICS",
+      "subsection": "Ornstein-Uhlenbeck Models",
+      "position": 51,
+      "depth": 0,
+      "context_text": "The Ornstein-Uhlenbeck process is an extension of the Brownian-motion model to include a linear restoring force back to the origin. The one-dimensional version of this diffusion process for $ -\\infty < x < \\infty $ is given by with a, b > 0. As with Brownian motion, the distribution of $ x_{t} $ (given the starting condition $ x_{0} $) is also normal, but now with a mean and a variance of",
+      "symbols_used": [
+        "a",
+        "b",
+        "d",
+        "m",
+        "n",
+        "v",
+        "x"
+      ],
+      "symbols_defined": [
+        "m",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A1.53",
+      "latex": "\\mu_{t}=x_{0}e^{-at}\\quad and\\quad\\sigma_{t}^{2}=\\frac{b}{2a}\\left(1-e^{-2at}\\right)",
+      "label": "Formula A1.53",
+      "chapter_id": "appendix1",
+      "section": "APPLICATIONS IN QUANTITATIVE GENETICS",
+      "subsection": "Ornstein-Uhlenbeck Models",
+      "position": 52,
+      "depth": 0,
+      "context_text": "The Ornstein-Uhlenbeck process is an extension of the Brownian-motion model to include a linear restoring force back to the origin. The one-dimensional version of this diffusion process for $ -\\infty < x < \\infty $ is given by with a, b > 0. As with Brownian motion, the distribution of $ x_{t} $ (given the starting condition $ x_{0} $) is also normal, but now with a mean and a variance of",
+      "symbols_used": [
+        "\\mu_{t}",
+        "\\sigma_{t}^{2}",
+        "a",
+        "b",
+        "d",
+        "e^{-2at}",
+        "e^{-at}",
+        "n",
+        "x_{0}"
+      ],
+      "symbols_defined": [
+        "\\mu_{t}"
+      ]
+    },
+    {
+      "id": "formula_A1.54",
+      "latex": "\\mu_{t}=\\theta+(x_{0}-\\theta)e^{-at}",
+      "label": "Formula A1.54",
+      "chapter_id": "appendix1",
+      "section": "APPLICATIONS IN QUANTITATIVE GENETICS",
+      "subsection": "Ornstein-Uhlenbeck Models",
+      "position": 53,
+      "depth": 0,
+      "context_text": "See Karlin and Taylor (1981) for a derivation. The resulting stationary distribution is normal with a mean of zero (on the assumed scale) and a variance of $ b/(2a) $. More generally, if $ m(x) = -a(x - \\theta) $, so that the resorting force is toward the value $ x = \\theta $, then the variance will be unchanged, while",
+      "symbols_used": [
+        "\\mu_{t}",
+        "\\theta",
+        "a",
+        "e^{-at}",
+        "x_{0}"
+      ],
+      "symbols_defined": [
+        "\\mu_{t}"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependent_id": "formula_A1.1",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.2",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.3",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.4",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.2",
+          "via_symbol": "x_{t}",
+          "relation": "defines_symbol",
+          "reason": "x_{t} defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "x_t",
+          "symbol_role": "parameter",
+          "sense_id": "formula_A1.2::x_{t}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.5",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.2",
+          "via_symbol": "x_{t}",
+          "relation": "defines_symbol",
+          "reason": "x_{t} defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "x_t",
+          "symbol_role": "parameter",
+          "sense_id": "formula_A1.2::x_{t}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.6",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.7",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.3",
+          "via_symbol": "\\delta_{x}",
+          "relation": "defines_symbol",
+          "reason": "\\delta_{x} defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\delta_x",
+          "symbol_role": "symbol",
+          "sense_id": "formula_A1.3::\\delta_{x}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.8",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.9",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.10",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.9",
+          "via_symbol": "\\phi",
+          "relation": "defines_symbol",
+          "reason": "\\phi defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\phi",
+          "symbol_role": "variable",
+          "sense_id": "formula_A1.9::\\phi",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.11",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.12",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.11",
+          "via_symbol": "\\phi",
+          "relation": "defines_symbol",
+          "reason": "\\phi defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\phi",
+          "symbol_role": "variable",
+          "sense_id": "formula_A1.11::\\phi",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.13",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.14",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.15",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.16",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.17",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.18",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.19",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.20",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.21",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.22",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.23",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.24",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.25",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "G",
+          "relation": "text_definition",
+          "reason": "G is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "G",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "called the scale function in the diffusion literature) is defined by the indefinite integral $$ G(x)=\\exp\\left[-2\\",
+          "meaning": "called the scale function in the diffusion literature) is defined by the indefinite integral $$ G(x)=\\exp\\left[-2\\",
+          "source_excerpt": "called the scale function in the diffusion literature) is defined by the indefinite integral $$ G(x)=\\exp\\left[-2\\",
+          "source_chunk_id": "appendix1_008"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.26",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.27",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.28",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "G",
+          "relation": "text_definition",
+          "reason": "G is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "G",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "defined by Equation A1",
+          "meaning": "defined by Equation A1",
+          "source_excerpt": "defined by Equation A1",
+          "source_chunk_id": "appendix1_011"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.29",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "G",
+          "relation": "text_definition",
+          "reason": "G is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "G",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "defined by Equation A1",
+          "meaning": "defined by Equation A1",
+          "source_excerpt": "defined by Equation A1",
+          "source_chunk_id": "appendix1_011"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.30",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.31",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.32",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.33",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.20",
+          "via_symbol": "o",
+          "relation": "defines_symbol",
+          "reason": "o defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "o",
+          "symbol_role": "variable",
+          "sense_id": "formula_A1.20::o",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.34",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.35",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.36",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.37",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.20",
+          "via_symbol": "o",
+          "relation": "defines_symbol",
+          "reason": "o defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "o",
+          "symbol_role": "variable",
+          "sense_id": "formula_A1.20::o",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.38",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A1.20",
+          "via_symbol": "o",
+          "relation": "defines_symbol",
+          "reason": "o defined by nearest upstream formula in appendix1",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "o",
+          "symbol_role": "variable",
+          "sense_id": "formula_A1.20::o",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.39",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.40",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.41",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.42",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.43",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.44",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.45",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.46",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.47",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.48",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.49",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.50",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.51",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.52",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.53",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A1.54",
+      "prerequisites": []
+    }
+  ],
+  "symbol_index": {
+    "\\delta_{x}": [
+      "formula_A1.2::\\delta_{x}",
+      "formula_A1.3::\\delta_{x}",
+      "formula_A1.9::\\delta_{x}",
+      "formula_A1.11::\\delta_{x}",
+      "formula_A1.13::\\delta_{x}",
+      "formula_A1.14::\\delta_{x}",
+      "formula_A1.15::\\delta_{x}",
+      "formula_A1.16::\\delta_{x}"
+    ],
+    "canonical:\\delta_x": [
+      "formula_A1.2::\\delta_{x}",
+      "formula_A1.3::\\delta_{x}",
+      "formula_A1.9::\\delta_{x}",
+      "formula_A1.11::\\delta_{x}",
+      "formula_A1.13::\\delta_{x}",
+      "formula_A1.14::\\delta_{x}",
+      "formula_A1.15::\\delta_{x}",
+      "formula_A1.16::\\delta_{x}"
+    ],
+    "\\sigma^{2}": [
+      "formula_A1.2::\\sigma^{2}"
+    ],
+    "canonical:\\sigma^2": [
+      "formula_A1.2::\\sigma^{2}"
+    ],
+    "x_{t}": [
+      "formula_A1.2::x_{t}",
+      "formula_A1.51::x_{t}"
+    ],
+    "canonical:x_t": [
+      "formula_A1.2::x_{t}",
+      "formula_A1.51::x_{t}"
+    ],
+    "k": [
+      "formula_A1.3::k"
+    ],
+    "canonical:k": [
+      "formula_A1.3::k"
+    ],
+    "l": [
+      "formula_A1.3::l"
+    ],
+    "canonical:l": [
+      "formula_A1.3::l"
+    ],
+    "r": [
+      "formula_A1.3::r"
+    ],
+    "canonical:r": [
+      "formula_A1.3::r"
+    ],
+    "m": [
+      "formula_A1.4::m",
+      "formula_A1.19::m",
+      "formula_A1.27::m",
+      "formula_A1.50::m",
+      "formula_A1.52::m"
+    ],
+    "canonical:m": [
+      "formula_A1.4::m",
+      "formula_A1.19::m",
+      "formula_A1.27::m",
+      "formula_A1.50::m",
+      "formula_A1.52::m"
+    ],
+    "x": [
+      "formula_A1.4::x",
+      "formula_A1.5::x",
+      "formula_A1.6::x",
+      "formula_A1.7::x",
+      "formula_A1.8::x",
+      "formula_A1.9::x",
+      "formula_A1.11::x",
+      "formula_A1.13::x",
+      "formula_A1.14::x",
+      "formula_A1.15::x",
+      "formula_A1.16::x",
+      "formula_A1.17::x",
+      "formula_A1.18::x",
+      "formula_A1.19::x",
+      "formula_A1.20::x",
+      "formula_A1.21::x",
+      "formula_A1.22::x",
+      "formula_A1.23::x",
+      "formula_A1.24::x",
+      "formula_A1.25::x",
+      "formula_A1.26::x",
+      "formula_A1.31::x",
+      "formula_A1.33::x",
+      "formula_A1.34::x",
+      "formula_A1.35::x",
+      "formula_A1.37::x",
+      "formula_A1.38::x",
+      "formula_A1.50::x",
+      "formula_A1.52::x"
+    ],
+    "canonical:x": [
+      "formula_A1.4::x",
+      "formula_A1.5::x",
+      "formula_A1.6::x",
+      "formula_A1.7::x",
+      "formula_A1.8::x",
+      "formula_A1.9::x",
+      "formula_A1.11::x",
+      "formula_A1.13::x",
+      "formula_A1.14::x",
+      "formula_A1.15::x",
+      "formula_A1.16::x",
+      "formula_A1.17::x",
+      "formula_A1.18::x",
+      "formula_A1.19::x",
+      "formula_A1.20::x",
+      "formula_A1.21::x",
+      "formula_A1.22::x",
+      "formula_A1.23::x",
+      "formula_A1.24::x",
+      "formula_A1.25::x",
+      "formula_A1.26::x",
+      "formula_A1.31::x",
+      "formula_A1.33::x",
+      "formula_A1.34::x",
+      "formula_A1.35::x",
+      "formula_A1.37::x",
+      "formula_A1.38::x",
+      "formula_A1.50::x",
+      "formula_A1.52::x"
+    ],
+    "v": [
+      "formula_A1.5::v",
+      "formula_A1.20::v",
+      "formula_A1.23::v",
+      "formula_A1.24::v"
+    ],
+    "canonical:v": [
+      "formula_A1.5::v",
+      "formula_A1.20::v",
+      "formula_A1.23::v",
+      "formula_A1.24::v"
+    ],
+    "\\varphi": [
+      "formula_A1.6::\\varphi",
+      "formula_A1.7::\\varphi",
+      "formula_A1.9::\\varphi",
+      "formula_A1.11::\\varphi",
+      "formula_A1.17::\\varphi",
+      "formula_A1.18::\\varphi",
+      "formula_A1.19::\\varphi",
+      "formula_A1.20::\\varphi",
+      "formula_A1.21::\\varphi",
+      "formula_A1.22::\\varphi",
+      "formula_A1.23::\\varphi",
+      "formula_A1.24::\\varphi",
+      "formula_A1.25::\\varphi",
+      "formula_A1.26::\\varphi"
+    ],
+    "canonical:\\varphi": [
+      "formula_A1.6::\\varphi",
+      "formula_A1.7::\\varphi",
+      "formula_A1.9::\\varphi",
+      "formula_A1.11::\\varphi",
+      "formula_A1.17::\\varphi",
+      "formula_A1.18::\\varphi",
+      "formula_A1.19::\\varphi",
+      "formula_A1.20::\\varphi",
+      "formula_A1.21::\\varphi",
+      "formula_A1.22::\\varphi",
+      "formula_A1.23::\\varphi",
+      "formula_A1.24::\\varphi",
+      "formula_A1.25::\\varphi",
+      "formula_A1.26::\\varphi"
+    ],
+    "p": [
+      "formula_A1.6::p",
+      "formula_A1.7::p",
+      "formula_A1.22::p",
+      "formula_A1.26::p",
+      "formula_A1.28::p",
+      "formula_A1.29::p",
+      "formula_A1.31::p",
+      "formula_A1.33::p",
+      "formula_A1.34::p",
+      "formula_A1.35::p",
+      "formula_A1.36::p",
+      "formula_A1.37::p",
+      "formula_A1.38::p",
+      "formula_A1.39::p",
+      "formula_A1.40::p",
+      "formula_A1.42::p",
+      "formula_A1.47::p",
+      "formula_A1.48::p",
+      "formula_A1.49::p"
+    ],
+    "canonical:p": [
+      "formula_A1.6::p",
+      "formula_A1.7::p",
+      "formula_A1.22::p",
+      "formula_A1.26::p",
+      "formula_A1.28::p",
+      "formula_A1.29::p",
+      "formula_A1.31::p",
+      "formula_A1.33::p",
+      "formula_A1.34::p",
+      "formula_A1.35::p",
+      "formula_A1.36::p",
+      "formula_A1.37::p",
+      "formula_A1.38::p",
+      "formula_A1.39::p",
+      "formula_A1.40::p",
+      "formula_A1.42::p",
+      "formula_A1.47::p",
+      "formula_A1.48::p",
+      "formula_A1.49::p"
+    ],
+    "t": [
+      "formula_A1.6::t",
+      "formula_A1.7::t",
+      "formula_A1.9::t",
+      "formula_A1.10::t",
+      "formula_A1.11::t",
+      "formula_A1.12::t",
+      "formula_A1.17::t",
+      "formula_A1.18::t",
+      "formula_A1.19::t",
+      "formula_A1.20::t",
+      "formula_A1.21::t",
+      "formula_A1.22::t",
+      "formula_A1.26::t"
+    ],
+    "canonical:t": [
+      "formula_A1.6::t",
+      "formula_A1.7::t",
+      "formula_A1.9::t",
+      "formula_A1.10::t",
+      "formula_A1.11::t",
+      "formula_A1.12::t",
+      "formula_A1.17::t",
+      "formula_A1.18::t",
+      "formula_A1.19::t",
+      "formula_A1.20::t",
+      "formula_A1.21::t",
+      "formula_A1.22::t",
+      "formula_A1.26::t"
+    ],
+    "\\delta_{t}": [
+      "formula_A1.7::\\delta_{t}",
+      "formula_A1.9::\\delta_{t}",
+      "formula_A1.11::\\delta_{t}",
+      "formula_A1.13::\\delta_{t}",
+      "formula_A1.14::\\delta_{t}",
+      "formula_A1.15::\\delta_{t}",
+      "formula_A1.16::\\delta_{t}",
+      "formula_A1.17::\\delta_{t}",
+      "formula_A1.18::\\delta_{t}",
+      "formula_A1.19::\\delta_{t}",
+      "formula_A1.20::\\delta_{t}"
+    ],
+    "canonical:\\delta_t": [
+      "formula_A1.7::\\delta_{t}",
+      "formula_A1.9::\\delta_{t}",
+      "formula_A1.11::\\delta_{t}",
+      "formula_A1.13::\\delta_{t}",
+      "formula_A1.14::\\delta_{t}",
+      "formula_A1.15::\\delta_{t}",
+      "formula_A1.16::\\delta_{t}",
+      "formula_A1.17::\\delta_{t}",
+      "formula_A1.18::\\delta_{t}",
+      "formula_A1.19::\\delta_{t}",
+      "formula_A1.20::\\delta_{t}"
+    ],
+    "a": [
+      "formula_A1.8::a",
+      "formula_A1.29::a",
+      "formula_A1.30::a",
+      "formula_A1.32::a"
+    ],
+    "canonical:a": [
+      "formula_A1.8::a",
+      "formula_A1.29::a",
+      "formula_A1.30::a",
+      "formula_A1.32::a"
+    ],
+    "f": [
+      "formula_A1.8::f"
+    ],
+    "canonical:f": [
+      "formula_A1.8::f"
+    ],
+    "\\phi": [
+      "formula_A1.9::\\phi",
+      "formula_A1.11::\\phi",
+      "formula_A1.13::\\phi",
+      "formula_A1.14::\\phi",
+      "formula_A1.15::\\phi",
+      "formula_A1.16::\\phi"
+    ],
+    "canonical:\\phi": [
+      "formula_A1.9::\\phi",
+      "formula_A1.11::\\phi",
+      "formula_A1.13::\\phi",
+      "formula_A1.14::\\phi",
+      "formula_A1.15::\\phi",
+      "formula_A1.16::\\phi"
+    ],
+    "d": [
+      "formula_A1.11::d",
+      "formula_A1.13::d",
+      "formula_A1.14::d",
+      "formula_A1.15::d",
+      "formula_A1.16::d"
+    ],
+    "canonical:d": [
+      "formula_A1.11::d",
+      "formula_A1.13::d",
+      "formula_A1.14::d",
+      "formula_A1.15::d",
+      "formula_A1.16::d"
+    ],
+    "\\delta_{x}^{2}": [
+      "formula_A1.15::\\delta_{x}^{2}",
+      "formula_A1.16::\\delta_{x}^{2}"
+    ],
+    "canonical:\\delta_x^2": [
+      "formula_A1.15::\\delta_{x}^{2}",
+      "formula_A1.16::\\delta_{x}^{2}"
+    ],
+    "o": [
+      "formula_A1.19::o",
+      "formula_A1.20::o"
+    ],
+    "canonical:o": [
+      "formula_A1.19::o",
+      "formula_A1.20::o"
+    ],
+    "x^{2}": [
+      "formula_A1.20::x^{2}",
+      "formula_A1.23::x^{2}"
+    ],
+    "canonical:x^2": [
+      "formula_A1.20::x^{2}",
+      "formula_A1.23::x^{2}"
+    ],
+    "u": [
+      "formula_A1.28::u"
+    ],
+    "canonical:u": [
+      "formula_A1.28::u"
+    ],
+    "b": [
+      "formula_A1.29::b",
+      "formula_A1.30::b",
+      "formula_A1.32::b"
+    ],
+    "canonical:b": [
+      "formula_A1.29::b",
+      "formula_A1.30::b",
+      "formula_A1.32::b"
+    ],
+    "u_{b,a}": [
+      "formula_A1.29::u_{b,a}"
+    ],
+    "canonical:u_b,a": [
+      "formula_A1.29::u_{b,a}"
+    ],
+    "\\bar{t}_{a,b}": [
+      "formula_A1.30::\\bar{t}_{a,b}"
+    ],
+    "canonical:\\overline{t}_a,b": [
+      "formula_A1.30::\\bar{t}_{a,b}"
+    ],
+    "h": [
+      "formula_A1.31::h",
+      "formula_A1.33::h"
+    ],
+    "canonical:h": [
+      "formula_A1.31::h",
+      "formula_A1.33::h"
+    ],
+    "\\bar{t}": [
+      "formula_A1.32::\\bar{t}",
+      "formula_A1.36::\\bar{t}",
+      "formula_A1.41::\\bar{t}",
+      "formula_A1.44::\\bar{t}"
+    ],
+    "canonical:\\overline{t}": [
+      "formula_A1.32::\\bar{t}",
+      "formula_A1.36::\\bar{t}",
+      "formula_A1.41::\\bar{t}",
+      "formula_A1.44::\\bar{t}"
+    ],
+    "t_{a,b}": [
+      "formula_A1.32::t_{a,b}"
+    ],
+    "canonical:t_a,b": [
+      "formula_A1.32::t_{a,b}"
+    ],
+    "h_{1}": [
+      "formula_A1.34::h_{1}",
+      "formula_A1.38::h_{1}"
+    ],
+    "canonical:h_1": [
+      "formula_A1.34::h_{1}",
+      "formula_A1.38::h_{1}"
+    ],
+    "h_{0}": [
+      "formula_A1.35::h_{0}",
+      "formula_A1.37::h_{0}"
+    ],
+    "canonical:h_0": [
+      "formula_A1.35::h_{0}",
+      "formula_A1.37::h_{0}"
+    ],
+    "\\bar{t}_{L}": [
+      "formula_A1.39::\\bar{t}_{L}",
+      "formula_A1.45::\\bar{t}_{L}"
+    ],
+    "canonical:\\overline{t}_L": [
+      "formula_A1.39::\\bar{t}_{L}",
+      "formula_A1.45::\\bar{t}_{L}"
+    ],
+    "\\bar{t}_{F}": [
+      "formula_A1.40::\\bar{t}_{F}",
+      "formula_A1.46::\\bar{t}_{F}"
+    ],
+    "canonical:\\overline{t}_F": [
+      "formula_A1.40::\\bar{t}_{F}",
+      "formula_A1.46::\\bar{t}_{F}"
+    ],
+    "I_{f}": [
+      "formula_A1.47::I_{f}",
+      "formula_A1.48::I_{f}",
+      "formula_A1.49::I_{f}"
+    ],
+    "canonical:I_f": [
+      "formula_A1.47::I_{f}",
+      "formula_A1.48::I_{f}",
+      "formula_A1.49::I_{f}"
+    ],
+    "\\mu_{t}": [
+      "formula_A1.53::\\mu_{t}",
+      "formula_A1.54::\\mu_{t}"
+    ],
+    "canonical:\\mu_t": [
+      "formula_A1.53::\\mu_{t}",
+      "formula_A1.54::\\mu_{t}"
+    ]
+  },
+  "ambiguous": [
+    {
+      "dependent_id": "formula_A1.3",
+      "symbol": "\\delta_{t}",
+      "family_key": "\\delta",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.4",
+      "symbol": "\\delta_{t}",
+      "family_key": "\\delta",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.3",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.5",
+      "symbol": "\\delta_{t}",
+      "family_key": "\\delta",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.3",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.8",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.9",
+      "symbol": "\\delta_{x}^{2}",
+      "family_key": "\\delta",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.3",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.9",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.10",
+      "symbol": "\\delta_{t}",
+      "family_key": "\\delta",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.3",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.10",
+      "symbol": "\\varphi",
+      "family_key": "\\varphi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.10",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.12",
+      "symbol": "\\delta_{t}",
+      "family_key": "\\delta",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.3",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{x}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\delta_{t}",
+          "family_key": "\\delta",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.12",
+      "symbol": "\\varphi",
+      "family_key": "\\varphi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.12",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.14",
+      "symbol": "x_{t}",
+      "family_key": "x",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.15",
+      "symbol": "\\sigma^{2}(\\delta_{x})",
+      "family_key": "\\sigma_var",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\sigma^{2}",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.17",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.21",
+      "symbol": "x^{2}",
+      "family_key": "x",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.26",
+      "symbol": "p^{2}",
+      "family_key": "p",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.27",
+      "symbol": "p^{2}",
+      "family_key": "p",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.28",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.29",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.30",
+      "symbol": "\\varphi",
+      "family_key": "\\varphi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.30",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.30",
+      "symbol": "x_{t}",
+      "family_key": "x",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.31",
+      "symbol": "\\varphi",
+      "family_key": "\\varphi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.31",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.32",
+      "symbol": "a^b",
+      "family_key": "a",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.29",
+          "chapter_id": "appendix1",
+          "via_symbol": "a",
+          "family_key": "a",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.30",
+          "chapter_id": "appendix1",
+          "via_symbol": "a",
+          "family_key": "a",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "a",
+          "family_key": "a",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.32",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.33",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.36",
+      "symbol": "\\bar{t}_{F}",
+      "family_key": "t",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.10",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.12",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.32",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\bar{t}",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.39",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.39",
+      "symbol": "h_{0}",
+      "family_key": "h",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "h",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "h",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{1}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{0}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{0}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{1}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.40",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.40",
+      "symbol": "h_{1}",
+      "family_key": "h",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "h",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "h",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{1}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{0}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{0}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "h_{1}",
+          "family_key": "h",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.41",
+      "symbol": "\\bar{t}_{F}",
+      "family_key": "t",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.10",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.12",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.32",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\bar{t}",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.36",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\bar{t}",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.39",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\bar{t}_{L}",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.40",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\bar{t}_{F}",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "t",
+          "family_key": "t",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.47",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.47",
+      "symbol": "x_{t}",
+      "family_key": "x",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.48",
+      "symbol": "\\varphi",
+      "family_key": "\\varphi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\varphi",
+          "family_key": "\\varphi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.48",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.49",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.50",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.51",
+      "symbol": "x_{0}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.50",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.52",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.53",
+      "symbol": "\\sigma_{t}^{2}",
+      "family_key": "\\sigma_var",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "\\sigma^{2}",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.53",
+      "symbol": "d",
+      "family_key": "d",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.53",
+      "symbol": "x_{0}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.50",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.51",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.52",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A1.54",
+      "symbol": "x_{0}",
+      "family_key": "x",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A1.11",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.13",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.14",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.15",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.16",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.17",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.18",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.19",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.2",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.20",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.21",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.22",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.23",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.24",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.25",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.26",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.31",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.33",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.34",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.35",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.37",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.38",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.4",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.5",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.50",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.51",
+          "chapter_id": "appendix1",
+          "via_symbol": "x_{t}",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.52",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.6",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.7",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.8",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A1.9",
+          "chapter_id": "appendix1",
+          "via_symbol": "x",
+          "family_key": "x",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    }
+  ]
+}

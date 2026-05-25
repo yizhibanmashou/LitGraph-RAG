@@ -1,0 +1,4939 @@
+{
+  "chapter_id": "appendix4",
+  "version": 1,
+  "generated_at": "2026-05-25T07:34:53Z",
+  "formulas": [
+    {
+      "id": "formula_A4.1",
+      "latex": "X^{2}=-2k\\ln(\\overline{p}_{G})",
+      "label": "Formula A4.1",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "Fisher's $ \\chi^{2} $ Method",
+      "position": 0,
+      "depth": 0,
+      "context_text": "Rice (1990b; also see Whitlock 2005) noted that a problem with Fisher's method is that smaller p values are differentially weighted compared to complementary larger p values (e.g., p versus 1 - p). Equation A4.1a can be rearranged to yield where $ \\overline{p}_G $ is the geometric mean of the individual $ p $ values, which differentially weights smaller values. Under Fisher’s method, an observed $ p $ value of (say) 0.001 receives more weight than a complementary value of 0.999, which is as extreme (with $ -\\ln $ weights of 6.9 vs. 0.001). However, under the Z-score transformation—which is obtained by solving $ \\Pr(U > Z) = p $, where $ U \\sim \\mathrm{N}(0,1) $—the two complementary $ p $ values are of equal magnitude (Z scores of $ -3.09 $ and $ 3.09 $). This motivates the Z-score method, which we now consider.",
+      "symbols_used": [
+        "X^{2}",
+        "\\overline{p}_{G}",
+        "k"
+      ],
+      "symbols_defined": [
+        "X^{2}"
+      ]
+    },
+    {
+      "id": "formula_A4.2",
+      "latex": "Z_{s}=\\frac{\\sum_{i=1}^{k}Z_{i}}{\\sqrt{k}}",
+      "label": "Formula A4.2",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "Stouffer's Z Score",
+      "position": 1,
+      "depth": 0,
+      "context_text": "An alternative to Fisher’s approach for combining p values was offered by Stouffer et al. (1949), who transformed the individual p values into Z scores. The sum of k independent unit normals is itself normal, with a mean of zero and a variance of k. These results lead to Stouffer’s Z score method: assign a score of $ Z_i $ for test i by solving $ \\Pr(U > Z_i) = p_i $. Let $ Z_s $ denote the sum over the transformed p values of k tests, scaled by $ k^{-1/2} $ to give it a variance of one, with Because $ Z_s \\sim N(0,1) $, the overall p value is obtained as As noted by Whitlock (2005), this test was first proposed in a footnote in Stouffer et al.'s sociological study of army life, making it one of the more obscure origins of a statistical method.",
+      "symbols_used": [
+        "Z_{i}",
+        "Z_{s}",
+        "k"
+      ],
+      "symbols_defined": [
+        "Z_{s}"
+      ]
+    },
+    {
+      "id": "formula_A4.3",
+      "latex": "p=\\Pr(U>Z_{s})",
+      "label": "Formula A4.3",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "Stouffer's Z Score",
+      "position": 2,
+      "depth": 1,
+      "context_text": "An alternative to Fisher’s approach for combining p values was offered by Stouffer et al. (1949), who transformed the individual p values into Z scores. The sum of k independent unit normals is itself normal, with a mean of zero and a variance of k. These results lead to Stouffer’s Z score method: assign a score of $ Z_i $ for test i by solving $ \\Pr(U > Z_i) = p_i $. Let $ Z_s $ denote the sum over the transformed p values of k tests, scaled by $ k^{-1/2} $ to give it a variance of one, with Because $ Z_s \\sim N(0,1) $, the overall p value is obtained as As noted by Whitlock (2005), this test was first proposed in a footnote in Stouffer et al.'s sociological study of army life, making it one of the more obscure origins of a statistical method.",
+      "symbols_used": [
+        "U",
+        "Z_{s}",
+        "p"
+      ],
+      "symbols_defined": [
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.4",
+      "latex": "Z_{w}=\\frac{\\sum_{i=1}^{k}w_{i}Z_{i}}{\\sqrt{\\sum_{i=1}^{k}w_{i}^{2}}}",
+      "label": "Formula A4.4",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "Stouffer's Z Score",
+      "position": 3,
+      "depth": 0,
+      "context_text": "Besides providing symmetric values for large and small $p$ values (i.e., $p$ and $1-p$), a second advantage of the Z-score approach is that one can individually weight $p$ values from different tests (Mosteller and Bush 1954; Liptak 1958), as the weighted sum of unit normals is itself a unit normal (while the weighted sum of $\\chi^2$ variables—the analog for Fisher's test—is considerably more complex). The resulting weighted version becomes where $ Z_w \\sim N(0,1) $. As expected, $ Z_w $ (Equation A4.2c) reduces to $ Z_s $ (Equation A4.2a) when all the weights are equal. One can either weight by the degrees of freedom or by the reciprocal of the standard error of the estimate. Whitlock (2005) showed that the weighted Z-score method is superior to either $ X^2 $ or $ Z_s $ when sample size varies over the data. $ Z_w $ has higher power and also a higher correlation between its predicted p value and the actual p value obtained if one was able to merge all the samples. As noted by Whitlock, many studies in evolutionary biology examine whether a hypothesis consistently holds over a collection of species. In such cases, the number of species is the number of replicates, and weighting p values for individual species is inappropriate. As detailed at the end of this Appendix, combining p values is one of the least powerful meta-analysis approaches, as it leaves much of the information from a collection of studies underutilized. A formal meta-analysis requires that studies report standard errors for their estimates. Unfortunately, many studies do not, and simply report p values instead, and in this setting the proceeding methods are the only type of meta-analysis available.",
+      "symbols_used": [
+        "Z_{i}",
+        "Z_{w}",
+        "k",
+        "w_{i}",
+        "w_{i}^{2}"
+      ],
+      "symbols_defined": [
+        "Z_{w}"
+      ]
+    },
+    {
+      "id": "formula_A4.5",
+      "latex": "\\pi=1-\\left(1-\\alpha\\right)^{n}",
+      "label": "Formula A4.5",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Standard Bonferroni Corrections",
+      "position": 4,
+      "depth": 0,
+      "context_text": "The probability of not making any Type-I errors (false positives) over n independent tests, each at level $ \\alpha $, is $ (1 - \\alpha)^n $. Hence, the probability, $ \\pi $, of having at least one false positive over the entire collection is simply one minus this or",
+      "symbols_used": [
+        "\\alpha",
+        "\\pi",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\pi"
+      ]
+    },
+    {
+      "id": "formula_A4.6",
+      "latex": "\\alpha=1-(1-\\pi)^{1/n}",
+      "label": "Formula A4.6",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Standard Bonferroni Corrections",
+      "position": 5,
+      "depth": 0,
+      "context_text": "If we solve for the $ \\alpha $ value required for each test,",
+      "symbols_used": [
+        "\\alpha",
+        "\\pi",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\alpha"
+      ]
+    },
+    {
+      "id": "formula_A4.7",
+      "latex": "\\alpha=\\pi/n",
+      "label": "Formula A4.7",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Standard Bonferroni Corrections",
+      "position": 6,
+      "depth": 0,
+      "context_text": "This is often called the Dunn-Šidák method. If we note that $ (1 - \\alpha)^n \\simeq 1 - n\\alpha $, we obtain the Bonferroni method by taking",
+      "symbols_used": [
+        "\\alpha",
+        "\\pi",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\alpha"
+      ]
+    },
+    {
+      "id": "formula_A4.8",
+      "latex": "k^{*}=\\max_{i}\\left(p(n-i+j)>\\pi\\frac{j}{i}\\right)\\quad for all j=1,\\cdots,i",
+      "label": "Formula A4.8",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Hommel's Method",
+      "position": 7,
+      "depth": 0,
+      "context_text": "To apply Hommel's method, we reject all hypotheses whose $p$ values are less than or equal to $\\pi/k^{*}$, where",
+      "symbols_used": [
+        "\\pi",
+        "a",
+        "f",
+        "i",
+        "j",
+        "k^{*}",
+        "l",
+        "n",
+        "o",
+        "p",
+        "r"
+      ],
+      "symbols_defined": [
+        "k^{*}"
+      ]
+    },
+    {
+      "id": "formula_A4.9",
+      "latex": "n^{-1}\\sum_{i=1}^{n}\\lambda_{i}=n^{-1}n=1",
+      "label": "Formula A4.9",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Cheverud's Method and Other Approach for Dealing with Dependence",
+      "position": 8,
+      "depth": 0,
+      "context_text": "To proceed, we need to introduce a few facts about the eigenstructure of a correlation matrix, C, whose eigenvalues are denoted (from largest to smallest) by $ \\lambda_1, \\cdots, \\lambda_n $. First, because C is a positive-semidefinite matrix, all $ \\lambda_i \\geq 0 $ (Appendix 5). Second, C is an $ n \\times n $ matrix with ones on its diagonal, which makes its trace (the sum of its diagonal elements; Appendix 5) equal to a value of n. The importance of this result is that the trace of a matrix equals the sum of its eigenvalues (Equation A5.8), which demonstrates that the average eigenvalue of C is",
+      "symbols_used": [
+        "\\lambda_{i}",
+        "n",
+        "n^{-1}"
+      ],
+      "symbols_defined": [
+        "\\lambda_{i}",
+        "n^{-1}"
+      ]
+    },
+    {
+      "id": "formula_A4.10",
+      "latex": "n_{e,Cheverud}=n\\left(1-\\frac{(n-1)\\sigma^{2}(\\lambda)}{n^{2}}\\right),\\qquad\\mathrm{where}\\qquad\\sigma^{2}(\\lambda)=\\frac{1}{n-1}\\sum_{i=1}^{n}(\\lambda_{i}-1)^{2}",
+      "label": "Formula A4.10",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Cheverud's Method and Other Approach for Dealing with Dependence",
+      "position": 9,
+      "depth": 1,
+      "context_text": "Motivated by the above eigenstructure observations, Cheverud's method (2001) computes the effective number of independent tests as",
+      "symbols_used": [
+        "C",
+        "\\lambda_{i}",
+        "\\mathrm{e}",
+        "\\mathrm{h}",
+        "\\mathrm{r}",
+        "\\mathrm{w}",
+        "\\sigma^{2}(\\lambda)",
+        "d",
+        "e",
+        "h",
+        "n^{2}",
+        "n_{e,Cheverud}",
+        "r",
+        "u",
+        "v",
+        "w"
+      ],
+      "symbols_defined": [
+        "C",
+        "d",
+        "e",
+        "h",
+        "n_{e,Cheverud}",
+        "r",
+        "u",
+        "v"
+      ]
+    },
+    {
+      "id": "formula_A4.11",
+      "latex": "n_{e,Li-Ji}=\\sum_{i=1}^{N}I(\\lambda_{i}\\geq1)+\\sum_{i=1}^{N}(\\lambda_{i}-\\mathrm{floor}[\\lambda_{i}])",
+      "label": "Formula A4.11",
+      "chapter_id": "appendix4",
+      "section": "BONFERRONI CORRECTIONS AND THEIR EXTENSIONS",
+      "subsection": "Cheverud's Method and Other Approach for Dealing with Dependence",
+      "position": 10,
+      "depth": 1,
+      "context_text": "Li and Ji (2005) noted that Cheverud's method often returns an overly large value of $ n_e $ (and therefore, less power), especially when used with a large number of moderately correlated tests. While Cheverud's approach considered the two extreme cases (n vs. 1 independent test), Li and Ji noted that a set of c identical tests will result in an eigenvalue of c > 1, while tests that are only partially correlated with others will generate eigenvalues values < 1. Hence, they partitioned an eigenvalue into two parts, its integer value and the remainder, where the integer part implies identical tests (and hence is counted as contributing one independent test), while the remainder represents partial correlations. Hence, if an eigensequence is 4.1, 3.5, 1, 0.5, 0.1,..., then the first three eigenvalues correspond to independent tests, and with the total of their non-integer residuals (0.1 + 0.5 + 0.5 + 0.1 = 1.2) adding one additional test, giving (for this part of the sequence) an effective number of four independent tests. Formally, the Li-Ji method is coded as where the indicator function $ I(x \\geq 1) $ returns a value of one when $ x \\geq 1 $, and otherwise returns a value of zero. Hence, the first sum in Equation A4.5b is the number of eigenvalues of C that are $ \\geq 1 $. The floor[x] function in the second term corresponds to the largest integer $ \\leq x $, so the second sum is all of the remainder terms (the effects of partial correlations among tests). Additional corrections for dealing with correlated tests have been proposed (e.g., Owen 2005; Efron 2007; Leek and Storey 2007, 2008; Li et al. 2012).",
+      "symbols_used": [
+        "I",
+        "J",
+        "L",
+        "N",
+        "\\lambda_{i}",
+        "\\mathrm{f}",
+        "\\mathrm{l}",
+        "\\mathrm{o}",
+        "\\mathrm{r}",
+        "e",
+        "f",
+        "l",
+        "n_{e,Li-Ji}",
+        "o",
+        "r"
+      ],
+      "symbols_defined": [
+        "J",
+        "L",
+        "e",
+        "i",
+        "n_{e,Li-Ji}"
+      ]
+    },
+    {
+      "id": "formula_A4.12",
+      "latex": "\\Pr(j\\mathsf{f a l s e p o s i t i v e s})=\\frac{n!}{(n-j)!j!}(1-\\alpha)^{n-j}\\alpha^{j}",
+      "label": "Formula A4.12",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "How Many False Positives?",
+      "position": 11,
+      "depth": 2,
+      "context_text": "Suppose we perform n independent tests, each with a Type-I error rate of $ \\alpha $. If all hypotheses are truly null, the number, j, of false positives follows a binomial distribution, with a “success” probability (a false positive) of $ \\alpha $, and n trials (the number of tests), yielding",
+      "symbols_used": [
+        "\\alpha",
+        "\\alpha^{j}",
+        "\\mathsf{a}",
+        "\\mathsf{e}",
+        "\\mathsf{f}",
+        "\\mathsf{i}",
+        "\\mathsf{l}",
+        "\\mathsf{o}",
+        "\\mathsf{p}",
+        "\\mathsf{s}",
+        "\\mathsf{t}",
+        "\\mathsf{v}",
+        "a",
+        "e",
+        "f",
+        "i",
+        "j",
+        "l",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "v"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.13",
+      "latex": "\\Pr(j\\mathsf{f a l s e p o s i t i v e s})\\simeq\\frac{(n\\alpha)^{j}e^{-n\\alpha}}{j!}",
+      "label": "Formula A4.13",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "How Many False Positives?",
+      "position": 12,
+      "depth": 2,
+      "context_text": "For n large and $ \\alpha $ small, this is closely approximated by the Poisson distribution, with Poisson parameter $ n\\alpha $ (the expected number of false positives), yielding",
+      "symbols_used": [
+        "\\alpha",
+        "\\mathsf{a}",
+        "\\mathsf{e}",
+        "\\mathsf{f}",
+        "\\mathsf{i}",
+        "\\mathsf{l}",
+        "\\mathsf{o}",
+        "\\mathsf{p}",
+        "\\mathsf{s}",
+        "\\mathsf{t}",
+        "\\mathsf{v}",
+        "a",
+        "e",
+        "e^{-n\\alpha}",
+        "f",
+        "i",
+        "j",
+        "l",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "v"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.14",
+      "latex": "\\phi_{u}(p)=1\\quad for\\quad0\\leq p\\leq1",
+      "label": "Formula A4.14",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 13,
+      "depth": 0,
+      "context_text": "One simple approach for estimating $ n_{0} $ is to use the average height for the middle range of the p-value histogram. Presumably, these p values are almost entirely drawn from null hypotheses, though this may not be the case for values near zero (and potentially one). Recall that the probability density function for a uniform over $ (0,1) $ has a very simple form",
+      "symbols_used": [
+        "\\phi_{u}",
+        "f",
+        "o",
+        "p",
+        "r"
+      ],
+      "symbols_defined": [
+        "\\phi_{u}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.15",
+      "latex": "\\begin{align*}n_0\\int_a^b\\phi_u(p)dp=n_0\\int_a^b1\\cdot dp=n_0(b-a)\\end{align*}",
+      "label": "Formula A4.15",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 14,
+      "depth": 0,
+      "context_text": "If there are $ n_0 $ truly null tests, then the expected number of $ p $ values from these tests that fall within an interval $ 0 \\leq a < b \\leq 1 $ is simply",
+      "symbols_used": [
+        "\\phi_u",
+        "a",
+        "a^b",
+        "a^b1",
+        "b",
+        "d",
+        "n_0",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\phi_u",
+        "a^b",
+        "d",
+        "n_0",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.16",
+      "latex": "\\widehat{n}_{0}(a,b)=\\frac{Number of p(i)values in(a,b)}{b-a}",
+      "label": "Formula A4.16",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 15,
+      "depth": 2,
+      "context_text": "Hence",
+      "symbols_used": [
+        "N",
+        "\\widehat{n}_{0}",
+        "a",
+        "b",
+        "e",
+        "f",
+        "i",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "\\widehat{n}_{0}",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "id": "formula_A4.17",
+      "latex": "\\begin{aligned}\\widehat{\\pi}_{0}(a,b)&=\\frac{Number of p(i)values in(a,b)}{n(b-a)}\\\\&=\\frac{Fraction of p(i)values in(a,b)}{b-a}\\end{aligned}",
+      "label": "Formula A4.17",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 16,
+      "depth": 2,
+      "context_text": "Likewise, an estimate for the fraction $ \\pi_{0}=n_{0}/n $ of true nulls is",
+      "symbols_used": [
+        "F",
+        "N",
+        "\\widehat{\\pi}_{0}",
+        "a",
+        "b",
+        "c",
+        "e",
+        "f",
+        "i",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "\\widehat{\\pi}_{0}",
+        "a",
+        "b"
+      ]
+    },
+    {
+      "id": "formula_A4.18",
+      "latex": "\\widehat{\\pi}_{0}(\\lambda)=\\frac{Number of p(i)values>\\lambda}{n(1-\\lambda)}",
+      "label": "Formula A4.18",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 17,
+      "depth": 2,
+      "context_text": "Storey and Tibshirani (2003) considered the number of $p$ values exceeding some tunable parameter value, $\\lambda$ (taking $a = \\lambda$ and $b = 1$ in Equation A4.8b), on the logic that for larger values of $\\lambda$, most of these draws are from the uniform corresponding to draws from the null. Let $\\widehat{\\pi}_0(\\lambda)$ denote the estimated fraction of truly null hypotheses based on using a tuning value of $ \\lambda $, then and",
+      "symbols_used": [
+        "N",
+        "\\lambda",
+        "\\widehat{\\pi}_{0}",
+        "a",
+        "b",
+        "e",
+        "f",
+        "i",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "\\lambda",
+        "\\widehat{\\pi}_{0}"
+      ]
+    },
+    {
+      "id": "formula_A4.19",
+      "latex": "\\widehat{n}_{0}(\\lambda)=n\\cdot\\widehat{\\pi}_{0}(\\lambda)=\\frac{Number of p(i)values>\\lambda}{1-\\lambda}",
+      "label": "Formula A4.19",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Subsampling From a Uniform Distribution",
+      "position": 18,
+      "depth": 2,
+      "context_text": "Storey and Tibshirani (2003) considered the number of $p$ values exceeding some tunable parameter value, $\\lambda$ (taking $a = \\lambda$ and $b = 1$ in Equation A4.8b), on the logic that for larger values of $\\lambda$, most of these draws are from the uniform corresponding to draws from the null. Let $\\widehat{\\pi}_0(\\lambda)$ denote the estimated fraction of truly null hypotheses based on using a tuning value of $ \\lambda $, then and",
+      "symbols_used": [
+        "N",
+        "\\lambda",
+        "\\widehat{\\pi}_{0}",
+        "\\widehat{n}_{0}",
+        "a",
+        "b",
+        "e",
+        "f",
+        "i",
+        "l",
+        "m",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "\\lambda",
+        "\\widehat{n}_{0}"
+      ]
+    },
+    {
+      "id": "formula_A4.20",
+      "latex": "\\phi_{A}(p)=\\frac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)}p^{a-1}(1-p)^{b-1}",
+      "label": "Formula A4.20",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Mixture Models",
+      "position": 19,
+      "depth": 0,
+      "context_text": "Allison et al. (2002) suggested that $ \\pi_0 $ can be estimated by treating the distribution of $ p $ values as a mixture, a fraction $ \\pi_0 $ of which comes from a uniform (and hence a uniform distribution function, $ \\phi_u $), while the remainder $ (1 - \\pi_0) $ are from the distribution, $ \\phi_A(p) $, of $ p $ values when the alternative hypothesis is true ([[SEE_FIGURE:A4.4]]). While the general form of $ \\phi_A(p) $ is unknown, a very flexible distribution to model it is by using the beta distribution (Appendix 2; Figure A2.3)",
+      "symbols_used": [
+        "\\Gamma",
+        "\\phi_{A}",
+        "a",
+        "b",
+        "p",
+        "p^{a-1}"
+      ],
+      "symbols_defined": [
+        "\\phi_{A}",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.21",
+      "latex": "\\ell(p)=(1-\\pi_{0})\\phi_{A}(p)+\\pi_{0}\\phi_{u}(p)=(1-\\pi_{0})\\frac{\\Gamma(a+b)}{\\Gamma(a)\\Gamma(b)}p^{a-1}(1-p)^{b-1}+\\pi_{0}",
+      "label": "Formula A4.21",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Mixture Models",
+      "position": 20,
+      "depth": 0,
+      "context_text": "Allison et al. (2002) suggested fitting the actual shape by using the data to obtain ML estimates of a and b, as well as our desired parameter, the fraction of true nulls, $ \\pi_{0} $. The resulting likelihood function for a single p value becomes with the resulting total likelihood over the n sampled p values (from independent tests) calculated by",
+      "symbols_used": [
+        "\\Gamma",
+        "\\phi_{A}",
+        "\\phi_{u}",
+        "\\pi_{0}",
+        "a",
+        "b",
+        "p",
+        "p^{a-1}"
+      ],
+      "symbols_defined": [
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.22",
+      "latex": "\\ell(\\mathbf{p})=\\prod_{i=1}^{n}\\ell(p_{i})",
+      "label": "Formula A4.22",
+      "chapter_id": "appendix4",
+      "section": "DETECTING AN EXCESS NUMBER OF SIGNIFICANT TESTS",
+      "subsection": "Estimating $ n_{0} $: Mixture Models",
+      "position": 21,
+      "depth": 0,
+      "context_text": "Allison et al. (2002) suggested fitting the actual shape by using the data to obtain ML estimates of a and b, as well as our desired parameter, the fraction of true nulls, $ \\pi_{0} $. The resulting likelihood function for a single p value becomes with the resulting total likelihood over the n sampled p values (from independent tests) calculated by",
+      "symbols_used": [
+        "\\mathbf{p}",
+        "n",
+        "p_{i}"
+      ],
+      "symbols_defined": [
+        "\\mathbf{p}"
+      ]
+    },
+    {
+      "id": "formula_A4.23",
+      "latex": "\\mathrm{FDR}=\\mathrm{Pr}(i is truly null\\mid i is deemed significant)=\\delta",
+      "label": "Formula A4.23",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "FDR: THE FALSE-DISCOVERY RATE",
+      "position": 22,
+      "depth": 2,
+      "context_text": "Another way to see the distinction between the false-positive rate and the false-discovery rate is to consider them as probability statements for a single test involving hypothesis i. For the FDR, we condition on the test as being significant, whereas for the false-positive rate, we condition on the hypothesis being null",
+      "symbols_used": [
+        "D",
+        "F",
+        "R",
+        "\\delta",
+        "\\mathrm{D}",
+        "\\mathrm{F}",
+        "\\mathrm{P}",
+        "\\mathrm{R}",
+        "\\mathrm{r}",
+        "a",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "i",
+        "l",
+        "m",
+        "n",
+        "r",
+        "s",
+        "t",
+        "u",
+        "y"
+      ],
+      "symbols_defined": [
+        "D",
+        "F",
+        "R",
+        "\\mathrm{D}",
+        "\\mathrm{F}",
+        "\\mathrm{R}"
+      ]
+    },
+    {
+      "id": "formula_A4.24",
+      "latex": "\\mathrm{FPR}=\\mathrm{Pr}(i is deemed significant\\mid i is truly null)=\\alpha",
+      "label": "Formula A4.24",
+      "chapter_id": "appendix4",
+      "section": "Appendix: Introduction",
+      "subsection": "FDR: THE FALSE-DISCOVERY RATE",
+      "position": 23,
+      "depth": 2,
+      "context_text": "Another way to see the distinction between the false-positive rate and the false-discovery rate is to consider them as probability statements for a single test involving hypothesis i. For the FDR, we condition on the test as being significant, whereas for the false-positive rate, we condition on the hypothesis being null",
+      "symbols_used": [
+        "F",
+        "R",
+        "\\alpha",
+        "\\mathrm{F}",
+        "\\mathrm{P}",
+        "\\mathrm{R}",
+        "\\mathrm{r}",
+        "a",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g",
+        "i",
+        "l",
+        "m",
+        "n",
+        "r",
+        "s",
+        "t",
+        "u",
+        "y"
+      ],
+      "symbols_defined": [
+        "F",
+        "R",
+        "\\mathrm{F}",
+        "\\mathrm{P}",
+        "\\mathrm{R}"
+      ]
+    },
+    {
+      "id": "formula_A4.25",
+      "latex": "PER=Pr(F=1\\mid S=n=1)",
+      "label": "Formula A4.25",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 24,
+      "depth": 3,
+      "context_text": "Fernando et al. (2004) and Manly et al. (2004) both noted that FDR measures are closely related to Morton’s (1955) posterior error rate (PER), originally introduced in the context of linkage analysis in humans (this is also referred to as the false positive report probability [FPRP]; Wacholder et al. 2004). Morton’s PER is simply the probability that a single significant test is a false positive,",
+      "symbols_used": [
+        "F",
+        "R",
+        "S",
+        "n",
+        "r"
+      ],
+      "symbols_defined": [
+        "R"
+      ]
+    },
+    {
+      "id": "formula_A4.26",
+      "latex": "PER=Pr(F=1\\mid S=n=1)=\\frac{Pr(false positive\\mid null true)\\cdot Pr(null)}{Pr(S=n=1)}",
+      "label": "Formula A4.26",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 25,
+      "depth": 3,
+      "context_text": "Framing tests in terms of the PER highlights the screening paradox: “Type-I error control may not lead to a suitably low PER” (Manly et al. 2004). For example, we might choose $ \\alpha = 0.05 $, but the PER may be far higher, which means that a test that is declared to be significant may have a much larger probability than 5% of being a false positive. The key is that because we are conditioning on the test being significant (as opposed to conditioning on the hypothesis being a null, as occurs with $ \\alpha $), S may include either false positives or true positives. The relative fractions of each (and hence the probability of a false positive) is a function of the single test parameters, $ \\alpha $ and $ \\beta $, and the fraction, $ \\pi_0 $, of hypotheses that are truly null. To see this, we apply Bayes’ theorem (Equation A2.2a), which yields",
+      "symbols_used": [
+        "F",
+        "R",
+        "S",
+        "a",
+        "e",
+        "f",
+        "i",
+        "l",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "R"
+      ]
+    },
+    {
+      "id": "formula_A4.27",
+      "latex": "\\Pr(false positive\\mid null true)\\cdot\\Pr(null)=\\alpha\\cdot\\pi_{0}",
+      "label": "Formula A4.27",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 26,
+      "depth": 2,
+      "context_text": "Consider the numerator of Equation A4.13 first. Let $ \\pi_0 = n_0/n $ be the fraction of all hypotheses that are truly null. The probability that a null is declared significant is simply the Type-I error, $ \\alpha $, hence",
+      "symbols_used": [
+        "\\alpha",
+        "\\pi_{0}",
+        "a",
+        "e",
+        "f",
+        "i",
+        "l",
+        "n",
+        "o",
+        "p",
+        "r",
+        "s",
+        "t",
+        "u",
+        "v"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.28",
+      "latex": "\\Pr(S=n=1)=\\alpha\\pi_{0}+(1-\\beta)(1-\\pi_{0})",
+      "label": "Formula A4.28",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 27,
+      "depth": 0,
+      "context_text": "Turning to the denominator of Equation A4.13, what is the probability that a single (randomly chosen) test will be declared significant, $ \\Pr(S = n = 1) $? This event can occur because we choose to test a hypothesis that is truly null $ (\\pi_0) $ and have a Type-I error $ (\\alpha) $, or because we choose to test a hypothesis that is truly false $ (\\pi - \\pi_0) $ and avoid a Type-II error. For the latter, the power is simply $ T/n_1 $, the fraction of all tests under the alternative that is declared to be significant. If we write the power as $ 1 - \\beta $ ($ \\beta $ is the Type-II error), the resulting probability that a single (randomly drawn) test is significant is",
+      "symbols_used": [
+        "S",
+        "\\alpha",
+        "\\beta",
+        "\\pi_{0}",
+        "n"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.29",
+      "latex": "PER=\\frac{\\alpha\\cdot\\pi_{0}}{\\alpha\\cdot\\pi_{0}+\\left(1-\\beta\\right)\\cdot\\left(1-\\pi_{0}\\right)}=\\left(1+\\frac{\\left(1-\\beta\\right)\\cdot\\left(1-\\pi_{0}\\right)}{\\alpha\\cdot\\pi_{0}}\\right)^{-1}",
+      "label": "Formula A4.29",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 28,
+      "depth": 0,
+      "context_text": "Substituting Equations A4.14a and A4.14b into Equation A4.13 yields",
+      "symbols_used": [
+        "R",
+        "\\alpha",
+        "\\beta",
+        "\\pi_{0}"
+      ],
+      "symbols_defined": [
+        "R"
+      ]
+    },
+    {
+      "id": "formula_A4.30",
+      "latex": "\\begin{align*}\\alpha=\\left({\\gamma\\over1-\\gamma}\\right)\\left({1-\\pi_0\\over\\pi_0}\\right)(1-\\beta)\\end{align*}",
+      "label": "Formula A4.30",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 29,
+      "depth": 0,
+      "context_text": "Sham and Purcell (2014) noted that one can rearrange Equation A4.15a to find the $ \\alpha $ value to obtain a desired PER value of $ \\gamma $, with",
+      "symbols_used": [
+        "\\alpha",
+        "\\beta",
+        "\\gamma",
+        "\\pi_0"
+      ],
+      "symbols_defined": [
+        "\\alpha"
+      ]
+    },
+    {
+      "id": "formula_A4.31",
+      "latex": "\\begin{align*}\\alpha=\\left({\\gamma\\over1-\\gamma}\\right)\\left({1\\over n}\\right)\\simeq{\\gamma\\over n}\\end{align*}",
+      "label": "Formula A4.31",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Morton's Posterior Error Rate (PER) and the FDR",
+      "position": 30,
+      "depth": 0,
+      "context_text": "In particular, if there is complete power ($ \\beta = 0 $) and only one of the $ n $ tested hypotheses departs from the null ($ \\pi_0 = n/[n + 1] $), Equation A4.15c reduces to which recovers the Bonferroni correction (Equation A4.4).",
+      "symbols_used": [
+        "\\alpha",
+        "\\gamma",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\alpha"
+      ]
+    },
+    {
+      "id": "formula_A4.32",
+      "latex": "\\frac{np(k)}{k}\\leq\\delta_{k}",
+      "label": "Formula A4.32",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "The Benjamini-Hochberg FDR Estimator",
+      "position": 31,
+      "depth": 0,
+      "context_text": "The original estimator for the FDR was introduced by Benjamini and Hochberg (1995). Suppose we declare a test to be significant if its $p$ value is at or below some threshold value, $\\tau = p(k)$, in which case $k$ of the hypotheses will be declared significant (as $p[k]$ is the $k$th smallest $p$ value), and $S = k$. Likewise, if all $n$ of the hypotheses are null, then the expected value of $F$ (the number of false positives) is just $n p(k)$. The resulting fraction of all rejected hypotheses that are false discoveries becomes $F/S = n p(k)/k$. Hence, the false-discovery rate, $\\delta_k$, for hypothesis $k$ is bounded by",
+      "symbols_used": [
+        "\\delta_{k}",
+        "k",
+        "n",
+        "p"
+      ],
+      "symbols_defined": [
+        "n"
+      ]
+    },
+    {
+      "id": "formula_A4.33",
+      "latex": "p(k)\\leq\\delta\\frac{k}{n}",
+      "label": "Formula A4.33",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "The Benjamini-Hochberg FDR Estimator",
+      "position": 32,
+      "depth": 0,
+      "context_text": "In particular, if we wish to obtain an FDR of $ \\delta $ for the entire experiment, then we reject (i.e., declare as significant) all hypotheses that satisfy",
+      "symbols_used": [
+        "\\delta",
+        "k",
+        "n",
+        "p"
+      ],
+      "symbols_defined": [
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.34",
+      "latex": "\\widehat{\\delta}_{k}=\\frac{\\widehat{n}_{0}p(k)}{k}",
+      "label": "Formula A4.34",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "The Benjamini-Hochberg FDR Estimator",
+      "position": 33,
+      "depth": 0,
+      "context_text": "This simple (heuristic) derivation shows why the original Benjamini-Hochberg estimate of the FDR is conservative, as in those settings in which one applies the FDR criteria, the expectation is that some fraction of the hypotheses are not null, and so $ n_0 < n $. The correct estimator of the expected number of rejected null hypotheses is $ n_0 p(k) $, which leads to a more generalized estimate of the FDR, where $ \\widehat{n}_0 $ (e.g., Equations A4.8–A4.10) replaces n. In this case, Equation A4.16a becomes",
+      "symbols_used": [
+        "\\widehat{\\delta}_{k}",
+        "\\widehat{n}_{0}",
+        "k",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\widehat{\\delta}_{k}"
+      ]
+    },
+    {
+      "id": "formula_A4.35",
+      "latex": "E[F D R(\\tau)]=E\\left[\\frac{F(\\tau)}{S(\\tau)}\\right]\\simeq\\frac{E[F(\\tau)]}{E[S(\\tau)]}",
+      "label": "Formula A4.35",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 34,
+      "depth": 0,
+      "context_text": "Following Storey and Tibshirani (2003), we consider the expected FDR for an experiment where we declare a hypothesis to be significant if its $p$ value is less than or equal to some threshold value, $\\tau$. Obviously, as $\\tau$ becomes smaller, the FDR is smaller (as significant nulls become increasingly less likely). However, if $\\tau$ is set too small, we lose power (e.g., suppose we set $\\tau = \\pi/n$; namely, the Bonferroni correction). What we would like to do is to find the expected value of the FDR as a function of the chosen threshold parameter, $\\tau$, to allow us to optimally tune this parameter to obtain the desired FDR. If we have a large number of tested hypotheses,",
+      "symbols_used": [
+        "D",
+        "F",
+        "R",
+        "S",
+        "\\tau"
+      ],
+      "symbols_defined": [
+        "D",
+        "F",
+        "R",
+        "\\tau"
+      ]
+    },
+    {
+      "id": "formula_A4.36",
+      "latex": "\\Pr(p\\leq\\tau\\mid null hypothesis)=\\int_{0}^{\\tau}\\phi_{u}(p)dp=\\tau",
+      "label": "Formula A4.36",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 35,
+      "depth": 2,
+      "context_text": "To obtain an estimate for $ E[F(\\tau)] $, we again use the fact that the distribution of p values under the null follows a uniform $ (0,1) $ distribution. Hence, where $ \\phi_{u}(p) $ is the uniform probability density function for p values under the null (Equation A4.8a). Hence, if $ n_{0} $ of the n tests are truly null, then",
+      "symbols_used": [
+        "\\phi_{u}",
+        "\\tau",
+        "d",
+        "e",
+        "h",
+        "i",
+        "l",
+        "n",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "y"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.37",
+      "latex": "E[F(\\tau)]=n_{0}\\cdot\\Pr(p\\leq\\tau\\mid null hypothesis)\\simeq n_{0}\\cdot\\tau",
+      "label": "Formula A4.37",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 36,
+      "depth": 2,
+      "context_text": "To obtain an estimate for $ E[F(\\tau)] $, we again use the fact that the distribution of p values under the null follows a uniform $ (0,1) $ distribution. Hence, where $ \\phi_{u}(p) $ is the uniform probability density function for p values under the null (Equation A4.8a). Hence, if $ n_{0} $ of the n tests are truly null, then",
+      "symbols_used": [
+        "\\tau",
+        "e",
+        "h",
+        "i",
+        "l",
+        "n_{0}",
+        "o",
+        "p",
+        "s",
+        "t",
+        "u",
+        "y"
+      ],
+      "symbols_defined": [
+        "\\tau"
+      ]
+    },
+    {
+      "id": "formula_A4.38",
+      "latex": "E[FDR(\\tau)]=\\frac{n_{0}\\cdot\\tau}{S(\\tau)}",
+      "label": "Formula A4.38",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 37,
+      "depth": 0,
+      "context_text": "Hence,",
+      "symbols_used": [
+        "D",
+        "F",
+        "R",
+        "S",
+        "\\tau",
+        "n_{0}"
+      ],
+      "symbols_defined": [
+        "D",
+        "F",
+        "R",
+        "\\tau"
+      ]
+    },
+    {
+      "id": "formula_A4.39",
+      "latex": "\\widehat{F D R}(\\tau)=n_{0}\\cdot\\frac{\\tau}{S(\\tau)}=\\left(\\frac{N[p(i)\\ values>\\lambda]}{1-\\lambda}\\right)\\cdot\\left(\\frac{\\tau}{N[p(i)\\ values\\leq\\tau]}\\right)",
+      "label": "Formula A4.39",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 38,
+      "depth": 2,
+      "context_text": "Setting $ \\tau = p(k) $, then $ S(\\tau) = k $, and Equation A4.21 becomes $ n_0 p(k)/k $, recovering Equation A4.17. Using the Storey-Tibshirani estimator for $ n_0 $ (Equation A4.9b), an estimated value for the FDR using threshold value, $ \\tau $ (and based on the tuning parameter, $ \\lambda $, in the Storey-Tibshirani estimator), becomes where $ N[x] $ is the number of occurrences of event x. Ideally, over a reasonable range of $ \\lambda $ values, we expect this estimate be stable. If $ \\lambda $ is set too large, the likelihood that almost all values correspond to draws from a null will be countered by the much smaller sample size (and hence a larger sampling error) from using such a small fraction of the total data.",
+      "symbols_used": [
+        "N",
+        "S",
+        "\\lambda",
+        "\\tau",
+        "\\widehat{D}",
+        "\\widehat{FDR}",
+        "\\widehat{F}",
+        "\\widehat{R}",
+        "a",
+        "e",
+        "i",
+        "l",
+        "n_{0}",
+        "p",
+        "s",
+        "u",
+        "v"
+      ],
+      "symbols_defined": [
+        "\\tau",
+        "\\widehat{D}",
+        "\\widehat{FDR}",
+        "\\widehat{F}",
+        "\\widehat{R}"
+      ]
+    },
+    {
+      "id": "formula_A4.40",
+      "latex": "\\mathrm{F D R}(\\tau)=\\frac{\\pi_{0}\\mathrm{c d f}_{U}(\\tau)}{\\pi_{0}\\mathrm{c d f}_{U}(\\tau)+\\left(1-\\pi_{0}\\right)\\mathrm{c d f}_{A}(\\tau)}=\\frac{\\pi_{0}\\tau}{\\pi_{0}\\tau+\\left(1-\\pi_{0}\\right)\\mathrm{c d f}_{A}(\\tau)},",
+      "label": "Formula A4.40",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 39,
+      "depth": 1,
+      "context_text": "Under a mixture-model setting (e.g., Equation A4.10), the false-discovery rate for a given a significance threshold ($ \\tau $) is simply the fraction of all true positives that are declared significant divided by the fraction of all tests that are declared significant (i.e., those tests for which $ p \\leq \\tau $). This can be estimated directly from the parameters of the mixture distribution, where cdf denotes the cumulative distribution function, with where $ \\phi_{U} $ is the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta).",
+      "symbols_used": [
+        "A",
+        "D",
+        "F",
+        "R",
+        "U",
+        "\\mathrm{D}",
+        "\\mathrm{F}",
+        "\\mathrm{R}",
+        "\\mathrm{c}",
+        "\\mathrm{d}",
+        "\\mathrm{f}",
+        "\\pi_{0}",
+        "\\tau",
+        "c",
+        "d",
+        "f"
+      ],
+      "symbols_defined": [
+        "D",
+        "F",
+        "R",
+        "\\mathrm{D}",
+        "\\mathrm{F}",
+        "\\mathrm{R}",
+        "\\tau"
+      ]
+    },
+    {
+      "id": "formula_A4.41",
+      "latex": "\\mathbf{c}\\mathbf{d}\\mathbf{f}_{U}(x)=\\int_{0}^{x}\\phi_{U}(p)d p=x\\qquad\\mathbf{c}\\mathbf{d}\\mathbf{f}_{A}(x)=\\int_{0}^{x}\\phi_{A}(p)d p",
+      "label": "Formula A4.41",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "A (Slightly More) Formal Derivation of the Estimated FDR",
+      "position": 40,
+      "depth": 1,
+      "context_text": "Under a mixture-model setting (e.g., Equation A4.10), the false-discovery rate for a given a significance threshold ($ \\tau $) is simply the fraction of all true positives that are declared significant divided by the fraction of all tests that are declared significant (i.e., those tests for which $ p \\leq \\tau $). This can be estimated directly from the parameters of the mixture distribution, where cdf denotes the cumulative distribution function, with where $ \\phi_{U} $ is the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta).",
+      "symbols_used": [
+        "\\mathbf{c}",
+        "\\mathbf{d}",
+        "\\mathbf{f}_{A}",
+        "\\mathbf{f}_{U}",
+        "\\phi_{A}",
+        "\\phi_{U}",
+        "d",
+        "p",
+        "x"
+      ],
+      "symbols_defined": [
+        "\\mathbf{c}",
+        "\\mathbf{d}",
+        "\\mathbf{f}_{U}",
+        "x"
+      ]
+    },
+    {
+      "id": "formula_A4.42",
+      "latex": "\\widehat{q}\\left[p(i)\\right]=\\min_{\\tau\\geq p(i)}\\widehat{F D R}(\\tau)",
+      "label": "Formula A4.42",
+      "chapter_id": "appendix4",
+      "section": "FDR: THE FALSE-DISCOVERY RATE",
+      "subsection": "Storey's q Value",
+      "position": 41,
+      "depth": 3,
+      "context_text": "While we can control the FDR for an entire set of experiments, we would also like to have an indication of the FDR for any particular experiment (or test) within this family of tests. Intuitively, tests with smaller p values should also have smaller associated FDR values. To address this, Storey (2002; Storey and Tibshirani 2003) introduced the concept of a q value (as opposed to the p value) for a particular test, where q is the expected FDR rate for tests within the current experiment whose p values are at least as extreme as the test of interest. The estimated q value is a function of the p value for that test and the distribution of the entire set of p values from the family of tests being considered, namely,",
+      "symbols_used": [
+        "\\tau",
+        "\\widehat{D}",
+        "\\widehat{FDR}",
+        "\\widehat{F}",
+        "\\widehat{R}",
+        "\\widehat{q}",
+        "i",
+        "p"
+      ],
+      "symbols_defined": [
+        "\\widehat{q}",
+        "i",
+        "p"
+      ]
+    },
+    {
+      "id": "formula_A4.43",
+      "latex": "T_{i}=\\overline{z}_{i},\\qquad\\mathrm{w i t h}\\qquad s_{i}^{2}=\\frac{1}{n_{i}-1}\\sum_{j=1}^{n_{i}}\\left(z_{i j}-\\overline{z}_{i}\\right)^{2}",
+      "label": "Formula A4.43",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 42,
+      "depth": 0,
+      "context_text": "The simplest setting is when study i estimates the mean of a quantity of interest, yielding",
+      "symbols_used": [
+        "T_{i}",
+        "\\mathrm{h}",
+        "\\mathrm{i}",
+        "\\mathrm{t}",
+        "\\mathrm{w}",
+        "\\overline{z}_{i}",
+        "h",
+        "i",
+        "n_{i}",
+        "s_{i}^{2}",
+        "t",
+        "w",
+        "z_{ij}"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.44",
+      "latex": "T_{i}=\\overline{z}_{i,t}-\\overline{z}_{i,c}",
+      "label": "Formula A4.44",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 43,
+      "depth": 0,
+      "context_text": "Another common setting is that in which the study contrasts the means of two different groups, which we will call the treatment $ (t) $ versus control $ (c) $,",
+      "symbols_used": [
+        "T_{i}",
+        "\\overline{z}_{i,c}",
+        "\\overline{z}_{i,t}",
+        "c",
+        "t"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.45",
+      "latex": "D_{i}=\\frac{T_{i}}{s_{i,p}}",
+      "label": "Formula A4.45",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 44,
+      "depth": 1,
+      "context_text": "Several slightly different standardizations exist in the literature for this case; they are of the form where $ s_{i,p} $ is the pooled standard error for study i. Different standardizations arise from slightly different estimates of this pooled standard error. Cohen's d statistic uses Equation A4.26b with",
+      "symbols_used": [
+        "D_{i}",
+        "T_{i}",
+        "p",
+        "s_{i,p}"
+      ],
+      "symbols_defined": [
+        "D_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.46",
+      "latex": "s_{i,p}^{2}=\\frac{(n_{i,t}-1)s_{i,t}^{2}+(n_{i,c}-1)s_{i,c}^{2}}{n_{i,c}+n_{i,t}}",
+      "label": "Formula A4.46",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 45,
+      "depth": 0,
+      "context_text": "Several slightly different standardizations exist in the literature for this case; they are of the form where $ s_{i,p} $ is the pooled standard error for study i. Different standardizations arise from slightly different estimates of this pooled standard error. Cohen's d statistic uses Equation A4.26b with",
+      "symbols_used": [
+        "c",
+        "i",
+        "n_{i,c}",
+        "n_{i,t}",
+        "p",
+        "s_{i,c}^{2}",
+        "s_{i,p}^{2}",
+        "s_{i,t}^{2}",
+        "t"
+      ],
+      "symbols_defined": [
+        "i",
+        "p",
+        "s_{i,p}^{2}"
+      ]
+    },
+    {
+      "id": "formula_A4.47",
+      "latex": "g_{i}=\\frac{\\overline{z}_{i,t}-\\overline{z}_{i,c}}{s_{i,p}},\\quad\\mathrm{w h e r e}\\quad s_{i,p}^{2}=\\frac{(n_{i,t}-1)s_{i,t}^{2}+(n_{i,c}-1)s_{i,c}^{2}}{n_{i,c}+n_{i,t}-2}",
+      "label": "Formula A4.47",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 46,
+      "depth": 2,
+      "context_text": "Another common standardization in the literature is Hedge's g, which uses which is the unbiased OLS estimate (and hence the REML estimate) of the pooled standard error. One further correction is often applied to $ g_i $, in that the ratio given by Equation A4.28a is a biased estimator of $ (\\mu_t - \\mu_c)/\\sigma_p $, which can be adjusted by using",
+      "symbols_used": [
+        "\\mathrm{e}",
+        "\\mathrm{h}",
+        "\\mathrm{r}",
+        "\\mathrm{w}",
+        "\\overline{z}_{i,c}",
+        "\\overline{z}_{i,t}",
+        "c",
+        "e",
+        "g_{i}",
+        "h",
+        "n_{i,c}",
+        "n_{i,t}",
+        "p",
+        "r",
+        "s_{i,c}^{2}",
+        "s_{i,p}",
+        "s_{i,p}^{2}",
+        "s_{i,t}^{2}",
+        "t",
+        "w"
+      ],
+      "symbols_defined": [
+        "g_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.48",
+      "latex": "g_{i}\\left(1-\\frac{3}{4(n_{i,c}+n_{i,t})-9}\\right)",
+      "label": "Formula A4.48",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 47,
+      "depth": 0,
+      "context_text": "Another common standardization in the literature is Hedge's g, which uses which is the unbiased OLS estimate (and hence the REML estimate) of the pooled standard error. One further correction is often applied to $ g_i $, in that the ratio given by Equation A4.28a is a biased estimator of $ (\\mu_t - \\mu_c)/\\sigma_p $, which can be adjusted by using",
+      "symbols_used": [
+        "c",
+        "g_{i}",
+        "n_{i,c}",
+        "n_{i,t}",
+        "t"
+      ],
+      "symbols_defined": [
+        "g_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.49",
+      "latex": "r_{i}^{*}=r_{i}+\\frac{r_{i}(1-r_{i}^{2})}{2(n_{i}-3)}",
+      "label": "Formula A4.49",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 48,
+      "depth": 0,
+      "context_text": "Besides comparisons of means, a meta-analysis often examines studies measuring the association between two variables, in which case the Pearson correlation coefficient, $ r_{i} $, is the initial summary statistic. This is a slightly biased estimator of the true correlation coefficient ($ \\rho $), but a simple correction returns an unbiased estimate,",
+      "symbols_used": [
+        "n_{i}",
+        "r_{i}",
+        "r_{i}^{*}",
+        "r_{i}^{2}"
+      ],
+      "symbols_defined": [
+        "r_{i}^{*}"
+      ]
+    },
+    {
+      "id": "formula_A4.50",
+      "latex": "z_{i,r}=\\frac{1}{2}\\ln\\left(\\frac{1+r_{i}}{1-r_{i}}\\right),\\qquad\\mathrm{w i t h}\\qquad s_{i}^{2}=\\frac{1}{n_{i}-3}",
+      "label": "Formula A4.50",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 49,
+      "depth": 0,
+      "context_text": "Fisher's z-transformation is used to both stabilize the variance and remove some of the skew:",
+      "symbols_used": [
+        "\\mathrm{h}",
+        "\\mathrm{i}",
+        "\\mathrm{t}",
+        "\\mathrm{w}",
+        "h",
+        "i",
+        "n_{i}",
+        "r_{i}",
+        "s_{i}^{2}",
+        "t",
+        "w",
+        "z_{i,r}"
+      ],
+      "symbols_defined": [
+        "i",
+        "r",
+        "z_{i,r}"
+      ]
+    },
+    {
+      "id": "formula_A4.51",
+      "latex": "r=\\frac{e^{2z_{r}}-1}{e^{2z_{r}}+1}",
+      "label": "Formula A4.51",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Standardizing Effect Sizes",
+      "position": 50,
+      "depth": 2,
+      "context_text": "Typically the unbiased estimate $ (r^{*}) $ is used in place of r in the transformed data, and we use $ T_{i} = z_{i,r} $ as the study effect (i.e., the value in Table A4.3). Note that the standard error of the transformed sample correlation is now simply a function of the sample size. Likewise, any estimates based on z can be back-converted to inferences of $ \\rho $ by using Fisher's z-to-r transform",
+      "symbols_used": [
+        "e",
+        "r",
+        "z_{r}"
+      ],
+      "symbols_defined": [
+        "r"
+      ]
+    },
+    {
+      "id": "formula_A4.52",
+      "latex": "T_{i}=\\theta+e_{i}",
+      "label": "Formula A4.52",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 51,
+      "depth": 0,
+      "context_text": "Under a fixed-effects meta-analysis (also called the common-effect model), we assume that the actual effect size is the same over all studies ($ \\theta_i = \\theta $), which yields where we assume that the residuals are independent but heteroscedastic, as $ \\sigma^{2}(e_{i}) = s_{i}^{2} $. Under the fixed-effects model, our interest is in combining studies to obtain a better estimate of the common (fixed) effect, $ \\theta $. This simply involves generalized least-squares (GLS; LW Chapter 8), with the resulting meta-analysis global estimate of $ \\theta $ (given the k studies) being",
+      "symbols_used": [
+        "T_{i}",
+        "\\theta",
+        "e_{i}"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.53",
+      "latex": "\\overline{T}=\\frac{\\sum_{i=1}^{k}w_{i}T_{i}}{\\sum_{i=1}^{k}w_{i}},\\quad\\mathrm{w h e r e}\\quad w_{i}=\\frac{1}{s_{i}^{2}}",
+      "label": "Formula A4.53",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 52,
+      "depth": 2,
+      "context_text": "Under a fixed-effects meta-analysis (also called the common-effect model), we assume that the actual effect size is the same over all studies ($ \\theta_i = \\theta $), which yields where we assume that the residuals are independent but heteroscedastic, as $ \\sigma^{2}(e_{i}) = s_{i}^{2} $. Under the fixed-effects model, our interest is in combining studies to obtain a better estimate of the common (fixed) effect, $ \\theta $. This simply involves generalized least-squares (GLS; LW Chapter 8), with the resulting meta-analysis global estimate of $ \\theta $ (given the k studies) being",
+      "symbols_used": [
+        "T_{i}",
+        "\\mathrm{e}",
+        "\\mathrm{h}",
+        "\\mathrm{r}",
+        "\\mathrm{w}",
+        "\\overline{T}",
+        "e",
+        "h",
+        "k",
+        "r",
+        "s_{i}^{2}",
+        "w_{i}"
+      ],
+      "symbols_defined": [
+        "\\overline{T}"
+      ]
+    },
+    {
+      "id": "formula_A4.54",
+      "latex": "s_{T}^{2}=\\frac{1}{\\sum_{i=1}^{k}w_{i}}",
+      "label": "Formula A4.54",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 53,
+      "depth": 0,
+      "context_text": "In other words, we use a weighted average, with each study weighted by its precision (studies with smaller standard errors receive larger weights). The meta-analysis standard error, $ s_{\\overline{T}} $, for the global estimate, $ \\overline{T} $, is",
+      "symbols_used": [
+        "k",
+        "s_{T}^{2}",
+        "w_{i}"
+      ],
+      "symbols_defined": [
+        "s_{T}^{2}"
+      ]
+    },
+    {
+      "id": "formula_A4.55",
+      "latex": "\\sigma^{2}(\\overline{T})=\\frac{\\sigma^{2}}{nk}",
+      "label": "Formula A4.55",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 54,
+      "depth": 0,
+      "context_text": "For the situation where we assume that each individual observation in a given study has the same variance, so $ \\sigma^2(T_i) = \\sigma^2/n_i $, then for $ k $ studies, each of size $ n $,",
+      "symbols_used": [
+        "\\overline{T}",
+        "\\sigma^{2}(\\overline{T})",
+        "k",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\overline{T}",
+        "\\sigma^{2}(\\overline{T})"
+      ]
+    },
+    {
+      "id": "formula_A4.56",
+      "latex": "Q=\\sum_{i=1}^{k}\\frac{\\left(T_{i}-\\overline{T}\\right)^{2}}{s_{i}^{2}}",
+      "label": "Formula A4.56",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 55,
+      "depth": 0,
+      "context_text": "An obvious next line of inquiry is whether the assumption of a common effect over all studies is reasonable. This can be examined using the Cochran Q test of heterogeneity, where (under the null of $ \\theta_1 = \\cdots = \\theta_k $, and assuming that the values of $ T_i $ are normally distributed), the distribution of $ Q $ is $ \\chi^2 $ with $ (k-1) $ degrees of freedom.",
+      "symbols_used": [
+        "Q",
+        "T_{i}",
+        "\\overline{T}",
+        "k",
+        "s_{i}^{2}"
+      ],
+      "symbols_defined": [
+        "Q"
+      ]
+    },
+    {
+      "id": "formula_A4.57",
+      "latex": "T_{i}=\\theta+\\sum_{j=1}^{m}b_{j}M_{ij}+e_{i}",
+      "label": "Formula A4.57",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 56,
+      "depth": 0,
+      "context_text": "One potential reason for a significant Q is that the study consists of different subsets of groups (say, males versus females), with a common effect that was the same in each group but differed among groups. In this case, we can extend the basic model by including a regression on moderator variables,",
+      "symbols_used": [
+        "M_{ij}",
+        "T_{i}",
+        "\\theta",
+        "b_{j}",
+        "e_{i}",
+        "m"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.58",
+      "latex": "T_{i}=\\mu+u_{i}+e_{i}",
+      "label": "Formula A4.58",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 57,
+      "depth": 0,
+      "context_text": "In most biological settings, the assumption of a single common value for the treatment mean over all studies is unrealistic. For example, in a meta-analysis of the strength of selection, we expect $ \\theta_{i} $ to vary over studies, and our interest shifts to the variance among the actual effects. This leads to the random-effects meta-analysis model where $ \\mu_i \\sim (0, \\sigma_u^2) $. Typically, the effect sizes $ (\\theta_i = \\mu + u_i) $ are assumed to be drawn from a normal, $ \\theta_i \\sim \\mathrm{N}(\\mu, \\sigma_u^2) $, and are independent of the residuals (which remain heteroscedastic). Under a random-effects analysis, our interest is the variation, $ \\sigma_u^2 $, among the realized effects, in addition to their overall grand mean, $ \\mu $. The estimate for the latter is also of the form of Equation A4.30b, but with a critical difference. Under a random-effects model, the weights are now given by where $ \\widehat{\\sigma}_{u}^{2} $ is the estimate of $ \\sigma_{u}^{2} $. One option for obtaining this variance is the DerSimonian-Laird estimator, which is based on Cochran's Q value (Equation A4.31), which is set to zero if it is negative (DerSimonian and Laird 1986), although other approaches (e.g., REML) could also be used.",
+      "symbols_used": [
+        "T_{i}",
+        "\\mu",
+        "e_{i}",
+        "u_{i}"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.59",
+      "latex": "w_{i}=\\frac{1}{s_{i}^{2}+\\widehat{\\sigma}_{u}^{2}}",
+      "label": "Formula A4.59",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 58,
+      "depth": 0,
+      "context_text": "In most biological settings, the assumption of a single common value for the treatment mean over all studies is unrealistic. For example, in a meta-analysis of the strength of selection, we expect $ \\theta_{i} $ to vary over studies, and our interest shifts to the variance among the actual effects. This leads to the random-effects meta-analysis model where $ \\mu_i \\sim (0, \\sigma_u^2) $. Typically, the effect sizes $ (\\theta_i = \\mu + u_i) $ are assumed to be drawn from a normal, $ \\theta_i \\sim \\mathrm{N}(\\mu, \\sigma_u^2) $, and are independent of the residuals (which remain heteroscedastic). Under a random-effects analysis, our interest is the variation, $ \\sigma_u^2 $, among the realized effects, in addition to their overall grand mean, $ \\mu $. The estimate for the latter is also of the form of Equation A4.30b, but with a critical difference. Under a random-effects model, the weights are now given by where $ \\widehat{\\sigma}_{u}^{2} $ is the estimate of $ \\sigma_{u}^{2} $. One option for obtaining this variance is the DerSimonian-Laird estimator, which is based on Cochran's Q value (Equation A4.31), which is set to zero if it is negative (DerSimonian and Laird 1986), although other approaches (e.g., REML) could also be used.",
+      "symbols_used": [
+        "\\widehat{\\sigma}_{u}^{2}",
+        "s_{i}^{2}",
+        "w_{i}"
+      ],
+      "symbols_defined": [
+        "w_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.60",
+      "latex": "\\widehat{\\sigma}_{u}^{2}=\\frac{Q-(k-1)}{S_{1}-(S_{2}/S_{1})},\\quad\\mathrm{w h e r e}\\quad S_{j}=\\sum_{i=1}^{k}s_{i}^{-2j}",
+      "label": "Formula A4.60",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 59,
+      "depth": 2,
+      "context_text": "In most biological settings, the assumption of a single common value for the treatment mean over all studies is unrealistic. For example, in a meta-analysis of the strength of selection, we expect $ \\theta_{i} $ to vary over studies, and our interest shifts to the variance among the actual effects. This leads to the random-effects meta-analysis model where $ \\mu_i \\sim (0, \\sigma_u^2) $. Typically, the effect sizes $ (\\theta_i = \\mu + u_i) $ are assumed to be drawn from a normal, $ \\theta_i \\sim \\mathrm{N}(\\mu, \\sigma_u^2) $, and are independent of the residuals (which remain heteroscedastic). Under a random-effects analysis, our interest is the variation, $ \\sigma_u^2 $, among the realized effects, in addition to their overall grand mean, $ \\mu $. The estimate for the latter is also of the form of Equation A4.30b, but with a critical difference. Under a random-effects model, the weights are now given by where $ \\widehat{\\sigma}_{u}^{2} $ is the estimate of $ \\sigma_{u}^{2} $. One option for obtaining this variance is the DerSimonian-Laird estimator, which is based on Cochran's Q value (Equation A4.31), which is set to zero if it is negative (DerSimonian and Laird 1986), although other approaches (e.g., REML) could also be used.",
+      "symbols_used": [
+        "Q",
+        "S_{1}",
+        "S_{2}",
+        "S_{j}",
+        "\\mathrm{e}",
+        "\\mathrm{h}",
+        "\\mathrm{r}",
+        "\\mathrm{w}",
+        "\\widehat{\\sigma}_{u}^{2}",
+        "e",
+        "h",
+        "k",
+        "r",
+        "s_{i}^{-2j}",
+        "w"
+      ],
+      "symbols_defined": [
+        "\\widehat{\\sigma}_{u}^{2}"
+      ]
+    },
+    {
+      "id": "formula_A4.61",
+      "latex": "\\sigma^{2}(\\overline{T})=\\frac{\\sigma^{2}}{nk}+\\frac{\\sigma_{u}^{2}}{k}",
+      "label": "Formula A4.61",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 60,
+      "depth": 0,
+      "context_text": "To see why this occurs, assume we are using the same design that led to Equation A4.30d, namely, k studies all of size n, and all with a common residual variance ($ \\sigma^{2} $) for each observation. In this case, the variance of the estimate of $ \\mu $ becomes showing (unlike the fixed-effects case; Equation A4.30d) that the actual number $ (k) $ of studies is at least as important as the total number $ (nk) $ of observations over all studies. Under a fixed-effects design, all that matters is $ nk $, as the only error is in estimating the common mean, with the contribution from any particular study being proportional to its sample size. Under a random-effects model, there is an additional error from the among-study variance, in that the mean realization for each study, $ \\theta_i = \\mu + u_i $, differs, with each new study providing additional information on the among-study variance. This leads to the second important consideration for a random-effects model: power is as much a function of the number of studies $ (k) $ as it is of the precision of any particular study $ (n_i) $. Indeed, if $ \\theta_i $ is measured without error in any particular study, one still needs a reasonable number of $ \\theta_i $ values to estimate their variance with any precision. Hence, not surprisingly, random-effects models have lower power than fixed-effects models.",
+      "symbols_used": [
+        "\\overline{T}",
+        "\\sigma^{2}(\\overline{T})",
+        "\\sigma_{u}^{2}",
+        "k",
+        "n"
+      ],
+      "symbols_defined": [
+        "\\overline{T}",
+        "\\sigma^{2}(\\overline{T})"
+      ]
+    },
+    {
+      "id": "formula_A4.62",
+      "latex": "T_{i}=\\mu+\\sum_{j=1}^{m}b_{j}M_{ij}+u_{i}+e_{i}",
+      "label": "Formula A4.62",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 61,
+      "depth": 0,
+      "context_text": "Finally, in many settings, we might expect the grand mean to vary over different categories, as when the selection gradient differs between males and females. Similarly, we may wish to examine whether the strength of selection varies between life-history versus morphological traits. The potential of different means over different major categories can be accommodated in a meta-analysis model by the use of moderator variables (cofactors). These adjust the mean for a particular class, leading to a mixed-model meta-analysis. Suppose that there are $ m \\ll k $ moderators. The resulting mixed-model is where $ b_{j} $ is the effect of a moderator, j, which has a value of $ M_{ij} $ in study i. Equations A4.32 and A4.33a are special cases of Equation A4.35a, which we can write in general-linear-model form (LW Chapter 8) as where $ y_i = T_i $, and the $ i $th row of the $ k \\times m $ matrix, $ \\mathbf{M} $, contains the values of the moderator variables associated with study $ i $. The vectors, $ \\mathbf{u} $ and $ \\mathbf{e} $, of random effects are assumed uncorrelated, with $ \\mathbf{e} \\sim (\\mathbf{0}, \\mathbf{R}) $ and $ \\mathbf{u} \\sim (\\mathbf{0}, \\mathbf{G}) $, where $ \\mathbf{R} $ is a known diagonal matrix, $ \\text{diag}(s_1^2, s_2^3, \\cdots, s_k^2) $, and $ \\mathbf{G} = \\sigma_u^2 \\mathbf{C} $, where $ \\mathbf{C} $ is a matrix of known constants.",
+      "symbols_used": [
+        "M_{ij}",
+        "T_{i}",
+        "\\mu",
+        "b_{j}",
+        "e_{i}",
+        "m",
+        "u_{i}"
+      ],
+      "symbols_defined": [
+        "T_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.63",
+      "latex": "\\mathbf{y}=\\mathbf{M}\\mathbf{b}+\\mathbf{u}+\\mathbf{e}",
+      "label": "Formula A4.63",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Fixed-effects, Random-effects, and Mixed-model Meta-analysis",
+      "position": 62,
+      "depth": 0,
+      "context_text": "Finally, in many settings, we might expect the grand mean to vary over different categories, as when the selection gradient differs between males and females. Similarly, we may wish to examine whether the strength of selection varies between life-history versus morphological traits. The potential of different means over different major categories can be accommodated in a meta-analysis model by the use of moderator variables (cofactors). These adjust the mean for a particular class, leading to a mixed-model meta-analysis. Suppose that there are $ m \\ll k $ moderators. The resulting mixed-model is where $ b_{j} $ is the effect of a moderator, j, which has a value of $ M_{ij} $ in study i. Equations A4.32 and A4.33a are special cases of Equation A4.35a, which we can write in general-linear-model form (LW Chapter 8) as where $ y_i = T_i $, and the $ i $th row of the $ k \\times m $ matrix, $ \\mathbf{M} $, contains the values of the moderator variables associated with study $ i $. The vectors, $ \\mathbf{u} $ and $ \\mathbf{e} $, of random effects are assumed uncorrelated, with $ \\mathbf{e} \\sim (\\mathbf{0}, \\mathbf{R}) $ and $ \\mathbf{u} \\sim (\\mathbf{0}, \\mathbf{G}) $, where $ \\mathbf{R} $ is a known diagonal matrix, $ \\text{diag}(s_1^2, s_2^3, \\cdots, s_k^2) $, and $ \\mathbf{G} = \\sigma_u^2 \\mathbf{C} $, where $ \\mathbf{C} $ is a matrix of known constants.",
+      "symbols_used": [
+        "\\mathbf{M}",
+        "\\mathbf{b}",
+        "\\mathbf{e}",
+        "\\mathbf{u}",
+        "\\mathbf{y}"
+      ],
+      "symbols_defined": [
+        "\\mathbf{y}"
+      ]
+    },
+    {
+      "id": "formula_A4.64",
+      "latex": "y_{i}=a+bs_{i}+e,\\quad where\\quad y_{i}=(T_{i}-\\overline{T})",
+      "label": "Formula A4.64",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Publication and Other Sources in Bias",
+      "position": 63,
+      "depth": 2,
+      "context_text": "While funnel asymmetry is essentially an informal visual judgment, the basic idea has been used for more formal tests. The Begg-Mazumdar (1994) rank correlation test looks for associations between the ranks of the standard errors $ (s_{i}) $ and study estimates $ (T_{i}) $. The Egger regression test (Egger et al. 1997) performs the regression",
+      "symbols_used": [
+        "T_{i}",
+        "\\overline{T}",
+        "a",
+        "b",
+        "e",
+        "h",
+        "r",
+        "s_{i}",
+        "w",
+        "y_{i}"
+      ],
+      "symbols_defined": [
+        "y_{i}"
+      ]
+    },
+    {
+      "id": "formula_A4.65",
+      "latex": "E[|\\theta|]=\\sigma_{u}\\sqrt{2/\\pi},\\qquad\\mathrm{w h i l e}\\qquad E[|T|]=\\sqrt{\\sigma_{u}^{2}+\\sigma_{e}^{2}}\\cdot\\sqrt{2/\\pi}",
+      "label": "Formula A4.65",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Bias When Estimating Magnitudes",
+      "position": 64,
+      "depth": 2,
+      "context_text": "Finally, consider a random-effects setting, in which the parameter of interest, $\\theta_{ii}$ in a given study (i) is drawn from normal distribution with a mean of $\\mu$ and a variance of $\\sigma_{\\mu}^{2}$, so $\\theta_{i} \\sim N(\\mu, \\sigma_{\\mu}^{2})$. Suppose we assume the observed effect, $T_{i}$, for this study is also normal, but with an additional sampling error, $\\sigma_{e}^{2}$, so that $T_{i} \\sim N(\\mu, \\sigma_{u}^{2} + \\sigma_{e}^{2})$. This additional variance has no effect on our estimate of the desired mean, $\\mu$, as $E[T_{i}] = \\mu$. However, in many setting in quantitative genetics (as well as ecology and evolution), our interest may be in the absolute magnitude, $|\\theta|$, of the effect, rather than its mean value. An important example of this type of inquiry is the estimation of the average strength of selection, $|\\beta|$, on a trait (Chapters 29 and 30). As noted by Hereford et al. (2004) and Morrissey (2016), $E[|T|] > E[\\|\\theta\\|]$ when $\\sigma_{e}^{2} > 0$, which will result in an overestimate of the expected absolute value of the effect. In particular, if $\\mu = 0$, then (Example A4.11), which yields a relative error of which can be a significant overestimation of the average magnitude of an effect if the error variance is large relative to the effect variance ([[SEE_FIGURE:A4.8]]). Morrissey (2016) presented several additional examples where the concern of a meta-analysis is in some measure of dispersion about a mean, in which case the error variance associated with using an estimate $ (T_i) $ will result in an upwardly biased estimator. Morrissey showed how the use of appropriate mixed models helps to resolve this concern.",
+      "symbols_used": [
+        "T",
+        "\\mathrm{e}",
+        "\\mathrm{h}",
+        "\\mathrm{i}",
+        "\\mathrm{l}",
+        "\\mathrm{w}",
+        "\\pi",
+        "\\sigma_{e}^{2}",
+        "\\sigma_{u}",
+        "\\sigma_{u}^{2}",
+        "\\theta",
+        "e",
+        "h",
+        "i",
+        "l",
+        "w"
+      ],
+      "symbols_defined": []
+    },
+    {
+      "id": "formula_A4.66",
+      "latex": "\\frac{E[|T|]-E[|\\theta|]}{E[|\\theta|]}=\\sqrt{\\frac{\\sigma_{e}^{2}}{\\sigma_{u}^{2}}+1-1}",
+      "label": "Formula A4.66",
+      "chapter_id": "appendix4",
+      "section": "FORMAL META-ANALYSIS",
+      "subsection": "Bias When Estimating Magnitudes",
+      "position": 65,
+      "depth": 0,
+      "context_text": "Finally, consider a random-effects setting, in which the parameter of interest, $\\theta_{ii}$ in a given study (i) is drawn from normal distribution with a mean of $\\mu$ and a variance of $\\sigma_{\\mu}^{2}$, so $\\theta_{i} \\sim N(\\mu, \\sigma_{\\mu}^{2})$. Suppose we assume the observed effect, $T_{i}$, for this study is also normal, but with an additional sampling error, $\\sigma_{e}^{2}$, so that $T_{i} \\sim N(\\mu, \\sigma_{u}^{2} + \\sigma_{e}^{2})$. This additional variance has no effect on our estimate of the desired mean, $\\mu$, as $E[T_{i}] = \\mu$. However, in many setting in quantitative genetics (as well as ecology and evolution), our interest may be in the absolute magnitude, $|\\theta|$, of the effect, rather than its mean value. An important example of this type of inquiry is the estimation of the average strength of selection, $|\\beta|$, on a trait (Chapters 29 and 30). As noted by Hereford et al. (2004) and Morrissey (2016), $E[|T|] > E[\\|\\theta\\|]$ when $\\sigma_{e}^{2} > 0$, which will result in an overestimate of the expected absolute value of the effect. In particular, if $\\mu = 0$, then (Example A4.11), which yields a relative error of which can be a significant overestimation of the average magnitude of an effect if the error variance is large relative to the effect variance ([[SEE_FIGURE:A4.8]]). Morrissey (2016) presented several additional examples where the concern of a meta-analysis is in some measure of dispersion about a mean, in which case the error variance associated with using an estimate $ (T_i) $ will result in an upwardly biased estimator. Morrissey showed how the use of appropriate mixed models helps to resolve this concern.",
+      "symbols_used": [
+        "T",
+        "\\sigma_{e}^{2}",
+        "\\sigma_{u}^{2}",
+        "\\theta"
+      ],
+      "symbols_defined": [
+        "T",
+        "\\theta"
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "dependent_id": "formula_A4.1",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.2",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.3",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "U",
+          "relation": "text_definition",
+          "reason": "U is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "U",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "obtained as As noted by Whitlock (2005), this test was first proposed in a footnote in Stouffer et al",
+          "meaning": "obtained as As noted by Whitlock (2005), this test was first proposed in a footnote in Stouffer et al",
+          "source_excerpt": "obtained as As noted by Whitlock (2005), this test was first proposed in a footnote in Stouffer et al",
+          "source_chunk_id": "appendix4_004"
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.2",
+          "via_symbol": "Z_{s}",
+          "relation": "defines_symbol",
+          "reason": "Z_{s} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "Z_s",
+          "symbol_role": "parameter",
+          "sense_id": "formula_A4.2::Z_{s}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.4",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.5",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.6",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.7",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.8",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.9",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.10",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.9",
+          "via_symbol": "\\lambda_{i}",
+          "relation": "defines_symbol",
+          "reason": "\\lambda_{i} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\lambda_i",
+          "symbol_role": "symbol",
+          "sense_id": "formula_A4.9::\\lambda_{i}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.11",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "I",
+          "relation": "text_definition",
+          "reason": "I is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "I",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "counted as contributing one independent test), while the remainder represents partial correlations",
+          "meaning": "counted as contributing one independent test), while the remainder represents partial correlations",
+          "source_excerpt": "counted as contributing one independent test), while the remainder represents partial correlations",
+          "source_chunk_id": "appendix4_011"
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.9",
+          "via_symbol": "\\lambda_{i}",
+          "relation": "defines_symbol",
+          "reason": "\\lambda_{i} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\lambda_i",
+          "symbol_role": "symbol",
+          "sense_id": "formula_A4.9::\\lambda_{i}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.12",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.13",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.14",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.15",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.16",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.17",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.18",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.19",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.20",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.21",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.22",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.23",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.15",
+          "via_symbol": "d",
+          "relation": "defines_symbol",
+          "reason": "d defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "d",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.15::d",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.24",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.15",
+          "via_symbol": "d",
+          "relation": "defines_symbol",
+          "reason": "d defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "d",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.15::d",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.25",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.24",
+          "via_symbol": "F",
+          "relation": "defines_symbol",
+          "reason": "F defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "F",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.24::F",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.26",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.24",
+          "via_symbol": "F",
+          "relation": "defines_symbol",
+          "reason": "F defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "F",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.24::F",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.27",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.28",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.29",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.30",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.31",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.32",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.33",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.34",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.35",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.36",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.15",
+          "via_symbol": "d",
+          "relation": "defines_symbol",
+          "reason": "d defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "d",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.15::d",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.37",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.38",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.39",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.40",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "U",
+          "relation": "text_definition",
+          "reason": "U is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "U",
+          "symbol_role": "variable",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "meaning": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "source_excerpt": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "source_chunk_id": "appendix4_022"
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.15",
+          "via_symbol": "d",
+          "relation": "defines_symbol",
+          "reason": "d defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "d",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.15::d",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.41",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "\\phi_{U}",
+          "relation": "text_definition",
+          "reason": "\\phi_{U} is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "\\phi_U",
+          "symbol_role": "symbol",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "meaning": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "source_excerpt": "the uniform distribution under the null and $ \\phi_{A} $ is the distribution of p values under the alternative (for example, a fitted beta)",
+          "source_chunk_id": "appendix4_022"
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.15",
+          "via_symbol": "d",
+          "relation": "defines_symbol",
+          "reason": "d defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "d",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.15::d",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.42",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.39",
+          "via_symbol": "\\widehat{FDR}",
+          "relation": "defines_symbol",
+          "reason": "\\widehat{FDR} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "\\hat{FDR}",
+          "symbol_role": "symbol",
+          "sense_id": "formula_A4.39::\\widehat{FDR}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.43",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.44",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.45",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.44",
+          "via_symbol": "T_{i}",
+          "relation": "defines_symbol",
+          "reason": "T_{i} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "T_i",
+          "symbol_role": "parameter",
+          "sense_id": "formula_A4.44::T_{i}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "s_{i,p}",
+          "relation": "text_definition",
+          "reason": "s_{i,p} is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "s_i,p",
+          "symbol_role": "symbol",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "the pooled standard error for study i",
+          "meaning": "the pooled standard error for study i",
+          "source_excerpt": "the pooled standard error for study i",
+          "source_chunk_id": "appendix4_027"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.46",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.47",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.46",
+          "via_symbol": "s_{i,p}^{2}",
+          "relation": "defines_symbol",
+          "reason": "s_{i,p}^{2} defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "s_i,p^2",
+          "symbol_role": "symbol",
+          "sense_id": "formula_A4.46::s_{i,p}^{2}",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.48",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.49",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.50",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.51",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.52",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.53",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.54",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.55",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.56",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.57",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.58",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.59",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "\\widehat{\\sigma}_{u}^{2}",
+          "relation": "text_definition",
+          "reason": "\\widehat{\\sigma}_{u}^{2} is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "\\hat{\\sigma}_u^2",
+          "symbol_role": "symbol",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "the estimate of $ \\sigma_{u}^{2} $",
+          "meaning": "the estimate of $ \\sigma_{u}^{2} $",
+          "source_excerpt": "the estimate of $ \\sigma_{u}^{2} $",
+          "source_chunk_id": "appendix4_028"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.60",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.56",
+          "via_symbol": "Q",
+          "relation": "defines_symbol",
+          "reason": "Q defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "Q",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.56::Q",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        },
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.61",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.62",
+      "prerequisites": [
+        {
+          "type": "variable_definition",
+          "target_id": null,
+          "via_symbol": "b_{j}",
+          "relation": "text_definition",
+          "reason": "b_{j} is explained in nearby text",
+          "confidence": 0.55,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "text_definition",
+          "canonical_symbol": "b_j",
+          "symbol_role": "parameter",
+          "sense_id": null,
+          "edge_weight": 0.65,
+          "review_note": "nearby_text",
+          "definition": "the effect of a moderator, j, which has a value of $ M_{ij} $ in study i",
+          "meaning": "the effect of a moderator, j, which has a value of $ M_{ij} $ in study i",
+          "source_excerpt": "the effect of a moderator, j, which has a value of $ M_{ij} $ in study i",
+          "source_chunk_id": "appendix4_028"
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.63",
+      "prerequisites": []
+    },
+    {
+      "dependent_id": "formula_A4.64",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.65",
+      "prerequisites": [
+        {
+          "type": "formula",
+          "target_id": "formula_A4.11",
+          "via_symbol": "e",
+          "relation": "defines_symbol",
+          "reason": "e defined by nearest upstream formula in appendix4",
+          "confidence": 0.84,
+          "cross_chapter": false,
+          "edge_status": "accepted",
+          "edge_evidence": "exact_match",
+          "canonical_symbol": "e",
+          "symbol_role": "variable",
+          "sense_id": "formula_A4.11::e",
+          "edge_weight": 1.0,
+          "review_note": "Nearest upstream formula match."
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.66",
+      "prerequisites": []
+    }
+  ],
+  "symbol_index": {
+    "X^{2}": [
+      "formula_A4.1::X^{2}"
+    ],
+    "canonical:X^2": [
+      "formula_A4.1::X^{2}"
+    ],
+    "Z_{s}": [
+      "formula_A4.2::Z_{s}"
+    ],
+    "canonical:Z_s": [
+      "formula_A4.2::Z_{s}"
+    ],
+    "p": [
+      "formula_A4.3::p",
+      "formula_A4.14::p",
+      "formula_A4.15::p",
+      "formula_A4.20::p",
+      "formula_A4.21::p",
+      "formula_A4.33::p",
+      "formula_A4.42::p",
+      "formula_A4.46::p"
+    ],
+    "canonical:p": [
+      "formula_A4.3::p",
+      "formula_A4.14::p",
+      "formula_A4.15::p",
+      "formula_A4.20::p",
+      "formula_A4.21::p",
+      "formula_A4.33::p",
+      "formula_A4.42::p",
+      "formula_A4.46::p"
+    ],
+    "Z_{w}": [
+      "formula_A4.4::Z_{w}"
+    ],
+    "canonical:Z_w": [
+      "formula_A4.4::Z_{w}"
+    ],
+    "\\pi": [
+      "formula_A4.5::\\pi"
+    ],
+    "canonical:\\pi": [
+      "formula_A4.5::\\pi"
+    ],
+    "\\alpha": [
+      "formula_A4.6::\\alpha",
+      "formula_A4.7::\\alpha",
+      "formula_A4.30::\\alpha",
+      "formula_A4.31::\\alpha"
+    ],
+    "canonical:\\alpha": [
+      "formula_A4.6::\\alpha",
+      "formula_A4.7::\\alpha",
+      "formula_A4.30::\\alpha",
+      "formula_A4.31::\\alpha"
+    ],
+    "k^{*}": [
+      "formula_A4.8::k^{*}"
+    ],
+    "canonical:k^*": [
+      "formula_A4.8::k^{*}"
+    ],
+    "\\lambda_{i}": [
+      "formula_A4.9::\\lambda_{i}"
+    ],
+    "canonical:\\lambda_i": [
+      "formula_A4.9::\\lambda_{i}"
+    ],
+    "n^{-1}": [
+      "formula_A4.9::n^{-1}"
+    ],
+    "canonical:n^-1": [
+      "formula_A4.9::n^{-1}"
+    ],
+    "C": [
+      "formula_A4.10::C"
+    ],
+    "canonical:C": [
+      "formula_A4.10::C"
+    ],
+    "d": [
+      "formula_A4.10::d",
+      "formula_A4.15::d"
+    ],
+    "canonical:d": [
+      "formula_A4.10::d",
+      "formula_A4.15::d"
+    ],
+    "e": [
+      "formula_A4.10::e",
+      "formula_A4.11::e"
+    ],
+    "canonical:e": [
+      "formula_A4.10::e",
+      "formula_A4.11::e"
+    ],
+    "h": [
+      "formula_A4.10::h"
+    ],
+    "canonical:h": [
+      "formula_A4.10::h"
+    ],
+    "n_{e,Cheverud}": [
+      "formula_A4.10::n_{e,Cheverud}"
+    ],
+    "canonical:n_e,Cheverud": [
+      "formula_A4.10::n_{e,Cheverud}"
+    ],
+    "r": [
+      "formula_A4.10::r",
+      "formula_A4.50::r",
+      "formula_A4.51::r"
+    ],
+    "canonical:r": [
+      "formula_A4.10::r",
+      "formula_A4.50::r",
+      "formula_A4.51::r"
+    ],
+    "u": [
+      "formula_A4.10::u"
+    ],
+    "canonical:u": [
+      "formula_A4.10::u"
+    ],
+    "v": [
+      "formula_A4.10::v"
+    ],
+    "canonical:v": [
+      "formula_A4.10::v"
+    ],
+    "J": [
+      "formula_A4.11::J"
+    ],
+    "canonical:J": [
+      "formula_A4.11::J"
+    ],
+    "L": [
+      "formula_A4.11::L"
+    ],
+    "canonical:L": [
+      "formula_A4.11::L"
+    ],
+    "i": [
+      "formula_A4.11::i",
+      "formula_A4.42::i",
+      "formula_A4.46::i",
+      "formula_A4.50::i"
+    ],
+    "canonical:i": [
+      "formula_A4.11::i",
+      "formula_A4.42::i",
+      "formula_A4.46::i",
+      "formula_A4.50::i"
+    ],
+    "n_{e,Li-Ji}": [
+      "formula_A4.11::n_{e,Li-Ji}"
+    ],
+    "canonical:n_e,Li-Ji": [
+      "formula_A4.11::n_{e,Li-Ji}"
+    ],
+    "\\phi_{u}": [
+      "formula_A4.14::\\phi_{u}"
+    ],
+    "canonical:\\phi_u": [
+      "formula_A4.14::\\phi_{u}",
+      "formula_A4.15::\\phi_u"
+    ],
+    "\\phi_u": [
+      "formula_A4.15::\\phi_u"
+    ],
+    "a^b": [
+      "formula_A4.15::a^b"
+    ],
+    "canonical:a^b": [
+      "formula_A4.15::a^b"
+    ],
+    "n_0": [
+      "formula_A4.15::n_0"
+    ],
+    "canonical:n_0": [
+      "formula_A4.15::n_0"
+    ],
+    "\\widehat{n}_{0}": [
+      "formula_A4.16::\\widehat{n}_{0}",
+      "formula_A4.19::\\widehat{n}_{0}"
+    ],
+    "canonical:\\hat{n}_0": [
+      "formula_A4.16::\\widehat{n}_{0}",
+      "formula_A4.19::\\widehat{n}_{0}"
+    ],
+    "a": [
+      "formula_A4.16::a",
+      "formula_A4.17::a"
+    ],
+    "canonical:a": [
+      "formula_A4.16::a",
+      "formula_A4.17::a"
+    ],
+    "b": [
+      "formula_A4.16::b",
+      "formula_A4.17::b"
+    ],
+    "canonical:b": [
+      "formula_A4.16::b",
+      "formula_A4.17::b"
+    ],
+    "\\widehat{\\pi}_{0}": [
+      "formula_A4.17::\\widehat{\\pi}_{0}",
+      "formula_A4.18::\\widehat{\\pi}_{0}"
+    ],
+    "canonical:\\hat{\\pi}_0": [
+      "formula_A4.17::\\widehat{\\pi}_{0}",
+      "formula_A4.18::\\widehat{\\pi}_{0}"
+    ],
+    "\\lambda": [
+      "formula_A4.18::\\lambda",
+      "formula_A4.19::\\lambda"
+    ],
+    "canonical:\\lambda": [
+      "formula_A4.18::\\lambda",
+      "formula_A4.19::\\lambda"
+    ],
+    "\\phi_{A}": [
+      "formula_A4.20::\\phi_{A}"
+    ],
+    "canonical:\\phi_A": [
+      "formula_A4.20::\\phi_{A}"
+    ],
+    "\\mathbf{p}": [
+      "formula_A4.22::\\mathbf{p}"
+    ],
+    "canonical:\\mathbf{p}": [
+      "formula_A4.22::\\mathbf{p}"
+    ],
+    "D": [
+      "formula_A4.23::D",
+      "formula_A4.35::D",
+      "formula_A4.38::D",
+      "formula_A4.40::D"
+    ],
+    "canonical:D": [
+      "formula_A4.23::D",
+      "formula_A4.35::D",
+      "formula_A4.38::D",
+      "formula_A4.40::D"
+    ],
+    "F": [
+      "formula_A4.23::F",
+      "formula_A4.24::F",
+      "formula_A4.35::F",
+      "formula_A4.38::F",
+      "formula_A4.40::F"
+    ],
+    "canonical:F": [
+      "formula_A4.23::F",
+      "formula_A4.24::F",
+      "formula_A4.35::F",
+      "formula_A4.38::F",
+      "formula_A4.40::F"
+    ],
+    "R": [
+      "formula_A4.23::R",
+      "formula_A4.24::R",
+      "formula_A4.25::R",
+      "formula_A4.26::R",
+      "formula_A4.29::R",
+      "formula_A4.35::R",
+      "formula_A4.38::R",
+      "formula_A4.40::R"
+    ],
+    "canonical:R": [
+      "formula_A4.23::R",
+      "formula_A4.24::R",
+      "formula_A4.25::R",
+      "formula_A4.26::R",
+      "formula_A4.29::R",
+      "formula_A4.35::R",
+      "formula_A4.38::R",
+      "formula_A4.40::R"
+    ],
+    "\\mathrm{D}": [
+      "formula_A4.23::\\mathrm{D}",
+      "formula_A4.40::\\mathrm{D}"
+    ],
+    "canonical:\\mathrm{D}": [
+      "formula_A4.23::\\mathrm{D}",
+      "formula_A4.40::\\mathrm{D}"
+    ],
+    "\\mathrm{F}": [
+      "formula_A4.23::\\mathrm{F}",
+      "formula_A4.24::\\mathrm{F}",
+      "formula_A4.40::\\mathrm{F}"
+    ],
+    "canonical:\\mathrm{F}": [
+      "formula_A4.23::\\mathrm{F}",
+      "formula_A4.24::\\mathrm{F}",
+      "formula_A4.40::\\mathrm{F}"
+    ],
+    "\\mathrm{R}": [
+      "formula_A4.23::\\mathrm{R}",
+      "formula_A4.24::\\mathrm{R}",
+      "formula_A4.40::\\mathrm{R}"
+    ],
+    "canonical:\\mathrm{R}": [
+      "formula_A4.23::\\mathrm{R}",
+      "formula_A4.24::\\mathrm{R}",
+      "formula_A4.40::\\mathrm{R}"
+    ],
+    "\\mathrm{P}": [
+      "formula_A4.24::\\mathrm{P}"
+    ],
+    "canonical:\\mathrm{P}": [
+      "formula_A4.24::\\mathrm{P}"
+    ],
+    "n": [
+      "formula_A4.32::n"
+    ],
+    "canonical:n": [
+      "formula_A4.32::n"
+    ],
+    "\\widehat{\\delta}_{k}": [
+      "formula_A4.34::\\widehat{\\delta}_{k}"
+    ],
+    "canonical:\\hat{\\delta}_k": [
+      "formula_A4.34::\\widehat{\\delta}_{k}"
+    ],
+    "\\tau": [
+      "formula_A4.35::\\tau",
+      "formula_A4.37::\\tau",
+      "formula_A4.38::\\tau",
+      "formula_A4.39::\\tau",
+      "formula_A4.40::\\tau"
+    ],
+    "canonical:\\tau": [
+      "formula_A4.35::\\tau",
+      "formula_A4.37::\\tau",
+      "formula_A4.38::\\tau",
+      "formula_A4.39::\\tau",
+      "formula_A4.40::\\tau"
+    ],
+    "\\widehat{D}": [
+      "formula_A4.39::\\widehat{D}"
+    ],
+    "canonical:\\hat{D}": [
+      "formula_A4.39::\\widehat{D}"
+    ],
+    "\\widehat{FDR}": [
+      "formula_A4.39::\\widehat{FDR}"
+    ],
+    "canonical:\\hat{FDR}": [
+      "formula_A4.39::\\widehat{FDR}"
+    ],
+    "\\widehat{F}": [
+      "formula_A4.39::\\widehat{F}"
+    ],
+    "canonical:\\hat{F}": [
+      "formula_A4.39::\\widehat{F}"
+    ],
+    "\\widehat{R}": [
+      "formula_A4.39::\\widehat{R}"
+    ],
+    "canonical:\\hat{R}": [
+      "formula_A4.39::\\widehat{R}"
+    ],
+    "\\mathbf{c}": [
+      "formula_A4.41::\\mathbf{c}"
+    ],
+    "canonical:\\mathbf{c}": [
+      "formula_A4.41::\\mathbf{c}"
+    ],
+    "\\mathbf{d}": [
+      "formula_A4.41::\\mathbf{d}"
+    ],
+    "canonical:\\mathbf{d}": [
+      "formula_A4.41::\\mathbf{d}"
+    ],
+    "\\mathbf{f}_{U}": [
+      "formula_A4.41::\\mathbf{f}_{U}"
+    ],
+    "canonical:\\mathbf{f}_U": [
+      "formula_A4.41::\\mathbf{f}_{U}"
+    ],
+    "x": [
+      "formula_A4.41::x"
+    ],
+    "canonical:x": [
+      "formula_A4.41::x"
+    ],
+    "\\widehat{q}": [
+      "formula_A4.42::\\widehat{q}"
+    ],
+    "canonical:\\hat{q}": [
+      "formula_A4.42::\\widehat{q}"
+    ],
+    "T_{i}": [
+      "formula_A4.43::T_{i}",
+      "formula_A4.44::T_{i}",
+      "formula_A4.52::T_{i}",
+      "formula_A4.57::T_{i}",
+      "formula_A4.58::T_{i}",
+      "formula_A4.62::T_{i}"
+    ],
+    "canonical:T_i": [
+      "formula_A4.43::T_{i}",
+      "formula_A4.44::T_{i}",
+      "formula_A4.52::T_{i}",
+      "formula_A4.57::T_{i}",
+      "formula_A4.58::T_{i}",
+      "formula_A4.62::T_{i}"
+    ],
+    "D_{i}": [
+      "formula_A4.45::D_{i}"
+    ],
+    "canonical:D_i": [
+      "formula_A4.45::D_{i}"
+    ],
+    "s_{i,p}^{2}": [
+      "formula_A4.46::s_{i,p}^{2}"
+    ],
+    "canonical:s_i,p^2": [
+      "formula_A4.46::s_{i,p}^{2}"
+    ],
+    "g_{i}": [
+      "formula_A4.47::g_{i}",
+      "formula_A4.48::g_{i}"
+    ],
+    "canonical:g_i": [
+      "formula_A4.47::g_{i}",
+      "formula_A4.48::g_{i}"
+    ],
+    "r_{i}^{*}": [
+      "formula_A4.49::r_{i}^{*}"
+    ],
+    "canonical:r_i^*": [
+      "formula_A4.49::r_{i}^{*}"
+    ],
+    "z_{i,r}": [
+      "formula_A4.50::z_{i,r}"
+    ],
+    "canonical:z_i,r": [
+      "formula_A4.50::z_{i,r}"
+    ],
+    "\\overline{T}": [
+      "formula_A4.53::\\overline{T}",
+      "formula_A4.55::\\overline{T}",
+      "formula_A4.61::\\overline{T}"
+    ],
+    "canonical:\\overline{T}": [
+      "formula_A4.53::\\overline{T}",
+      "formula_A4.55::\\overline{T}",
+      "formula_A4.61::\\overline{T}"
+    ],
+    "s_{T}^{2}": [
+      "formula_A4.54::s_{T}^{2}"
+    ],
+    "canonical:s_T^2": [
+      "formula_A4.54::s_{T}^{2}"
+    ],
+    "\\sigma^{2}(\\overline{T})": [
+      "formula_A4.55::\\sigma^{2}(\\overline{T})",
+      "formula_A4.61::\\sigma^{2}(\\overline{T})"
+    ],
+    "canonical:\\sigma^2(\\overline{T})": [
+      "formula_A4.55::\\sigma^{2}(\\overline{T})",
+      "formula_A4.61::\\sigma^{2}(\\overline{T})"
+    ],
+    "Q": [
+      "formula_A4.56::Q"
+    ],
+    "canonical:Q": [
+      "formula_A4.56::Q"
+    ],
+    "w_{i}": [
+      "formula_A4.59::w_{i}"
+    ],
+    "canonical:w_i": [
+      "formula_A4.59::w_{i}"
+    ],
+    "\\widehat{\\sigma}_{u}^{2}": [
+      "formula_A4.60::\\widehat{\\sigma}_{u}^{2}"
+    ],
+    "canonical:\\hat{\\sigma}_u^2": [
+      "formula_A4.60::\\widehat{\\sigma}_{u}^{2}"
+    ],
+    "\\mathbf{y}": [
+      "formula_A4.63::\\mathbf{y}"
+    ],
+    "canonical:\\mathbf{y}": [
+      "formula_A4.63::\\mathbf{y}"
+    ],
+    "y_{i}": [
+      "formula_A4.64::y_{i}"
+    ],
+    "canonical:y_i": [
+      "formula_A4.64::y_{i}"
+    ],
+    "T": [
+      "formula_A4.66::T"
+    ],
+    "canonical:T": [
+      "formula_A4.66::T"
+    ],
+    "\\theta": [
+      "formula_A4.66::\\theta"
+    ],
+    "canonical:\\theta": [
+      "formula_A4.66::\\theta"
+    ]
+  },
+  "ambiguous": [
+    {
+      "dependent_id": "formula_A4.4",
+      "symbol": "Z_{i}",
+      "family_key": "Z",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.2",
+          "chapter_id": "appendix4",
+          "via_symbol": "Z_{s}",
+          "family_key": "Z",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.12",
+      "symbol": "\\alpha^{j}",
+      "family_key": "\\alpha",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.6",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\alpha",
+          "family_key": "\\alpha",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.7",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\alpha",
+          "family_key": "\\alpha",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.12",
+      "symbol": "\\mathsf{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.13",
+      "symbol": "\\mathsf{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.19",
+      "symbol": "\\widehat{\\pi}_{0}",
+      "family_key": "\\pi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.21",
+      "symbol": "\\phi_{A}",
+      "family_key": "\\phi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.14",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{u}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_u",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.20",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{A}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.21",
+      "symbol": "\\pi_{0}",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.22",
+      "symbol": "p_{i}",
+      "family_key": "p",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.14",
+          "chapter_id": "appendix4",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.20",
+          "chapter_id": "appendix4",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.21",
+          "chapter_id": "appendix4",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.3",
+          "chapter_id": "appendix4",
+          "via_symbol": "p",
+          "family_key": "p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.27",
+      "symbol": "\\pi_{0}",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.28",
+      "symbol": "\\pi_{0}",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.29",
+      "symbol": "\\pi_{0}",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.30",
+      "symbol": "\\pi_0",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.34",
+      "symbol": "\\widehat{n}_{0}",
+      "family_key": "n",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.36",
+      "symbol": "\\phi_{u}",
+      "family_key": "\\phi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.14",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{u}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_u",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.20",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{A}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.37",
+      "symbol": "n_{0}",
+      "family_key": "n",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.38",
+      "symbol": "n_{0}",
+      "family_key": "n",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.39",
+      "symbol": "n_{0}",
+      "family_key": "n",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.40",
+      "symbol": "\\mathrm{d}",
+      "family_key": "d",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "d",
+          "family_key": "d",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.40",
+      "symbol": "\\pi_{0}",
+      "family_key": "\\pi",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.18",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\pi}_{0}",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.5",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\pi",
+          "family_key": "\\pi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.41",
+      "symbol": "\\phi_{A}",
+      "family_key": "\\phi",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.14",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{u}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_u",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.20",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\phi_{A}",
+          "family_key": "\\phi",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.42",
+      "symbol": "\\widehat{D}",
+      "family_key": "D",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.23",
+          "chapter_id": "appendix4",
+          "via_symbol": "D",
+          "family_key": "D",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.35",
+          "chapter_id": "appendix4",
+          "via_symbol": "D",
+          "family_key": "D",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.38",
+          "chapter_id": "appendix4",
+          "via_symbol": "D",
+          "family_key": "D",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.39",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{D}",
+          "family_key": "D",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.40",
+          "chapter_id": "appendix4",
+          "via_symbol": "D",
+          "family_key": "D",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.42",
+      "symbol": "\\widehat{F}",
+      "family_key": "F",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.23",
+          "chapter_id": "appendix4",
+          "via_symbol": "F",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.24",
+          "chapter_id": "appendix4",
+          "via_symbol": "F",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.35",
+          "chapter_id": "appendix4",
+          "via_symbol": "F",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.38",
+          "chapter_id": "appendix4",
+          "via_symbol": "F",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.39",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{F}",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.40",
+          "chapter_id": "appendix4",
+          "via_symbol": "F",
+          "family_key": "F",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.42",
+      "symbol": "\\widehat{R}",
+      "family_key": "R",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.23",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.24",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.25",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.26",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.29",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.35",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.38",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.39",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{R}",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.40",
+          "chapter_id": "appendix4",
+          "via_symbol": "R",
+          "family_key": "R",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.43",
+      "symbol": "n_{i}",
+      "family_key": "n",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.47",
+      "symbol": "\\mathrm{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.47",
+      "symbol": "s_{i,p}",
+      "family_key": "s,p",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.46",
+          "chapter_id": "appendix4",
+          "via_symbol": "s_{i,p}^{2}",
+          "family_key": "s,p",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.49",
+      "symbol": "n_{i}",
+      "family_key": "n",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.49",
+      "symbol": "r_{i}",
+      "family_key": "r",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "r",
+          "family_key": "r",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.50",
+      "symbol": "n_{i}",
+      "family_key": "n",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.15",
+          "chapter_id": "appendix4",
+          "via_symbol": "n_0",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.19",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{n}_{0}",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.32",
+          "chapter_id": "appendix4",
+          "via_symbol": "n",
+          "family_key": "n",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.50",
+      "symbol": "r_{i}",
+      "family_key": "r",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "r",
+          "family_key": "r",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.52",
+      "symbol": "e_{i}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.53",
+      "symbol": "T_{i}",
+      "family_key": "T",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.43",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.44",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.52",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.53",
+      "symbol": "\\mathrm{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.56",
+      "symbol": "T_{i}",
+      "family_key": "T",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.43",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.44",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.52",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.53",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.56",
+      "symbol": "s_{i}^{2}",
+      "family_key": "s",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.54",
+          "chapter_id": "appendix4",
+          "via_symbol": "s_{T}^{2}",
+          "family_key": "s",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.57",
+      "symbol": "b_{j}",
+      "family_key": "b",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "b",
+          "family_key": "b",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "b",
+          "family_key": "b",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.57",
+      "symbol": "e_{i}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.58",
+      "symbol": "e_{i}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.58",
+      "symbol": "u_{i}",
+      "family_key": "u",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "u",
+          "family_key": "u",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.59",
+      "symbol": "s_{i}^{2}",
+      "family_key": "s",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.54",
+          "chapter_id": "appendix4",
+          "via_symbol": "s_{T}^{2}",
+          "family_key": "s",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.60",
+      "symbol": "\\mathrm{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.61",
+      "symbol": "\\sigma_{u}^{2}",
+      "family_key": "\\sigma_var",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\sigma^{2}(\\overline{T})",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.62",
+      "symbol": "b_{j}",
+      "family_key": "b",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.16",
+          "chapter_id": "appendix4",
+          "via_symbol": "b",
+          "family_key": "b",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.17",
+          "chapter_id": "appendix4",
+          "via_symbol": "b",
+          "family_key": "b",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.62",
+      "symbol": "e_{i}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.62",
+      "symbol": "u_{i}",
+      "family_key": "u",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "u",
+          "family_key": "u",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.63",
+      "symbol": "\\mathbf{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.64",
+      "symbol": "T_{i}",
+      "family_key": "T",
+      "reason": "3+ same-chapter candidates for the same symbol family",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.43",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.44",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.52",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.53",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.57",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.58",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.61",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.62",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.64",
+      "symbol": "s_{i}",
+      "family_key": "s",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.54",
+          "chapter_id": "appendix4",
+          "via_symbol": "s_{T}^{2}",
+          "family_key": "s",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.65",
+      "symbol": "T",
+      "family_key": "T",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.43",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.44",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.52",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.53",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.57",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.58",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.61",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\overline{T}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.62",
+          "chapter_id": "appendix4",
+          "via_symbol": "T_{i}",
+          "family_key": "T",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.65",
+      "symbol": "\\mathrm{e}",
+      "family_key": "e",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.10",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.11",
+          "chapter_id": "appendix4",
+          "via_symbol": "e",
+          "family_key": "e",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.65",
+      "symbol": "\\sigma_{e}^{2}",
+      "family_key": "\\sigma_var",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\sigma^{2}(\\overline{T})",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.61",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\sigma^{2}(\\overline{T})",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.65",
+      "symbol": "\\sigma_{u}",
+      "family_key": "\\sigma",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.60",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\widehat{\\sigma}_{u}^{2}",
+          "family_key": "\\sigma",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    },
+    {
+      "dependent_id": "formula_A4.66",
+      "symbol": "\\sigma_{e}^{2}",
+      "family_key": "\\sigma_var",
+      "reason": "family-only symbol match; requires semantic review before entering the main graph",
+      "edge_status": "ambiguous",
+      "edge_evidence": "family_candidate",
+      "candidates": [
+        {
+          "target_id": "formula_A4.55",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\sigma^{2}(\\overline{T})",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        },
+        {
+          "target_id": "formula_A4.61",
+          "chapter_id": "appendix4",
+          "via_symbol": "\\sigma^{2}(\\overline{T})",
+          "family_key": "\\sigma_var",
+          "match_type": "family_candidate",
+          "confidence": 0.45
+        }
+      ]
+    }
+  ]
+}

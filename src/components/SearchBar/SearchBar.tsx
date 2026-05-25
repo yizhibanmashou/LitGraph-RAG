@@ -2,16 +2,40 @@ import { FormEvent, KeyboardEvent, useEffect, useMemo, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import type { SearchFormula } from '../../types/formula';
+import type { ChapterNavigatorPayload } from '../../types/learning';
+import type { ChapterSearchResult, SearchResult } from '../../types/search';
 import { useSearchStore } from '../../stores/searchStore';
+import { flattenChapters } from '../../utils/starNavigation';
+import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
 import { SearchResults } from './SearchResults';
 
 interface SearchBarProps {
   searchIndex: SearchFormula[];
+  chapterNavigator?: ChapterNavigatorPayload;
+  size?: 'default' | 'compact';
+  tone?: 'dark' | 'light' | 'nav';
 }
 
-export function SearchBar({ searchIndex }: SearchBarProps) {
+function normalizeSearch(value: string): string {
+  return value.trim().toLowerCase().replace(/\s+/g, '');
+}
+
+function chapterAliases(chapter: ChapterSearchResult): string[] {
+  const chapterNumber = String(chapter.chapter_id.match(/\d+$/)?.[0] || chapter.chapter);
+  const base = [chapter.chapter_id, chapter.label, chapter.label.replace(/\s+/g, ''), chapter.title, chapter.title.replace(/\s+/g, '')];
+  if (chapter.chapter_id.startsWith('appendix')) {
+    return [...base, `appendix${chapterNumber}`, `app${chapterNumber}`, `a${chapterNumber}`].map(normalizeSearch);
+  }
+  return [...base, `chapter${chapterNumber}`, `chap${chapterNumber}`, `ch${chapterNumber}`, `c${chapterNumber}`].map(normalizeSearch);
+}
+
+function matchesChapterQuery(chapter: ChapterSearchResult, normalizedQuery: string): boolean {
+  return chapterAliases(chapter).some((alias) => alias.includes(normalizedQuery));
+}
+
+export function SearchBar({ searchIndex, chapterNavigator, size = 'default', tone = 'dark' }: SearchBarProps) {
   const navigate = useNavigate();
-  const workerRef = useRef<Worker | null>(null);
+  const copy = getUiCopy(DEFAULT_LANGUAGE);
   const query = useSearchStore((state) => state.query);
   const results = useSearchStore((state) => state.results);
   const selectedIndex = useSearchStore((state) => state.selectedIndex);
@@ -19,39 +43,94 @@ export function SearchBar({ searchIndex }: SearchBarProps) {
   const setResults = useSearchStore((state) => state.setResults);
   const setSelectedIndex = useSearchStore((state) => state.setSelectedIndex);
 
-  const lookup = useMemo(() => new Map(searchIndex.map((item) => [item.id, item])), [searchIndex]);
+  const formulaLookup = useMemo(() => new Map(searchIndex.map((item) => [item.id, item])), [searchIndex]);
+  const chapterResults = useMemo<ChapterSearchResult[]>(
+    () =>
+      chapterNavigator
+        ? flattenChapters(chapterNavigator).map((chapter) => ({
+            resultType: 'chapter',
+            id: chapter.chapter_id,
+            chapter_id: chapter.chapter_id,
+            chapter: chapter.chapter,
+            label: formatChapterLabel(chapter.chapter_id, chapter.chapter),
+            title: chapter.title_zh || chapter.title_en.replace(' Formula Navigator', ''),
+            context: chapter.description_zh || chapter.section_hint || chapter.description_en,
+            formula_count: chapter.full_formula_ids.length,
+          }))
+        : [],
+    [chapterNavigator],
+  );
+
+  const widthClass = size === 'compact' ? 'w-[min(360px,calc(100vw-48px))]' : 'w-[min(520px,48vw)]';
+  const inputClass =
+    tone === 'light'
+      ? 'search-bar__input search-bar__input--light h-12 w-full rounded-xl border border-slate-200 bg-white/92 pl-11 pr-11 text-sm text-slate-950 shadow-[0_10px_28px_rgba(15,23,42,0.08)] outline-none backdrop-blur placeholder:text-slate-400 focus:border-blue-300 focus:ring-4 focus:ring-blue-500/10'
+      : tone === 'nav'
+        ? 'search-bar__input search-bar__input--nav h-12 w-full rounded-2xl border border-blue-300/18 bg-[#071225]/88 pl-11 pr-11 text-sm text-slate-100 caret-blue-200 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.035),0_14px_34px_rgba(2,6,23,0.36)] outline-none backdrop-blur-xl placeholder:text-slate-500 selection:bg-blue-300/18 focus:border-blue-300/48 focus:bg-[#08162b]/94 focus:ring-4 focus:ring-blue-500/10'
+      : 'search-bar__input search-bar__input--dark h-12 w-full rounded-2xl border border-cyan-100/18 bg-slate-950/90 pl-11 pr-11 text-sm text-cyan-50 caret-cyan-200 shadow-[0_18px_44px_rgba(2,6,23,0.48)] outline-none backdrop-blur-xl placeholder:text-slate-500 selection:bg-cyan-300/20 focus:border-cyan-200/55 focus:bg-slate-950/95 focus:ring-4 focus:ring-cyan-300/10';
+  const iconClass = tone === 'light' ? 'text-slate-400' : tone === 'nav' ? 'text-blue-200/70' : 'text-cyan-100/80';
+  const clearClass = tone === 'light' ? 'text-slate-400 hover:bg-slate-100 hover:text-slate-700' : tone === 'nav' ? 'text-slate-400 hover:bg-white/8 hover:text-blue-100' : 'text-cyan-100/70 hover:bg-white/10 hover:text-white';
+
+  const workerRef = useRef<Worker | null>(null);
 
   useEffect(() => {
     if (!searchIndex.length) return;
     const worker = new Worker(new URL('./searchWorker.ts', import.meta.url), { type: 'module' });
     workerRef.current = worker;
-    worker.onmessage = (event: MessageEvent<{ type: string; results?: SearchFormula[] }>) => {
-      if (event.data.type === 'results') setResults(event.data.results || []);
-    };
     worker.postMessage({ type: 'init', payload: searchIndex });
     return () => {
       worker.terminate();
-      workerRef.current = null;
     };
-  }, [searchIndex, setResults]);
+  }, [searchIndex]);
 
   useEffect(() => {
-    const handle = window.setTimeout(() => {
-      workerRef.current?.postMessage({ type: 'search', query });
-    }, 200);
-    return () => window.clearTimeout(handle);
-  }, [query]);
+    const normalizedQuery = normalizeSearch(query);
+    if (!normalizedQuery) {
+      setResults([]);
+      return;
+    }
 
-  const openFormula = (formulaId: string) => {
-    const formula = lookup.get(formulaId);
+    const matchedChapters = chapterResults.filter((chapter) => matchesChapterQuery(chapter, normalizedQuery)).slice(0, 6);
+
+    if (workerRef.current) {
+      workerRef.current.onmessage = (event) => {
+        if (event.data.type === 'results') {
+          const formulaResults = event.data.results as SearchFormula[];
+          setResults([...(matchedChapters as SearchResult[]), ...formulaResults].slice(0, 10));
+        }
+      };
+      workerRef.current.postMessage({ type: 'search', query: normalizedQuery });
+    } else {
+      const exactFormulas = searchIndex.filter((item) => normalizeSearch(item.number).startsWith(normalizedQuery));
+      const fuzzyFormulas = searchIndex.filter((item) => {
+        const haystack = [item.label, item.section, item.context, item.keywords.join(' ')].join(' ');
+        return normalizeSearch(haystack).includes(normalizedQuery);
+      });
+      const formulas = [...exactFormulas, ...fuzzyFormulas].filter((item, index, arr) => arr.findIndex((candidate) => candidate.id === item.id) === index);
+      setResults([...(matchedChapters as SearchResult[]), ...formulas].slice(0, 10));
+    }
+  }, [chapterResults, query, searchIndex, setResults]);
+
+  const openResult = (resultId: string) => {
+    const chapter = chapterResults.find((item) => item.id === resultId);
+    if (chapter) {
+      navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`);
+      setQuery('');
+      setResults([]);
+      return;
+    }
+
+    const formula = formulaLookup.get(resultId);
     if (!formula) return;
-    navigate(`/graph/${formula.id}`);
+    navigate(`/graph/${formula.id}?chapterId=${formula.chapter_id}`);
+    setQuery('');
+    setResults([]);
   };
 
   const submit = (event: FormEvent) => {
     event.preventDefault();
     const selected = results[selectedIndex] || results[0];
-    if (selected) openFormula(selected.id);
+    if (selected) openResult(selected.id);
   };
 
   const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
@@ -70,21 +149,15 @@ export function SearchBar({ searchIndex }: SearchBarProps) {
   };
 
   return (
-    <form onSubmit={submit} className="relative w-[min(520px,48vw)] min-w-[280px]">
-      <Search className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-slate-300" size={17} />
-      <input
-        value={query}
-        onChange={(event) => setQuery(event.target.value)}
-        onKeyDown={onKeyDown}
-        placeholder="Search formula, keyword, or number"
-        className="h-12 w-full rounded-md border border-slate-400/30 bg-slate-950/80 pl-11 pr-11 text-sm text-white shadow-lg outline-none backdrop-blur placeholder:text-slate-400 focus:border-blue-300"
-      />
+    <form onSubmit={submit} className={`search-bar relative ${widthClass} min-w-[260px]`}>
+      <Search className={`pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 ${iconClass}`} size={17} />
+      <input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={onKeyDown} placeholder={copy.app.searchPlaceholder} className={inputClass} />
       {query ? (
-        <button type="button" onClick={() => setQuery('')} className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded p-1 text-slate-300 hover:bg-white/10">
+        <button type="button" onClick={() => setQuery('')} className={`absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded p-1 ${clearClass}`} aria-label={copy.app.clearSearch}>
           <X size={16} />
         </button>
       ) : null}
-      <SearchResults results={results} selectedIndex={selectedIndex} onSelect={openFormula} />
+      <SearchResults results={results} selectedIndex={selectedIndex} onSelect={openResult} tone={tone} />
     </form>
   );
 }

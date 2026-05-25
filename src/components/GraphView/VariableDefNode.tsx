@@ -1,19 +1,60 @@
+import { useEffect, useState } from 'react';
 import type { NodeProps } from '@xyflow/react';
 import { Handle, Position } from '@xyflow/react';
 import type { VariableNodeData } from '../../types/graph';
+import { generateVariableDetails } from '../../services/llmClient';
+import { explainVariablePrerequisite, humanizeSource } from '../../utils/formulaInfo';
+import { DEFAULT_LANGUAGE, getUiCopy } from '../../utils/uiCopy';
+import { MathFormula } from '../common/MathFormula';
 
 export function VariableDefNode({ data }: NodeProps) {
   const nodeData = data as unknown as VariableNodeData;
   const prerequisite = nodeData.prerequisite;
+  const fallbackDefinition = explainVariablePrerequisite(prerequisite);
+  const copy = getUiCopy(DEFAULT_LANGUAGE).graph.variable;
+  const [detail, setDetail] = useState<{ status: 'idle' | 'loading' | 'ready' | 'error'; text: string }>({
+    status: 'idle',
+    text: fallbackDefinition,
+  });
+  const source = humanizeSource(prerequisite.source);
+
+  useEffect(() => {
+    if (!nodeData.formulaId || !prerequisite.symbol) {
+      setDetail({ status: 'idle', text: fallbackDefinition });
+      return;
+    }
+    let cancelled = false;
+    setDetail({ status: 'loading', text: fallbackDefinition });
+    generateVariableDetails({
+      formulaId: nodeData.formulaId,
+      latex: nodeData.formulaLatex || '',
+      context: fallbackDefinition,
+      symbol: prerequisite.symbol,
+      prerequisite,
+      language: 'zh',
+    })
+      .then((value) => {
+        if (!cancelled) setDetail({ status: 'ready', text: value.text });
+      })
+      .catch(() => {
+        if (!cancelled) setDetail({ status: 'error', text: fallbackDefinition });
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, [fallbackDefinition, nodeData.formulaId, nodeData.formulaLatex, prerequisite]);
+
   return (
-    <div className="variable-def-node bg-white/40 text-slate-600 backdrop-blur-md">
+    <div className="variable-def-node">
       <Handle type="source" position={Position.Right} />
-      <div className="flex items-center gap-2">
-        <span className="h-1.5 w-1.5 rounded-full bg-slate-300" />
-        <div className="text-xs font-semibold text-slate-600">{prerequisite.symbol}</div>
+      <div className="flex items-center gap-2.5">
+        <span className="variable-def-node__marker" />
+        <MathFormula latex={prerequisite.symbol} inline className="variable-def-node__symbol min-w-0" />
       </div>
-      <div className="mt-2 text-xs leading-5 text-slate-600">{prerequisite.definition}</div>
-      <div className="mt-2 truncate text-[10px] font-medium uppercase tracking-[0.08em] text-slate-400">{prerequisite.source}</div>
+      <div className="variable-def-node__copy mt-2">{detail.text}</div>
+      <div className="variable-def-node__source mt-2 truncate">
+        {detail.status === 'loading' ? copy.loading : detail.status === 'ready' ? copy.ready : source}
+      </div>
     </div>
   );
 }

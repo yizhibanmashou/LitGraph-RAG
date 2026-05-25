@@ -150,7 +150,32 @@ NON_SYMBOL_MACROS = {
 }
 
 LATIN_SYMBOL_RE = re.compile(r"[A-Za-z](?:[A-Za-z]+)?")
-SYMBOL_SPLIT_RE = re.compile(r"\\[A-Za-z]+|[A-Za-z]")
+SYMBOL_TOKEN_RE = re.compile(
+    r"\\[A-Za-z]+(?:_\{[^{}]*\}|_[A-Za-z0-9]+|\^\{[^{}]*\}|\^[A-Za-z0-9]+)*"
+    r"|[A-Za-z](?:_\{[^{}]*\}|_[A-Za-z0-9]+|\^\{[^{}]*\}|\^[A-Za-z0-9]+)*"
+)
+GLUED_SYMBOL_BOUNDARY_RE = re.compile(
+    r"((?:\\[A-Za-z]+|[A-Za-z])"
+    r"(?:_\{[^{}]*\}|_[A-Za-z0-9]+)?"
+    r"(?:\^\{[^{}]*\}|\^[A-Za-z0-9]+))"
+    r"(?=(?:\\[A-Za-z]+|[A-Za-z])(?:_\{[^{}]*\}|_[A-Za-z0-9]+)?)"
+)
+STYLE_SYMBOL_TOKEN_RE = re.compile(
+    r"\\(?:bar|overline|hat|widehat|tilde|widetilde|dot|vec|mathbf|boldsymbol)"
+    r"\{[^{}]+\}(?:_\{[^{}]*\}|_[A-Za-z0-9]+|\^\{[^{}]*\}|\^[A-Za-z0-9]+)*"
+)
+SCRIPT_MACROS = {"bar", "overline", "hat", "widehat", "tilde", "widetilde", "dot", "vec"}
+FUNCTION_LIKE_NAMES = {"E", "P", "Pr", "Var", "Cov", "F"}
+ROLE_OPERATOR = "operator"
+ROLE_VARIABLE = "variable"
+ROLE_FUNCTION = "function"
+ROLE_PARAMETER = "parameter"
+ROLE_INDEX = "index"
+ROLE_SYMBOL = "symbol"
+ROLE_COMMAND = "command"
+ROLE_COVARIANCE_OPERATOR = "covariance_operator"
+ROLE_STATISTIC_VARIANCE = "statistic_variance"
+ROLE_MATRIX_SYMBOL = "matrix_symbol"
 
 
 @dataclass(frozen=True)
@@ -159,6 +184,14 @@ class Symbol:
 
     name: str
     family_key: str
+    canonical_latex: str
+    exact_key: str
+    role: str = ROLE_SYMBOL
+    base: str = ""
+    subscript: str = ""
+    superscript: str = ""
+    accent: str = ""
+    occurrence_context: str = ""
 
 
 def normalize_symbol(symbol: str) -> str:
@@ -167,20 +200,140 @@ def normalize_symbol(symbol: str) -> str:
     normalized = symbol.strip()
     normalized = normalized.replace(" ", "")
     normalized = normalized.replace(r"\left", "").replace(r"\right", "")
-    normalized = re.sub(r"([_^])\{([^{}]+)\}", r"\1\2", normalized)
     normalized = normalized.replace("'", r"^{\prime}")
     return normalized
+
+
+def normalize_latex_for_symbol_scan(latex: str) -> str:
+    """Repair OCR-glued adjacent symbols before tokenization."""
+
+    value = latex
+    value = re.sub(r"\\(?:begin|end)\s*\{[^{}]*\}", " ", value)
+    value = re.sub(r"\\\\+", " ", value)
+    previous = None
+    while previous != value:
+        previous = value
+        value = GLUED_SYMBOL_BOUNDARY_RE.sub(r"\1 ", value)
+    return value
+
+
+def _normalize_script_braces(value: str) -> str:
+    value = re.sub(r"_\{([^{}]+)\}", r"_\1", value)
+    value = re.sub(r"\^\{([^{}]+)\}", r"^\1", value)
+    return value
+
+
+def canonical_symbol(symbol: str) -> str:
+    """Return a conservative canonical form preserving meaningful scripts."""
+
+    value = normalize_symbol(symbol)
+    for macro in ("bar", "overline"):
+        value = value.replace(f"\\{macro}", "\\overline")
+    if value.startswith("\\widehat"):
+        value = value.replace("\\widehat", "\\hat", 1)
+    if value.startswith("\\widetilde"):
+        value = value.replace("\\widetilde", "\\tilde", 1)
+    return _normalize_script_braces(value)
+
+
+def is_sigma_covariance_call(symbol: str) -> bool:
+    value = canonical_symbol(symbol)
+    return bool(re.match(r"^\\sigma(?:\\left)?[\(\[].*,.*(?:\\right)?[\)\]]$", value))
+
+
+def is_sigma_variance_quantity(symbol: str) -> bool:
+    value = canonical_symbol(symbol)
+    return bool(re.match(r"^\\sigma(?:_[A-Za-z0-9\\]+)?\^2(?:\(.*\))?$", value))
+
+
+def is_sigma_matrix_symbol(symbol: str) -> bool:
+    value = canonical_symbol(symbol)
+    return value in {r"\Sigma", r"\mathbf{\Sigma}", r"\boldsymbol{\Sigma}"}
 
 
 def family_key(symbol: str) -> str:
     """Return a coarse symbol-family key by removing adornments and indices."""
 
-    value = normalize_symbol(symbol)
+    value = canonical_symbol(symbol)
+    if is_sigma_covariance_call(value):
+        return r"\sigma_cov"
+    if is_sigma_variance_quantity(value):
+        return r"\sigma_var"
+    if is_sigma_matrix_symbol(value):
+        return r"\Sigma_matrix"
     for macro in STYLE_MACROS:
         value = value.replace(f"\\{macro}", "")
     value = re.sub(r"[_^](?:\{[^{}]*\}|\\?[A-Za-z0-9]+)", "", value)
     value = value.replace("(", "").replace(")", "")
+    value = value.replace("{", "").replace("}", "")
     return value or normalize_symbol(symbol)
+
+
+def exact_key(symbol: str) -> str:
+    return canonical_symbol(symbol)
+
+
+def symbol_role(symbol: str) -> str:
+    value = canonical_symbol(symbol)
+    if is_sigma_covariance_call(value):
+        return ROLE_COVARIANCE_OPERATOR
+    if is_sigma_variance_quantity(value):
+        return ROLE_STATISTIC_VARIANCE
+    if is_sigma_matrix_symbol(value):
+        return ROLE_MATRIX_SYMBOL
+    if any(value.startswith(f"\\{macro}") for macro in OPERATOR_MACROS):
+        return ROLE_OPERATOR
+    if value.startswith("\\") and value[1:] in GREEK_MACROS:
+        return ROLE_VARIABLE
+    if re.match(r"^[A-Za-z]+(?:_[A-Za-z0-9]+)?$", value) and "_" in value:
+        return ROLE_PARAMETER
+    if re.match(r"^[A-Za-z]_[A-Za-z0-9]+$", value):
+        return ROLE_INDEX
+    if value.startswith("\\") and any(value.startswith(f"\\{macro}") for macro in SCRIPT_MACROS):
+        return ROLE_SYMBOL
+    if re.match(r"^[A-Za-z]$", value):
+        return ROLE_VARIABLE
+    return ROLE_SYMBOL
+
+
+def split_symbol_parts(symbol: str) -> tuple[str, str, str]:
+    value = canonical_symbol(symbol)
+    if "(" in value:
+        value = value.split("(", 1)[0]
+    base = value
+    subscript = ""
+    superscript = ""
+    if "_" in value:
+        base, tail = value.split("_", 1)
+        if "^" in tail:
+            subscript, superscript = tail.split("^", 1)
+        else:
+            subscript = tail
+    elif "^" in value:
+        base, superscript = value.split("^", 1)
+    return base, subscript, superscript
+
+
+def is_operator_symbol(symbol: str) -> bool:
+    value = canonical_symbol(symbol)
+    if is_sigma_covariance_call(value):
+        return True
+    if value.startswith("\\"):
+        return value[1:] in OPERATOR_MACROS or value[1:] in NON_SYMBOL_MACROS
+    return value in {"E", "P", "Pr", "Var", "Cov"}
+
+
+def is_atomic_symbol(symbol: str) -> bool:
+    """Return True for visually atomic symbols such as ``D`` or ``\\mu``."""
+
+    if is_operator_symbol(symbol):
+        return False
+    value = family_key(symbol)
+    value = value.replace("{", "").replace("}", "")
+    if value.startswith("\\"):
+        macro = value[1:]
+        return macro in GREEK_MACROS
+    return len(value) == 1 and value.isalpha()
 
 
 def _source(node: LatexNode) -> str:
@@ -252,15 +405,197 @@ def _append_scripts(base: str, tail: str) -> str:
 
 def _symbols_from_chars(text: str) -> set[str]:
     symbols: set[str] = set()
-    for match in SYMBOL_SPLIT_RE.finditer(text):
+    style_spans: list[tuple[int, int]] = []
+    for match in STYLE_SYMBOL_TOKEN_RE.finditer(text):
+        symbols.add(match.group(0))
+        style_spans.append(match.span())
+
+    for match in SYMBOL_TOKEN_RE.finditer(text):
+        if any(start <= match.start() and match.end() <= end for start, end in style_spans):
+            continue
         token = match.group(0)
+        next_text = text[match.end() :].lstrip()
         if token.startswith("\\"):
-            name = token[1:]
-            if name in GREEK_MACROS or name in OPERATOR_MACROS:
+            macro_match = re.match(r"\\([A-Za-z]+)", token)
+            name = macro_match.group(1) if macro_match else token[1:]
+            if name in GREEK_MACROS:
                 symbols.add(token)
+            elif name in OPERATOR_MACROS:
+                continue
+        elif token in FUNCTION_LIKE_NAMES and next_text.startswith("("):
+            continue
         elif token.isalpha():
             symbols.add(token)
+        elif re.match(r"^[A-Za-z](?:_\{[^{}]*\}|_[A-Za-z0-9]+|\^\{[^{}]*\}|\^[A-Za-z0-9]+)+$", token):
+            symbols.add(token)
     return symbols
+
+
+def _regex_symbols_from_latex(latex: str) -> set[str]:
+    return _symbols_from_chars(latex)
+
+
+def _matching_close(open_ch: str) -> str:
+    return ")" if open_ch == "(" else "]"
+
+
+def _call_has_top_level_comma(text: str, open_index: int) -> bool:
+    open_ch = text[open_index]
+    close_ch = _matching_close(open_ch)
+    depth = 0
+    brace_depth = 0
+    cursor = open_index
+    while cursor < len(text):
+        ch = text[cursor]
+        if ch == "{":
+            brace_depth += 1
+        elif ch == "}":
+            brace_depth = max(0, brace_depth - 1)
+        elif brace_depth == 0 and ch == open_ch:
+            depth += 1
+        elif brace_depth == 0 and ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                return False
+        elif brace_depth == 0 and ch == "," and depth == 1:
+            return True
+        cursor += 1
+    return False
+
+
+def _call_argument_text(text: str, open_index: int) -> str | None:
+    open_ch = text[open_index]
+    close_ch = _matching_close(open_ch)
+    depth = 0
+    brace_depth = 0
+    cursor = open_index
+    while cursor < len(text):
+        ch = text[cursor]
+        if ch == "{":
+            brace_depth += 1
+        elif ch == "}":
+            brace_depth = max(0, brace_depth - 1)
+        elif brace_depth == 0 and ch == open_ch:
+            depth += 1
+        elif brace_depth == 0 and ch == close_ch:
+            depth -= 1
+            if depth == 0:
+                return text[open_index + 1 : cursor]
+        cursor += 1
+    return None
+
+
+def _sigma_call_open_matches(latex: str) -> Iterable[re.Match[str]]:
+    return re.finditer(r"\\sigma(?:\s*\\left)?\s*([\(\[])", latex)
+
+
+def _has_sigma_covariance_call(latex: str) -> bool:
+    for match in _sigma_call_open_matches(latex):
+        open_index = match.start(1)
+        if _call_has_top_level_comma(latex, open_index):
+            return True
+    return False
+
+
+def _is_operator_call_expression(latex: str) -> bool:
+    value = latex.strip()
+    return bool(
+        re.match(r"^\\sigma(?:\s*\\left)?\s*[\(\[].*,.*[\)\]]\s*$", value)
+        or re.match(r"^(?:E|\\?Pr|\\?Var|\\?Cov|\\?cov|\\?corr|\\?det|\\?ln|\\?log|\\?exp)\s*(?:\\left)?\s*[\(\[]", value)
+    )
+
+
+def _definition_symbols_from_operator_lhs(latex: str) -> set[str]:
+    value = latex.strip()
+    match = re.match(r"^E\s*(?:\\left)?\s*([\(\[])", value)
+    if not match:
+        return set()
+    args = _call_argument_text(value, match.start(1))
+    if args is None or "," in args or r"\mid" in args or "|" in args:
+        return set()
+    return _extract_symbols_from_latex(args)
+
+
+def _sigma_variance_call_symbols(latex: str) -> set[str]:
+    symbols: set[str] = set()
+    pattern = re.compile(
+        r"(\\sigma(?:_\{[^{}]+\}|_[A-Za-z0-9]+)?(?:\^\{2\}|\^2))"
+        r"\s*(?:\\left)?\s*([\(\[])"
+    )
+    for match in pattern.finditer(latex):
+        open_index = match.start(2)
+        if _call_has_top_level_comma(latex, open_index):
+            continue
+        args = _call_argument_text(latex, open_index)
+        if args is None:
+            continue
+        symbols.add(f"{normalize_symbol(match.group(1))}({normalize_symbol(args)})")
+    return symbols
+
+
+def _sigma_variance_fragments(symbols: Iterable[str]) -> set[str]:
+    fragments: set[str] = {r"\sigma"}
+    for symbol in symbols:
+        head = canonical_symbol(symbol).split("(", 1)[0]
+        fragments.add(head)
+        base, subscript, superscript = split_symbol_parts(head)
+        fragments.add(base)
+        if subscript:
+            fragments.add(subscript.strip("{}"))
+        if superscript:
+            fragments.add(superscript.strip("{}"))
+        if subscript and superscript:
+            fragments.add(f"{subscript.strip('{}')}^{superscript.strip('{}')}")
+    return {fragment for fragment in fragments if fragment}
+
+
+def _discard_by_canonical(symbols: set[str], fragments: Iterable[str]) -> None:
+    fragment_keys = {canonical_symbol(fragment) for fragment in fragments if fragment}
+    for symbol in list(symbols):
+        if canonical_symbol(symbol) in fragment_keys:
+            symbols.discard(symbol)
+
+
+def _compound_fragments(symbol: str) -> set[str]:
+    fragments: set[str] = set()
+    value = normalize_symbol(symbol)
+    if "_" not in value and "^" not in value:
+        return fragments
+    base, subscript, superscript = split_symbol_parts(value)
+    if base and re.fullmatch(r"\\?[A-Za-z]", base):
+        fragments.add(base)
+    for script in (subscript, superscript):
+        cleaned = script.strip("{}")
+        if len(cleaned) > 1 and cleaned.isalpha():
+            fragments.update(cleaned)
+        elif re.fullmatch(r"\\?[A-Za-z]", cleaned):
+            fragments.add(cleaned)
+    clean_subscript = subscript.strip("{}")
+    clean_superscript = superscript.strip("{}")
+    if clean_subscript and clean_superscript:
+        fragments.add(f"{clean_subscript}^{clean_superscript}")
+    return fragments
+
+
+def _is_compound_symbol(symbol: str) -> bool:
+    value = normalize_symbol(symbol)
+    return "_" in value or "^" in value
+
+
+def _remove_compound_fragments(symbols: set[str], protected_atomic: set[str]) -> set[str]:
+    fragments: set[str] = set()
+    for symbol in symbols:
+        fragments.update(_compound_fragments(symbol))
+    result: set[str] = set()
+    for symbol in symbols:
+        if symbol in fragments and symbol not in protected_atomic:
+            continue
+        if not _is_compound_symbol(symbol):
+            canonical = canonical_symbol(symbol)
+            if any(other != symbol and _is_compound_symbol(other) and canonical_symbol(other).startswith(f"{canonical}_") for other in symbols):
+                continue
+        result.add(symbol)
+    return result
 
 
 def _extract_from_nodes(nodes: Iterable[LatexNode]) -> set[str]:
@@ -274,8 +609,15 @@ def _extract_from_nodes(nodes: Iterable[LatexNode]) -> set[str]:
             macro = node.macroname
             src = _source(node)
 
-            if macro in GREEK_MACROS or macro in OPERATOR_MACROS:
+            if macro in GREEK_MACROS:
                 symbols.add(_append_scripts(f"\\{macro}", src[len(macro) + 1 :]))
+                for arg in _macro_arg_sources(node):
+                    symbols.update(_extract_symbols_from_latex(arg))
+                continue
+
+            if macro in OPERATOR_MACROS:
+                operator_symbol = _append_scripts(f"\\{macro}", src[len(macro) + 1 :])
+                symbols.add(operator_symbol)
                 for arg in _macro_arg_sources(node):
                     symbols.update(_extract_symbols_from_latex(arg))
                 continue
@@ -313,11 +655,29 @@ def _extract_from_nodes(nodes: Iterable[LatexNode]) -> set[str]:
 def _extract_symbols_from_latex(latex: str) -> set[str]:
     if not latex:
         return set()
+    scan_latex = normalize_latex_for_symbol_scan(latex)
     try:
-        nodes, _, _ = LatexWalker(latex).get_latex_nodes()
-        return {normalize_symbol(s) for s in _extract_from_nodes(nodes) if normalize_symbol(s)}
+        nodes, _, _ = LatexWalker(scan_latex).get_latex_nodes()
+        regex_symbols = _regex_symbols_from_latex(scan_latex)
+        protected_atomic = {normalize_symbol(s) for s in regex_symbols if not _compound_fragments(s)}
+        variance_calls = _sigma_variance_call_symbols(scan_latex)
+        symbols = _extract_from_nodes(nodes) | regex_symbols | variance_calls
+        variance_fragments = _sigma_variance_fragments(variance_calls)
+        _discard_by_canonical(symbols, variance_fragments)
+        normalized = {normalize_symbol(s) for s in symbols if normalize_symbol(s)}
+        _discard_by_canonical(normalized, variance_fragments)
+        if _has_sigma_covariance_call(scan_latex):
+            normalized.discard(r"\sigma")
+        return _remove_compound_fragments(normalized, protected_atomic)
     except Exception:
-        return {normalize_symbol(s) for s in _symbols_from_chars(latex) if normalize_symbol(s)}
+        regex_symbols = _regex_symbols_from_latex(scan_latex)
+        variance_calls = _sigma_variance_call_symbols(scan_latex)
+        protected_atomic = {normalize_symbol(s) for s in regex_symbols if not _compound_fragments(s)}
+        normalized = {normalize_symbol(s) for s in (regex_symbols | variance_calls) if normalize_symbol(s)}
+        _discard_by_canonical(normalized, _sigma_variance_fragments(variance_calls))
+        if _has_sigma_covariance_call(scan_latex):
+            normalized.discard(r"\sigma")
+        return _remove_compound_fragments(normalized, protected_atomic)
 
 
 def extract_symbols(latex: str) -> dict[str, list[dict[str, str]]]:
@@ -331,19 +691,56 @@ def extract_symbols(latex: str) -> dict[str, list[dict[str, str]]]:
     all_symbols = _extract_symbols_from_latex(latex)
     defined_symbols: set[str] = set()
     lhs = _split_first_definition_lhs(latex)
+    lhs_is_operator_call = False
     if lhs:
-        defined_symbols = _extract_symbols_from_latex(lhs)
+        lhs_is_operator_call = _is_operator_call_expression(lhs)
+        defined_symbols = _definition_symbols_from_operator_lhs(lhs) if lhs_is_operator_call else _extract_symbols_from_latex(lhs)
 
-    if not defined_symbols and all_symbols:
+    if not defined_symbols and all_symbols and not lhs_is_operator_call:
         first = sorted(all_symbols, key=lambda s: latex.find(s.replace("\\", "\\")) if s in latex else 9999)
         if first:
             defined_symbols.add(first[0])
 
-    used = sorted(all_symbols)
-    defined = sorted(defined_symbols)
+    used = sorted(symbol for symbol in all_symbols if not is_operator_symbol(symbol))
+    defined = sorted(symbol for symbol in defined_symbols if not is_operator_symbol(symbol))
+
+    used_detailed = [
+        {
+            "symbol": s,
+            "canonical_latex": canonical_symbol(s),
+            "family_key": family_key(s),
+            "exact_key": exact_key(s),
+            "role": symbol_role(s),
+            "base": split_symbol_parts(s)[0],
+            "subscript": split_symbol_parts(s)[1],
+            "superscript": split_symbol_parts(s)[2],
+            "accent": "overline" if "\\overline" in s or "\\bar" in s else "hat" if "\\hat" in s or "\\widehat" in s else "tilde" if "\\tilde" in s or "\\widetilde" in s else "vec" if "\\vec" in s else "",
+            "occurrence_context": "formula",
+        }
+        for s in used
+        if not is_operator_symbol(s)
+    ]
+    defined_detailed = [
+        {
+            "symbol": s,
+            "canonical_latex": canonical_symbol(s),
+            "family_key": family_key(s),
+            "exact_key": exact_key(s),
+            "role": symbol_role(s),
+            "base": split_symbol_parts(s)[0],
+            "subscript": split_symbol_parts(s)[1],
+            "superscript": split_symbol_parts(s)[2],
+            "accent": "overline" if "\\overline" in s or "\\bar" in s else "hat" if "\\hat" in s or "\\widehat" in s else "tilde" if "\\tilde" in s or "\\widetilde" in s else "vec" if "\\vec" in s else "",
+            "occurrence_context": "definition",
+        }
+        for s in defined
+        if not is_operator_symbol(s)
+    ]
     return {
         "symbols_used": [{"symbol": s, "family_key": family_key(s)} for s in used],
         "symbols_defined": [{"symbol": s, "family_key": family_key(s)} for s in defined],
+        "symbols_used_detailed": used_detailed,
+        "symbols_defined_detailed": defined_detailed,
     }
 
 
@@ -396,21 +793,29 @@ def find_recent_definition(
     """Find the nearest upstream definition in the same chapter."""
 
     name = symbol["symbol"] if isinstance(symbol, dict) else str(symbol)
-    fk = symbol.get("family_key") if isinstance(symbol, dict) else family_key(name)
-    candidates = list(symbol_index.get(name, [])) + list(symbol_index.get(f"family:{fk}", []))
-    best: dict[str, Any] | None = None
-    for sense_id in candidates:
-        sense = senses.get(sense_id)
-        if not sense:
-            continue
-        if sense.get("chapter_id") != chapter_id:
-            continue
-        sense_position = int(sense.get("position", -1))
-        if sense_position >= position:
-            continue
-        if best is None or sense_position > int(best.get("position", -1)):
-            best = sense
-    return best
+    exact_candidates = list(symbol_index.get(name, []))
+    canonical = symbol.get("canonical_latex") if isinstance(symbol, dict) else canonical_symbol(name)
+    canonical_candidates = list(symbol_index.get(f"canonical:{canonical}", []))
+
+    def choose_best(candidates: list[str]) -> dict[str, Any] | None:
+        best: dict[str, Any] | None = None
+        for sense_id in candidates:
+            sense = senses.get(sense_id)
+            if not sense:
+                continue
+            if sense.get("chapter_id") != chapter_id:
+                continue
+            sense_position = int(sense.get("position", -1))
+            if sense_position >= position:
+                continue
+            if best is None or sense_position > int(best.get("position", -1)):
+                best = sense
+        return best
+
+    exact_best = choose_best(exact_candidates)
+    if exact_best is not None:
+        return exact_best
+    return choose_best(canonical_candidates)
 
 
 def build_dependency_node(

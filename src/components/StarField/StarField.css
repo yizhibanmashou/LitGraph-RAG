@@ -1,12 +1,40 @@
 .starfield-root {
-  position: fixed;
-  inset: 0;
+  position: absolute;
+  inset: 0 var(--starfield-right-reserve, 0px) 0 0;
   z-index: 0;
   overflow: hidden;
   background:
-    radial-gradient(circle at 68% 42%, rgba(39, 174, 96, 0.18), transparent 26%),
-    linear-gradient(135deg, #06060f 0%, #0d1117 58%, #101827 100%);
-  transition: opacity 0.5s ease;
+    radial-gradient(circle at 50% 50%, rgba(255, 255, 255, 0.08), transparent 24%),
+    radial-gradient(circle at 18% 72%, rgba(148, 163, 184, 0.08), transparent 22%),
+    linear-gradient(135deg, #020617 0%, #030712 48%, #050816 100%);
+  transition: opacity 0.55s ease;
+}
+
+.starfield-root--reserved-right {
+  width: auto;
+}
+
+.starfield-root::before,
+.starfield-root::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.starfield-root::before {
+  z-index: 1;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 0%, transparent 45%, rgba(0, 0, 0, 0.48) 100%),
+    linear-gradient(90deg, rgba(2, 6, 23, 0.76) 0%, transparent 28%, transparent 72%, rgba(2, 6, 23, 0.62) 100%);
+}
+
+.starfield-root::after {
+  z-index: 2;
+  opacity: 0.12;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 100% 4px;
+  mix-blend-mode: screen;
 }
 
 .starfield-root--visible {
@@ -22,18 +50,181 @@
 .starfield-root canvas {
   position: absolute;
   inset: 0;
+  z-index: 0;
   display: block;
+  cursor: grab;
+  touch-action: none;
 }
 
 .evolution-overlay {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  z-index: 1;
+  z-index: 3;
   opacity: 0.16;
   background:
-    repeating-linear-gradient(75deg, transparent 0 42px, rgba(125, 211, 252, 0.08) 43px 44px, transparent 45px 84px),
-    radial-gradient(ellipse at 15% 75%, rgba(167, 243, 208, 0.18), transparent 24%),
-    radial-gradient(ellipse at 82% 18%, rgba(147, 197, 253, 0.14), transparent 22%);
+    radial-gradient(ellipse at 20% 76%, rgba(255, 255, 255, 0.09), transparent 28%),
+    radial-gradient(ellipse at 74% 18%, rgba(226, 232, 240, 0.08), transparent 24%),
+    repeating-linear-gradient(122deg, transparent 0 90px, rgba(255, 255, 255, 0.025) 91px 92px, transparent 93px 156px);
   mix-blend-mode: screen;
+}
+
+.formula-tooltip {
+  animation: formula-tooltip-in 180ms ease-out;
+}
+
+.formula-tooltip__math {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.92);
+  color: #0f172a;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.72), 0 14px 32px rgba(8, 47, 73, 0.14);
+}
+
+.star-node-card {
+  animation: formula-tooltip-in 180ms ease-out;
+  border: 1px solid rgba(165, 243, 252, 0.18);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(125, 211, 252, 0.2), transparent 34%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.86));
+  padding: 18px;
+  color: #f8fafc;
+  box-shadow: 0 0 44px rgba(45, 212, 191, 0.16), 0 26px 70px rgba(0, 0, 0, 0.48);
+  backdrop-filter: blur(24px);
+}
+
+.star-node-card__close {
+  position: absolute;
+  right: 14px;
+  top: 14px;
+  display: inline-flex;
+  width: 30px;
+  height: 30px;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #cbd5e1;
+  cursor: pointer;
+}
+
+.star-node-card__eyebrow {
+  margin: 0 38px 8px 0;
+  color: rgba(165, 243, 252, 0.82);
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.star-node-card h2 {
+  margin: 0;
+  padding-right: 28px;
+  color: #fff;
+  font-size: 21px;
+  font-weight: 750;
+  line-height: 1.12;
+}
+
+.star-node-card__meta {
+  margin: 8px 0 0;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.star-node-card__math {
+  margin-top: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.94);
+  color: #0f172a;
+}
+
+.star-node-card__copy {
+  display: -webkit-box;
+  margin: 14px 0 0;
+  overflow: hidden;
+  color: #cbd5e1;
+  font-size: 13px;
+  line-height: 1.65;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.star-node-card__action {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+  border: 1px solid rgba(165, 243, 252, 0.28);
+  border-radius: 999px;
+  background: linear-gradient(135deg, rgba(125, 211, 252, 0.18), rgba(14, 165, 233, 0.1));
+  padding: 9px 13px;
+  color: #e0f2fe;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 850;
+}
+
+.star-node-hover-tooltip {
+  pointer-events: none;
+  animation: formula-tooltip-in 140ms ease-out;
+  border: 1px solid rgba(165, 243, 252, 0.18);
+  border-radius: 14px;
+  background:
+    radial-gradient(circle at 16% 0%, rgba(125, 211, 252, 0.16), transparent 36%),
+    rgba(2, 6, 23, 0.82);
+  padding: 12px 13px;
+  color: #e2e8f0;
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.38), 0 0 28px rgba(45, 212, 191, 0.11);
+  backdrop-filter: blur(18px);
+}
+
+.star-node-hover-tooltip p {
+  margin: 0 0 5px;
+  color: #bae6fd;
+  font-size: 10px;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.star-node-hover-tooltip strong {
+  display: block;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 800;
+  line-height: 1.25;
+  text-wrap: pretty;
+}
+
+.star-node-hover-tooltip span {
+  display: block;
+  margin-top: 6px;
+  color: #94a3b8;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+@keyframes formula-tooltip-in {
+  from {
+    opacity: 0;
+    transform: translateY(6px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .starfield-root,
+  .formula-tooltip {
+    animation: none;
+    transition: none;
+  }
 }

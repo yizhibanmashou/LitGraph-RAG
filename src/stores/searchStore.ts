@@ -1,12 +1,12 @@
 import { create } from 'zustand';
-import type { SearchFormula } from '../types/formula';
+import type { SearchResult } from '../types/search';
 
 interface SearchState {
   query: string;
-  results: SearchFormula[];
+  results: SearchResult[];
   selectedIndex: number;
   setQuery: (query: string) => void;
-  setResults: (results: SearchFormula[]) => void;
+  setResults: (results: SearchResult[]) => void;
   setSelectedIndex: (index: number) => void;
   reset: () => void;
 }
