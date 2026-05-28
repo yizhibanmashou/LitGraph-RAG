@@ -1,15 +1,15 @@
-import React, { KeyboardEvent, MouseEvent } from 'react';
+import React, { MouseEvent, useCallback, useMemo, useState } from 'react';
 import type { NodeProps } from '@xyflow/react';
 import { Handle, Position } from '@xyflow/react';
 import type { FormulaNodeData } from '../../types/graph';
 import type { FormulaPrerequisite } from '../../types/formula';
 import { chapterColor, chapterRank, rawFormulaNumber } from '../../utils/constants';
-import { buildFormulaSymbolPrerequisites, explainVariablePrerequisite } from '../../utils/formulaInfo';
+import { buildFormulaSymbolPrerequisites } from '../../utils/formulaInfo';
+import { isFocusAnnotationLabel, resolveSymbolShortLabel } from '../../utils/symbolAnnotation';
 import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
-import { MathFormula } from '../common/MathFormula';
-import { RichMathText } from '../common/RichMathText';
+import { MathFormula, type MathAnnotation } from '../common/MathFormula';
 
-function compareSymbolExplanations(a?: any[], b?: any[]): boolean {
+function compareSymbolExplanations(a?: FormulaNodeData['symbolExplanations'], b?: FormulaNodeData['symbolExplanations']): boolean {
   if (a === b) return true;
   if (!a || !b) return false;
   if (a.length !== b.length) return false;
@@ -20,23 +20,76 @@ function compareSymbolExplanations(a?: any[], b?: any[]): boolean {
       item.type === other.type &&
       item.target_id === other.target_id &&
       item.confidence === other.confidence &&
+      item.shortLabel === other.shortLabel &&
       item.llmText === other.llmText &&
       item.llmStatus === other.llmStatus
     );
   });
 }
 
-type SymbolNote = FormulaPrerequisite & { llmText?: string; llmStatus?: 'loading' | 'ready' | 'error' };
+type SymbolNote = FormulaPrerequisite & {
+  shortLabel?: string;
+  llmText?: string;
+  llmStatus?: 'loading' | 'ready' | 'error';
+};
+
+interface ActiveCallout {
+  annotation: MathAnnotation;
+  anchor: { x: number; y: number };
+  box: { x: number; y: number; width: number; height: number };
+  lineStart: { x: number; y: number };
+}
+
+function clamp(value: number, min: number, max: number): number {
+  return Math.max(min, Math.min(max, value));
+}
+
+function estimateCalloutBox(note: string): { width: number; height: number } {
+  const length = note.trim().length;
+  const width = clamp(Math.round(length * 15 + 28), 132, 220);
+  const height = length > 14 ? 50 : 36;
+  return { width, height };
+}
+
+function displaySymbolLabel(symbol: string): string {
+  return symbol
+    .replace(/\\mathrm\{([^{}]+)\}/g, '$1')
+    .replace(/\\overline\{([^{}]+)\}/g, '$1̄')
+    .replace(/[{}]/g, '')
+    .replace(/\\/g, '')
+    .trim();
+}
 
 export const FormulaNode = React.memo(
   ({ id, data, selected }: NodeProps) => {
+    const nodeRef = React.useRef<HTMLDivElement | null>(null);
     const nodeData = data as unknown as FormulaNodeData;
     const formula = nodeData.formula;
     const copy = getUiCopy(DEFAULT_LANGUAGE).graph.node;
-    const symbolNotes: SymbolNote[] = nodeData.symbolExplanations?.length ? nodeData.symbolExplanations : buildFormulaSymbolPrerequisites(formula);
+    const symbolNotes: SymbolNote[] = useMemo(
+      () => (nodeData.symbolExplanations?.length ? nodeData.symbolExplanations : buildFormulaSymbolPrerequisites(formula)),
+      [formula, nodeData.symbolExplanations],
+    );
     const chapter = chapterRank(formula.chapter_id, Number(rawFormulaNumber(formula.id).split('.')[0]));
     const active = nodeData.focused || selected;
     const role = nodeData.role || (nodeData.focused ? 'focus' : 'prerequisite');
+    const [activeCallout, setActiveCallout] = useState<ActiveCallout | null>(null);
+    const annotations = useMemo(
+      () =>
+        nodeData.mode === 'focus'
+          ? symbolNotes
+              .map((prereq) => {
+                const symbol = prereq.symbol || prereq.via_symbol || '';
+                const note = resolveSymbolShortLabel(prereq, {
+                  shortLabel: prereq.shortLabel,
+                  llmText: prereq.llmText,
+                });
+                return { symbol, note };
+              })
+              .filter((item) => item.symbol && isFocusAnnotationLabel(item.note))
+          : [],
+      [nodeData.mode, symbolNotes],
+    );
 
     const handleDoubleClick = (event: MouseEvent<HTMLDivElement>) => {
       event.stopPropagation();
@@ -50,8 +103,39 @@ export const FormulaNode = React.memo(
       nodeData.onExpand(id, intent);
     };
 
+    const handleAnnotationChange = useCallback((annotation: MathAnnotation | null, anchorRect?: DOMRect) => {
+      if (!annotation || !anchorRect || !nodeRef.current) {
+        setActiveCallout(null);
+        return;
+      }
+      const nodeRect = nodeRef.current.getBoundingClientRect();
+      const scale = nodeRect.width / (nodeRef.current.offsetWidth || nodeRect.width || 1);
+      const anchor = {
+        x: (anchorRect.left + anchorRect.width / 2 - nodeRect.left) / scale,
+        y: (anchorRect.top + anchorRect.height / 2 - nodeRect.top) / scale,
+      };
+      const width = nodeRef.current.offsetWidth;
+      const height = nodeRef.current.offsetHeight;
+      const { width: boxWidth, height: boxHeight } = estimateCalloutBox(annotation.note);
+      const placeRight = anchor.x >= width * 0.5;
+      const lowerBandY = clamp(anchor.y + 46, 122, height - boxHeight - 44);
+      const box = {
+        x: placeRight ? clamp(anchor.x + 42, 34, width - boxWidth - 34) : clamp(anchor.x - boxWidth - 42, 34, width - boxWidth - 34),
+        y: lowerBandY,
+        width: boxWidth,
+        height: boxHeight,
+      };
+      const lineStart = {
+        x: placeRight ? box.x : box.x + box.width,
+        y: box.y + box.height / 2,
+      };
+
+      setActiveCallout({ annotation, anchor, box, lineStart });
+    }, []);
+
     return (
       <div
+        ref={nodeRef}
         role="button"
         tabIndex={0}
         aria-disabled={nodeData.locked}
@@ -92,26 +176,41 @@ export const FormulaNode = React.memo(
             </span>
           )}
         </div>
-        <MathFormula latex={formula.latex} className="formula-node__math mt-3" />
-        {nodeData.mode === 'focus' ? (
-          <div className="formula-node__symbol-strip" aria-label={copy.symbolNotes}>
-            <strong>{copy.symbolNotes}</strong>
-            {symbolNotes.slice(0, 6).map((prereq) => (
-              <div key={prereq.symbol} className="formula-node__symbol-note">
-                <MathFormula latex={prereq.symbol} inline />
-                <p><RichMathText text={prereq.llmText || explainVariablePrerequisite(prereq)} /></p>
-                {prereq.llmStatus === 'loading' ? <small>{copy.symbolLoading}</small> : null}
-                {prereq.llmStatus === 'ready' ? <small>{copy.symbolSource}</small> : null}
-                {prereq.llmStatus === 'error' ? <small>{copy.symbolFallback}</small> : null}
-              </div>
-            ))}
-            {!symbolNotes.length ? (
-              <p className="formula-node__symbol-empty">{copy.symbolEmpty}</p>
-            ) : null}
-          </div>
+        <MathFormula
+          latex={formula.latex}
+          className="formula-node__math mt-3"
+          annotations={annotations}
+          onAnnotationChange={nodeData.mode === 'focus' ? handleAnnotationChange : undefined}
+        />
+        {nodeData.mode === 'focus' && activeCallout ? (
+          <>
+            <svg className="formula-node__callout-lines" aria-hidden="true">
+              <path
+                d={`M ${activeCallout.lineStart.x} ${activeCallout.lineStart.y} L ${activeCallout.anchor.x} ${activeCallout.anchor.y}`}
+                vectorEffect="non-scaling-stroke"
+              />
+              <circle cx={activeCallout.anchor.x} cy={activeCallout.anchor.y} r="3.5" />
+            </svg>
+            <div
+              className="formula-node__callout"
+              style={{
+                left: activeCallout.box.x,
+                top: activeCallout.box.y,
+                width: activeCallout.box.width,
+                minHeight: activeCallout.box.height,
+              }}
+              aria-live="polite"
+            >
+              <span className="formula-node__callout-symbol">{displaySymbolLabel(activeCallout.annotation.symbol)}</span>
+              <strong>{activeCallout.annotation.note}</strong>
+            </div>
+          </>
         ) : null}
         <div className="formula-node__footer mt-3 flex items-center justify-between gap-3 pt-2.5">
-          <div className="formula-node__section line-clamp-2 text-left">{formula.section || formula.subsection}</div>
+          <div className="min-w-0 text-left">
+            <div className="formula-node__section line-clamp-2">{formula.section || formula.subsection}</div>
+            {nodeData.locked && nodeData.lockedReason ? <div className="formula-node__locked-reason">{nodeData.lockedReason}</div> : null}
+          </div>
           <span className="formula-node__dot" />
         </div>
         <Handle type="source" position={Position.Right} />
@@ -129,6 +228,7 @@ export const FormulaNode = React.memo(
       prevData.loading === nextData.loading &&
       prevData.mode === nextData.mode &&
       prevData.locked === nextData.locked &&
+      prevData.lockedReason === nextData.lockedReason &&
       prevData.learned === nextData.learned &&
       compareSymbolExplanations(prevData.symbolExplanations, nextData.symbolExplanations)
     );

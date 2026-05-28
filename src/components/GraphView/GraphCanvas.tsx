@@ -108,6 +108,7 @@ function GraphCanvasInner({ searchIndex, mode = 'guided', storylines, toolbar }:
   const isChapterGraph = Boolean(routeChapterId);
   const focusChapterId = routeChapterId || params.get('chapterId') || chapterIdForFormula(focusFormulaId, searchLookup) || resolveFormulaChapter(focusFormulaId);
   const guidedUnlock = params.get('entry') === 'chapter' && params.get('study') === 'chapter';
+  const shouldShowLockedReason = !isChapterGraph && mode === 'guided' && guidedUnlock;
   const storylineId = params.get('storyline');
   const storylineTitle = useMemo(() => {
     const storyline = storylines.find((item) => item.id === storylineId);
@@ -189,13 +190,14 @@ function GraphCanvasInner({ searchIndex, mode = 'guided', storylines, toolbar }:
           role: focused ? 'focus' : role,
           mode,
           locked,
+          lockedReason: locked && shouldShowLockedReason ? copy.node.lockedReason : undefined,
           learned,
           symbolExplanations: focusSymbolExplanations,
           onExpand: focusFormula,
         } satisfies FormulaNodeData,
       };
     },
-    [canUseFormula, focusChapterId, focusFormula, isChapterGraph, learnedByChapter, mode],
+    [canUseFormula, copy.node.lockedReason, focusChapterId, focusFormula, isChapterGraph, learnedByChapter, mode, shouldShowLockedReason],
   );
 
   const refreshNodeData = useCallback(
@@ -203,6 +205,7 @@ function GraphCanvasInner({ searchIndex, mode = 'guided', storylines, toolbar }:
       items.map((node) => {
         if (node.type !== 'formula') return node;
         const data = node.data as unknown as FormulaNodeData;
+        const locked = isChapterGraph ? false : !canUseFormula(node.id);
         return {
           ...node,
           data: {
@@ -211,14 +214,15 @@ function GraphCanvasInner({ searchIndex, mode = 'guided', storylines, toolbar }:
             loading: loadingIds.has(node.id),
             role: !isChapterGraph && node.id === focusFormulaId ? 'focus' : data.role === 'focus' ? 'expanded' : data.role,
             mode,
-            locked: isChapterGraph ? false : !canUseFormula(node.id),
+            locked,
+            lockedReason: locked && shouldShowLockedReason ? copy.node.lockedReason : undefined,
             learned: Boolean(learnedByChapter[focusChapterId]?.has(node.id)),
             chapterGraph: isChapterGraph || data.chapterGraph,
             onExpand: focusFormula,
           } satisfies FormulaNodeData,
         };
       }),
-    [canUseFormula, focusChapterId, focusFormula, focusFormulaId, isChapterGraph, learnedByChapter, loadingIds, mode],
+    [canUseFormula, copy.node.lockedReason, focusChapterId, focusFormula, focusFormulaId, isChapterGraph, learnedByChapter, loadingIds, mode, shouldShowLockedReason],
   );
 
   const buildVariableNodes = useCallback(
@@ -294,7 +298,12 @@ function GraphCanvasInner({ searchIndex, mode = 'guided', storylines, toolbar }:
                 prerequisite: prereq,
                 language: 'zh',
               })
-                .then((value) => ({ ...prereq, llmText: value.text, llmStatus: 'ready' as const }))
+                .then((value) => ({
+                  ...prereq,
+                  shortLabel: value.shortLabel,
+                  llmText: value.text,
+                  llmStatus: 'ready' as const,
+                }))
                 .catch(() => ({ ...prereq, llmStatus: 'error' as const })),
             ),
           ).then((symbolNotes) => {

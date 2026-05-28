@@ -5,7 +5,7 @@ import type { FormulaDataState } from '../hooks/useFormulaData';
 import { SearchBar } from '../components/SearchBar/SearchBar';
 import { StarField } from '../components/StarField/StarField';
 import { buildFormulaStarNodes, type StarNode } from '../utils/starNavigation';
-import { getChapterById } from '../utils/learningNavigator';
+import { getChapterById, resolveRecommendedChapterFormulaId } from '../utils/learningNavigator';
 import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../utils/uiCopy';
 
 interface ChapterPageProps {
@@ -22,12 +22,19 @@ export function ChapterPage({ data }: ChapterPageProps) {
     [chapter, data.featured, data.searchIndex],
   );
   const startingNodes = useMemo(() => formulaNodes.filter((node) => node.isBackbone).slice(0, 8), [formulaNodes]);
+  const recommendedFormulaId = useMemo(
+    () => (chapter ? resolveRecommendedChapterFormulaId(chapter, data.searchIndex) : null),
+    [chapter, data.searchIndex],
+  );
 
   const enterNode = (node: StarNode) => {
     if (node.kind === 'formula') {
       const entry = node.isBackbone ? '&entry=chapter' : '';
       navigate(`/graph/${node.id}?study=chapter&chapterId=${chapterId}&layer=backbone${entry}`);
     }
+  };
+  const enterRecommendedFormula = () => {
+    if (recommendedFormulaId) navigate(`/graph/${recommendedFormulaId}?study=chapter&chapterId=${chapterId}&layer=backbone&entry=chapter`);
   };
   const entryPanel = chapter ? (
     <>
@@ -37,7 +44,7 @@ export function ChapterPage({ data }: ChapterPageProps) {
       </div>
       <div className="chapter-entry-panel__list">
         {startingNodes.map((node, index) => (
-          <button key={node.id} type="button" onClick={() => enterNode(node)} className="chapter-entry-panel__item">
+          <button key={node.id} type="button" onClick={() => (node.id === recommendedFormulaId ? enterRecommendedFormula() : enterNode(node))} className="chapter-entry-panel__item">
             <span className="chapter-entry-panel__number">{String(index + 1).padStart(2, '0')}</span>
             <span className="chapter-entry-panel__content">
               <strong>{node.label}</strong>

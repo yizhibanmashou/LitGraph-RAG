@@ -94,6 +94,11 @@ same-chapter formula prerequisites, automatically show up to four compact
 variable definition cards to the left of the formula card. Later formulas keep
 the staged interaction: learners choose prerequisites or successors explicitly.
 
+## Documentation
+
+- [design-and-optimization.md](docs/design-and-optimization.md) — 产品与设计基线（v0.2）
+- [implementation-prep.md](docs/implementation-prep.md) — Focus 优化开工清单（P0）
+
 ## Verification
 
 Run the focused Python pipeline tests:

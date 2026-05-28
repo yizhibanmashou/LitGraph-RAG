@@ -111,6 +111,7 @@ const UI_COPY = {
         symbolSource: 'LLM 解释',
         symbolFallback: '本地符号导读',
         symbolEmpty: '这条公式暂时没有识别到可精读的符号。',
+        lockedReason: '先学习与它相连的前置公式后解锁。',
         learned: '已学',
       },
       timeline: {
@@ -262,6 +263,7 @@ const UI_COPY = {
         symbolSource: 'LLM note',
         symbolFallback: 'Local symbol note',
         symbolEmpty: 'No variable notes are available for this formula yet.',
+        lockedReason: 'Learn a connected prerequisite formula first to unlock it.',
         learned: 'Learned',
       },
       timeline: {

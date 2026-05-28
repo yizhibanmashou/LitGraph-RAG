@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import type { SearchFormula } from '../../types/formula';
 import type { ChapterLearningEntry } from '../../types/learning';
 import { rawFormulaNumber } from '../../utils/constants';
-import { inferChapterTitleFromSearchIndex } from '../../utils/learningNavigator';
+import { inferChapterTitleFromSearchIndex, resolveRecommendedChapterFormulaId } from '../../utils/learningNavigator';
 import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
 
 interface ChapterCardProps {
@@ -15,7 +15,7 @@ export function ChapterCard({ chapter, searchIndex }: ChapterCardProps) {
   const [open, setOpen] = useState(false);
   const navigate = useNavigate();
   const copy = getUiCopy(DEFAULT_LANGUAGE).navigator;
-  const first = chapter.backbone_formula_ids[0] || chapter.full_formula_ids[0];
+  const first = resolveRecommendedChapterFormulaId(chapter, searchIndex);
   const chapterTitle = chapter.description_zh || chapter.section_hint || inferChapterTitleFromSearchIndex(chapter.chapter, searchIndex) || chapter.title_zh || chapter.title_en;
 
   return (
@@ -33,7 +33,14 @@ export function ChapterCard({ chapter, searchIndex }: ChapterCardProps) {
               <span key={id}>{rawFormulaNumber(id)}</span>
             ))}
           </div>
-          <button type="button" disabled={!first} onClick={() => navigate(`/chapter/${chapter.chapter_id}`)}>
+          <button
+            type="button"
+            onClick={() =>
+              first
+                ? navigate(`/graph/${first}?study=chapter&chapterId=${chapter.chapter_id}&layer=backbone&entry=chapter`)
+                : navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`)
+            }
+          >
             {copy.enterChapter}
           </button>
         </div>

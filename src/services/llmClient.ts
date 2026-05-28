@@ -1,5 +1,6 @@
 import type { FormulaPrerequisite, StorylineEntry, StorylineStep } from '../types/formula';
 import type { LanguageCode } from '../types/learning';
+import { compressTextToShortLabel } from '../utils/symbolAnnotation.ts';
 
 const LLM_ENDPOINT = '/api/llm';
 const DEFAULT_MODEL = 'deepseek-chat';
@@ -27,6 +28,11 @@ export interface VariableDetailRequest {
   symbol: string;
   prerequisite?: FormulaPrerequisite;
   language: LanguageCode;
+}
+
+export interface VariableDetailResponse {
+  shortLabel: string;
+  text: string;
 }
 
 export interface StorylineNarrativeRequest {
@@ -144,6 +150,9 @@ export function buildVariableDetailsChatRequest(input: VariableDetailRequest): C
             task: 'variable_details',
             language: input.language,
             output_schema: {
+              shortLabel: zh
+                ? '4-16 字名词短语，用于公式旁指引框；只写符号在本式中的角色，不要句子、不要复述符号本身。'
+                : 'A 4-16 word noun phrase for the in-formula callout; state the symbol role in this formula only.',
               text: zh
                 ? '解释这个符号在当前公式中的含义和作用，1-2 句；不要只复述符号名。'
                 : 'Explain the symbol meaning and role in this formula in 1-2 sentences; do not merely restate the symbol name.',
@@ -288,8 +297,13 @@ function validateFormulaNotes(value: unknown): FormulaNoteResponse {
   };
 }
 
-function validateVariableDetails(value: unknown): { text: string } {
-  return { text: requireStringField(value, 'text') };
+function validateVariableDetails(value: unknown): VariableDetailResponse {
+  const text = requireStringField(value, 'text');
+  const record = value && typeof value === 'object' ? (value as Record<string, unknown>) : {};
+  const rawShortLabel = typeof record.shortLabel === 'string' ? record.shortLabel.trim() : '';
+  const shortLabel = rawShortLabel || compressTextToShortLabel(text);
+  if (!shortLabel) throw new Error('LLM JSON response missing shortLabel.');
+  return { shortLabel, text };
 }
 
 function validateStorylineNarrative(value: unknown): StorylineNarrativeResponse {
@@ -306,7 +320,7 @@ export async function generateFormulaNotes(request: FormulaNoteRequest): Promise
   );
 }
 
-export async function generateVariableDetails(request: VariableDetailRequest): Promise<{ text: string }> {
+export async function generateVariableDetails(request: VariableDetailRequest): Promise<VariableDetailResponse> {
   return cachedRequest(`variable-details:${request.formulaId}:${request.symbol}:${request.language}`, () =>
     postChatCompletion(buildVariableDetailsChatRequest(request), validateVariableDetails),
   );

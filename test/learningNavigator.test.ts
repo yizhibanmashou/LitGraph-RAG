@@ -6,6 +6,7 @@ import {
   getText,
   getThemeRouteById,
   inferChapterTitleFromSearchIndex,
+  resolveRecommendedChapterFormulaId,
 } from '../src/utils/learningNavigator.ts';
 import type { SearchFormula } from '../src/types/formula.ts';
 import type { ChapterNavigatorPayload, ThemeRoutesPayload } from '../src/types/learning.ts';
@@ -95,4 +96,53 @@ test('inferChapterTitleFromSearchIndex uses formula section instead of navigator
 test('getText returns requested language with English fallback', () => {
   assert.equal(getText({ en: 'Selection Detection Methods', zh: '选择检测方法' }, 'zh'), '选择检测方法');
   assert.equal(getText({ en: 'Selection Detection Methods' }, 'zh'), 'Selection Detection Methods');
+});
+
+test('resolveRecommendedChapterFormulaId prefers available representative formulas', () => {
+  const chapter = getChapterByNumber(chapterPayload, 2)!;
+  const searchIndex: SearchFormula[] = [
+    {
+      id: 'formula_2.1',
+      number: '2.1',
+      chapter: 2,
+      chapter_id: 'chapter2',
+      section: 'Neutral Evolution',
+      label: 'Formula 2.1',
+      latex_preview: 'p',
+      context: '',
+      keywords: [],
+    },
+  ];
+
+  assert.equal(resolveRecommendedChapterFormulaId(chapter, searchIndex), 'formula_2.1');
+});
+
+test('resolveRecommendedChapterFormulaId falls back through backbone, full, then search index', () => {
+  const chapter = {
+    ...getChapterByNumber(chapterPayload, 2)!,
+    representative_formula_ids: ['formula_2.missing'],
+    backbone_formula_ids: ['formula_2.backbone'],
+    full_formula_ids: ['formula_2.full'],
+  };
+  const searchIndex: SearchFormula[] = [
+    {
+      id: 'formula_2.full',
+      number: '2.full',
+      chapter: 2,
+      chapter_id: 'chapter2',
+      section: 'Fallback',
+      label: 'Formula 2.full',
+      latex_preview: 'x',
+      context: '',
+      keywords: [],
+    },
+  ];
+
+  assert.equal(resolveRecommendedChapterFormulaId(chapter, searchIndex), 'formula_2.full');
+  assert.equal(resolveRecommendedChapterFormulaId({ ...chapter, full_formula_ids: ['formula_2.missingFull'] }, searchIndex), 'formula_2.full');
+});
+
+test('resolveRecommendedChapterFormulaId returns null when a chapter has no available formulas', () => {
+  const chapter = getChapterByNumber(chapterPayload, 2)!;
+  assert.equal(resolveRecommendedChapterFormulaId(chapter, []), null);
 });

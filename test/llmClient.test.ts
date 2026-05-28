@@ -44,6 +44,36 @@ test('variable details request carries the current formula and symbol', () => {
   assert.equal(payload.context, 'Price equation context');
   assert.equal(payload.symbol, 'z_i');
   assert.equal(payload.prerequisite.meaning, 'trait value');
+  assert.match(payload.output_schema.shortLabel, /4-16/);
+});
+
+test('variable details parser accepts shortLabel and text', async () => {
+  const result = await __llmClientTestUtils.postChatCompletion(
+    buildVariableDetailsChatRequest({
+      formulaId: 'formula_3.1',
+      latex: 'N_e = N/(1+\\sigma_w^2)',
+      context: 'Selection reduces Ne.',
+      symbol: 'N_e',
+      language: 'zh',
+    }),
+    __llmClientTestUtils.validateVariableDetails,
+    async () =>
+      new Response(
+        JSON.stringify({
+          choices: [
+            {
+              message: {
+                content: '{"shortLabel":"有效种群大小","text":"N_e 表示经漂变与选择修正后的有效繁殖群体大小。"}',
+              },
+            },
+          ],
+        }),
+        { status: 200, headers: { 'Content-Type': 'application/json' } },
+      ),
+  );
+
+  assert.equal(result.shortLabel, '有效种群大小');
+  assert.match(result.text, /有效繁殖群体大小/);
 });
 
 test('storyline narrative request defaults to Chinese formula-grounded narrative', () => {

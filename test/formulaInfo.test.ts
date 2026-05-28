@@ -4,6 +4,7 @@ import {
   buildFormulaBrief,
   buildFormulaLearningCopy,
   buildFormulaSymbolPrerequisites,
+  conciseVariablePrerequisite,
   compactContext,
   describeFormulaSymbol,
   explainPrerequisite,
@@ -226,6 +227,18 @@ test('buildFormulaSymbolPrerequisites preserves formula 7.1 starter symbols', ()
 
 test('describeFormulaSymbol explains selection-gradient symbols locally', () => {
   assert.match(describeFormulaSymbol('\\beta', { latex: 'R=\\sigma_{A}^{2}\\beta', context_text: '' }), /选择梯度/);
+});
+
+test('conciseVariablePrerequisite keeps hover notes short', () => {
+  assert.equal(
+    conciseVariablePrerequisite({
+      type: 'variable_definition',
+      symbol: 'N_e',
+      meaning: '有效群体大小，决定中性模型下多态性水平的尺度。',
+      confidence: 0.9,
+    }),
+    '有效种群大小',
+  );
 });
 
 test('standaloneGraphCopy describes zero-prerequisite formulas without bare counts', () => {

@@ -101,7 +101,7 @@ input {
 .math-formula__viewport {
   width: 100%;
   overflow-x: auto;
-  overflow-y: hidden;
+  overflow-y: visible;
   padding: 12px;
   scroll-behavior: smooth;
 }
@@ -116,6 +116,49 @@ input {
 .math-formula .katex {
   max-width: 100%;
   font-size: 1.05em;
+}
+
+.math-formula--annotated .math-formula__viewport {
+  padding-block: 12px;
+}
+
+.math-symbol-hotspot {
+  position: relative;
+  border-radius: 6px;
+  cursor: help;
+  outline: none;
+  color: #e0f2fe;
+  text-shadow: 0 0 16px rgba(56, 189, 248, 0.16);
+  transition:
+    background-color 160ms ease,
+    box-shadow 180ms ease,
+    color 160ms ease;
+}
+
+.math-symbol-hotspot::before {
+  position: absolute;
+  inset: -0.12em -0.18em -0.08em;
+  z-index: -1;
+  border: 1px solid rgba(125, 211, 252, 0.26);
+  border-radius: 8px;
+  content: "";
+  background: linear-gradient(180deg, rgba(14, 165, 233, 0.11), rgba(14, 165, 233, 0.035));
+  opacity: 0.62;
+  transform: scaleX(0.92);
+  transition: opacity 160ms ease, transform 180ms ease, border-color 180ms ease;
+}
+
+.math-symbol-hotspot:hover,
+.math-symbol-hotspot:focus-visible {
+  color: #f0f9ff;
+  text-shadow: 0 0 18px rgba(125, 211, 252, 0.36);
+}
+
+.math-symbol-hotspot:hover::before,
+.math-symbol-hotspot:focus-visible::before {
+  border-color: rgba(186, 230, 253, 0.55);
+  opacity: 1;
+  transform: scaleX(1);
 }
 
 .math-formula--inline .math-formula__viewport {

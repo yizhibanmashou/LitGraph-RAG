@@ -179,6 +179,59 @@ export function explainVariablePrerequisite(prereq: FormulaPrerequisite): string
   return `${symbol}: 在教材当前上下文中定义。`;
 }
 
+export function conciseVariablePrerequisite(prereq: FormulaPrerequisite): string {
+  const symbol = prereq.symbol || prereq.via_symbol || '';
+  const symbolLabel = conciseKnownSymbolLabel(symbol);
+  if (symbolLabel) return symbolLabel;
+
+  const text = explainVariablePrerequisite(prereq)
+    .replace(/^.*?在这里很关键，因为当前公式依赖它的含义：/, '')
+    .replace(/^.*?:\s*/, '')
+    .replace(/。.*$/, '')
+    .replace(/；.*$/, '')
+    .replace(/，.*$/, '')
+    .trim();
+
+  if (!text) return '当前公式中的关键符号';
+  return text.length > 28 ? `${text.slice(0, 28)}...` : text;
+}
+
+function conciseKnownSymbolLabel(symbol: string): string {
+  const normalized = symbol.replace(/\s+/g, '');
+  const labels: Record<string, string> = {
+    'N_{e}': '有效种群大小',
+    'N_e': '有效种群大小',
+    'N': '实际繁殖个体数',
+    'N_{t}': '第 t 代个体数',
+    'N_t': '第 t 代个体数',
+    '\\sigma_{k}^{2}': '家系间后代数方差',
+    '\\sigma_k^2': '家系间后代数方差',
+    '\\sigma_{w}^{2}': '家系间适合度方差',
+    '\\sigma_w^2': '家系间适合度方差',
+    '\\mu_{k}': '平均后代数',
+    '\\mu_k': '平均后代数',
+    'P_{t}': '同源概率',
+    'H_{t}': '第 t 代杂合度',
+    'H_{0}': '初始杂合度',
+    'T': '世代时间',
+    'D_{a}': '替换位点分化',
+    'D_{s}': '沉默位点分化',
+    'P_{a}': '替换位点多态性',
+    'P_{s}': '沉默位点多态性',
+    'S_{a}': '替换位点多态性',
+    'S_{s}': '沉默位点多态性',
+    '\\mu_{a}': '替换位点突变率',
+    '\\mu_{s}': '沉默位点突变率',
+    '\\theta_{a}': '替换位点 θ',
+    '\\theta_{s}': '沉默位点 θ',
+    'a_{n}': '样本校正常数',
+    'n_{a}': '替换位点数',
+    'n_{s}': '沉默位点数',
+    'f': '替换比例',
+  };
+  return labels[normalized] || '';
+}
+
 function cleanSymbolForText(symbol: string): string {
   return symbol
     .replace(/\\/g, '')

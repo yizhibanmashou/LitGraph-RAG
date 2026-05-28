@@ -9,9 +9,16 @@ export interface FormulaNodeData {
   role?: 'focus' | 'prerequisite' | 'expanded' | 'successor';
   mode?: 'guided' | 'focus' | 'explore';
   locked?: boolean;
+  lockedReason?: string;
   learned?: boolean;
   chapterGraph?: boolean;
-  symbolExplanations?: Array<FormulaPrerequisite & { llmText?: string; llmStatus?: 'loading' | 'ready' | 'error' }>;
+  symbolExplanations?: Array<
+    FormulaPrerequisite & {
+      shortLabel?: string;
+      llmText?: string;
+      llmStatus?: 'loading' | 'ready' | 'error';
+    }
+  >;
   onExpand: (formulaId: string, intent?: FormulaExpansionIntent) => void;
 }
 

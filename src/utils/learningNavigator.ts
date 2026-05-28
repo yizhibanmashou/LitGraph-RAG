@@ -32,6 +32,19 @@ export function inferChapterTitleFromSearchIndex(chapterNumber: number, searchIn
   return searchIndex.find((formula) => formula.chapter === chapterNumber && formula.section.trim())?.section.trim() || null;
 }
 
+export function resolveRecommendedChapterFormulaId(chapter: ChapterLearningEntry, searchIndex: SearchFormula[]): string | null {
+  const availableFormulaIds = new Set(searchIndex.filter((item) => item.chapter_id === chapter.chapter_id).map((item) => item.id));
+  const firstAvailable = (formulaIds: string[]) => formulaIds.find((id) => availableFormulaIds.has(id)) || null;
+
+  return (
+    firstAvailable(chapter.representative_formula_ids) ||
+    firstAvailable(chapter.backbone_formula_ids) ||
+    firstAvailable(chapter.full_formula_ids) ||
+    searchIndex.find((item) => item.chapter_id === chapter.chapter_id)?.id ||
+    null
+  );
+}
+
 export function getStudyFormulaIds(context: StudyContext): string[] {
   if (context.type === 'chapter') {
     return context.layer === 'full' ? context.chapter.full_formula_ids : context.chapter.backbone_formula_ids;

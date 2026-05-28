@@ -6,6 +6,7 @@ import type { ChapterNavigatorPayload } from '../../types/learning';
 import type { ChapterSearchResult, SearchResult } from '../../types/search';
 import { useSearchStore } from '../../stores/searchStore';
 import { flattenChapters } from '../../utils/starNavigation';
+import { resolveRecommendedChapterFormulaId } from '../../utils/learningNavigator';
 import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
 import { SearchResults } from './SearchResults';
 
@@ -60,6 +61,7 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
         : [],
     [chapterNavigator],
   );
+  const chapterLookup = useMemo(() => new Map(chapterNavigator ? flattenChapters(chapterNavigator).map((chapter) => [chapter.chapter_id, chapter]) : []), [chapterNavigator]);
 
   const widthClass = size === 'compact' ? 'w-[min(360px,calc(100vw-48px))]' : 'w-[min(520px,48vw)]';
   const inputClass =
@@ -114,7 +116,13 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
   const openResult = (resultId: string) => {
     const chapter = chapterResults.find((item) => item.id === resultId);
     if (chapter) {
-      navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`);
+      const navigatorEntry = chapterLookup.get(chapter.chapter_id);
+      const recommendedFormulaId = navigatorEntry ? resolveRecommendedChapterFormulaId(navigatorEntry, searchIndex) : null;
+      if (recommendedFormulaId) {
+        navigate(`/graph/${recommendedFormulaId}?study=chapter&chapterId=${chapter.chapter_id}&layer=backbone`);
+      } else {
+        navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`);
+      }
       setQuery('');
       setResults([]);
       return;
