@@ -556,6 +556,129 @@
   background: rgba(8, 47, 73, 0.2);
 }
 
+.graph-info-panel__copy-block--concept-layer {
+  border-color: rgba(148, 163, 184, 0.12);
+  background:
+    linear-gradient(135deg, rgba(15, 23, 42, 0.64), rgba(2, 6, 23, 0.26)),
+    var(--graph-panel-muted);
+}
+
+.graph-info-panel__copy-block--concept-layer > summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.graph-info-panel__copy-block--concept-layer > summary::-webkit-details-marker {
+  display: none;
+}
+
+.graph-info-panel__copy-block--concept-layer .graph-info-panel__summary-label {
+  display: inline-flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+}
+
+.graph-info-panel__copy-block--concept-layer .graph-info-panel__summary-label::before {
+  display: inline-grid;
+  width: 16px;
+  height: 16px;
+  place-items: center;
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.42);
+  color: rgba(125, 211, 252, 0.86);
+  content: "+";
+  font-size: 11px;
+  line-height: 1;
+}
+
+.graph-info-panel__copy-block--concept-layer[open] .graph-info-panel__summary-label::before {
+  content: "-";
+}
+
+.graph-info-panel__copy-block--concept-layer:not([open]) {
+  gap: 0;
+}
+
+.graph-info-panel__concept-reference-list {
+  display: grid;
+  gap: 8px;
+}
+
+.graph-info-panel__concept-reference {
+  display: grid;
+  min-width: 0;
+  gap: 7px;
+  border: 1px solid rgba(148, 163, 184, 0.12);
+  border-radius: 12px;
+  background: rgba(15, 23, 42, 0.46);
+  padding: 10px;
+}
+
+.graph-info-panel__concept-reference-header {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px;
+}
+
+.graph-info-panel__concept-reference-header strong {
+  min-width: 0;
+  color: rgba(240, 253, 250, 0.92);
+  font-size: 12px;
+  line-height: 1.35;
+}
+
+.graph-info-panel__concept-reference-header small {
+  border: 1px solid rgba(94, 234, 212, 0.14);
+  border-radius: 999px;
+  background: rgba(20, 184, 166, 0.06);
+  padding: 2px 7px;
+  color: rgba(153, 246, 228, 0.76);
+  font-size: 9px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+
+.graph-info-panel__concept-reference-symbol {
+  display: inline-flex;
+  width: fit-content;
+  max-width: 100%;
+  border: 1px solid rgba(56, 189, 248, 0.14);
+  border-radius: 999px;
+  background: rgba(56, 189, 248, 0.06);
+  padding: 3px 8px;
+  color: #bae6fd;
+}
+
+.graph-info-panel__concept-reference-symbol .math-formula,
+.graph-info-panel__concept-reference-symbol .math-formula__viewport {
+  width: auto;
+  max-width: 100%;
+  padding: 0;
+  overflow: hidden;
+}
+
+.graph-info-panel__concept-reference-symbol .math-formula__content {
+  min-width: 0;
+}
+
+.graph-info-panel__concept-reference p,
+.graph-info-panel__concept-layer-empty,
+.graph-info-panel__concept-layer-more {
+  margin: 0;
+  color: rgba(203, 213, 225, 0.74);
+  font-size: 12px;
+  line-height: 1.52;
+}
+
+.graph-info-panel__concept-layer-more {
+  color: rgba(125, 211, 252, 0.82);
+  font-weight: 760;
+}
+
 .graph-info-panel__source-sentence {
   margin: 0 0 8px;
   border-left: 2px solid rgba(125, 211, 252, 0.34);

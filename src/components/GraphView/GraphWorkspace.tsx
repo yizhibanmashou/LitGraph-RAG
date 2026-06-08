@@ -70,7 +70,18 @@ export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, for
         return;
       }
     }
+    if (!routeChapterId && nextMode === 'guided') {
+      const selectedFormulaId = params.get('selected');
+      if (selectedFormulaId && selectedFormulaId !== focusFormulaId) {
+        const next = new URLSearchParams(params);
+        next.set('mode', 'guided');
+        next.delete('conceptId');
+        navigate(`/graph/${selectedFormulaId}?${next.toString()}`);
+        return;
+      }
+    }
     const next = new URLSearchParams(params);
+    if (nextMode === 'guided') next.delete('conceptId');
     if (nextMode === 'concept') next.delete('mode');
     else next.set('mode', nextMode);
     setParams(next, { replace: true });

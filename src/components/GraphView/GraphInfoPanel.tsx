@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { useParams, useSearchParams } from 'react-router-dom';
-import type { ConceptView } from '../../types/conceptGraph';
+import type { ConceptReference, ConceptView } from '../../types/conceptGraph';
 import type { FormulaLearningCopyPayload, FormulaPrerequisite, SearchFormula, StorylineEntry } from '../../types/formula';
 import type { LanguageCode, StudyContext } from '../../types/learning';
 import { useDependencyGraph } from '../../hooks/useDependencyGraph';
@@ -44,6 +44,57 @@ function getStudyContextText(studyContext: StudyContext, language: LanguageCode)
     };
   }
   return null;
+}
+
+interface ConceptReferenceListProps {
+  title: string;
+  layer: string;
+  items: ConceptReference[];
+  empty: string;
+  more: (count: number) => string;
+}
+
+function ConceptReferenceList({ title, layer, items, empty, more }: ConceptReferenceListProps) {
+  const visibleItems = items.slice(0, 8);
+  const hiddenCount = Math.max(0, items.length - visibleItems.length);
+
+  return (
+    <details className="graph-info-panel__copy-block graph-info-panel__copy-block--concept-layer">
+      <summary className="graph-info-panel__copy-heading">
+        <span className="graph-info-panel__summary-label">{title}</span>
+        <small>{layer}</small>
+        <small>{items.length}</small>
+      </summary>
+      {items.length ? (
+        <div className="graph-info-panel__concept-reference-list">
+          {visibleItems.map((item) => {
+            const symbol = item.symbol || item.via_symbol || '';
+            const definition = item.definition_zh || item.definition || '';
+            return (
+              <article
+                className="graph-info-panel__concept-reference"
+                key={`${item.concept_id || item.name}:${item.defined_by_formula_id || item.from_formula_id || symbol}`}
+              >
+                <div className="graph-info-panel__concept-reference-header">
+                  <strong><RichMathText text={item.name} /></strong>
+                  <small>{item.formula_label}</small>
+                </div>
+                {symbol ? (
+                  <div className="graph-info-panel__concept-reference-symbol">
+                    <MathFormula latex={symbol} inline />
+                  </div>
+                ) : null}
+                {definition ? <p><RichMathText text={definition} /></p> : null}
+              </article>
+            );
+          })}
+          {hiddenCount ? <p className="graph-info-panel__concept-layer-more">{more(hiddenCount)}</p> : null}
+        </div>
+      ) : (
+        <p className="graph-info-panel__concept-layer-empty">{empty}</p>
+      )}
+    </details>
+  );
 }
 
 export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext, storylines }: GraphInfoPanelProps) {
@@ -328,6 +379,20 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
             </div>
             <p><RichMathText text={conceptView.definition_zh || conceptView.definition} /></p>
           </div>
+          <ConceptReferenceList
+            title={copy.prerequisiteConcepts}
+            layer={language === 'zh' ? '第 1 层前置' : 'Layer 1'}
+            items={conceptView.prerequisite_concepts}
+            empty={language === 'zh' ? '当前概念没有可展开的前置概念。' : 'No prerequisite concepts are available for this concept.'}
+            more={(count) => language === 'zh' ? `还有 ${count} 个同层概念，可在画布中继续按层展开查看。` : `${count} more same-layer concepts are available on the canvas.`}
+          />
+          <ConceptReferenceList
+            title={copy.introducedConcepts}
+            layer={language === 'zh' ? '第 2 层本式符号' : 'Layer 2'}
+            items={conceptView.introduced_concepts}
+            empty={language === 'zh' ? '当前公式没有额外的首次引入背景概念。' : 'No introduced background concepts are available for this formula.'}
+            more={(count) => language === 'zh' ? `还有 ${count} 个同层概念，可在画布中继续按层展开查看。` : `${count} more same-layer concepts are available on the canvas.`}
+          />
           {conceptView.teaching_move_zh || conceptView.teaching_move ? (
             <div className="graph-info-panel__copy-block graph-info-panel__copy-block--concept-teaching">
               <div className="graph-info-panel__copy-heading">

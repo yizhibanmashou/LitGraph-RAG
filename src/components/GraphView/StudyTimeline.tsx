@@ -57,6 +57,10 @@ export function StudyTimeline({ studyContext, searchIndex }: StudyTimelineProps)
           const active = formulaId === focusFormulaId;
           const label = lookup.get(formulaId)?.label || rawFormulaNumber(formulaId);
           const nextParams = new URLSearchParams(params);
+          if (!routeChapterId) {
+            nextParams.set('selected', formulaId);
+            nextParams.delete('conceptId');
+          }
           const href = `/graph/${formulaId}?${nextParams.toString()}`;
           return (
             <button
