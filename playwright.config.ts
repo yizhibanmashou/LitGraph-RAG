@@ -20,9 +20,9 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npm run dev -- --port 5317 --strictPort',
+    command: 'npm run build && npm run preview -- --port 5317 --strictPort',
     url: 'http://127.0.0.1:5317',
     reuseExistingServer: false,
-    timeout: 60_000,
+    timeout: 120_000,
   },
 });

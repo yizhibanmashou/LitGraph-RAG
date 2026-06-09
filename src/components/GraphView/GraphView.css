@@ -2538,41 +2538,7 @@
   }
 
   .graph-onboarding-hint {
-    position: fixed;
-    left: 58px;
-    right: auto;
-    bottom: 12px;
-    z-index: 26;
-    width: min(286px, calc(100vw - 248px));
-    min-height: 34px;
-    max-width: none;
-    flex: 0 0 auto;
-    gap: 8px;
-    border-radius: 999px;
-    padding: 6px 9px;
-    font-size: 11px;
-    line-height: 1.25;
-    background:
-      linear-gradient(135deg, rgba(15, 23, 42, 0.86), rgba(2, 12, 27, 0.72)),
-      rgba(9, 18, 32, 0.8);
-    box-shadow: 0 10px 26px rgba(0, 0, 0, 0.32);
-  }
-
-  .graph-onboarding-hint__icon {
-    width: 14px;
-    height: 14px;
-  }
-
-  .graph-onboarding-hint span {
-    overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-  }
-
-  .graph-onboarding-hint button {
-    width: 22px;
-    height: 22px;
-    flex-basis: 22px;
+    display: none;
   }
 
   .formula-node--annotated.formula-node--focus {

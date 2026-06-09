@@ -1,50 +1,49 @@
-import { FormEvent, KeyboardEvent, useEffect, useMemo, useRef } from 'react';
+import { FormEvent, KeyboardEvent, useEffect, useId, useMemo, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Search, X } from 'lucide-react';
 import type { SearchFormula } from '../../types/formula';
 import type { ChapterNavigatorPayload } from '../../types/learning';
-import type { ChapterSearchResult, SearchResult } from '../../types/search';
+import type { ChapterSearchResult, ConceptSearchResult, FormulaSearchResult, SearchResult } from '../../types/search';
 import { useSearchStore } from '../../stores/searchStore';
 import { flattenChapters } from '../../utils/starNavigation';
-import { resolveRecommendedChapterFormulaId } from '../../utils/learningNavigator';
 import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../utils/uiCopy';
+import {
+  buildSearchQueryPlan,
+  isChapterSearchQuery,
+  rankSearchResults,
+  scoreChapterSearch,
+  scoreConceptSearch,
+  scoreFormulaSearch,
+  toConceptSearchResult,
+  toFormulaSearchResult,
+} from '../../utils/searchMatching';
 import { SearchResults } from './SearchResults';
 
 interface SearchBarProps {
   searchIndex: SearchFormula[];
+  conceptIndex?: ConceptSearchResult[];
   chapterNavigator?: ChapterNavigatorPayload;
   size?: 'default' | 'compact';
   tone?: 'dark' | 'light' | 'nav';
 }
 
-function normalizeSearch(value: string): string {
-  return value.trim().toLowerCase().replace(/\s+/g, '');
-}
+const SEARCH_SUGGESTIONS = ['2.1', '杂合度', '有效群体大小', 'selection', 'kappa'];
 
-function chapterAliases(chapter: ChapterSearchResult): string[] {
-  const chapterNumber = String(chapter.chapter_id.match(/\d+$/)?.[0] || chapter.chapter);
-  const base = [chapter.chapter_id, chapter.label, chapter.label.replace(/\s+/g, ''), chapter.title, chapter.title.replace(/\s+/g, '')];
-  if (chapter.chapter_id.startsWith('appendix')) {
-    return [...base, `appendix${chapterNumber}`, `app${chapterNumber}`, `a${chapterNumber}`].map(normalizeSearch);
-  }
-  return [...base, `chapter${chapterNumber}`, `chap${chapterNumber}`, `ch${chapterNumber}`, `c${chapterNumber}`].map(normalizeSearch);
-}
-
-function matchesChapterQuery(chapter: ChapterSearchResult, normalizedQuery: string): boolean {
-  return chapterAliases(chapter).some((alias) => alias.includes(normalizedQuery));
-}
-
-export function SearchBar({ searchIndex, chapterNavigator, size = 'default', tone = 'dark' }: SearchBarProps) {
+export function SearchBar({ searchIndex, conceptIndex = [], chapterNavigator, size = 'default', tone = 'dark' }: SearchBarProps) {
   const navigate = useNavigate();
   const copy = getUiCopy(DEFAULT_LANGUAGE);
+  const panelId = useId();
   const query = useSearchStore((state) => state.query);
   const results = useSearchStore((state) => state.results);
   const selectedIndex = useSearchStore((state) => state.selectedIndex);
   const setQuery = useSearchStore((state) => state.setQuery);
   const setResults = useSearchStore((state) => state.setResults);
   const setSelectedIndex = useSearchStore((state) => state.setSelectedIndex);
+  const [isFocused, setIsFocused] = useState(false);
+  const [isSearching, setIsSearching] = useState(false);
 
   const formulaLookup = useMemo(() => new Map(searchIndex.map((item) => [item.id, item])), [searchIndex]);
+  const conceptLookup = useMemo(() => new Map(conceptIndex.map((item) => [item.id, item])), [conceptIndex]);
   const chapterResults = useMemo<ChapterSearchResult[]>(
     () =>
       chapterNavigator
@@ -61,7 +60,6 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
         : [],
     [chapterNavigator],
   );
-  const chapterLookup = useMemo(() => new Map(chapterNavigator ? flattenChapters(chapterNavigator).map((chapter) => [chapter.chapter_id, chapter]) : []), [chapterNavigator]);
 
   const widthClass = size === 'compact' ? 'w-[min(360px,calc(100vw-48px))]' : 'w-[min(520px,48vw)]';
   const inputClass =
@@ -74,6 +72,7 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
   const clearClass = tone === 'light' ? 'text-slate-400 hover:bg-slate-100 hover:text-slate-700' : tone === 'nav' ? 'text-slate-400 hover:bg-white/8 hover:text-blue-100' : 'text-cyan-100/70 hover:bg-white/10 hover:text-white';
 
   const workerRef = useRef<Worker | null>(null);
+  const searchRequestRef = useRef(0);
 
   useEffect(() => {
     if (!searchIndex.length) return;
@@ -82,49 +81,93 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
     worker.postMessage({ type: 'init', payload: searchIndex });
     return () => {
       worker.terminate();
+      workerRef.current = null;
     };
   }, [searchIndex]);
 
   useEffect(() => {
-    const normalizedQuery = normalizeSearch(query);
-    if (!normalizedQuery) {
+    const queryPlan = buildSearchQueryPlan(query);
+    const requestId = searchRequestRef.current + 1;
+    searchRequestRef.current = requestId;
+
+    if (!queryPlan.normalized) {
+      setIsSearching(false);
       setResults([]);
       return;
     }
 
-    const matchedChapters = chapterResults.filter((chapter) => matchesChapterQuery(chapter, normalizedQuery)).slice(0, 6);
+    if (!searchIndex.length && !chapterResults.length && !conceptIndex.length) {
+      setIsSearching(true);
+      setResults([]);
+      return;
+    }
 
-    if (workerRef.current) {
+    const matchedChapters = rankSearchResults(
+      chapterResults.flatMap((chapter): ChapterSearchResult[] => {
+        const match = scoreChapterSearch(chapter, queryPlan);
+        return match ? [{ ...chapter, searchScore: match.score, matchReason: match.reason }] : [];
+      }),
+    ).slice(0, 5);
+    const matchedConcepts = rankSearchResults(
+      conceptIndex.flatMap((concept): ConceptSearchResult[] => {
+        const match = scoreConceptSearch(concept, queryPlan);
+        return match ? [toConceptSearchResult(concept, match)] : [];
+      }),
+    ).slice(0, 6);
+    const chapterOnly = isChapterSearchQuery(queryPlan);
+
+    const commitResults = (formulaResults: FormulaSearchResult[]) => {
+      if (searchRequestRef.current !== requestId) return;
+      const merged = new Map<string, SearchResult>();
+      [...matchedChapters, ...(chapterOnly ? [] : matchedConcepts), ...(chapterOnly ? [] : formulaResults)].forEach((item) => {
+        const existing = merged.get(item.id);
+        if (!existing || (item.searchScore || 0) > (existing.searchScore || 0)) {
+          merged.set(item.id, item);
+        }
+      });
+      setResults(rankSearchResults([...merged.values()]).slice(0, 10));
+      setIsSearching(false);
+    };
+
+    setIsSearching(true);
+    setResults(rankSearchResults([...matchedChapters, ...(chapterOnly ? [] : matchedConcepts)]).slice(0, 10));
+
+    if (chapterOnly) {
+      commitResults([]);
+    } else if (workerRef.current) {
       workerRef.current.onmessage = (event) => {
-        if (event.data.type === 'results') {
-          const formulaResults = event.data.results as SearchFormula[];
-          setResults([...(matchedChapters as SearchResult[]), ...formulaResults].slice(0, 10));
+        if (event.data.type === 'results' && event.data.requestId === requestId) {
+          commitResults(event.data.results as FormulaSearchResult[]);
         }
       };
-      workerRef.current.postMessage({ type: 'search', query: normalizedQuery });
+      workerRef.current.postMessage({ type: 'search', query, requestId });
     } else {
-      const exactFormulas = searchIndex.filter((item) => normalizeSearch(item.number).startsWith(normalizedQuery));
-      const fuzzyFormulas = searchIndex.filter((item) => {
-        const haystack = [item.label, item.section, item.context, item.keywords.join(' ')].join(' ');
-        return normalizeSearch(haystack).includes(normalizedQuery);
-      });
-      const formulas = [...exactFormulas, ...fuzzyFormulas].filter((item, index, arr) => arr.findIndex((candidate) => candidate.id === item.id) === index);
-      setResults([...(matchedChapters as SearchResult[]), ...formulas].slice(0, 10));
+      const formulaResults = searchIndex
+        .map((item) => {
+          const match = scoreFormulaSearch(item, queryPlan);
+          return match ? toFormulaSearchResult(item, match) : null;
+        })
+        .filter((item): item is FormulaSearchResult => Boolean(item));
+      commitResults(formulaResults);
     }
-  }, [chapterResults, query, searchIndex, setResults]);
+  }, [chapterResults, conceptIndex, query, searchIndex, setResults]);
 
   const openResult = (resultId: string) => {
     const chapter = chapterResults.find((item) => item.id === resultId);
     if (chapter) {
-      const navigatorEntry = chapterLookup.get(chapter.chapter_id);
-      const recommendedFormulaId = navigatorEntry ? resolveRecommendedChapterFormulaId(navigatorEntry, searchIndex) : null;
-      if (recommendedFormulaId) {
-        navigate(`/graph/${recommendedFormulaId}?study=chapter&chapterId=${chapter.chapter_id}&layer=backbone`);
-      } else {
-        navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`);
-      }
+      navigate(`/graph/chapter/${chapter.chapter_id}?study=chapter&chapterId=${chapter.chapter_id}&layer=full`);
       setQuery('');
       setResults([]);
+      setIsFocused(false);
+      return;
+    }
+
+    const concept = conceptLookup.get(resultId);
+    if (concept) {
+      navigate(`/graph/${concept.formula_id}?chapterId=${concept.chapter_id}&conceptId=${concept.concept_id}&selected=${concept.formula_id}`);
+      setQuery('');
+      setResults([]);
+      setIsFocused(false);
       return;
     }
 
@@ -133,6 +176,7 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
     navigate(`/graph/${formula.id}?chapterId=${formula.chapter_id}`);
     setQuery('');
     setResults([]);
+    setIsFocused(false);
   };
 
   const submit = (event: FormEvent) => {
@@ -142,6 +186,9 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
   };
 
   const onKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (!results.length && (event.key === 'ArrowDown' || event.key === 'ArrowUp')) {
+      return;
+    }
     if (event.key === 'ArrowDown') {
       event.preventDefault();
       setSelectedIndex(Math.min(results.length - 1, selectedIndex + 1));
@@ -153,19 +200,72 @@ export function SearchBar({ searchIndex, chapterNavigator, size = 'default', ton
     if (event.key === 'Escape') {
       setQuery('');
       setResults([]);
+      setIsFocused(false);
+    }
+    if (event.key === 'Enter') {
+      const selected = results[selectedIndex] || results[0];
+      if (selected) {
+        event.preventDefault();
+        openResult(selected.id);
+      }
     }
   };
 
+  const chooseSuggestion = (value: string) => {
+    setQuery(value);
+    setIsFocused(true);
+  };
+
+  const panelOpen = isFocused;
+
   return (
-    <form onSubmit={submit} className={`search-bar relative ${widthClass} min-w-[260px]`}>
+    <form
+      onSubmit={submit}
+      onFocus={() => setIsFocused(true)}
+      onBlur={(event) => {
+        if (!event.currentTarget.contains(event.relatedTarget as Node | null)) setIsFocused(false);
+      }}
+      className={`search-bar relative ${widthClass} min-w-[260px]`}
+      role="search"
+    >
       <Search className={`pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 ${iconClass}`} size={17} />
-      <input value={query} onChange={(event) => setQuery(event.target.value)} onKeyDown={onKeyDown} placeholder={copy.app.searchPlaceholder} className={inputClass} />
+      <input
+        value={query}
+        onChange={(event) => setQuery(event.target.value)}
+        onKeyDown={onKeyDown}
+        placeholder={copy.app.searchPlaceholder}
+        className={inputClass}
+        role="combobox"
+        aria-controls={panelId}
+        aria-expanded={panelOpen}
+        aria-autocomplete="list"
+        aria-activedescendant={results[selectedIndex] ? `${panelId}-${results[selectedIndex].id}` : undefined}
+      />
       {query ? (
-        <button type="button" onClick={() => setQuery('')} className={`absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded p-1 ${clearClass}`} aria-label={copy.app.clearSearch}>
+        <button
+          type="button"
+          onClick={() => {
+            setQuery('');
+            setResults([]);
+          }}
+          className={`absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded p-1 ${clearClass}`}
+          aria-label={copy.app.clearSearch}
+        >
           <X size={16} />
         </button>
       ) : null}
-      <SearchResults results={results} selectedIndex={selectedIndex} onSelect={openResult} tone={tone} />
+      <SearchResults
+        id={panelId}
+        query={query}
+        results={results}
+        selectedIndex={selectedIndex}
+        isOpen={isFocused}
+        isSearching={isSearching}
+        suggestions={SEARCH_SUGGESTIONS}
+        onSuggestionSelect={chooseSuggestion}
+        onSelect={openResult}
+        tone={tone}
+      />
     </form>
   );
 }

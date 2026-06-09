@@ -1,11 +1,13 @@
 import { useEffect, useState } from 'react';
 import type { FeaturedFormula, FormulaLearningCopyPayload, SearchFormula, StorylineEntry, StorylinePayload } from '../types/formula';
 import type { ChapterNavigatorPayload, ThemeRoutesPayload } from '../types/learning';
+import type { ConceptSearchResult } from '../types/search';
 import { loadJSON } from '../utils/loadJSON';
 
 export interface FormulaDataState {
   featured: FeaturedFormula[];
   searchIndex: SearchFormula[];
+  conceptIndex: ConceptSearchResult[];
   formulaLearningCopy: FormulaLearningCopyPayload['items'];
   storylines: StorylineEntry[];
   chapterNavigator: ChapterNavigatorPayload;
@@ -19,6 +21,7 @@ export function useFormulaData(): FormulaDataState {
   const [state, setState] = useState<FormulaDataState>({
     featured: [],
     searchIndex: [],
+    conceptIndex: [],
     formulaLearningCopy: {},
     storylines: [],
     chapterNavigator: { groups: [] },
@@ -30,16 +33,22 @@ export function useFormulaData(): FormulaDataState {
 
   useEffect(() => {
     const controller = new AbortController();
+    const conceptIndexRequest = loadJSON<{ items: ConceptSearchResult[] }>('/data/concept_graph/concept_search_index.json', controller.signal).catch((error: Error) => {
+      if (error.name === 'AbortError') throw error;
+      return { items: [] };
+    });
     Promise.all([
       loadJSON<{ featured: FeaturedFormula[] }>('/data/featured_formulas.json', controller.signal),
       loadJSON<SearchFormula[]>('/data/formula_search_index.json', controller.signal),
       loadJSON<ChapterNavigatorPayload>('/data/chapter_navigator.json', controller.signal),
+      conceptIndexRequest,
     ])
-      .then(([featuredPayload, searchIndex, chapterNavigator]) => {
+      .then(([featuredPayload, searchIndex, chapterNavigator, conceptSearchIndex]) => {
         setState((current) => ({
           ...current,
           featured: featuredPayload.featured,
           searchIndex,
+          conceptIndex: conceptSearchIndex.items,
           chapterNavigator,
           loading: false,
           error: null,

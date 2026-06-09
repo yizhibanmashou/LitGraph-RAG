@@ -37,7 +37,7 @@ export function HomePage({ data }: HomePageProps) {
         <div className="pointer-events-none absolute inset-0 z-10 bg-[linear-gradient(90deg,rgba(2,4,10,0.54)_0%,rgba(2,4,10,0.18)_34%,transparent_58%,rgba(2,4,10,0.14)_100%),linear-gradient(180deg,rgba(2,4,10,0.02)_0%,transparent_48%,rgba(2,4,10,0.48)_100%)]" />
 
         <div className="home-search-panel absolute left-6 right-6 top-8 z-30 animate-[fadeSlideUp_0.8s_ease_both] sm:left-10 sm:right-auto sm:w-[min(420px,calc(100%-80px))]">
-          <SearchBar searchIndex={data.searchIndex} chapterNavigator={data.chapterNavigator} size="compact" />
+          <SearchBar searchIndex={data.searchIndex} conceptIndex={data.conceptIndex} chapterNavigator={data.chapterNavigator} size="compact" />
         </div>
 
         <div className="home-hero-copy pointer-events-none absolute bottom-10 left-6 right-6 z-20 max-w-2xl pt-28 sm:left-10 sm:right-auto sm:pr-6 md:left-14 md:bottom-14">

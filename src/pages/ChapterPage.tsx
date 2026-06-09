@@ -83,7 +83,7 @@ export function ChapterPage({ data }: ChapterPageProps) {
           <ChevronLeft size={22} />
         </Link>
         <div className="chapter-topbar__search w-[320px]">
-          <SearchBar searchIndex={data.searchIndex} chapterNavigator={data.chapterNavigator} size="compact" />
+          <SearchBar searchIndex={data.searchIndex} conceptIndex={data.conceptIndex} chapterNavigator={data.chapterNavigator} size="compact" />
         </div>
       </div>
 

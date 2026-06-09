@@ -44,7 +44,7 @@ function AppShell() {
             <span className={`app-brand__subtitle block text-xs ${isGraph ? 'text-slate-300' : 'text-slate-500'}`}>{copy.app.subtitle}</span>
           </span>
         </a>
-        {isHome ? null : <SearchBar searchIndex={data.searchIndex} chapterNavigator={data.chapterNavigator} size="compact" tone="nav" />}
+        {isHome ? null : <SearchBar searchIndex={data.searchIndex} conceptIndex={data.conceptIndex} chapterNavigator={data.chapterNavigator} size="compact" tone="nav" />}
       </header>
       <main className={`relative z-10 min-h-screen ${isGraph ? 'app-main--graph' : ''}`}>
         <AppErrorBoundary>
