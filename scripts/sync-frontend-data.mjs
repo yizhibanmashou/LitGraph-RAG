@@ -12,6 +12,7 @@ const reviewOnlyPatterns = [
   /[/\\]concept_graph[/\\]concept_review_audit\.json$/,
   /[/\\]concept_graph[/\\]llm_prompts(?:[/\\]|$)/,
   /[/\\]concept_graph[/\\]llm_results(?:[/\\]|$)/,
+  /[/\\]symbol_sense[/\\]prompts(?:[/\\]|$)/,
 ];
 
 const unsafePublicCopyPatterns = [

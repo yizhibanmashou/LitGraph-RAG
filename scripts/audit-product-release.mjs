@@ -58,6 +58,7 @@ const REVIEW_ONLY_FILE_PATTERNS = [
   /[/\\]concept_graph[/\\]concept_review_audit\.json$/,
   /[/\\]concept_graph[/\\]llm_prompts(?:[/\\]|$)/,
   /[/\\]concept_graph[/\\]llm_results(?:[/\\]|$)/,
+  /[/\\]symbol_sense(?:[/\\]|$)/,
 ];
 
 const INTERNAL_REVIEW_KEYS = new Set([
