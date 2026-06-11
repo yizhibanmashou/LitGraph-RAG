@@ -40,7 +40,7 @@ function AppShell() {
             <Search size={18} />
           </span>
           <span className="app-brand__copy">
-            <span className="block text-sm font-semibold tracking-wide">Formula Atlas</span>
+            <span className="block text-sm font-semibold tracking-wide">Knowstellation</span>
             <span className={`app-brand__subtitle block text-xs ${isGraph ? 'text-slate-300' : 'text-slate-500'}`}>{copy.app.subtitle}</span>
           </span>
         </a>
@@ -71,7 +71,7 @@ function AppShell() {
 
 export default function App() {
   return (
-    <BrowserRouter future={{ v7_relativeSplatPath: true, v7_startTransition: true }}>
+    <BrowserRouter future={{ v7_relativeSplatPath: true }}>
       <AppShell />
     </BrowserRouter>
   );

@@ -125,6 +125,15 @@ test('buildCompoundFocusAnnotations extracts matrix transpose groups', () => {
   assert.ok(notes.some((item) => item.symbol === '(\\mathbf{z}_i-\\mathbf{\\bar{z}})^T'));
 });
 
+test('buildCompoundFocusAnnotations does not treat adjacent variables as powers', () => {
+  const notes = buildCompoundFocusAnnotations({
+    latex: '\\frac{dW}{dp}=2pW_{AA}+2(1-2p)W_{Aa}+2(p-1)W_{aa}',
+    context_text: 'fitness derivative',
+  });
+
+  assert.equal(notes.some((item) => item.symbol === '(p-1)^W'), false);
+});
+
 test('buildFormulaWideFocusAnnotation creates a whole-formula fallback', () => {
   const note = buildFormulaWideFocusAnnotation({
     latex: 'R=h^2S',

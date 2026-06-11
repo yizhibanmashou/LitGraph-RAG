@@ -1,6 +1,6 @@
-"""Formula Atlas offline textbook pipeline.
+"""Knowstellation offline source pipeline.
 
-The package builds the static JSON contracts consumed by the Formula Atlas
+The package builds the static JSON contracts consumed by the Knowstellation
 frontend from PaddleOCR-VL JSONL/Markdown output.
 """
 

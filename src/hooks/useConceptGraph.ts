@@ -17,12 +17,11 @@ export interface ConceptGraphApi {
 }
 
 function rankConceptView(view: ConceptView): number {
-  const reviewPenalty = view.review_flags.length ? 0.08 : 0;
   const symbolPenalty = view.defined_symbol === view.supporting_formula_label ? 0.12 : 0;
   const name = view.name.toLowerCase();
   const genericPenalty = /\b(index|variable|count|number of categories|formula .* concept)\b/.test(name) ? 0.1 : 0;
   const coreBonus = /\b(probability|fitness|trait|selection|response|variance|covariance|likelihood|frequency|expectation)\b/.test(name) ? 0.08 : 0;
-  return view.confidence + coreBonus - reviewPenalty - symbolPenalty - genericPenalty;
+  return view.confidence + coreBonus - symbolPenalty - genericPenalty;
 }
 
 function bestViewForFormula(graph: ConceptGraphPayload, formulaId: string): ConceptView | null {

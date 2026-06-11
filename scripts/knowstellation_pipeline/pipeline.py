@@ -18,7 +18,7 @@ from .teaching import write_teaching_payloads
 
 
 ROOT = Path(__file__).resolve().parents[2]
-DEFAULT_WORK_ROOT = ROOT / "data" / "formula_atlas_pipeline"
+DEFAULT_WORK_ROOT = ROOT / "data" / "knowstellation_pipeline"
 
 
 def capture_ocr(
@@ -32,7 +32,7 @@ def capture_ocr(
     output_dir = work_root / safe_slug(book_id) / "ocr_raw"
     token = token_from_env(token_env)
     if not token:
-        raise RuntimeError(f"{token_env} is not set. Add it to the local .env file or current shell environment.")
+        raise RuntimeError(f"{token_env} is not set. Add it to the local .env.local file or current shell environment.")
     client = AistudioPaddleOCRClient(
         token,
         model=model,

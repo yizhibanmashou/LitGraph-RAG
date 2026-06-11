@@ -16,7 +16,7 @@ export class AppErrorBoundary extends Component<AppErrorBoundaryProps, AppErrorB
   }
 
   componentDidCatch(error: Error, info: ErrorInfo) {
-    console.error('Formula Atlas render error', error, info);
+    console.error('Knowstellation render error', error, info);
   }
 
   render() {

@@ -1,4 +1,4 @@
-"""Build Formula Atlas frontend dependency data from structured JSON."""
+"""Build Knowstellation frontend dependency data from structured JSON."""
 
 from __future__ import annotations
 

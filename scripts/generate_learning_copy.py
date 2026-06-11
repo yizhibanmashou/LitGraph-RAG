@@ -50,7 +50,7 @@ def select_formulas(formulas, ids, limit):
 
 
 def build_prompt(formula):
-    return f"""Generate learner-facing formula explanations for a formula atlas.
+    return f"""Generate learner-facing formula explanations for a Knowstellation knowledge graph.
 
 Return strict JSON only, with this exact shape:
 {{

@@ -55,7 +55,11 @@ export function useGuidedSymbolExplanations({
 
         const dependency = chapter?.dependencies.find((dep) => dep.dependent_id === formulaId) || null;
         const symbolPrerequisites = buildFocusSymbolPrerequisites(currentFormula, dependency);
-        const loadingSymbolNotes: GuidedSymbolNote[] = symbolPrerequisites.map((item) => ({ ...item, llmStatus: 'loading' as const }));
+        const llmSymbolPrerequisites = symbolPrerequisites.filter((item) => item.kind !== 'formula');
+        const loadingSymbolNotes: GuidedSymbolNote[] = symbolPrerequisites.map((item) => ({
+          ...item,
+          llmStatus: item.kind === 'formula' ? 'ready' as const : 'loading' as const,
+        }));
         setNodes((currentNodes) =>
           refreshNodeData(currentNodes, chapter).map((node) => {
             if (node.id !== formulaId || node.type !== 'formula') return node;
@@ -70,7 +74,7 @@ export function useGuidedSymbolExplanations({
           }),
         );
 
-        if (!symbolPrerequisites.length) {
+        if (!llmSymbolPrerequisites.length) {
           markExpanded(formulaId);
           setShowHint(false);
           return;
@@ -80,7 +84,7 @@ export function useGuidedSymbolExplanations({
           formulaId,
           latex: currentFormula.latex || '',
           context: currentFormula.context_text || '',
-          symbols: symbolPrerequisites.map((prereq) => ({
+          symbols: llmSymbolPrerequisites.map((prereq) => ({
             symbol: prereq.symbol || prereq.via_symbol || 'symbol',
             kind: prereq.kind || 'symbol',
             prerequisite: prereq,
@@ -89,6 +93,7 @@ export function useGuidedSymbolExplanations({
         }).catch(() => null);
         const detailBySymbol = new Map(batch?.items.map((item) => [item.symbol, item]) || []);
         const symbolNotes: GuidedSymbolNote[] = symbolPrerequisites.map((prereq) => {
+          if (prereq.kind === 'formula') return { ...prereq, llmStatus: 'ready' as const };
           const symbol = prereq.symbol || prereq.via_symbol || 'symbol';
           const detail = detailBySymbol.get(symbol);
           return detail
@@ -98,7 +103,7 @@ export function useGuidedSymbolExplanations({
                 llmText: detail.text,
                 llmStatus: 'ready' as const,
               }
-            : { ...prereq, llmStatus: 'error' as const };
+            : { ...prereq, llmStatus: 'ready' as const };
         });
 
         if (guidedSymbolRequestRef.current.get(formulaId) !== requestId) return;

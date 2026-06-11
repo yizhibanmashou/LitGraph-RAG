@@ -145,21 +145,22 @@ def token_from_env(env_name: str = "PADDLEOCR_AISTUDIO_TOKEN") -> str:
 
 
 def load_root_dotenv(path: Path | None = None) -> None:
-    dotenv = path or ROOT / ".env"
-    if not dotenv.is_file():
-        return
-    try:
-        lines = dotenv.read_text(encoding="utf-8-sig").splitlines()
-    except OSError:
-        return
-    for raw in lines:
-        line = raw.strip()
-        if not line or line.startswith("#") or "=" not in line:
+    dotenv_files = [path] if path is not None else [ROOT / ".env.local", ROOT / ".env"]
+    for dotenv in dotenv_files:
+        if not dotenv.is_file():
             continue
-        key, value = line.split("=", 1)
-        key = key.strip()
-        if key and os.environ.get(key) is None:
-            os.environ[key] = value.strip().strip('"').strip("'")
+        try:
+            lines = dotenv.read_text(encoding="utf-8-sig").splitlines()
+        except OSError:
+            continue
+        for raw in lines:
+            line = raw.strip()
+            if not line or line.startswith("#") or "=" not in line:
+                continue
+            key, value = line.split("=", 1)
+            key = key.strip()
+            if key and os.environ.get(key) is None:
+                os.environ[key] = value.strip().strip('"').strip("'")
 
 
 def extract_markdown_assets(jsonl_path: Path, output_dir: Path) -> list[Path]:

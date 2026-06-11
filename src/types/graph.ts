@@ -41,9 +41,13 @@ export interface ConceptNodeData {
   reference?: ConceptReference;
   clickable: boolean;
   active?: boolean;
+  depth?: number;
+  canExpandPrerequisites?: boolean;
+  prerequisitesExpanded?: boolean;
   conceptCounts?: Partial<Record<ConceptRevealGroup, number>>;
   revealedGroups?: Partial<Record<ConceptRevealGroup, boolean>>;
   onRevealGroup?: (group: ConceptRevealGroup) => void;
+  onExpandPrerequisites?: (reference: ConceptReference) => void;
   onOpenConcept: (conceptId: string) => void;
   onOpenFormula: (formulaId: string) => void;
 }

@@ -1,0 +1,119 @@
+{
+  "version": 1,
+  "generated_at": "2026-06-11T09:35:15.410Z",
+  "release_gate": {
+    "passed": true,
+    "blockers": [],
+    "warnings": []
+  },
+  "public_data": {
+    "dir": "public/data",
+    "json_files": 80,
+    "required_files": 9
+  },
+  "concept_graph": {
+    "chapters": 35,
+    "formulas_processed": 2601,
+    "concept_views": 2641,
+    "concept_search_entries": 2641,
+    "prerequisite_edges": 1579,
+    "introduced_edges": 12968,
+    "unique_public_concept_names": 1566,
+    "zero_view_chapters": [],
+    "top_concepts": [
+      {
+        "name": "Response",
+        "count": 118
+      },
+      {
+        "name": "Probability",
+        "count": 117
+      },
+      {
+        "name": "Variance",
+        "count": 87
+      },
+      {
+        "name": "Standard Deviation",
+        "count": 81
+      },
+      {
+        "name": "Time",
+        "count": 30
+      },
+      {
+        "name": "Change",
+        "count": 29
+      },
+      {
+        "name": "Class Selection Coefficient",
+        "count": 28
+      },
+      {
+        "name": "Fitness",
+        "count": 27
+      },
+      {
+        "name": "Absolute Fitness",
+        "count": 26
+      },
+      {
+        "name": "Expectation",
+        "count": 24
+      },
+      {
+        "name": "Beta",
+        "count": 23
+      },
+      {
+        "name": "Class Fitness",
+        "count": 22
+      },
+      {
+        "name": "Alpha",
+        "count": 21
+      },
+      {
+        "name": "Population Size",
+        "count": 21
+      },
+      {
+        "name": "Vector or Matrix Quantity",
+        "count": 21
+      },
+      {
+        "name": "Additive Genetic Variance",
+        "count": 19
+      },
+      {
+        "name": "Correlation",
+        "count": 18
+      },
+      {
+        "name": "Information",
+        "count": 18
+      },
+      {
+        "name": "Probability Density",
+        "count": 17
+      },
+      {
+        "name": "Cost",
+        "count": 16
+      }
+    ]
+  },
+  "brand": {
+    "product_name": "Knowstellation",
+    "legacy_formula_atlas_findings": [],
+    "allowed_legacy_references": [
+      "https://formula-atlas.13260051624.workers.dev/",
+      "GraphAtlas",
+      "GraphAtlasProps",
+      "graph-atlas",
+      "graph-atlas-node",
+      "graph-atlas-map",
+      "graph-atlas-panel"
+    ]
+  }
+}

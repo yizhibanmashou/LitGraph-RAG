@@ -19,7 +19,6 @@ import { useConceptGraph } from '../../hooks/useConceptGraph';
 import { useDependencyGraph } from '../../hooks/useDependencyGraph';
 import { useGraphStore } from '../../stores/graphStore';
 import { DEFAULT_LANGUAGE, getUiCopy } from '../../utils/uiCopy';
-import { conceptTeachingMoveFromContext } from '../../utils/conceptTeachingMove';
 import { GraphCanvasView } from './GraphCanvasView';
 import {
   chapterIdForFormula,
@@ -72,9 +71,16 @@ const CONCEPT_INTRO_X = 900;
 const CONCEPT_PREREQ_COLUMN_GAP = 336;
 const CONCEPT_PREREQ_ROW_GAP = 326;
 const CONCEPT_INTRO_ROW_GAP = 310;
+const CONCEPT_NESTED_PREREQ_X_OFFSET = -336;
+const CONCEPT_NESTED_PREREQ_Y_GAP = 210;
+const CONCEPT_MAX_NESTED_DEPTH = 2;
 
 function conceptReferenceKey(reference: ConceptReference, index: number): string {
   return `${reference.concept_id || reference.symbol || reference.name || 'concept'}:${reference.defined_by_formula_id || reference.from_formula_id || index}`;
+}
+
+function conceptReferenceStableKey(reference: ConceptReference): string {
+  return `${reference.concept_id || reference.symbol || reference.name || 'concept'}:${reference.defined_by_formula_id || reference.from_formula_id || ''}`;
 }
 
 function visibleConceptReferences(items: ConceptReference[], limit: number): ConceptReference[] {
@@ -90,28 +96,68 @@ function visibleConceptReferences(items: ConceptReference[], limit: number): Con
   return result;
 }
 
-function enrichConceptTeachingMove(view: ConceptView, searchLookup: Map<string, SearchFormula>): ConceptView {
-  const currentContext = searchLookup.get(view.defined_by_formula_id)?.context || '';
-  const currentMove = conceptTeachingMoveFromContext(currentContext);
-  const enrichReference = (reference: ConceptReference): ConceptReference => {
-    const formulaId = reference.defined_by_formula_id || reference.from_formula_id || '';
-    const move = conceptTeachingMoveFromContext(searchLookup.get(formulaId)?.context || '');
-    return move
-      ? {
-          ...reference,
-          teaching_move: reference.teaching_move || move.teaching_move,
-          teaching_move_zh: reference.teaching_move_zh || move.teaching_move_zh,
-          source_sentence: reference.source_sentence || move.source_sentence,
-        }
-      : reference;
-  };
+function formulaEvidenceConceptId(formulaId: string): string {
+  return `concept_fallback_${formulaId.replace(/[^A-Za-z0-9_]+/g, '_')}`;
+}
+
+function extractReadableSymbols(latex = ''): string[] {
+  const ignored = new Set(['frac', 'left', 'right', 'quad', 'qquad', 'mathrm', 'text', 'begin', 'end', 'sqrt']);
+  const symbols = new Set<string>();
+  const cleaned = latex.replace(/\\(?:mathrm|text)\{[^{}]*\}/g, ' ');
+  for (const match of cleaned.matchAll(/\\[A-Za-z]+(?:_\{[^{}]+\}|_[A-Za-z0-9]|\^\{[^{}]+\})?|[A-Za-z](?:_\{[^{}]+\}|_[A-Za-z0-9]|\^\{[^{}]+\})?/g)) {
+    const value = match[0];
+    const key = value.replace(/^\\/, '');
+    if (ignored.has(key)) continue;
+    if (/^[A-Za-z]$/.test(value) || value.startsWith('\\') || /[_^]/.test(value)) symbols.add(value);
+  }
+  return [...symbols].slice(0, 6);
+}
+
+function buildFormulaEvidenceView(formula: SearchFormula, chapterId: string): ConceptView {
+  const symbols = extractReadableSymbols(formula.latex_preview);
+  const label = formula.label || `Formula ${formula.number || formula.id}`;
+  const introducedConcepts: ConceptReference[] = symbols.map((symbol, index) => ({
+    concept_id: `${formulaEvidenceConceptId(formula.id)}_symbol_${index}`,
+    name: symbol,
+    symbol,
+    defined_by_formula_id: null,
+    formula_label: label,
+    clickable: false,
+    confidence: 1,
+    relation: 'introduced_for',
+    concept_type: 'formula_symbol',
+    definition: `${symbol} is one of the symbols needed to read this equation.`,
+    definition_zh: `${symbol} 是读懂这条公式时需要先定位的符号。`,
+  }));
+
   return {
-    ...view,
-    teaching_move: view.teaching_move || currentMove?.teaching_move,
-    teaching_move_zh: view.teaching_move_zh || currentMove?.teaching_move_zh,
-    source_sentence: view.source_sentence || currentMove?.source_sentence,
-    prerequisite_concepts: view.prerequisite_concepts.map(enrichReference),
-    introduced_concepts: view.introduced_concepts.map(enrichReference),
+    chapter_id: chapterId || formula.chapter_id,
+    concept_id: formulaEvidenceConceptId(formula.id),
+    name: `${label} 关系式解读`,
+    definition: 'Read this equation as a relationship first: the left side is the quantity being compared or expressed, and the right side shows the terms that determine it.',
+    definition_zh: '先把这条公式读成一个关系式：左侧是要比较或表达的量，右侧说明它由哪些条件和符号共同决定。',
+    concept_type: 'formula_evidence_view',
+    defined_by_formula_id: formula.id,
+    defined_symbol: symbols[0] || '',
+    supporting_formula_label: label,
+    supporting_formula_latex: formula.latex_preview,
+    formula_section: formula.section,
+    evidence: [{
+      chunk_id: formula.id,
+      block_index: 0,
+      block_type: 'formula',
+    }],
+    confidence: 1,
+    prerequisite_concepts: [],
+    introduced_concepts: introducedConcepts,
+    edges: introducedConcepts.map((reference) => ({
+      from: reference.concept_id,
+      to: formulaEvidenceConceptId(formula.id),
+      relation: 'introduced_for',
+      clickable: false,
+      confidence: 1,
+      symbol: reference.symbol,
+    })),
   };
 }
 
@@ -121,12 +167,26 @@ function defaultConceptReveals(view: ConceptView): Partial<Record<ConceptRevealG
   return {};
 }
 
+function nestedConceptReferences(reference?: ConceptReference): ConceptReference[] {
+  const prerequisites = (reference?.prerequisite_concepts || []).map((item) => ({
+    ...item,
+    relation: item.relation || 'prerequisite_for',
+  }));
+  const introduced = (reference?.introduced_concepts || []).map((item) => ({
+    ...item,
+    relation: item.relation || 'introduced_for',
+  }));
+  return visibleConceptReferences([...prerequisites, ...introduced], 4);
+}
+
 function buildConceptScene(
   view: ConceptView,
   revealedGroups: Partial<Record<ConceptRevealGroup, boolean>>,
+  expandedReferenceKeys: Set<string>,
   onOpenConcept: (conceptId: string) => void,
   onOpenFormula: (formulaId: string) => void,
   onRevealGroup: (group: ConceptRevealGroup) => void,
+  onExpandPrerequisites: (reference: ConceptReference) => void,
 ): { nodes: Node[]; edges: Edge[] } {
   const prerequisites = visibleConceptReferences(view.prerequisite_concepts, 8);
   const introduced = visibleConceptReferences(view.introduced_concepts, 6);
@@ -151,6 +211,7 @@ function buildConceptScene(
         },
         revealedGroups,
         onRevealGroup,
+        onExpandPrerequisites,
         onOpenConcept,
         onOpenFormula,
       } satisfies ConceptNodeData,
@@ -159,6 +220,10 @@ function buildConceptScene(
   const edges: Edge[] = [];
 
   if (showPrerequisites) prerequisites.forEach((reference, index) => {
+    const referenceKey = conceptReferenceStableKey(reference);
+    const nested = nestedConceptReferences(reference);
+    const canExpandPrerequisites = nested.length > 0;
+    const prerequisitesExpanded = expandedReferenceKeys.has(referenceKey);
     const id = `prereq:${conceptReferenceKey(reference, index)}`;
     const column = prerequisites.length > 5 ? index % 2 : 0;
     const row = prerequisites.length > 5 ? Math.floor(index / 2) : index;
@@ -172,8 +237,12 @@ function buildConceptScene(
         role: 'prerequisite',
         reference,
         clickable: true,
+        depth: 1,
+        canExpandPrerequisites,
+        prerequisitesExpanded,
         onOpenConcept,
         onOpenFormula,
+        onExpandPrerequisites,
       } satisfies ConceptNodeData,
     });
     edges.push({
@@ -193,6 +262,46 @@ function buildConceptScene(
         labelVisible: prerequisites.length <= 4 && index < 2,
       } satisfies DependencyEdgeData,
     });
+    if (expandedReferenceKeys.has(referenceKey)) {
+      nested.forEach((nestedReference, nestedIndex) => {
+        const nestedId = `nested:${referenceKey}:${conceptReferenceKey(nestedReference, nestedIndex)}`;
+        const nestedY = y - Math.max(0, nested.length - 1) * (CONCEPT_NESTED_PREREQ_Y_GAP / 2) + nestedIndex * CONCEPT_NESTED_PREREQ_Y_GAP;
+        nodes.push({
+          id: nestedId,
+          type: 'concept',
+          position: { x: prereqStartX + column * CONCEPT_PREREQ_COLUMN_GAP + CONCEPT_NESTED_PREREQ_X_OFFSET, y: nestedY },
+          data: {
+            view,
+            role: 'prerequisite',
+            reference: nestedReference,
+            clickable: Boolean(nestedReference.clickable),
+            depth: CONCEPT_MAX_NESTED_DEPTH,
+            canExpandPrerequisites: false,
+            prerequisitesExpanded: false,
+            onOpenConcept,
+            onOpenFormula,
+            onExpandPrerequisites,
+          } satisfies ConceptNodeData,
+        });
+        edges.push({
+          id: `${nestedId}->${id}`,
+          source: nestedId,
+          target: id,
+          type: 'dependency',
+          markerEnd: { type: MarkerType.ArrowClosed, color: '#7dd3fc' },
+          data: {
+            via: nestedReference.via_symbol || nestedReference.symbol || 'depends',
+            crossChapter: false,
+            confidence: nestedReference.confidence,
+            kind: 'concept',
+            relation: nestedReference.relation || 'prerequisite_for',
+            explanation: `继续展开：${nestedReference.name} 是 ${reference.name} 的前置概念。`,
+            active: true,
+            labelVisible: false,
+          } satisfies DependencyEdgeData,
+        });
+      });
+    }
   });
 
   if (showIntroduced) introduced.forEach((reference, index) => {
@@ -252,9 +361,11 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
   const [graphNotice, setGraphNotice] = useState<string | null>(null);
   const [guidedStages, setGuidedStages] = useState<Record<string, GuidedExpansionStage>>({});
   const [conceptReveals, setConceptReveals] = useState<Record<string, Partial<Record<ConceptRevealGroup, boolean>>>>({});
+  const [expandedConceptReferences, setExpandedConceptReferences] = useState<Record<string, string[]>>({});
   const [conceptHistory, setConceptHistory] = useState<ConceptHistoryEntry[]>([]);
   const nodesRef = useRef<Node[]>([]);
   const conceptRevealsRef = useRef<Record<string, Partial<Record<ConceptRevealGroup, boolean>>>>({});
+  const expandedConceptReferencesRef = useRef<Record<string, string[]>>({});
   const expandFormulaRef = useRef<(formulaId: string, intent?: FormulaExpansionIntent) => void>(() => undefined);
   const loadConceptSceneRef = useRef<(conceptOrFormulaId: string) => void>(() => undefined);
   const autoExpandedFocusRef = useRef<string | null>(null);
@@ -294,6 +405,10 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
   useEffect(() => {
     conceptRevealsRef.current = conceptReveals;
   }, [conceptReveals]);
+
+  useEffect(() => {
+    expandedConceptReferencesRef.current = expandedConceptReferences;
+  }, [expandedConceptReferences]);
 
   useEffect(() => {
     if (!isChapterGraph || !routeSelectedFormulaId) return;
@@ -380,12 +495,32 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
     [reactFlow],
   );
 
+  const toggleNestedPrerequisites = useCallback((reference: ConceptReference) => {
+    const view = activeConceptViewRef.current;
+    if (!view) return;
+    const referenceKey = conceptReferenceStableKey(reference);
+    setExpandedConceptReferences((current) => {
+      const currentKeys = new Set(current[view.concept_id] || []);
+      if (currentKeys.has(referenceKey)) {
+        currentKeys.delete(referenceKey);
+      } else {
+        currentKeys.add(referenceKey);
+      }
+      return {
+        ...current,
+        [view.concept_id]: [...currentKeys],
+      };
+    });
+  }, []);
+
   const renderConceptScene = useCallback(
     (rawView: ConceptView, revealedGroups: Partial<Record<ConceptRevealGroup, boolean>>) => {
-      const view = enrichConceptTeachingMove(rawView, searchLookup);
+      const view = rawView;
+      const expandedKeys = new Set(expandedConceptReferencesRef.current[view.concept_id] || []);
       const scene = buildConceptScene(
         view,
         revealedGroups,
+        expandedKeys,
         openLinkedConcept,
         openFormulaEvidence,
         (group) => {
@@ -397,6 +532,7 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
             },
           }));
         },
+        toggleNestedPrerequisites,
       );
       setNodes(scene.nodes);
       setEdges(scene.edges);
@@ -405,7 +541,7 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
       setStandaloneFocusId(null);
       setShowHint(true);
     },
-    [openFormulaEvidence, openLinkedConcept, searchLookup],
+    [openFormulaEvidence, openLinkedConcept, searchLookup, toggleNestedPrerequisites],
   );
 
   const loadConceptScene = useCallback(
@@ -416,7 +552,8 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
       setGraphNotice(null);
       const view = await getConceptView(focusChapterId, conceptOrFormulaId);
       if (requestId !== conceptSceneRequestRef.current) return;
-      if (!view) {
+      const fallbackFormula = searchLookup.get(conceptOrFormulaId) || searchLookup.get(focusFormulaId);
+      if (!view && !fallbackFormula) {
         activeConceptViewRef.current = null;
         setNodes([]);
         setEdges([]);
@@ -425,23 +562,23 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
         setGraphNotice(`${copy.missingFormula} ${conceptOrFormulaId}`);
         return;
       }
-      const enrichedView = enrichConceptTeachingMove(view, searchLookup);
-      const revealedGroups = conceptRevealsRef.current[view.concept_id] || defaultConceptReveals(enrichedView);
+      const enrichedView = view || buildFormulaEvidenceView(fallbackFormula!, focusChapterId);
+      const revealedGroups = conceptRevealsRef.current[enrichedView.concept_id] || defaultConceptReveals(enrichedView);
       activeConceptViewRef.current = enrichedView;
       renderConceptScene(enrichedView, revealedGroups);
       setConceptReveals((current) => (
-        current[view.concept_id]
+        current[enrichedView.concept_id]
           ? current
           : {
               ...current,
-              [view.concept_id]: revealedGroups,
+              [enrichedView.concept_id]: revealedGroups,
             }
       ));
       if (options.syncUrl) {
         const next = new URLSearchParams(paramsKey);
-        next.set('conceptId', view.concept_id);
+        next.set('conceptId', enrichedView.concept_id);
         next.set('chapterId', focusChapterId);
-        next.set('selected', view.defined_by_formula_id);
+        next.set('selected', enrichedView.defined_by_formula_id);
         next.delete('fromConceptId');
         next.delete('fromFormulaId');
         next.delete('fromConceptLabel');
@@ -450,7 +587,7 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
       window.dispatchEvent(new CustomEvent('litgraph:concept-details', { detail: { conceptView: enrichedView } }));
       fitConceptScene(520);
     },
-    [copy.missingFormula, fitConceptScene, focusChapterId, focusFormulaId, getConceptView, paramsKey, renderConceptScene, searchLookup, setParams],
+    [copy.missingConcept, copy.missingFormula, fitConceptScene, focusChapterId, focusFormulaId, getConceptView, paramsKey, renderConceptScene, searchLookup, setParams],
   );
 
   useEffect(() => {
@@ -458,7 +595,7 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
     if (!isConceptMode || !view) return;
     renderConceptScene(view, conceptReveals[view.concept_id] || {});
     fitConceptScene(420);
-  }, [conceptReveals, fitConceptScene, isConceptMode, renderConceptScene]);
+  }, [conceptReveals, expandedConceptReferences, fitConceptScene, isConceptMode, renderConceptScene]);
 
   useEffect(() => {
     loadConceptSceneRef.current = (conceptOrFormulaId: string) => {
@@ -619,7 +756,9 @@ function GraphCanvasInner({ searchIndex, mode = 'concept', storylines, toolbar }
     setGuidedStages({});
     setLoadingIds(new Set());
     setConceptReveals({});
+    setExpandedConceptReferences({});
     conceptRevealsRef.current = {};
+    expandedConceptReferencesRef.current = {};
     activeConceptViewRef.current = null;
     autoExpandedFocusRef.current = null;
     const target = routeConceptId || linkedFormulaId || focusFormulaId;

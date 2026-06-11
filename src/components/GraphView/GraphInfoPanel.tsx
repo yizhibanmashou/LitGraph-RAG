@@ -364,10 +364,8 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
             </div>
           </div>
           <div className="graph-info-panel__copy-block graph-info-panel__copy-block--concept-definition">
-            <div className="graph-info-panel__copy-heading">
-              <span>{copy.conceptDefinition}</span>
-              <small>{Math.round(conceptView.confidence * 100)}%</small>
-              {conceptView.review_flags.length ? <small>{copy.needsReview}</small> : null}
+              <div className="graph-info-panel__copy-heading">
+                <span>{copy.conceptDefinition}</span>
             </div>
             <p><RichMathText text={conceptView.definition_zh || conceptView.definition} /></p>
           </div>
@@ -382,42 +380,14 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
             title={copy.introducedConcepts}
             layer={language === 'zh' ? '第 2 层本式符号' : 'Layer 2'}
             items={conceptView.introduced_concepts}
-            empty={language === 'zh' ? '当前公式没有额外的首次引入背景概念。' : 'No introduced background concepts are available for this formula.'}
+            empty={language === 'zh' ? '当前公式没有额外的本式符号需要展开。' : 'No additional formula symbols need to be expanded here.'}
             more={(count) => language === 'zh' ? `还有 ${count} 个同层概念，可在画布中继续按层展开查看。` : `${count} more same-layer concepts are available on the canvas.`}
           />
-          {conceptView.teaching_move_zh || conceptView.teaching_move ? (
-            <div className="graph-info-panel__copy-block graph-info-panel__copy-block--concept-teaching">
-              <div className="graph-info-panel__copy-heading">
-                <span>教材引入</span>
-                <small>{conceptView.supporting_formula_label}</small>
-              </div>
-              <p><RichMathText text={conceptView.teaching_move_zh || conceptView.teaching_move || ''} /></p>
-            </div>
-          ) : null}
-          <div className="graph-info-panel__concept-stats" aria-label="概念局部视图统计">
-            <div>
-              <strong>{conceptView.prerequisite_concepts.length}</strong>
-              <span>{copy.prerequisiteConcepts}</span>
-            </div>
-            <div>
-              <strong>{conceptView.introduced_concepts.length}</strong>
-              <span>{copy.introducedConcepts}</span>
-            </div>
-            <div>
-              <strong>{conceptView.evidence.length}</strong>
-              <span>{copy.evidence}</span>
-            </div>
-          </div>
           <details className="graph-info-panel__copy-block graph-info-panel__copy-block--formula-evidence">
             <summary className="graph-info-panel__copy-heading">
               <span>{copy.supportingFormula}已折叠</span>
               <small>{conceptView.supporting_formula_label}</small>
             </summary>
-            {conceptView.source_sentence ? (
-              <p className="graph-info-panel__source-sentence">
-                <RichMathText text={conceptView.source_sentence} />
-              </p>
-            ) : null}
             <MathFormula latex={conceptView.supporting_formula_latex} />
           </details>
         </section>
@@ -434,6 +404,12 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
               {llmState.status === 'error' ? <small>{copy.fallback}</small> : null}
             </div>
             <p><RichMathText text={learningCopy.takeaway} /></p>
+          </div>
+          <div className="graph-info-panel__copy-block graph-info-panel__copy-block--reading-order">
+            <div className="graph-info-panel__copy-heading">
+              <span>读法顺序</span>
+            </div>
+            <p><RichMathText text={learningCopy.nextAction} /></p>
           </div>
           <div className="graph-info-panel__copy-block">
             <div className="graph-info-panel__copy-heading">

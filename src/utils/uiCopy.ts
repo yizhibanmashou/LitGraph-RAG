@@ -5,22 +5,22 @@ export const DEFAULT_LANGUAGE: LanguageCode = 'zh';
 const UI_COPY = {
   zh: {
     app: {
-      subtitle: '公式依赖学习图谱',
+      subtitle: '知识星构导航系统',
       searchPlaceholder: '搜索公式、章节或主题',
       home: '首页',
       clearSearch: '清空搜索',
       formulaUnavailable: '公式暂时无法渲染',
     },
     home: {
-      eyebrow: '教材公式图谱',
+      eyebrow: '书本与论文知识星构',
       intro:
-        '从章节星图、公式搜索或叙事线开始，把分散的公式放回教材推导里理解。',
+        '把书本与论文转换成可导航的知识星构。从章节星图、公式搜索或叙事线开始，沿着概念、符号和证据理解原始资料。',
       sectors: '章节',
       nodes: '公式',
       paths: '叙事线',
       pathways: '知识路径',
       pathwayIntro:
-        '故事线带你跨越章节，追踪核心概念在整本书中的演化轨迹。',
+        '故事线带你跨越章节，追踪核心概念在书本与论文中的演化轨迹。',
       enterStoryline: '进入叙事线',
     },
     chapter: {
@@ -76,11 +76,12 @@ const UI_COPY = {
       fromStoryline: '来自叙事线：',
       emptyChapter: '暂未找到这个章节的公式数据。',
       missingFormula: '没有在当前章节中找到这个公式。',
+      missingConcept: '已切换到公式证据视图。',
       dataError: '图谱数据暂时无法加载。',
       standalone: '这个公式目前在本地图谱中没有已确认的前置或后续关系。',
       chapterGraphSuffix: '全章图谱',
       hints: {
-        concept: '概念视图：从当前概念出发，只展示一跳前置概念和本公式首次引入的背景概念；公式作为证据保留。',
+        concept: '概念视图：从当前概念出发，先看一跳前置，再看本式符号；公式作为证据保留。',
         guided: '引导学习：先点公式卡片理解符号，再选择看前置概念或后续公式。',
         explore: '自由探索：点击公式，在当前章节里展开它的前置和后续关系。',
       },
@@ -127,10 +128,9 @@ const UI_COPY = {
         chapterGraph: '整章图谱',
         conceptEyebrow: '概念局部视图',
         conceptSymbol: '概念符号',
-        conceptDefinition: '概念定义',
-        needsReview: '待复核',
+        conceptDefinition: '概念解读',
         prerequisiteConcepts: '前置概念',
-        introducedConcepts: '首次引入',
+        introducedConcepts: '本式符号',
         evidence: '证据',
         supportingFormula: '支撑公式',
         plain: '通俗解释',
@@ -174,16 +174,16 @@ const UI_COPY = {
   },
   en: {
     app: {
-      subtitle: 'A LitGraph Learning System',
+      subtitle: 'Knowledge Constellation System',
       searchPlaceholder: 'Search formula, chapter, or topic',
       home: 'Home',
       clearSearch: 'Clear search',
       formulaUnavailable: 'Formula unavailable',
     },
     home: {
-      eyebrow: 'Textbook Formula Atlas',
+      eyebrow: 'Books and Papers as Knowledge Stars',
       intro:
-        'Start from the chapter star map, formula search, or a storyline to read formulas in their textbook argument.',
+        'Turn dense books and papers into navigable knowledge constellations. Start from a chapter star map, formula search, or storyline, then follow concepts through the source.',
       sectors: 'Sectors',
       nodes: 'Nodes',
       paths: 'Paths',
@@ -245,11 +245,12 @@ const UI_COPY = {
       fromStoryline: 'From storyline: ',
       emptyChapter: 'No formulas were found for this chapter.',
       missingFormula: 'This formula was not found in the current chapter.',
+      missingConcept: 'Switched to the formula evidence view.',
       dataError: 'Graph data could not be loaded.',
       standalone: 'This formula currently stands alone in the local graph.',
       chapterGraphSuffix: 'full graph',
       hints: {
-        concept: 'Concept: start from the current concept, show one-hop prerequisites and first-introduced background concepts; formulas stay as evidence.',
+        concept: 'Concept: start from the current concept, show one-hop prerequisites and formula symbols; formulas stay as evidence.',
         guided: 'Guided: click the formula card first, then choose prerequisites or successors.',
         explore: 'Explore: click formulas to expand relationships inside this chapter.',
       },
@@ -287,8 +288,7 @@ const UI_COPY = {
         chapterGraph: 'Chapter graph',
         conceptEyebrow: 'Concept view',
         conceptSymbol: 'Concept symbol',
-        conceptDefinition: 'Concept definition',
-        needsReview: 'Needs review',
+        conceptDefinition: 'Concept reading',
         prerequisiteConcepts: 'Prerequisites',
         introducedConcepts: 'Introduced',
         evidence: 'Evidence',

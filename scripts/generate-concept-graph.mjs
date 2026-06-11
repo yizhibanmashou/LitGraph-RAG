@@ -7,6 +7,252 @@ const DEPENDENCY_DIR = resolve(ROOT, 'data/frontend/dependency');
 const PROMPT_DIR = resolve(ROOT, 'data/frontend/symbol_sense/prompts');
 const STRUCTURED_DIR = resolve(ROOT, 'data/structured');
 const OUTPUT_DIR = resolve(ROOT, 'data/frontend/concept_graph');
+const REVIEW_OUTPUT_DIR = resolve(ROOT, 'tmp/concept-review');
+const SYMBOL_CONCEPT_MAP_SUFFIX = '_symbol_concept_map.json';
+
+const REVIEW_PRESERVED_FIELDS = [
+  'concept_id',
+  'concept_name',
+  'concept_type',
+  'definition',
+  'definition_zh',
+  'aliases',
+  'evidence',
+  'confidence',
+  'review_status',
+  'review_flags',
+  'reviewed_by',
+  'reviewed_at',
+  'review_notes',
+  'canonical_concept_id',
+  'canonical_concept_name',
+];
+
+const REVIEW_STATUSES = ['unreviewed', 'approved', 'rejected', 'edited', 'ambiguous', 'needs_revision', 'reviewed'];
+const CONCEPT_CALIBRATIONS = new Map([
+  ['chapter8::formula_8.8b::defined::\\frac{H_{h}}{H_{0}}', {
+    concept_name: 'Relative Sweep-Linked Heterozygosity',
+    concept_type: 'quantity_concept',
+    definition: 'The heterozygosity remaining after a sweep, expressed relative to the baseline heterozygosity H0.',
+    definition_zh: '选择扫荡后保留下来的杂合度相对基准杂合度的比例，用来直接读出遗传多样性还剩多少。',
+    aliases: ['\\frac{H_{h}}{H_{0}}', 'H_h/H_0', 'Relative Sweep-Linked Heterozygosity'],
+    review_notes: 'Curated from Formula 8.8b: H_h/H_0 is approximated as 1 - p(0)^(2c/s).',
+  }],
+  ['chapter8::formula_8.8e::defined::\\eta', {
+    concept_name: 'Recessive Sweep Recombination Scale',
+    concept_type: 'quantity_concept',
+    definition: 'A dimensionless recombination scale for a fully recessive sweep, eta = c sqrt(4Ne/s).',
+    definition_zh: '完全隐性选择扫荡中的重组尺度参数，η = c√(4Ne/s)，用来衡量中性位点通过重组逃离扫荡影响的机会。',
+    aliases: ['\\eta', 'eta', 'Recessive Sweep Recombination Scale'],
+    review_notes: 'Curated from Formula 8.8e context: Ewing et al. show H_h/H_0 ≃ eta/(1+eta) where eta=c sqrt(4Ne/s).',
+  }],
+  ['chapter8::formula_8.23::defined::\\chi', {
+    concept_name: 'Characteristic Dispersal Length',
+    concept_type: 'quantity_concept',
+    definition: 'The characteristic dispersal length in a geographically structured sweep model.',
+    definition_zh: '地理结构软扫荡模型中的特征扩散长度，用来刻画有利突变扩散时影响范围的空间尺度。',
+    aliases: ['\\chi', 'chi', 'Characteristic Dispersal Length'],
+    review_notes: 'Curated from Formula 8.23 context: Ralph and Coop identify chi as the key characteristic dispersal length.',
+  }],
+  ['chapter30::formula_30.33c::defined::\\eta', {
+    concept_name: 'Extended Selection Gradient Vector',
+    concept_type: 'quantity_concept',
+    definition: "Morrissey's extended selection gradient vector, computed from the total-effect matrix and path-analysis selection gradients.",
+    definition_zh: 'Morrissey 路径分析中的扩展选择梯度向量，把直接路径系数通过总效应矩阵转换为包含间接路径的选择梯度。',
+    aliases: ['\\boldsymbol{\\eta}', '\\eta', 'eta', 'Extended Selection Gradient Vector'],
+    review_notes: 'Curated from Formula 30.33c subsection title and equation eta = Phi beta_pa.',
+  }],
+  ['chapter30::formula_30.33c::used::\\Phi', {
+    concept_name: 'Total-Effect Matrix',
+    concept_type: 'math_concept',
+    definition: 'A matrix that converts direct path-analysis coefficients into total effects, including indirect pathways.',
+    definition_zh: '总效应矩阵，把直接路径系数转换成包含间接路径在内的总效应。',
+    aliases: ['\\Phi', 'Phi', 'Total-Effect Matrix'],
+    review_notes: 'Curated from Formula 30.33c: eta = Phi beta_pa.',
+  }],
+  ['chapter30::formula_30.33c::used::\\beta', {
+    concept_name: 'Path-Analysis Selection Gradient Vector',
+    concept_type: 'quantity_concept',
+    definition: 'A vector of direct selection gradients estimated in the path-analysis model.',
+    definition_zh: '路径分析模型中的直接选择梯度向量，表示各条直接路径上的选择效应。',
+    aliases: ['\\beta_{pa}', '\\beta', 'Path-Analysis Selection Gradient Vector'],
+    review_notes: 'Curated from Formula 30.33c: beta_pa is transformed by Phi.',
+  }],
+  ['chapter18::formula_18.23a::defined::\\overline{z}_{s,t}', {
+    concept_name: 'Selected Population Mean Trait Value',
+    concept_type: 'quantity_concept',
+    definition: 'The observed mean trait value for the selected population at time t.',
+    definition_zh: '第 t 个时间点中，选择组群体的观测平均性状值。',
+    aliases: ['\\overline{z}_{s,t}', 'selected population mean', 'Selected Population Mean Trait Value'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population means are decomposed in Equations 18.23a-b.',
+  }],
+  ['chapter18::formula_18.23a::used::s', {
+    concept_name: 'Selected Population',
+    concept_type: 'domain_concept',
+    definition: 'The population or line subjected to selection.',
+    definition_zh: '受到选择处理的群体或品系。',
+    aliases: ['s', 'selected', 'Selected Population'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population.',
+  }],
+  ['chapter18::formula_18.23a::used::t', {
+    concept_name: 'Time',
+    concept_type: 'quantity_concept',
+    definition: 'A quantity indexing the stage, generation, or interval of the process.',
+    definition_zh: '表示过程所处阶段、世代或时间间隔的量。',
+    aliases: ['t', 'Time'],
+    review_notes: 'Curated for the selected population mean at time t.',
+  }],
+  ['chapter18::formula_18.23b::defined::\\overline{z}_{c,t}', {
+    concept_name: 'Control Population Mean Trait Value',
+    concept_type: 'quantity_concept',
+    definition: 'The observed mean trait value for the control population at time t.',
+    definition_zh: '第 t 个时间点中，对照组群体的观测平均性状值。',
+    aliases: ['\\overline{z}_{c,t}', 'control population mean', 'Control Population Mean Trait Value'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population means are decomposed in Equations 18.23a-b.',
+  }],
+  ['chapter18::formula_18.23b::used::c', {
+    concept_name: 'Control Population',
+    concept_type: 'domain_concept',
+    definition: 'The control population or line used as the comparison baseline.',
+    definition_zh: '作为比较基线的对照组群体或对照品系。',
+    aliases: ['c', 'control', 'Control Population'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population.',
+  }],
+  ['chapter18::formula_18.23b::used::t', {
+    concept_name: 'Time',
+    concept_type: 'quantity_concept',
+    definition: 'A quantity indexing the stage, generation, or interval of the process.',
+    definition_zh: '表示过程所处阶段、世代或时间间隔的量。',
+    aliases: ['t', 'Time'],
+    review_notes: 'Curated for the control population mean at time t.',
+  }],
+  ['chapter18::formula_18.25b::defined::R_{C}', {
+    concept_name: 'Cumulative Response',
+    concept_type: 'quantity_concept',
+    definition: 'The cumulative response, computed as the selected population mean minus the control population mean at time t.',
+    definition_zh: '第 t 个时间点中，选择组平均性状值与对照组平均性状值之差表示的累积响应。',
+    aliases: ['R_{C}', 'R_C', 'cumulative response', 'Cumulative Response'],
+    review_notes: 'Curated from the local text: R_C(t) is introduced in the section describing cumulative responses and differentials.',
+  }],
+  ['chapter18::formula_18.25b::used::c', {
+    concept_name: 'Control Population',
+    concept_type: 'domain_concept',
+    definition: 'The control population or line used as the comparison baseline.',
+    definition_zh: '作为比较基线的对照组群体或对照品系。',
+    aliases: ['c', 'control', 'Control Population'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population.',
+  }],
+  ['chapter18::formula_18.25b::used::s', {
+    concept_name: 'Selected Population',
+    concept_type: 'domain_concept',
+    definition: 'The population or line subjected to selection.',
+    definition_zh: '受到选择处理的群体或品系。',
+    aliases: ['s', 'selected', 'Selected Population'],
+    review_notes: 'Curated from the local text: selected (s) and control (c) population.',
+  }],
+  ['chapter18::formula_18.25b::used::t', {
+    concept_name: 'Time',
+    concept_type: 'quantity_concept',
+    definition: 'A quantity indexing the stage, generation, or interval of the process.',
+    definition_zh: '表示过程所处阶段、世代或时间间隔的量。',
+    aliases: ['t', 'Time'],
+    review_notes: 'Curated for the cumulative response expression R_C(t).',
+  }],
+  ['chapter18::formula_18.25c::defined::S_{t}', {
+    concept_name: 'Selection Differential',
+    concept_type: 'quantity_concept',
+    definition: 'The selection differential for time t.',
+    definition_zh: '第 t 个时间点对应的选择差。',
+    aliases: ['S_{t}', 'selection differential', 'Selection Differential'],
+    review_notes: 'Curated from the local text: responses and differentials are estimated together in Equations 18.25b-d.',
+  }],
+  ['chapter18::formula_18.25d::defined::S_{C}', {
+    concept_name: 'Cumulative Selection Differential',
+    concept_type: 'quantity_concept',
+    definition: 'The cumulative selection differential up to time t.',
+    definition_zh: '截至第 t 个时间点累积得到的选择差。',
+    aliases: ['S_{C}', 'S_C', 'cumulative selection differential', 'Cumulative Selection Differential'],
+    review_notes: 'Curated from the local text: S_C(t) is the cumulative selection differential.',
+  }],
+  ['appendix5::formula_A5.4::defined::\\theta', {
+    concept_name: 'Vector Angle',
+    concept_type: 'math_concept',
+    definition: 'The angle between two vectors, computed from their normalized dot product.',
+    aliases: ['\\theta', 'theta', 'Vector Angle'],
+    review_notes: 'Curated for public appendix coverage: the formula defines the angle between two vectors from their dot product.',
+  }],
+  ['appendix5::formula_A5.15::defined::\\mathbf{I}', {
+    concept_name: 'Identity Matrix',
+    concept_type: 'math_concept',
+    definition: 'A matrix with ones on the diagonal and zeros elsewhere.',
+    aliases: ['\\mathbf{I}', 'I', 'Identity Matrix'],
+    review_notes: 'Curated for public appendix coverage: the identity matrix appears in the characteristic matrix expression.',
+  }],
+  ['appendix5::formula_A5.48::defined::\\phi', {
+    concept_name: 'Multivariate Normal Density',
+    concept_type: 'math_concept',
+    definition: 'A probability density for a normally distributed vector, parameterized by a mean vector and covariance matrix.',
+    aliases: ['\\phi', 'phi', 'Multivariate Normal Density', 'Probability Density'],
+    review_notes: 'Curated for public appendix coverage: the formula gives the multivariate normal density.',
+  }],
+  ['appendix5::formula_A5.56::defined::\\lambda_{i}', {
+    concept_name: 'Eigenvalue',
+    concept_type: 'math_concept',
+    definition: 'A scalar value associated with a matrix transformation or covariance structure.',
+    aliases: ['\\lambda_{i}', 'lambda_i', 'Eigenvalue'],
+    review_notes: 'Curated for public appendix coverage: the formula expresses variance share through covariance-matrix eigenvalues.',
+  }],
+  ['appendix6::formula_A6.2::defined::\\varphi', {
+    concept_name: 'Multivariate Normal Density',
+    concept_type: 'math_concept',
+    definition: 'A probability density for a normally distributed vector, parameterized by a mean vector and covariance matrix.',
+    aliases: ['\\varphi', 'varphi', 'Multivariate Normal Density', 'Probability Density'],
+    review_notes: 'Curated for public appendix coverage: the formula differentiates the multivariate normal density.',
+  }],
+  ['appendix6::formula_A6.10::defined::\\widehat{\\boldsymbol{\\beta}}', {
+    concept_name: 'Fixed-Effect Estimator Vector',
+    concept_type: 'quantity_concept',
+    definition: 'A vector of estimated fixed-effect coefficients used in mixed-model equations.',
+    aliases: ['\\widehat{\\boldsymbol{\\beta}}', 'beta hat', 'Fixed-Effect Estimator Vector'],
+    review_notes: 'Curated for public appendix coverage: the formula solves for the estimated fixed-effect coefficient vector.',
+  }],
+  ['appendix6::formula_A6.14::defined::g', {
+    concept_name: 'Lagrangian Objective',
+    concept_type: 'math_concept',
+    definition: 'An augmented objective function used to optimize a function subject to a constraint.',
+    aliases: ['g', 'Lagrangian Objective'],
+    review_notes: 'Curated for public appendix coverage: the formula constructs the Lagrangian objective for constrained optimization.',
+  }],
+  ['appendix6::formula_A6.15::defined::\\lambda', {
+    concept_name: 'Lagrange Multiplier',
+    concept_type: 'math_concept',
+    definition: 'A parameter introduced to optimize a function while enforcing a constraint.',
+    aliases: ['\\lambda', 'lambda', 'Lagrange Multiplier'],
+    review_notes: 'Curated for public appendix coverage: the formula uses lambda as the multiplier in the constrained-gradient condition.',
+  }],
+]);
+
+const PRODUCT_GENERIC_CONCEPT_NAMES = new Set([
+  'chi',
+  'coefficient',
+  'count',
+  'distance',
+  'eta',
+  'expression',
+  'fact',
+  'function',
+  'index',
+  'mean',
+  'offspring',
+  'rate',
+  'ratio of',
+  'same logic',
+  'there',
+  'time index',
+  'value',
+  'values',
+  'variable',
+]);
 
 const COMMON_SYMBOL_NAMES = new Map([
   ['N', 'Population Size'],
@@ -46,6 +292,10 @@ const COMMON_SYMBOL_NAMES = new Map([
   ['v', 'Variance Function'],
   ['T', 'Time'],
   ['I', 'Information'],
+  ['ln', 'Natural Logarithm'],
+  ['\\ln', 'Natural Logarithm'],
+  ['exp', 'Exponential Function'],
+  ['\\exp', 'Exponential Function'],
   ['B_{0}', 'Bayes Factor'],
   ['I_{f}', 'Fixation Integral'],
   ['\\varphi', 'Probability Density'],
@@ -119,6 +369,9 @@ const SUBSCRIPT_SYMBOL_NAMES = [
   { pattern: /^\\lambda_\{?.+\}?$/i, name: 'Eigenvalue', type: 'math_concept' },
   { pattern: /^\\mu_\{?z\}?$/i, name: 'Mean Trait Value', type: 'quantity_concept' },
   { pattern: /^\\mu_\{?.+\}?$/i, name: 'Mean', type: 'quantity_concept' },
+  { pattern: /^c_\{?0\}?$/i, name: 'Baseline Recombination Rate', type: 'quantity_concept' },
+  { pattern: /^p\(0\)$/i, name: 'Initial Allele Frequency', type: 'quantity_concept' },
+  { pattern: /^p_\{?.+\}?$/i, name: 'Probability', type: 'quantity_concept' },
   { pattern: /^\\sigma_\{?A\}?\^\{?2\}?$/i, name: 'Additive Genetic Variance', type: 'quantity_concept' },
   { pattern: /^\\sigma_\{?B\}?\^\{?2\}?$/i, name: 'Among-Block Variance', type: 'quantity_concept' },
   { pattern: /^\\sigma_\{?G\}?\^\{?2\}?$/i, name: 'Genetic Variance', type: 'quantity_concept' },
@@ -134,6 +387,8 @@ const SUBSCRIPT_SYMBOL_NAMES = [
   { pattern: /^\\widehat\{?h\}?$/i, name: 'Estimated Function', type: 'quantity_concept' },
   { pattern: /^h_\{?0\}?$/i, name: 'Loss-Conditioned Function', type: 'quantity_concept' },
   { pattern: /^h_\{?1\}?$/i, name: 'Fixation-Conditioned Function', type: 'quantity_concept' },
+  { pattern: /^H_\{?h\}?$/i, name: 'Sweep-Linked Heterozygosity', type: 'quantity_concept' },
+  { pattern: /^H_\{?0\}?$/i, name: 'Baseline Heterozygosity', type: 'quantity_concept' },
   { pattern: /^\\pi_\{?t\}?$/i, name: 'Time-Dependent Distribution', type: 'quantity_concept' },
   { pattern: /^\\pi\^\{\*\}$/i, name: 'Stationary Distribution', type: 'quantity_concept' },
   { pattern: /^\\nu_\{?n\}?$/i, name: 'Posterior Degrees of Freedom', type: 'quantity_concept' },
@@ -163,6 +418,9 @@ const OPERATOR_SYMBOLS = new Set([
   '\\int',
   '\\partial',
   '\\Delta',
+  '\\ln',
+  '\\log',
+  '\\exp',
   'Cov',
   'Var',
   'E',
@@ -179,6 +437,39 @@ const IGNORED_SYMBOLS = new Set([
   '\\widehat{\\boldsymbol}',
   '\\mathbf',
   '\\mathrm',
+  'frac',
+  'left',
+  'right',
+  'mathrm',
+  'mathbf',
+  'boldsymbol',
+  'where',
+]);
+
+const LATEX_COMMAND_SYMBOLS = new Set([
+  'begin',
+  'boldsymbol',
+  'cdot',
+  'cos',
+  'end',
+  'exp',
+  'frac',
+  'int',
+  'left',
+  'ln',
+  'log',
+  'mathrm',
+  'mathbf',
+  'over',
+  'partial',
+  'prod',
+  'right',
+  'sin',
+  'sqrt',
+  'sum',
+  'tan',
+  'text',
+  'where',
 ]);
 
 const STRUCTURED_BLOCK_PRIORITY = new Map([
@@ -205,7 +496,7 @@ const CONCEPT_DEFINITIONS = new Map([
   ['probability', 'A quantity measuring how likely an event or state transition is.'],
   ['population size', 'The number of individuals or gene copies represented by the population model.'],
   ['count', 'A discrete number of items, individuals, or events.'],
-  ['variable', 'A placeholder quantity whose value can vary in the local formula context.'],
+  ['variable', 'A placeholder quantity whose value can change within the equation.'],
   ['time', 'A quantity indexing the stage, generation, or interval of the process.'],
   ['mean', 'The average value of a quantity in the relevant distribution or population.'],
   ['delta', 'A local change or increment in the modeled quantity.'],
@@ -223,6 +514,12 @@ const CONCEPT_DEFINITIONS = new Map([
   ['strength of stabilizing selection', 'A parameter describing how strongly selection pulls trait values toward an optimum.'],
   ['selection differential', 'The change in mean trait value caused by selection before transmission.'],
   ['response', 'The change in mean trait value observed after inheritance or transmission.'],
+  ['cumulative response', 'The accumulated response measured across time or generations.'],
+  ['cumulative selection differential', 'The accumulated selection differential across time or generations.'],
+  ['selected population', 'The population or line subjected to selection.'],
+  ['control population', 'The control population or line used as the comparison baseline.'],
+  ['selected population mean trait value', 'The observed mean trait value for the selected population at the indexed time.'],
+  ['control population mean trait value', 'The observed mean trait value for the control population at the indexed time.'],
   ['variance', 'A measure of spread around the mean.'],
   ['covariance', 'A measure of how two quantities vary together.'],
   ['expectation', 'The average value predicted by a probability distribution.'],
@@ -241,11 +538,15 @@ const CONCEPT_DEFINITIONS = new Map([
   ['rate', 'A parameter describing how quickly a process occurs.'],
   ['selection coefficient', 'A parameter measuring the strength of selection.'],
   ['mutation rate', 'A parameter measuring the probability of mutation per generation.'],
+  ['recombination rate', 'The rate at which recombination separates linked loci.'],
+  ['baseline recombination rate', 'The reference recombination rate used to scale linked-site effects.'],
+  ['initial allele frequency', 'The allele frequency at the starting point of the process.'],
   ['variance function', 'A function describing local variance in a diffusion or stochastic process.'],
   ['information', 'A quantity measuring how much data or a likelihood constrains a parameter.'],
   ['bayes factor', 'A ratio comparing how strongly data support one hypothesis over another.'],
   ['fixation integral', 'An integral used to compute fixation-related quantities.'],
   ['probability density', 'A function whose integral gives probability over a continuous range.'],
+  ['pi constant', 'The mathematical constant pi used in analytic expressions.'],
   ['stationary distribution', 'A distribution that remains unchanged under the transition dynamics.'],
   ['replacement-site divergence', 'The amount of divergence at replacement, amino-acid-changing sites between species.'],
   ['silent-site divergence', 'The amount of divergence at silent sites, used as a neutral reference in MK-style tests.'],
@@ -286,6 +587,16 @@ const CONCEPT_DEFINITIONS = new Map([
   ['estimated function', 'A function estimated from data or simulation output.'],
   ['loss-conditioned function', 'A function conditioned on paths leading to loss.'],
   ['fixation-conditioned function', 'A function conditioned on paths leading to fixation.'],
+  ['natural logarithm', 'The logarithm with base e, used to turn multiplicative changes into additive scale.'],
+  ['exponential function', 'The inverse of the natural logarithm, often used to express multiplicative decay or growth.'],
+  ['heterozygosity', 'The probability that two randomly sampled alleles at a locus are different.'],
+  ['sweep-linked heterozygosity', 'Heterozygosity at a neutral locus linked to a selected site after a selective sweep.'],
+  ['baseline heterozygosity', 'The reference heterozygosity level used before or without the sweep effect.'],
+  ['expected heterozygosity', 'The expected level of genetic diversity, often measured by nucleotide diversity.'],
+  ['decline in heterozygosity', 'The proportional reduction in genetic diversity relative to a reference level.'],
+  ['recessive sweep recombination scale', 'A dimensionless parameter combining recombination, effective population size, and selection strength for a fully recessive sweep.'],
+  ['characteristic dispersal length', 'The spatial length scale controlling how far the signal of a geographically structured sweep extends.'],
+  ['extended selection gradient vector', 'Morrissey’s path-analysis selection gradient vector that incorporates indirect paths through the total-effect matrix.'],
   ['time-dependent distribution', 'A probability distribution indexed by time.'],
   ['inverse normalizing constant', 'The reciprocal of a constant that makes a probability distribution integrate to one.'],
   ['additive genetic value', 'The additive genetic contribution to an individual or trait value.'],
@@ -327,6 +638,12 @@ const CONCEPT_DEFINITIONS_ZH = new Map([
   ['strength of stabilizing selection', '描述稳定化选择把性状拉向最优值强度的参数。'],
   ['selection differential', '选择作用在遗传传递之前造成的平均性状值变化。'],
   ['response', '遗传或传递之后观察到的平均性状值变化。'],
+  ['cumulative response', '随时间或世代累积得到的选择响应。'],
+  ['cumulative selection differential', '随时间或世代累积得到的选择差。'],
+  ['selected population', '受到选择处理的群体或品系。'],
+  ['control population', '作为比较基线的对照组群体或对照品系。'],
+  ['selected population mean trait value', '指定时间点中，选择组群体的观测平均性状值。'],
+  ['control population mean trait value', '指定时间点中，对照组群体的观测平均性状值。'],
   ['variance', '衡量一个量围绕平均值分散程度的指标。'],
   ['covariance', '衡量两个量共同变化方向和强度的指标。'],
   ['expectation', '由概率分布预测出的平均值。'],
@@ -351,11 +668,15 @@ const CONCEPT_DEFINITIONS_ZH = new Map([
   ['rate', '描述某个过程发生快慢的参数。'],
   ['selection coefficient', '衡量选择强度的参数。'],
   ['mutation rate', '衡量每一代发生突变概率的参数。'],
+  ['recombination rate', '重组率表示连锁位点被重组分开的速率，决定中性位点逃离选择扫荡影响的机会。'],
+  ['baseline recombination rate', '基准重组率用于给连锁位点效应定尺度，常作为比较遗传多样性下降幅度的参照。'],
+  ['initial allele frequency', '初始等位基因频率表示过程开始时某个等位基因在群体中的相对占比。'],
   ['variance function', '描述扩散或随机过程中局部方差的函数。'],
   ['information', '衡量数据或似然函数对参数约束程度的量。'],
   ['bayes factor', '比较数据支持两个假设强弱的比值。'],
   ['fixation integral', '用于计算固定相关数量的积分。'],
   ['probability density', '连续变量中积分后得到概率的函数。'],
+  ['pi constant', '圆周率 π，是解析表达式中使用的数学常数。'],
   ['stationary distribution', '在转移动力学下保持不变的概率分布。'],
   ['replacement-site divergence', '替换位点（会改变氨基酸的位点）在物种之间积累的分化量。'],
   ['silent-site divergence', '沉默位点在物种之间积累的分化量，常作为 MK 检验中的中性参照。'],
@@ -389,6 +710,16 @@ const CONCEPT_DEFINITIONS_ZH = new Map([
   ['estimated function', '由数据或模拟结果估计出的函数。'],
   ['loss-conditioned function', '在路径最终丢失这一条件下定义的函数。'],
   ['fixation-conditioned function', '在路径最终固定这一条件下定义的函数。'],
+  ['natural logarithm', '以 e 为底的对数，用来把乘法关系转到可加尺度上。'],
+  ['exponential function', '自然对数的反函数，常用来表示按比例衰减或增长。'],
+  ['heterozygosity', '杂合度表示随机抽取两个等位基因时二者不同的概率，是衡量遗传多样性的核心量。'],
+  ['sweep-linked heterozygosity', '选择扫荡后，与受选择位点连锁的中性位点仍保留下来的杂合度。'],
+  ['baseline heterozygosity', '作为参照的杂合度水平，通常表示没有扫荡影响或扫荡前的遗传多样性。'],
+  ['expected heterozygosity', '期望杂合度表示模型预期的遗传多样性水平，在这里用核苷酸多样性来衡量。'],
+  ['decline in heterozygosity', '杂合度下降表示遗传多样性相对基准水平的减少比例。'],
+  ['recessive sweep recombination scale', '完全隐性选择扫荡中的重组尺度参数，η = c√(4Ne/s)，用来衡量中性位点通过重组逃离扫荡影响的机会。'],
+  ['characteristic dispersal length', '地理结构软扫荡模型中的特征扩散长度，用来刻画有利突变扩散时影响范围的空间尺度。'],
+  ['extended selection gradient vector', 'Morrissey 路径分析中的扩展选择梯度向量，把直接路径系数通过总效应矩阵转换为包含间接路径的选择梯度。'],
   ['time-dependent distribution', '随时间变化的概率分布。'],
   ['inverse normalizing constant', '使概率分布积分为 1 的归一化常数的倒数。'],
   ['additive genetic value', '个体或性状值中的加性遗传贡献。'],
@@ -410,11 +741,22 @@ function conceptDefinitionZh(name, role, conceptType) {
   const key = normalizeSpaces(name).toLowerCase();
   const stable = CONCEPT_DEFINITIONS_ZH.get(key);
   if (stable) return stable;
-  if (conceptType === 'operator_or_function') return `${name} 是当前公式中使用的函数或算子，用来把输入量转换为模型需要的输出。`;
-  if (conceptType === 'math_concept') return `${name} 是当前公式中使用的数学概念，用来组织或计算相关数量。`;
-  if (conceptType === 'domain_concept') return `${name} 是当前公式涉及的背景概念，用来帮助解释模型中的生物学含义。`;
-  if (role === 'defined') return `${name} 是由当前支撑公式引入的局部数学量。`;
-  return `${name} 是当前公式中使用的背景量，用来帮助理解公式中的符号关系。`;
+  if (conceptType === 'operator_or_function') return `${name} 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。`;
+  if (conceptType === 'math_concept') return `${name} 是这条公式借用的数学工具，用来把多个数量整理成更容易比较或计算的形式。`;
+  if (conceptType === 'domain_concept') return `${name} 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。`;
+  if (role === 'defined') return `${name} 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。`;
+  return `${name} 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。`;
+}
+
+function conceptDefinitionEn(name, role, conceptType) {
+  const key = normalizeSpaces(name).toLowerCase();
+  const stable = CONCEPT_DEFINITIONS.get(key);
+  if (stable) return stable;
+  if (conceptType === 'operator_or_function') return `${name} is the operation that turns the input terms into the output used by the equation.`;
+  if (conceptType === 'math_concept') return `${name} is a mathematical tool the equation uses to organize, transform, or compare quantities.`;
+  if (conceptType === 'domain_concept') return `${name} places the symbol back in the model context: it marks the object, class, or condition being described.`;
+  if (role === 'defined') return `${name} is the main quantity to read from this equation; the right-hand side shows which terms determine it.`;
+  return `${name} is a supporting symbol in this equation; read it through its relationship to the main quantity.`;
 }
 
 function slug(value) {
@@ -612,6 +954,57 @@ function isMkTestContext(context) {
 
 function symbolSpecificConcept(symbol, context = '') {
   const compact = String(symbol || '').replace(/\s+/g, '');
+  if (/^c$/i.test(compact) && /recombination|sweep|linked neutral|linked sites|H_\{h\}|H_\{0\}|c\/s|c_0/i.test(context || '')) {
+    return { name: 'Recombination Rate', type: 'quantity_concept' };
+  }
+  if (/^c_\{?0\}?$/i.test(compact) && /recombination|linked sites|heterozygosity|sweeps/i.test(context || '')) {
+    return { name: 'Baseline Recombination Rate', type: 'quantity_concept' };
+  }
+  if (/^p\(0\)$/i.test(compact) && /allele frequency|sweep|p\(0\)|ln\[?p\(0\)/i.test(context || '')) {
+    return { name: 'Initial Allele Frequency', type: 'quantity_concept' };
+  }
+  if (/^\\eta$/i.test(compact) && /complete recessive|recessive sweep|Ewing|H_\{h\}|H_\{0\}|sqrt\{?4N/i.test(context || '')) {
+    return { name: 'Recessive Sweep Recombination Scale', type: 'quantity_concept' };
+  }
+  if (/^\\chi$/i.test(compact) && /characteristic dispersal length|geographic|Ralph and Coop|rate of spread|successful mutations/i.test(context || '')) {
+    return { name: 'Characteristic Dispersal Length', type: 'quantity_concept' };
+  }
+  if (/^\\eta$/i.test(compact) && /Morrissey|path analysis|extended selection gradient|\\boldsymbol\{\\Phi\}|\\beta_\{?pa\}?/i.test(context || '')) {
+    return { name: 'Extended Selection Gradient Vector', type: 'quantity_concept' };
+  }
+  if (/^H_\{?h\}?$/i.test(compact) && /sweep|H_\{0\}|heterozygosity|linked neutral/i.test(context || '')) {
+    return { name: 'Sweep-Linked Heterozygosity', type: 'quantity_concept' };
+  }
+  if (/^H_\{?0\}?$/i.test(compact) && /sweep|H_\{h\}|heterozygosity|linked neutral/i.test(context || '')) {
+    return { name: 'Baseline Heterozygosity', type: 'quantity_concept' };
+  }
+  if (/^\\pi$/i.test(compact) && /characteristic dispersal length|rate of spread|successful mutations|2\\pi|pi\\s*lambda|pi\\s*rho/i.test(context || '')) {
+    return { name: 'Pi Constant', type: 'math_concept' };
+  }
+  if (/^\\pi(?:_\{?0\}?)?$/i.test(compact) && /heterozygosity|nucleotide diversity|neutral population/i.test(context || '')) {
+    return { name: compact.includes('0') ? 'Baseline Heterozygosity' : 'Expected Heterozygosity', type: 'quantity_concept' };
+  }
+  if (/^\\frac\{?\\pi\}?\/?\{?\\pi_\{?0\}?\}?/i.test(compact) || (/\\pi/.test(compact) && /decline in heterozygosity/i.test(context || ''))) {
+    return { name: 'Decline in Heterozygosity', type: 'quantity_concept' };
+  }
+  if (/R_\{?C\}?$/i.test(compact) && /cumulative[^.]{0,80}responses?/i.test(context || '')) {
+    return { name: 'Cumulative Response', type: 'quantity_concept' };
+  }
+  if (/S_\{?C\}?$/i.test(compact) && /cumulative[^.]{0,80}(?:selection\s+)?differentials?/i.test(context || '')) {
+    return { name: 'Cumulative Selection Differential', type: 'quantity_concept' };
+  }
+  if (/^c$/i.test(compact) && /\bcontrol\s*\(\s*c\s*\)\s+population/i.test(context || '')) {
+    return { name: 'Control Population', type: 'domain_concept' };
+  }
+  if (/^s$/i.test(compact) && /\bselected\s*\(\s*s\s*\)\s+and\s+control/i.test(context || '')) {
+    return { name: 'Selected Population', type: 'domain_concept' };
+  }
+  if (/\\overline\{z\}_\{?s,t\}?$/i.test(compact) && /\bselected\s*\(\s*s\s*\)/i.test(context || '')) {
+    return { name: 'Selected Population Mean Trait Value', type: 'quantity_concept' };
+  }
+  if (/\\overline\{z\}_\{?c,t\}?$/i.test(compact) && /\bcontrol\s*\(\s*c\s*\)/i.test(context || '')) {
+    return { name: 'Control Population Mean Trait Value', type: 'quantity_concept' };
+  }
   if (/\\widehat\{\\overline\{\\alpha\}\}(?:_\{?[A-Za-z]+\}?)?$/.test(compact) && isMkTestContext(context)) {
     return { name: 'Estimated Fraction of Adaptive Substitutions', type: 'quantity_concept' };
   }
@@ -649,7 +1042,10 @@ function uniqueFormulaSymbols(symbols) {
 
 function isIgnoredSymbol(symbol) {
   const compact = String(symbol || '').replace(/\s+/g, '');
-  return IGNORED_SYMBOLS.has(compact);
+  const commandName = compact.replace(/^\\/, '').replace(/\{.*$/u, '');
+  if (IGNORED_SYMBOLS.has(compact) || LATEX_COMMAND_SYMBOLS.has(commandName)) return true;
+  if (/^\\?mathrm\{?[A-Za-z]\}?$/i.test(compact)) return true;
+  return false;
 }
 
 function nearbyPromptMap(chapterId) {
@@ -901,11 +1297,9 @@ function makeSymbolConcept(chapterId, formula, symbol, role, promptRecord, struc
   const structuredEvidence = bestStructuredEvidence(formula, symbol, name, structuredBlocks);
   const definitionSource = structuredEvidence?.sentence || sentenceWindow(context, symbol);
   const stableDefinition = CONCEPT_DEFINITIONS.get(name.toLowerCase());
-  const fallback = stableDefinition || (role === 'defined'
-    ? `${name} is a local mathematical quantity introduced by the supporting formula.`
-    : `${name} is a background quantity used in the local formula context.`);
-  const definition = cleanDefinition(stableDefinition ? '' : usefulDefinitionSentence(definitionSource) ? definitionSource : '', fallback);
   const conceptType = conceptTypeFor(symbol, role, context);
+  const fallback = stableDefinition || conceptDefinitionEn(name, role, conceptType);
+  const definition = cleanDefinition(stableDefinition ? '' : usefulDefinitionSentence(definitionSource) ? definitionSource : '', fallback);
   const confidence = confidenceFor(symbol, formula, promptRecord, role, structuredEvidence);
   const teachingMove = conceptTeachingMoveFromContext(context);
   return {
@@ -928,6 +1322,153 @@ function makeSymbolConcept(chapterId, formula, symbol, role, promptRecord, struc
     review_status: 'unreviewed',
     review_flags: confidence < 0.72 ? ['needs_review'] : [],
     extraction_model: 'deterministic_formula_structured_context_v2',
+  };
+}
+
+function symbolConceptStableKey(concept) {
+  return [
+    concept.chapter_id || '',
+    concept.formula_id || '',
+    concept.role || '',
+    concept.symbol || '',
+  ].join('::');
+}
+
+function valuesDiffer(left, right) {
+  return JSON.stringify(left ?? null) !== JSON.stringify(right ?? null);
+}
+
+function hasReviewWork(generated, reviewed) {
+  const status = reviewed.review_status || 'unreviewed';
+  if (status && status !== 'unreviewed') return true;
+  if (reviewed.reviewed_by || reviewed.reviewed_at || reviewed.review_notes) return true;
+  if (reviewed.canonical_concept_id || reviewed.canonical_concept_name) return true;
+  return REVIEW_PRESERVED_FIELDS.some((field) => (
+    reviewed[field] !== undefined && valuesDiffer(reviewed[field], generated[field])
+  ));
+}
+
+function mergeReviewedSymbolConcepts(generatedConcepts, reviewedPayload) {
+  if (!reviewedPayload?.symbol_concepts?.length) return generatedConcepts;
+  const byStableKey = new Map();
+  const byConceptId = new Map();
+  for (const concept of reviewedPayload.symbol_concepts) {
+    byStableKey.set(symbolConceptStableKey(concept), concept);
+    if (concept.concept_id) byConceptId.set(concept.concept_id, concept);
+  }
+  return generatedConcepts.map((generated) => {
+    const reviewed = byStableKey.get(symbolConceptStableKey(generated)) || byConceptId.get(generated.concept_id);
+    if (!reviewed || !hasReviewWork(generated, reviewed)) return generated;
+    const preserved = {};
+    for (const field of REVIEW_PRESERVED_FIELDS) {
+      if (reviewed[field] !== undefined) preserved[field] = reviewed[field];
+    }
+    return {
+      ...generated,
+      ...preserved,
+      review_status: REVIEW_STATUSES.includes(preserved.review_status) ? preserved.review_status : generated.review_status,
+      review_flags: preserved.review_flags !== undefined ? preserved.review_flags : generated.review_flags,
+    };
+  });
+}
+
+function applyConceptCalibrations(symbolConcepts) {
+  return symbolConcepts.map((concept) => {
+    const curated = CONCEPT_CALIBRATIONS.get(symbolConceptStableKey(concept));
+    if (!curated) return concept;
+    const { review_notes, ...updates } = curated;
+    return {
+      ...concept,
+      ...updates,
+    };
+  });
+}
+
+function missingCalibratedConceptEntries(symbolConcepts, chapterDoc, promptMap, structuredBlocks) {
+  const chapterId = chapterDoc.chapter_id;
+  const formulasById = new Map((chapterDoc.formulas || []).map((formula) => [formula.id, formula]));
+  const existingKeys = new Set(symbolConcepts.map(symbolConceptStableKey));
+  const missing = [];
+
+  for (const [stableKey] of CONCEPT_CALIBRATIONS) {
+    const [calibrationChapterId, formulaId, role, symbol] = stableKey.split('::');
+    if (calibrationChapterId !== chapterId || existingKeys.has(stableKey)) continue;
+    const formula = formulasById.get(formulaId);
+    if (!formula) continue;
+    const concept = makeSymbolConcept(chapterId, formula, symbol, role, promptMap.get(formulaId), structuredBlocks);
+    missing.push(concept);
+    existingKeys.add(symbolConceptStableKey(concept));
+  }
+
+  return missing;
+}
+
+function appendMissingCalibratedConcepts(symbolConcepts, chapterDoc, promptMap, structuredBlocks) {
+  return [
+    ...symbolConcepts,
+    ...missingCalibratedConceptEntries(symbolConcepts, chapterDoc, promptMap, structuredBlocks),
+  ];
+}
+
+function productConceptName(name, formulaLabel, symbol) {
+  const cleanName = normalizeSpaces(name || '');
+  const cleanFormulaLabel = normalizeSpaces(formulaLabel || '');
+  if (!cleanName) return cleanFormulaLabel ? `${cleanFormulaLabel} Concept` : 'Formula Concept';
+  if (/^formula\s+.+\s+result$/i.test(cleanName)) return `${cleanFormulaLabel || cleanName.replace(/\s+Result$/i, '')} Concept`;
+  if (!PRODUCT_GENERIC_CONCEPT_NAMES.has(cleanName.toLowerCase())) return cleanName;
+  return `${cleanFormulaLabel || 'Formula'} ${cleanName}`;
+}
+
+function conceptReferenceDisplayScore(reference, index) {
+  const name = normalizeSpaces(reference.name || '').toLowerCase();
+  let score = Number.isFinite(reference.confidence) ? reference.confidence : 0;
+  if (PRODUCT_GENERIC_CONCEPT_NAMES.has(name)) score -= 0.08;
+  if (/^formula\s+.+\s+/.test(name)) score -= 0.06;
+  if (/\bsub\b/.test(name)) score -= 0.04;
+  if (reference.definition_zh) score += 0.03;
+  return score - index * 0.0001;
+}
+
+function sortConceptReferencesForDisplay(references) {
+  return references
+    .map((reference, index) => ({ reference, score: conceptReferenceDisplayScore(reference, index) }))
+    .sort((left, right) => right.score - left.score)
+    .map((item) => item.reference);
+}
+
+function reviewStatusCounts(symbolConcepts) {
+  return symbolConcepts.reduce((counts, concept) => {
+    const status = REVIEW_STATUSES.includes(concept.review_status) ? concept.review_status : 'unreviewed';
+    counts[status] = (counts[status] || 0) + 1;
+    return counts;
+  }, {});
+}
+
+function symbolConceptMapSummary(chapterId, symbolConcepts) {
+  const status_counts = reviewStatusCounts(symbolConcepts);
+  const reviewed_entries = symbolConcepts.filter((item) => (item.review_status || 'unreviewed') !== 'unreviewed').length;
+  return {
+    chapter_id: chapterId,
+    symbol_concept_entries: symbolConcepts.length,
+    unique_concepts: new Set(symbolConcepts.map((item) => item.concept_id)).size,
+    low_confidence_entries: symbolConcepts.filter((item) => item.confidence < 0.72).length,
+    reviewed_entries,
+    unreviewed_entries: symbolConcepts.length - reviewed_entries,
+    status_counts,
+  };
+}
+
+function buildSymbolConceptMapPayload(chapterId, symbolConcepts, source, generatedAt) {
+  return {
+    chapter_id: chapterId,
+    version: 1,
+    generated_at: generatedAt,
+    source: {
+      ...source,
+      method: 'reviewable symbol-concept map seeded from formula dependencies, formula-symbol maps, and structured block evidence',
+    },
+    summary: symbolConceptMapSummary(chapterId, symbolConcepts),
+    symbol_concepts: symbolConcepts,
   };
 }
 
@@ -978,6 +1519,12 @@ function lhsFunctionArguments(latex) {
   return new Set(match[1].split(',').map((item) => normalizeSpaces(item)).filter(Boolean));
 }
 
+function lhsFunctionName(latex) {
+  const lhs = String(latex || '').split('=')[0] || '';
+  const match = lhs.match(/^\s*([\\A-Za-z][\\A-Za-z0-9_{}^]*)\s*\(/);
+  return normalizeSpaces(match?.[1] || '');
+}
+
 function lhsNamedStatistic(latex) {
   const lhs = String(latex || '')
     .replace(/\\begin\{[^{}]+\}/g, '')
@@ -997,6 +1544,41 @@ function lhsPrimarySymbol(latex) {
   if (!/^[\\A-Za-z]/.test(normalized)) return '';
   if (/(?:\\sum|\\prod|\\int|\\frac|\\sqrt|\\left|\\right)/.test(normalized)) return '';
   return normalized;
+}
+
+function lhsIsExpression(latex) {
+  const lhs = normalizeSpaces(String(latex || '')
+    .replace(/\\begin\{[^{}]+\}/g, '')
+    .replace(/\\end\{[^{}]+\}/g, '')
+    .split('=')[0] || '');
+  if (!lhs) return false;
+  if (/(?:\\frac|\\sum|\\prod|\\int|\\sqrt|\\left|\\right)/.test(lhs)) return true;
+  return /[+\-*/(),]/.test(stripLatex(lhs));
+}
+
+function whereDefinedSymbols(latex) {
+  const text = String(latex || '');
+  const whereIndex = text.search(/\\(?:mathrm|text)\{[^{}]*w\s*h\s*e\s*r\s*e[^{}]*\}|\bwhere\b/i);
+  if (whereIndex < 0) return [];
+  const tail = text.slice(whereIndex)
+    .replace(/^\\(?:mathrm|text)\{[^{}]*w\s*h\s*e\s*r\s*e[^{}]*\}/i, ' ')
+    .replace(/^\bwhere\b/i, ' ')
+    .replace(/\\(?:quad|qquad|;|,|:|!)\b/g, ' ');
+  const symbols = [];
+  for (const match of tail.matchAll(/(?:^|[,\s])((?:\\[A-Za-z]+(?:\{[^{}]+\})?|[A-Za-z])(?:_\{[^{}]+\}|_[A-Za-z0-9]|\^\{[^{}]+\})?)\s*=/g)) {
+    if (match[1] && !isIgnoredSymbol(match[1])) symbols.push(normalizeSpaces(match[1]));
+  }
+  return uniqueFormulaSymbols(symbols);
+}
+
+function lhsRatioConceptSymbol(latex) {
+  const lhs = normalizeSpaces(String(latex || '')
+    .replace(/\\begin\{[^{}]+\}/g, '')
+    .replace(/\\end\{[^{}]+\}/g, '')
+    .split('=')[0] || '');
+  if (/^\\frac\{H_\{?h\}?\}\{H_\{?0\}?\}$/.test(lhs)) return '\\frac{H_{h}}{H_{0}}';
+  if (/^\\frac\{\\pi\}\{\\pi_\{?0\}?\}$/.test(lhs)) return '\\frac{\\pi}{\\pi_{0}}';
+  return '';
 }
 
 function symbolKey(value) {
@@ -1025,17 +1607,66 @@ function isRedundantWithDefinedSymbol(symbol, definedSymbols) {
   });
 }
 
+function symbolContainsSubscriptParts(symbol, candidate) {
+  const candidateKey = symbolKey(candidate);
+  if (!candidateKey || !/^[A-Za-z]+$/.test(candidateKey)) return false;
+  const symbolValue = String(symbol || '');
+  const subscriptParts = [...symbolValue.matchAll(/_\{([^{}]+)\}/g)]
+    .flatMap((match) => match[1].split(',').map((part) => symbolKey(part).replace(/[^A-Za-z]/g, '')).filter(Boolean));
+  return subscriptParts.includes(candidateKey);
+}
+
+function isSubscriptPartOfDefinedSymbol(symbol, definedSymbols) {
+  return definedSymbols.some((defined) => symbolContainsSubscriptParts(defined, symbol));
+}
+
+function typesetWordLetters(latex) {
+  const letters = new Set();
+  for (const match of String(latex || '').matchAll(/\\(?:mathrm|text)\{([^{}]+)\}/g)) {
+    const compact = normalizeSpaces(match[1]).replace(/\s+/g, '').toLowerCase();
+    if (/^(?:where|then|with|and|for|if|the)$/.test(compact)) {
+      compact.split('').forEach((char) => letters.add(char));
+    }
+  }
+  return letters;
+}
+
+function removeTypesetWords(latex) {
+  return String(latex || '').replace(/\\(?:mathrm|text)\{[^{}]+\}/g, ' ');
+}
+
+function topLevelSingleLetterAppears(latex, symbol) {
+  const clean = removeTypesetWords(latex)
+    .replace(/_\{[^{}]*\}/g, ' ')
+    .replace(/_[A-Za-z0-9]/g, ' ')
+    .replace(/\\[A-Za-z]+/g, ' ');
+  return new RegExp(`(^|[^A-Za-z])${escapeRegExp(symbol)}([^A-Za-z]|$)`).test(clean);
+}
+
+function isTypesetWordArtifact(symbol, formula) {
+  const clean = normalizeSpaces(symbol);
+  if (!/^[a-z]$/.test(clean)) return false;
+  if (!typesetWordLetters(formula.latex).has(clean.toLowerCase())) return false;
+  return !topLevelSingleLetterAppears(formula.latex, clean);
+}
+
 function formulaSymbols(formula) {
   const functionArguments = lhsFunctionArguments(formula.latex);
   const argumentSymbols = uniqueFormulaSymbols([...functionArguments]);
   const argumentSet = new Set(argumentSymbols);
+  const functionName = lhsFunctionName(formula.latex);
   const lhsPrimary = lhsPrimarySymbol(formula.latex);
-  let defined = uniqueFormulaSymbols(formula.symbols_defined || [])
+  const ratioSymbol = lhsRatioConceptSymbol(formula.latex);
+  let defined = ratioSymbol ? [ratioSymbol] : lhsIsExpression(formula.latex) ? whereDefinedSymbols(formula.latex) : uniqueFormulaSymbols(formula.symbols_defined || [])
     .filter((symbol) => !argumentSet.has(symbol))
     .filter((symbol) => !lhsPrimary || !isSplitFromWholeSymbol(symbol, lhsPrimary));
+  if (functionName) {
+    defined = uniqueFormulaSymbols([functionName]);
+  }
   if (lhsPrimary && (lhsPrimary.includes('_') || /\\(?:widehat|hat|overline|bar)/.test(lhsPrimary))) {
     defined = [lhsPrimary];
   }
+  defined = defined.filter((symbol) => !isSubscriptPartOfDefinedSymbol(symbol, defined));
   const lhsSymbol = lhsNamedStatistic(formula.latex);
   if (!lhsPrimary && lhsSymbol && COMMON_SYMBOL_NAMES.has(lhsSymbol)) {
     defined = [lhsSymbol];
@@ -1043,6 +1674,7 @@ function formulaSymbols(formula) {
   const definedSet = new Set(defined);
   const definedLetters = lhsSymbol ? new Set(lhsSymbol.split('')) : null;
   let used = uniqueFormulaSymbols([...(formula.symbols_used || []), ...argumentSymbols]).filter((symbol) => {
+    if (isTypesetWordArtifact(symbol, formula)) return false;
     if (definedSet.has(symbol)) return false;
     if (lhsPrimary && isSplitFromWholeSymbol(symbol, lhsPrimary)) return false;
     if (isRedundantWithDefinedSymbol(symbol, defined)) return false;
@@ -1096,6 +1728,16 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
     }
   }
 
+  for (const missingConcept of missingCalibratedConceptEntries(symbolConcepts, chapterDoc, promptMap, structuredBlocks)) {
+    const concept = registerConcept(missingConcept);
+    symbolConceptByFormulaSymbolRole.set(`${concept.formula_id}:${concept.symbol}:${concept.role}`, concept);
+    if (concept.role === 'defined') {
+      const list = definedByFormula.get(concept.formula_id) || [];
+      list.push(concept);
+      definedByFormula.set(concept.formula_id, list);
+    }
+  }
+
   const conceptViews = [];
   for (const formula of chapterDoc.formulas || []) {
     let currentConcepts = definedByFormula.get(formula.id) || [];
@@ -1110,13 +1752,13 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
         symbol: formula.label,
         role: 'defined',
         concept_id: `concept_${chapterId}_${slug(formula.id)}_statement`,
-        concept_name: `${formula.label} Result`,
+        concept_name: `${formula.label} Relationship`,
         concept_type: 'theorem_or_principle',
         definition: cleanDefinition(
           structuredEvidence?.sentence || sentenceWindow(`${promptRecord?.nearby_text || ''} ${formula.context_text || ''}`, formula.label),
-          `${formula.label} statement.`,
+          `${formula.label} relationship.`,
         ),
-        definition_zh: `${formula.label} 对应的公式结论，用来支撑当前概念视图。`,
+        definition_zh: '这条关系式把左侧目标量和右侧条件连接起来，适合作为理解本公式符号关系的起点。',
         teaching_move: teachingMove?.teaching_move,
         teaching_move_zh: teachingMove?.teaching_move_zh,
         source_sentence: teachingMove?.source_sentence,
@@ -1140,7 +1782,7 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
       for (const concept of concepts) {
         prerequisiteConcepts.push({
           concept_id: concept.concept_id,
-          name: concept.concept_name,
+          name: productConceptName(concept.concept_name, prereqFormula?.label || prereq.target_id, concept.symbol),
           defined_by_formula_id: concept.formula_id,
           from_formula_id: prereq.target_id,
           formula_label: prereqFormula?.label || prereq.target_id,
@@ -1173,7 +1815,7 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
       if (!concept) continue;
       introducedConcepts.push({
         concept_id: concept.concept_id,
-        name: concept.concept_name,
+        name: productConceptName(concept.concept_name, formula.label, concept.symbol),
         symbol,
         defined_by_formula_id: null,
         formula_label: formula.label,
@@ -1190,7 +1832,7 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
     }
 
     const uniquePrerequisiteConcepts = dedupeConceptReferences(prerequisiteConcepts);
-    const uniqueIntroducedConcepts = dedupeConceptReferences(introducedConcepts);
+    const uniqueIntroducedConcepts = sortConceptReferencesForDisplay(dedupeConceptReferences(introducedConcepts));
 
     for (const current of currentConcepts) {
       const prereqEdges = uniquePrerequisiteConcepts.map((concept) => ({
@@ -1216,7 +1858,7 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
       conceptViews.push({
         chapter_id: chapterId,
         concept_id: current.concept_id,
-        name: current.concept_name,
+        name: productConceptName(current.concept_name, formula.label, current.symbol),
         definition: current.definition,
         definition_zh: current.definition_zh,
         teaching_move: current.teaching_move,
@@ -1269,8 +1911,240 @@ function buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks) {
   };
 }
 
+function symbolConceptLookup(symbolConcepts) {
+  return {
+    byStableKey: new Map(symbolConcepts.map((concept) => [symbolConceptStableKey(concept), concept])),
+    byConceptId: new Map(symbolConcepts.map((concept) => [concept.concept_id, concept])),
+  };
+}
+
+function reviewedConceptForView(view, lookup) {
+  return lookup.byStableKey.get(symbolConceptStableKey({
+    chapter_id: view.chapter_id,
+    formula_id: view.defined_by_formula_id,
+    role: 'defined',
+    symbol: view.defined_symbol,
+  })) || lookup.byConceptId.get(view.concept_id);
+}
+
+function reviewedConceptForReference(chapterId, formulaId, role, symbol, conceptId, lookup) {
+  return lookup.byStableKey.get(symbolConceptStableKey({
+    chapter_id: chapterId,
+    formula_id: formulaId,
+    role,
+    symbol,
+  })) || lookup.byConceptId.get(conceptId);
+}
+
+function applyConceptToReference(reference, concept, clickable) {
+  const publicReference = sanitizePublicConceptReference(reference);
+  if (!concept) {
+    return {
+      ...publicReference,
+      clickable,
+    };
+  }
+  return {
+    ...publicReference,
+    concept_id: concept.concept_id,
+    name: productConceptName(concept.concept_name, reference.formula_label || concept.formula_label, concept.symbol),
+    symbol: concept.symbol || reference.symbol,
+    clickable,
+    confidence: concept.confidence,
+    concept_type: concept.concept_type,
+    definition: concept.definition,
+    definition_zh: concept.definition_zh,
+  };
+}
+
+function sanitizePublicConceptReference(reference) {
+  if (!reference) return reference;
+  const {
+    review_flags: _reviewFlags,
+    review_status: _reviewStatus,
+    teaching_move: _teachingMove,
+    teaching_move_zh: _teachingMoveZh,
+    source_sentence: _sourceSentence,
+    extraction_model: _extractionModel,
+    ...publicReference
+  } = reference;
+  return publicReference;
+}
+
+function sanitizeConceptViewForProduct(view) {
+  const {
+    review_flags: _reviewFlags,
+    review_status: _reviewStatus,
+    symbol_concepts: _symbolConcepts,
+    teaching_move: _teachingMove,
+    teaching_move_zh: _teachingMoveZh,
+    source_sentence: _sourceSentence,
+    extraction_model: _extractionModel,
+    evidence,
+    ...publicView
+  } = view;
+  return {
+    ...publicView,
+    evidence: sanitizePublicEvidence(evidence || []),
+  };
+}
+
+function sanitizePublicEvidence(evidence) {
+  return (evidence || []).map((item) => {
+    const {
+      sentence: _sentence,
+      teaching_move: _teachingMove,
+      teaching_move_zh: _teachingMoveZh,
+      source_sentence: _sourceSentence,
+      ...publicEvidence
+    } = item;
+    return publicEvidence;
+  });
+}
+
+function attachNestedConceptReferences(views) {
+  const byConceptId = new Map((views || []).map((view) => [view.concept_id, view]));
+  const enrichReference = (reference) => {
+    const nestedView = byConceptId.get(reference.concept_id);
+    if (!nestedView) return reference;
+    return {
+      ...reference,
+      prerequisite_concepts: (nestedView.prerequisite_concepts || [])
+        .slice(0, 6)
+        .map(sanitizePublicConceptReference),
+      introduced_concepts: (nestedView.introduced_concepts || [])
+        .slice(0, 4)
+        .map(sanitizePublicConceptReference),
+    };
+  };
+  return (views || []).map((view) => ({
+    ...view,
+    prerequisite_concepts: (view.prerequisite_concepts || []).map(enrichReference),
+  }));
+}
+
+function conceptGraphSummary(chapterId, formulasProcessed, symbolConcepts, views) {
+  return {
+    chapter_id: chapterId,
+    formulas_processed: formulasProcessed,
+    symbol_concept_entries: symbolConcepts.length,
+    unique_concepts: new Set(symbolConcepts.map((item) => item.concept_id)).size,
+    concept_views: views.length,
+    prerequisite_edges: views.reduce((sum, view) => sum + view.prerequisite_concepts.length, 0),
+    introduced_edges: views.reduce((sum, view) => sum + view.introduced_concepts.length, 0),
+    low_confidence_entries: symbolConcepts.filter((item) => item.confidence < 0.72).length,
+    formula_edges_used: views.reduce((sum, view) => sum + view.prerequisite_concepts.length, 0),
+  };
+}
+
+function applySymbolConceptsToGraph(conceptGraph, symbolConcepts) {
+  const lookup = symbolConceptLookup(symbolConcepts);
+  const views = [];
+
+  for (const view of conceptGraph.views || []) {
+    const current = reviewedConceptForView(view, lookup);
+
+    const updatedView = current
+      ? {
+          ...view,
+          concept_id: current.concept_id,
+          name: productConceptName(current.concept_name, view.supporting_formula_label, current.symbol),
+          definition: current.definition,
+          definition_zh: current.definition_zh,
+          teaching_move: current.teaching_move,
+          teaching_move_zh: current.teaching_move_zh,
+          source_sentence: current.source_sentence,
+          concept_type: current.concept_type,
+          defined_symbol: current.symbol,
+          evidence: current.evidence,
+          confidence: current.confidence,
+        }
+      : view;
+
+    const prerequisiteConcepts = [];
+    for (const reference of view.prerequisite_concepts || []) {
+      const concept = reviewedConceptForReference(
+        view.chapter_id,
+        reference.defined_by_formula_id || reference.from_formula_id,
+        'defined',
+        reference.symbol || reference.via_symbol,
+        reference.concept_id,
+        lookup,
+      );
+      prerequisiteConcepts.push(applyConceptToReference(reference, concept, true));
+    }
+
+    const introducedConcepts = [];
+    for (const reference of view.introduced_concepts || []) {
+      const concept = reviewedConceptForReference(
+        view.chapter_id,
+        view.defined_by_formula_id,
+        'used',
+        reference.symbol,
+        reference.concept_id,
+        lookup,
+      );
+      introducedConcepts.push(applyConceptToReference(reference, concept, false));
+    }
+
+    const prerequisiteEdges = prerequisiteConcepts.map((concept) => ({
+      from: concept.concept_id,
+      to: updatedView.concept_id,
+      relation: 'prerequisite_for',
+      derived_from_formula_edge: {
+        from: concept.from_formula_id,
+        to: updatedView.defined_by_formula_id,
+        via_symbol: concept.via_symbol,
+      },
+      clickable: true,
+      confidence: concept.confidence,
+    }));
+    const introducedEdges = introducedConcepts.map((concept) => ({
+      from: concept.concept_id,
+      to: updatedView.concept_id,
+      relation: 'introduced_for',
+      symbol: concept.symbol,
+      clickable: false,
+      confidence: concept.confidence,
+    }));
+
+    views.push({
+      ...sanitizeConceptViewForProduct(updatedView),
+      prerequisite_concepts: prerequisiteConcepts,
+      introduced_concepts: introducedConcepts,
+      edges: [...prerequisiteEdges, ...introducedEdges],
+    });
+  }
+
+  return {
+    ...conceptGraph,
+    source: {
+      ...conceptGraph.source,
+      method: 'concept views from formula dependencies, formula-symbol maps, and structured evidence',
+    },
+    summary: conceptGraphSummary(
+      conceptGraph.chapter_id,
+      conceptGraph.summary.formulas_processed,
+      symbolConcepts,
+      views,
+    ),
+    symbol_concepts: undefined,
+    views: attachNestedConceptReferences(views),
+  };
+}
+
+async function readJsonIfExists(filePath) {
+  try {
+    return JSON.parse(await readFile(filePath, 'utf8'));
+  } catch (error) {
+    if (error?.code === 'ENOENT') return null;
+    throw error;
+  }
+}
+
 async function main() {
   await mkdir(OUTPUT_DIR, { recursive: true });
+  await mkdir(REVIEW_OUTPUT_DIR, { recursive: true });
   const dependencyFiles = (await readdir(DEPENDENCY_DIR)).filter((file) => file.endsWith('_dependencies.json')).sort();
   const index = {
     version: 1,
@@ -1282,7 +2156,19 @@ async function main() {
     const chapterDoc = JSON.parse(await readFile(resolve(DEPENDENCY_DIR, file), 'utf8'));
     const promptMap = await nearbyPromptMap(chapterDoc.chapter_id);
     const structuredBlocks = await structuredBlocksForChapter(chapterDoc.chapter_id);
-    const conceptGraph = buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks);
+    const generatedConceptGraph = buildChapterConceptGraph(chapterDoc, promptMap, structuredBlocks);
+    const symbolConceptMapPath = resolve(REVIEW_OUTPUT_DIR, `${chapterDoc.chapter_id}${SYMBOL_CONCEPT_MAP_SUFFIX}`);
+    const symbolConcepts = applyConceptCalibrations(
+      appendMissingCalibratedConcepts(generatedConceptGraph.symbol_concepts, chapterDoc, promptMap, structuredBlocks),
+    );
+    const symbolConceptMap = buildSymbolConceptMapPayload(
+      chapterDoc.chapter_id,
+      symbolConcepts,
+      generatedConceptGraph.source,
+      generatedConceptGraph.generated_at,
+    );
+    const conceptGraph = applySymbolConceptsToGraph(generatedConceptGraph, symbolConceptMap.symbol_concepts);
+    await writeFile(symbolConceptMapPath, `${JSON.stringify(symbolConceptMap, null, 2)}\n`, 'utf8');
     await writeFile(resolve(OUTPUT_DIR, `${chapterDoc.chapter_id}_concept_graph.json`), `${JSON.stringify(conceptGraph, null, 2)}\n`, 'utf8');
     index.chapters.push({
       chapter_id: chapterDoc.chapter_id,

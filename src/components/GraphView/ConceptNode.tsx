@@ -1,16 +1,11 @@
 import React from 'react';
 import type { NodeProps } from '@xyflow/react';
 import { Handle, Position } from '@xyflow/react';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import type { ConceptNodeData, ConceptRevealGroup } from '../../types/graph';
 import { formatSectionLabel } from '../../utils/uiCopy';
 import { MathFormula } from '../common/MathFormula';
 import { RichMathText } from '../common/RichMathText';
-
-function confidenceLabel(value: number): string {
-  if (!Number.isFinite(value)) return '待审阅';
-  return `${Math.round(value * 100)}%`;
-}
 
 export const ConceptNode = React.memo(({ data }: NodeProps) => {
   const nodeData = data as unknown as ConceptNodeData;
@@ -22,18 +17,15 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
   const symbol = role === 'focus' ? view.defined_symbol : reference?.symbol || reference?.via_symbol || '';
   const formulaLabel = role === 'focus' ? view.supporting_formula_label : reference?.formula_label || view.supporting_formula_label;
   const formulaId = role === 'focus' ? view.defined_by_formula_id : reference?.defined_by_formula_id || reference?.from_formula_id || '';
-  const confidence = role === 'focus' ? view.confidence : reference?.confidence ?? view.confidence;
-  const flags = role === 'focus' ? view.review_flags : reference?.review_flags || [];
   const clickable = role === 'prerequisite' && nodeData.clickable && Boolean(reference?.concept_id);
+  const canExpandPrerequisites = role === 'prerequisite' && Boolean(nodeData.canExpandPrerequisites && reference);
   const focusDefinition = view.definition_zh?.trim() || view.definition;
   const referenceDefinition = reference?.definition_zh?.trim() || reference?.definition?.trim();
-  const teachingMove = role === 'focus'
-    ? view.teaching_move_zh || view.teaching_move
-    : reference?.teaching_move_zh || reference?.teaching_move;
-  const sourceSentence = role === 'focus' ? view.source_sentence : reference?.source_sentence;
-  const compactDefinition = role === 'prerequisite'
-    ? `由 ${formulaLabel} 定义，并通过公式依赖支撑当前概念。`
-    : referenceDefinition || `在 ${formulaLabel} 中首次作为背景概念出现，用来帮助理解当前公式。`;
+  const isIntroducedReference = reference?.relation === 'introduced_for';
+  const compactDefinition = referenceDefinition
+    || (role === 'prerequisite' && !isIntroducedReference
+      ? `这个概念支撑当前公式，可顺着 ${formulaLabel} 查看它的来源。`
+      : `这个符号在 ${formulaLabel} 中帮助解释当前概念。`);
 
   const openConcept = (event: React.MouseEvent | React.KeyboardEvent) => {
     event.stopPropagation();
@@ -45,6 +37,12 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
     event.stopPropagation();
     if (!formulaId) return;
     nodeData.onOpenFormula(formulaId);
+  };
+
+  const togglePrerequisites = (event: React.MouseEvent<HTMLButtonElement>) => {
+    event.stopPropagation();
+    if (!reference) return;
+    nodeData.onExpandPrerequisites?.(reference);
   };
 
   const revealGroup = (event: React.MouseEvent<HTMLButtonElement>, group: ConceptRevealGroup) => {
@@ -68,8 +66,10 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
       className={[
         'concept-node',
         `concept-node--${role}`,
+        nodeData.depth ? `concept-node--depth-${nodeData.depth}` : '',
         clickable ? 'concept-node--clickable' : '',
         nodeData.active ? 'concept-node--active' : '',
+        nodeData.prerequisitesExpanded ? 'concept-node--expanded' : '',
       ].filter(Boolean).join(' ')}
       data-testid="concept-node"
       data-concept-role={role}
@@ -78,9 +78,8 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
       <Handle type="target" position={Position.Left} />
       <div className="concept-node__header">
         <span className="concept-node__role">
-          {role === 'focus' ? '当前概念' : role === 'prerequisite' ? '前置概念' : '首次引入'}
+          {role === 'focus' ? '当前概念' : role === 'prerequisite' ? (nodeData.depth === 2 ? '第 2 层前置' : '前置概念') : '本式符号'}
         </span>
-        <span className="concept-node__confidence">{confidenceLabel(confidence)}</span>
       </div>
       <h3><RichMathText text={title} /></h3>
       {symbol ? (
@@ -101,27 +100,36 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
         <span>{formulaLabel}</span>
         {role === 'focus' && view.formula_section ? <span>{formatSectionLabel(view.formula_section)}</span> : null}
       </div>
-      {clickable ? (
-        <button
-          type="button"
-          className="concept-node__open-button nodrag nopan"
-          onClick={openConcept}
-          aria-label={`进入前置概念 ${title}`}
-        >
-          <span>进入概念</span>
-          <ArrowRight size={13} aria-hidden="true" />
-        </button>
-      ) : null}
-      {teachingMove ? (
-        <div className="concept-node__teaching">
-          <span>教材引入</span>
-          <strong>{teachingMove}</strong>
+      {clickable || canExpandPrerequisites ? (
+        <div className="concept-node__actions">
+          {canExpandPrerequisites ? (
+            <button
+              type="button"
+              className={nodeData.prerequisitesExpanded ? 'concept-node__expand-button concept-node__expand-button--active nodrag nopan' : 'concept-node__expand-button nodrag nopan'}
+              onClick={togglePrerequisites}
+              aria-label={`${nodeData.prerequisitesExpanded ? '收起' : '展开'} ${title} 的前置概念`}
+            >
+              <span>{nodeData.prerequisitesExpanded ? '收起前置' : '展开前置'}</span>
+              {nodeData.prerequisitesExpanded ? <ChevronUp size={13} aria-hidden="true" /> : <ChevronDown size={13} aria-hidden="true" />}
+            </button>
+          ) : null}
+          {clickable ? (
+            <button
+              type="button"
+              className="concept-node__open-button nodrag nopan"
+              onClick={openConcept}
+              aria-label={`进入前置概念 ${title}`}
+            >
+              <span>进入概念</span>
+              <ArrowRight size={13} aria-hidden="true" />
+            </button>
+          ) : null}
         </div>
       ) : null}
       {role === 'focus' ? (
         <>
           <div className="concept-node__learning-path" aria-label="概念展开层级">
-            <span className="concept-node__path-step concept-node__path-step--active">核心定义</span>
+            <span className="concept-node__path-step concept-node__path-step--active">概念解读</span>
             <span className={prerequisitesRevealed ? 'concept-node__path-step concept-node__path-step--active' : 'concept-node__path-step'}>
               前置来源
             </span>
@@ -162,24 +170,12 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
               </div>
             </div>
             {evidenceOpen ? (
-              <>
-                {sourceSentence ? (
-                  <p className="concept-node__source">
-                    <RichMathText text={sourceSentence} />
-                  </p>
-                ) : null}
-                <MathFormula latex={view.supporting_formula_latex} className="concept-node__formula" />
-              </>
+              <MathFormula latex={view.supporting_formula_latex} className="concept-node__formula" />
             ) : null}
           </div>
         </>
       ) : null}
-      {flags.length ? (
-        <div className="concept-node__review">
-          {flags.includes('needs_review') ? '需要复核' : '未人工审阅'}
-        </div>
-      ) : null}
-      {role === 'introduced' ? <div className="concept-node__locked-note">背景概念，不继续展开</div> : null}
+      {role === 'introduced' ? <div className="concept-node__locked-note">本式符号，用于理解当前公式</div> : null}
       <Handle type="source" position={Position.Right} />
     </div>
   );

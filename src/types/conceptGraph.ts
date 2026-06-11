@@ -2,8 +2,6 @@ export type ConceptRole = 'defined' | 'used';
 
 export type ConceptNodeRole = 'focus' | 'prerequisite' | 'introduced';
 
-export type ConceptReviewStatus = 'unreviewed' | 'reviewed' | 'needs_revision';
-
 export interface ConceptEvidence {
   chunk_id: string;
   block_index: number;
@@ -27,8 +25,6 @@ export interface SymbolConcept {
   aliases: string[];
   evidence: ConceptEvidence[];
   confidence: number;
-  review_status: ConceptReviewStatus | string;
-  review_flags: string[];
   extraction_model: string;
 }
 
@@ -49,7 +45,8 @@ export interface ConceptReference {
   teaching_move?: string;
   teaching_move_zh?: string;
   source_sentence?: string;
-  review_flags?: string[];
+  prerequisite_concepts?: ConceptReference[];
+  introduced_concepts?: ConceptReference[];
 }
 
 export interface ConceptViewEdge {
@@ -85,8 +82,6 @@ export interface ConceptView {
   formula_subsection?: string;
   evidence: ConceptEvidence[];
   confidence: number;
-  review_status: ConceptReviewStatus | string;
-  review_flags: string[];
   prerequisite_concepts: ConceptReference[];
   introduced_concepts: ConceptReference[];
   edges: ConceptViewEdge[];
@@ -104,15 +99,18 @@ export interface ConceptGraphSummary {
   formula_edges_used: number;
 }
 
+export interface ConceptGraphSource {
+  formula_dependency_graph: string;
+  symbol_sense_prompts: string;
+  structured_blocks?: string;
+  method: string;
+}
+
 export interface ConceptGraphPayload {
   chapter_id: string;
   version: number;
   generated_at: string;
-  source: {
-    formula_dependency_graph: string;
-    symbol_sense_prompts: string;
-    method: string;
-  };
+  source: ConceptGraphSource;
   summary: ConceptGraphSummary;
   symbol_concepts: SymbolConcept[];
   views: ConceptView[];

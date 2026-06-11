@@ -134,6 +134,7 @@ function formulaActionText(input: BuildFormulaLearningCopyInput): string {
   const label = formulaDisplayName(input);
   const latex = normalizeLatex(input.latex);
   const context = (input.context || '').toLowerCase();
+  if (isHeterozygosityDecayFormula(input.latex, input.context)) return '先看起点 H_0，再看每代保留比例 (1 - 1/(2N))，最后读 t 代后的 H_t。';
   if (latex.includes('\\varphi') && (latex.includes('p_{t}') || context.includes('probability density'))) return '先把它当成 p 的“位置地图”：看清起点 p0、时间 t、终点 pt，再暂时放过长求和细节。';
   if (latex.includes('E(t)=') || context.includes('expected age')) return '先把 p 当成当前频率，再读 E(t) 是“这条中性等位基因大约存在了多久”。';
   if (latex.includes('\\sigma_{p}^{2}') || context.includes('among-population variance')) return '先问不同群体的 p 会散开多宽，再看 2N 和 t 如何控制散开的速度。';
@@ -146,10 +147,24 @@ function formulaActionText(input: BuildFormulaLearningCopyInput): string {
   return `读 ${label} 时，先点开式中陌生符号，再沿图谱看它依赖的前置定义。`;
 }
 
+function isHeterozygosityDecayFormula(latex = '', context = ''): boolean {
+  const compact = normalizeLatex(latex);
+  const lowerContext = context.toLowerCase();
+  const hasHeterozygosityTerms =
+    (compact.includes('H_{t}') || compact.includes('H_t')) &&
+    (compact.includes('H_{0}') || compact.includes('H_0'));
+  const hasDriftDecayFactor =
+    compact.includes('\\frac{1}{2N}') ||
+    compact.includes('1/(2N)') ||
+    compact.includes('1-1/2N');
+  return hasHeterozygosityTerms && hasDriftDecayFactor && (compact.includes('^{t}') || lowerContext.includes('heterozygosity'));
+}
+
 function formulaTakeawayText(input: BuildFormulaLearningCopyInput, plainMeaning: string): string {
   const label = formulaDisplayName(input);
   const latex = normalizeLatex(input.latex);
   const context = (input.context || '').toLowerCase();
+  if (isHeterozygosityDecayFormula(input.latex, input.context)) return '杂合度按固定比例逐代下降；N 越大，下降越慢。';
   if (latex.includes('\\varphi') && (latex.includes('p_{t}') || context.includes('probability density'))) return '从 p0 出发，t 代后的 p 有一张概率地图。';
   if (latex.includes('E(t)=') || context.includes('expected age')) return '当前频率 p 可以反推出中性等位基因的大致年龄。';
   if (latex.includes('\\sigma_{p}^{2}') || context.includes('among-population variance')) return '漂变让不同群体的 p 逐渐散开，方差记录散开的宽度。';

@@ -11,10 +11,10 @@ if str(ROOT) not in sys.path:
 if str(ROOT / "scripts") not in sys.path:
     sys.path.insert(0, str(ROOT / "scripts"))
 
-from scripts.formula_atlas_pipeline.pipeline import build_from_ocr_jsonl  # noqa: E402
+from scripts.knowstellation_pipeline.pipeline import build_from_ocr_jsonl  # noqa: E402
 
 
-class FormulaAtlasPipelineTest(unittest.TestCase):
+class KnowstellationPipelineTest(unittest.TestCase):
     def test_builds_frontend_contracts_with_source_trace(self):
         with tempfile.TemporaryDirectory() as tmp:
             root = Path(tmp)

@@ -374,8 +374,8 @@ def build_chapter_navigator(by_chapter: dict[str, list[FormulaRecord]]) -> dict[
     return {
         "groups": [
             {
-                "id": "formula-atlas-generated",
-                "title_en": "Generated Formula Atlas",
+                "id": "knowstellation-generated",
+                "title_en": "Generated Knowstellation",
                 "title_zh": "自动生成公式图谱",
                 "description_en": "Formula navigator generated from a textbook PDF.",
                 "description_zh": "从教材 PDF 自动生成的公式学习导航。",

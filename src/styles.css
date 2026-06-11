@@ -660,8 +660,8 @@ input {
   }
 
   .home-hero-title {
-    font-size: clamp(54px, 14vw, 120px);
-    line-height: 0.88;
+    font-size: clamp(42px, 9vw, 92px);
+    line-height: 0.94;
   }
 
   .home-hero-intro {

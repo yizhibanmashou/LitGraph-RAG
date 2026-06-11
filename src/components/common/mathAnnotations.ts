@@ -1,6 +1,14 @@
 import { readBracedGroup, skipWhitespace } from '../../utils/latexHelpers.ts';
-import { compactMathText, latexToMathTokens, latexToReadableCandidates, symbolRequiresOverline } from '../../utils/mathSymbolMatching';
-import type { MathAnnotation } from './MathFormula';
+import { compactMathText, latexToMathTokens, latexToReadableCandidates, symbolRequiresOverline } from '../../utils/mathSymbolMatching.ts';
+
+export interface MathAnnotation {
+  symbol: string;
+  note: string;
+  text?: string;
+  kind?: 'symbol' | 'compound' | 'formula';
+  target?: string;
+  status?: 'loading' | 'ready' | 'error';
+}
 
 interface FractionProfile {
   numeratorCandidates: string[];
@@ -143,6 +151,7 @@ function isOneMinusCandidate(candidate: string): boolean {
 }
 
 function isFractionCandidate(candidate: string): boolean {
+  if (isPoweredGroupCandidate(candidate)) return false;
   return /^(?:\\)?(?:dfrac|tfrac|frac)\{/.test(candidate) || candidate.includes('/');
 }
 
@@ -183,6 +192,10 @@ function candidateGroupMatchesText(text: string, candidates: string[], tokens: s
   return tokens.length ? tokens.every((token) => text.includes(token)) : false;
 }
 
+function isCompoundCandidateShape(value: string): boolean {
+  return /(?:frac|[()\/+\-∑∂=^])/i.test(value);
+}
+
 function splitFractionElementText(element: HTMLElement): { numeratorText: string; denominatorText: string; fullText: string } | null {
   const fraction = element.classList.contains('mfrac') ? element : null;
   if (!fraction) return null;
@@ -219,19 +232,20 @@ function fractionProfileMatchesElement(element: HTMLElement, profile?: FractionP
 }
 
 function compoundStructureMatchesText(text: string, candidate: string, tokens: string[]): boolean {
+  if (!isCompoundCandidateShape(candidate)) return false;
   if (!candidateTokensPresent(text, tokens)) return false;
   if (isOneMinusCandidate(candidate)) return /1-/.test(text) && (text.includes('/') || /\d+[A-Za-zΑ-Ωα-ω]/u.test(text) || /-[A-Za-zΑ-Ωα-ω]/u.test(text));
-  if (isDerivativeCandidate(candidate)) return text.includes('∂');
-  if (isFractionCandidate(candidate)) return text.includes('/') || text.includes('∂') || candidateTokensPresent(text, tokens);
   if (isPoweredGroupCandidate(candidate)) {
     if (/\)[TΤ]/u.test(candidate)) return isTransposeGroupLocalContext(text);
     return isPoweredGroupLocalContext(text);
   }
+  if (isDerivativeCandidate(candidate)) return text.includes('∂');
+  if (isFractionCandidate(candidate)) return text.includes('/') || text.includes('∂') || candidateTokensPresent(text, tokens);
   return false;
 }
 
 function isScriptedInitialValueContext(text: string, candidate: string): boolean {
-  return /\(0\)/.test(candidate) && /(?:\(0|0\)|\(0\))/.test(text) && candidateTokensPresent(text, latexToMathTokens(candidate));
+  return text === candidate && /\(0\)/.test(candidate);
 }
 
 function isStructuredCompoundCandidate(candidate: string): boolean {
@@ -247,24 +261,27 @@ function isCompoundGroupingTarget(
   ancestorWindowText: string,
 ): boolean {
   const className = String(element.className || '');
-  const broadText = `${neighborhoodText}${siblingWindowText}${ancestorWindowText}`;
+  const localText = `${ownText}${neighborhoodText}`;
   if (isOneMinusCandidate(candidate)) {
-    if (!isOneMinusLocalContext(broadText)) return false;
+    if (!isOneMinusLocalContext(localText)) return false;
     if (className.includes('mopen') || className.includes('mclose') || className.includes('mbin')) return true;
-    return className.includes('vlist') || (element.children.length > 0 && !className.includes('mfrac')) || /^[()1+\-∑/^0-9]+$/.test(ownText);
+    if (className.includes('minner')) return isOneMinusLocalContext(ownText) || isOneMinusLocalContext(neighborhoodText);
+    return ownText === '1' && /1-/.test(neighborhoodText);
   }
   if (isFractionCandidate(candidate)) {
-    const isFractionElement = className.includes('mfrac') || className.includes('frac-line') || className.includes('vlist');
-    if (!isFractionElement && !isFractionLocalContext(broadText)) return false;
-    return isFractionElement || element.children.length > 0 || ownText.length >= 2;
+    const isFractionElement = className.includes('mfrac') || className.includes('frac-line') || Boolean(element.closest?.('.mfrac'));
+    return isFractionElement && isFractionLocalContext(localText);
   }
   if (isPoweredGroupCandidate(candidate)) {
-    const hasPoweredContext = /\)[TΤ]/u.test(candidate) ? isTransposeGroupLocalContext(broadText) : isPoweredGroupLocalContext(broadText);
+    const hasPoweredContext = /\)[TΤ]/u.test(candidate)
+      ? isTransposeGroupLocalContext(localText)
+      : isPoweredGroupLocalContext(localText);
     if (!hasPoweredContext) return false;
     if (className.includes('mopen') || className.includes('mclose') || className.includes('mbin')) return true;
-    return element.children.length > 0 || /^[()0-9+\-∑/^]+$/.test(ownText);
+    if (className.includes('minner')) return ownText.startsWith('(') && compoundStructureMatchesText(ownText, candidate, latexToMathTokens(candidate));
+    return false;
   }
-  return true;
+  return ownText === candidate || isScriptedInitialValueContext(ownText, candidate);
 }
 
 function findFractionPartTarget(fraction: HTMLElement, profile: FractionProfile): HTMLElement | null {
@@ -316,6 +333,7 @@ function compoundWindowMatchesElement(
   candidate: string,
   tokens: string[],
 ): boolean {
+  const localText = `${ownText}${neighborhoodText}${siblingWindowText}`;
   if (compoundTextMatchesCandidate(ownText, candidate) || compoundTextMatchesCandidate(neighborhoodText, candidate)) return true;
   if (compoundTextMatchesCandidate(siblingWindowText, candidate) || compoundStructureMatchesText(siblingWindowText, candidate, tokens)) {
     if (isOneMinusCandidate(candidate)) return isOneMinusLocalContext(neighborhoodText) || isOneMinusLocalContext(siblingWindowText);
@@ -323,15 +341,15 @@ function compoundWindowMatchesElement(
     if (isPoweredGroupCandidate(candidate)) return isPoweredGroupLocalContext(neighborhoodText) || isPoweredGroupLocalContext(siblingWindowText);
     return true;
   }
-  if (!compoundStructureMatchesText(ancestorWindowText, candidate, tokens)) return false;
-  if (isOneMinusCandidate(candidate)) return isOneMinusLocalContext(neighborhoodText) || isOneMinusLocalContext(ancestorWindowText);
-  if (isFractionCandidate(candidate)) return isFractionLocalContext(neighborhoodText) || isFractionLocalContext(ancestorWindowText);
+  if (!compoundStructureMatchesText(localText, candidate, tokens)) return false;
+  if (isOneMinusCandidate(candidate)) return isOneMinusLocalContext(neighborhoodText);
+  if (isFractionCandidate(candidate)) return isFractionLocalContext(neighborhoodText);
   if (isPoweredGroupCandidate(candidate)) {
     return /\)[TΤ]/u.test(candidate)
-      ? isTransposeGroupLocalContext(neighborhoodText) || isTransposeGroupLocalContext(ancestorWindowText)
-      : isPoweredGroupLocalContext(neighborhoodText) || isPoweredGroupLocalContext(ancestorWindowText);
+      ? isTransposeGroupLocalContext(neighborhoodText)
+      : isPoweredGroupLocalContext(neighborhoodText);
   }
-  return isScriptedInitialValueContext(neighborhoodText, candidate) || compoundTextMatchesCandidate(siblingWindowText, candidate);
+  return isScriptedInitialValueContext(neighborhoodText, candidate);
 }
 
 function annotationMatchesElement(
@@ -367,6 +385,13 @@ function annotationMatchesElement(
   });
 }
 
+export const __testing = {
+  annotationMatchesElement,
+  compactNeighborhoodText,
+  compactSiblingWindowText,
+  compactAncestorWindowText,
+};
+
 function annotationTargetScore(
   element: HTMLElement,
   annotation: MathAnnotation & { candidates: string[] },
@@ -386,6 +411,7 @@ function annotationTargetScore(
 }
 
 function maxTargetsForAnnotation(annotation: MathAnnotation): number {
+  if (annotation.kind === 'formula') return 1;
   if (annotation.kind !== 'compound') return 24;
   const candidates = latexToReadableCandidates(annotation.symbol);
   if (candidates.some((candidate) => isStructuredCompoundCandidate(candidate))) return 3;
@@ -433,7 +459,7 @@ export function annotateRenderedMath(root: HTMLElement, annotations: MathAnnotat
     .filter((item) => item.symbol && item.note)
     .map((item) => ({
       ...item,
-      candidates: latexToReadableCandidates(item.target || item.symbol),
+      candidates: latexToReadableCandidates(item.target || item.symbol).filter((candidate) => item.kind !== 'compound' || isCompoundCandidateShape(candidate)),
       tokens: item.kind === 'compound' ? latexToMathTokens(item.target || item.symbol) : [],
       fractionProfile: item.kind === 'compound' && /^\\(?:dfrac|tfrac|frac)\b/.test((item.target || item.symbol).trim()) ? buildFractionProfile(item.target || item.symbol) : null,
       requiresOverline: symbolRequiresOverline(item.symbol),
@@ -451,7 +477,29 @@ export function annotateRenderedMath(root: HTMLElement, annotations: MathAnnotat
     return text.length >= 1 && text.length <= 28;
   });
 
-  for (const annotation of available) {
+  const formulaFallback = available.find((annotation) => annotation.kind === 'formula') || null;
+  const primaryAnnotations = formulaFallback
+    ? available.filter((annotation) => annotation.kind !== 'formula')
+    : available;
+
+  const applyAnnotationToTargets = (annotation: MathAnnotation, targets: HTMLElement[]) => {
+    for (const target of targets) {
+      target.classList.add('math-symbol-hotspot');
+      target.setAttribute('data-note', annotation.note);
+      target.setAttribute('data-symbol', annotation.symbol);
+      target.setAttribute('data-text', annotation.text || '');
+      target.setAttribute('data-kind', annotation.kind || 'symbol');
+      if (annotation.kind === 'compound' && (annotation as MathAnnotation & { fractionProfile?: FractionProfile | null }).fractionProfile) {
+        const fractionProfile = (annotation as MathAnnotation & { fractionProfile?: FractionProfile | null }).fractionProfile;
+        target.setAttribute('data-compound-shape', fractionProfile?.part ? `fraction-${fractionProfile.part}` : 'fraction');
+      }
+      target.setAttribute('data-status', annotation.status || 'ready');
+      target.setAttribute('tabindex', '0');
+      target.setAttribute('aria-label', `${annotation.symbol}: ${annotation.note}`);
+    }
+  };
+
+  for (const annotation of primaryAnnotations) {
     let matches: HTMLElement[];
     if (annotation.kind === 'compound' && annotation.fractionProfile) {
       matches = findFractionAnnotationTargets(root, { ...annotation, fractionProfile: annotation.fractionProfile });
@@ -473,18 +521,13 @@ export function annotateRenderedMath(root: HTMLElement, annotations: MathAnnotat
       targets.push(match);
       if (targets.length >= maxTargets) break;
     }
-    for (const target of targets) {
-      target.classList.add('math-symbol-hotspot');
-      target.setAttribute('data-note', annotation.note);
-      target.setAttribute('data-symbol', annotation.symbol);
-      target.setAttribute('data-text', annotation.text || '');
-      target.setAttribute('data-kind', annotation.kind || 'symbol');
-      if (annotation.kind === 'compound' && annotation.fractionProfile) {
-        target.setAttribute('data-compound-shape', annotation.fractionProfile.part ? `fraction-${annotation.fractionProfile.part}` : 'fraction');
-      }
-      target.setAttribute('data-status', annotation.status || 'ready');
-      target.setAttribute('tabindex', '0');
-      target.setAttribute('aria-label', `${annotation.symbol}: ${annotation.note}`);
-    }
+    applyAnnotationToTargets(annotation, targets);
+  }
+
+  if (formulaFallback && root.querySelectorAll('.math-symbol-hotspot').length === 0) {
+    applyAnnotationToTargets(
+      formulaFallback,
+      Array.from(root.querySelectorAll<HTMLElement>('.katex-html')).slice(0, 1),
+    );
   }
 }

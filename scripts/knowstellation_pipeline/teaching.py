@@ -24,7 +24,7 @@ def write_teaching_payloads(formulas: list[FormulaRecord], dependency_dir: Path,
     write_json(concept_dir / "concept_graph_index.json", build_concept_index(by_chapter))
     write_json(output_dir / "formula_learning_copy.json", build_learning_copy(formulas))
     write_json(output_dir / "storylines.json", build_storylines(formulas))
-    write_json(output_dir / "llm_cache.json", {"version": 1, "generated_at": utc_now(), "items": {}, "source": "formula_atlas_pipeline_placeholder"})
+    write_json(output_dir / "llm_cache.json", {"version": 1, "generated_at": utc_now(), "items": {}, "source": "knowstellation_pipeline_placeholder"})
     return {"concept_view_count": total_views}
 
 
@@ -58,7 +58,7 @@ def build_concept_graph(chapter_id: str, formulas: list[FormulaRecord], dependen
             "confidence": round(confidence, 4),
             "review_status": "unreviewed",
             "review_flags": review_flags,
-            "extraction_model": "formula_atlas_pipeline_rule_fallback_v1",
+            "extraction_model": "knowstellation_pipeline_rule_fallback_v1",
         }
         concepts_by_formula[formula.id] = concept
         symbol_concepts.append(concept)
@@ -183,14 +183,14 @@ def build_learning_copy(formulas: list[FormulaRecord]) -> dict[str, Any]:
                 "inThisChapter": f"它出现在 {formula.section}，用于支撑本章局部公式图。",
             },
             "source_context_hash": "",
-            "model": "formula_atlas_pipeline_rule_fallback_v1",
+            "model": "knowstellation_pipeline_rule_fallback_v1",
             "confidence": round(formula.confidence, 4),
             "review_flags": formula.review_flags if flags else [],
         }
     return {
         "version": 1,
         "generated_at": utc_now(),
-        "source": "formula_atlas_pipeline_rule_fallback_v1",
+        "source": "knowstellation_pipeline_rule_fallback_v1",
         "items": items,
     }
 

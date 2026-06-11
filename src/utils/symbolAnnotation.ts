@@ -24,12 +24,19 @@ const GENERIC_LABEL_PATTERNS = [
 ];
 
 const ASCII_MATH_SYMBOL_LABEL = /^(?:[A-Za-z]+(?:_[A-Za-z0-9]+)?(?:\^[0-9A-Za-z]+)?|[A-Za-z]+_[A-Za-z0-9]+\^[0-9A-Za-z]+)$/;
+const EXTRA_GENERIC_LABEL_PATTERNS = [
+  /这个公式直接使用/,
+  /当前公式附近/,
+  /关键符号/,
+  /^是这个公式/,
+  /^出现在当前公式/,
+];
 
 export function isGenericAnnotationLabel(value: string): boolean {
   const normalized = value.replace(/\s+/g, ' ').trim();
   if (!normalized) return true;
   if (ASCII_MATH_SYMBOL_LABEL.test(normalized)) return true;
-  return GENERIC_LABEL_PATTERNS.some((pattern) => pattern.test(normalized));
+  return GENERIC_LABEL_PATTERNS.some((pattern) => pattern.test(normalized)) || EXTRA_GENERIC_LABEL_PATTERNS.some((pattern) => pattern.test(normalized));
 }
 
 export function compressTextToShortLabel(text: string, maxLength = 16): string {

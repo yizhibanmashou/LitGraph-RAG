@@ -514,7 +514,7 @@ export function scoreConceptSearch(item: ConceptSearchResult, plan: SearchQueryP
     score = bestScore(score, conceptScore(item, { score: 690, reason: '概念符号匹配' }));
   }
   if (fieldIncludes(item.context, plan, 3)) {
-    score = bestScore(score, conceptScore(item, { score: 610, reason: plan.hasCjkAlias ? '中文概念映射' : '概念定义匹配' }));
+    score = bestScore(score, conceptScore(item, { score: 610, reason: plan.hasCjkAlias ? '中文概念映射' : '概念解读匹配' }));
   }
   if (fieldIncludes(item.formula_section || '', plan, 2)) {
     score = bestScore(score, conceptScore(item, { score: plan.hasCjkAlias ? 680 : 540, reason: plan.hasCjkAlias ? '中文概念映射' : '章节主题匹配' }));

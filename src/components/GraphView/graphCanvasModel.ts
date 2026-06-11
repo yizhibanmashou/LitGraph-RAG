@@ -1,7 +1,7 @@
 import type { Edge, Node } from '@xyflow/react';
 import type { ChapterFormula, FormulaDependency, FormulaPrerequisite, SearchFormula } from '../../types/formula';
 import type { DependencyEdgeData, VariableNodeData } from '../../types/graph';
-import { buildCompoundFocusAnnotations, type FocusAnnotationNote } from '../../utils/focusAnnotations.ts';
+import { buildCompoundFocusAnnotations, buildFormulaWideFocusAnnotation, type FocusAnnotationNote } from '../../utils/focusAnnotations.ts';
 import { buildFormulaSymbolPrerequisites, explainPrerequisite } from '../../utils/formulaInfo.ts';
 import { layoutPrerequisites } from './graphLayout.ts';
 
@@ -53,9 +53,11 @@ export function buildFocusSymbolPrerequisites(formula?: ChapterFormula | null, d
     ...item,
     kind: 'symbol' as const,
   }));
+  const formulaWideAnnotation = buildFormulaWideFocusAnnotation(formula);
   return dedupeFocusAnnotations([
     ...buildCompoundFocusAnnotations(formula),
     ...symbolPrerequisites,
+    ...(formulaWideAnnotation ? [formulaWideAnnotation] : []),
   ]);
 }
 

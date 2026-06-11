@@ -421,6 +421,20 @@
   font-weight: 700;
 }
 
+.graph-info-panel__copy-block--reading-order {
+  border-color: rgba(125, 211, 252, 0.14);
+  background:
+    linear-gradient(135deg, rgba(125, 211, 252, 0.055), rgba(15, 23, 42, 0.66)),
+    var(--graph-panel-muted);
+}
+
+.graph-info-panel__copy-block--reading-order p {
+  color: rgba(203, 213, 225, 0.9);
+  font-size: 13px;
+  font-weight: 650;
+  line-height: 1.55;
+}
+
 .graph-info-panel__section--concept-detail {
   display: grid;
   gap: 12px;
@@ -462,37 +476,6 @@
 
 .graph-info-panel__concept-symbol .math-formula__content {
   min-width: 0;
-}
-
-.graph-info-panel__concept-stats {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 8px;
-}
-
-.graph-info-panel__concept-stats > div {
-  display: grid;
-  min-width: 0;
-  gap: 3px;
-  border: 1px solid rgba(148, 163, 184, 0.14);
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.035);
-  padding: 10px 9px;
-}
-
-.graph-info-panel__concept-stats strong {
-  color: #ccfbf1;
-  font-size: 19px;
-  line-height: 1;
-}
-
-.graph-info-panel__concept-stats span {
-  min-width: 0;
-  overflow-wrap: anywhere;
-  color: rgba(203, 213, 225, 0.76);
-  font-size: 10px;
-  font-weight: 780;
-  line-height: 1.2;
 }
 
 .graph-info-panel__copy-block--concept-definition {
@@ -542,11 +525,6 @@
 
 .graph-info-panel__copy-block--formula-evidence .math-formula__content {
   min-width: max-content;
-}
-
-.graph-info-panel__copy-block--concept-teaching {
-  border-color: rgba(125, 211, 252, 0.16);
-  background: rgba(8, 47, 73, 0.2);
 }
 
 .graph-info-panel__copy-block--concept-layer {
@@ -670,16 +648,6 @@
 .graph-info-panel__concept-layer-more {
   color: rgba(125, 211, 252, 0.82);
   font-weight: 760;
-}
-
-.graph-info-panel__source-sentence {
-  margin: 0 0 8px;
-  border-left: 2px solid rgba(125, 211, 252, 0.34);
-  padding-left: 8px;
-  color: rgba(203, 213, 225, 0.82);
-  font-size: 12px;
-  font-weight: 650;
-  line-height: 1.55;
 }
 
 .graph-info-panel__copy-heading {
@@ -1789,6 +1757,17 @@
     rgba(10, 22, 38, 0.9);
 }
 
+.concept-node--depth-2 {
+  width: 226px;
+  min-height: 126px;
+  gap: 8px;
+  border-color: rgba(125, 211, 252, 0.18);
+  background:
+    radial-gradient(circle at 0% 0%, rgba(125, 211, 252, 0.06), transparent 42%),
+    rgba(7, 18, 32, 0.78);
+  opacity: 0.88;
+}
+
 .concept-node--introduced {
   width: 272px;
   min-height: 154px;
@@ -1812,6 +1791,11 @@
     0 22px 48px rgba(0, 0, 0, 0.38),
     0 0 24px rgba(56, 189, 248, 0.16);
   outline: none;
+}
+
+.concept-node--depth-2.concept-node--clickable:hover,
+.concept-node--depth-2.concept-node--clickable:focus-visible {
+  opacity: 1;
 }
 
 .concept-node h3 {
@@ -1839,8 +1823,7 @@
   gap: 8px;
 }
 
-.concept-node__role,
-.concept-node__confidence {
+.concept-node__role {
   display: inline-flex;
   flex: 0 0 auto;
   align-items: center;
@@ -1868,12 +1851,6 @@
   border-color: rgba(251, 191, 36, 0.22);
   background: rgba(251, 191, 36, 0.1);
   color: #fde68a;
-}
-
-.concept-node__confidence {
-  border: 1px solid rgba(148, 163, 184, 0.16);
-  background: rgba(15, 23, 42, 0.54);
-  color: rgba(203, 213, 225, 0.82);
 }
 
 .concept-node__symbol {
@@ -1942,7 +1919,15 @@
   white-space: nowrap;
 }
 
-.concept-node__open-button {
+.concept-node__actions {
+  display: flex;
+  min-width: 0;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.concept-node__open-button,
+.concept-node__expand-button {
   display: inline-flex;
   width: max-content;
   max-width: 100%;
@@ -1962,7 +1947,14 @@
   transition: transform 160ms ease, border-color 160ms ease, background-color 160ms ease, color 160ms ease;
 }
 
-.concept-node__open-button span {
+.concept-node__expand-button {
+  border-color: rgba(94, 234, 212, 0.24);
+  background: rgba(20, 184, 166, 0.1);
+  color: #99f6e4;
+}
+
+.concept-node__open-button span,
+.concept-node__expand-button span {
   min-width: 0;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -1970,12 +1962,23 @@
 }
 
 .concept-node__open-button:hover,
-.concept-node__open-button:focus-visible {
+.concept-node__open-button:focus-visible,
+.concept-node__expand-button:hover,
+.concept-node__expand-button:focus-visible,
+.concept-node__expand-button--active {
   transform: translateY(-1px);
   border-color: rgba(125, 211, 252, 0.5);
   background: rgba(14, 165, 233, 0.18);
   color: #f0f9ff;
   outline: none;
+}
+
+.concept-node__expand-button:hover,
+.concept-node__expand-button:focus-visible,
+.concept-node__expand-button--active {
+  border-color: rgba(94, 234, 212, 0.46);
+  background: rgba(20, 184, 166, 0.16);
+  color: #f0fdfa;
 }
 
 .concept-node__teaching {
@@ -2135,16 +2138,6 @@
   gap: 6px;
 }
 
-.concept-node__source {
-  margin: 0;
-  border-left: 2px solid rgba(125, 211, 252, 0.34);
-  padding-left: 8px;
-  color: rgba(203, 213, 225, 0.82);
-  font-size: 11.5px;
-  font-weight: 650;
-  line-height: 1.48;
-}
-
 .concept-node__evidence-heading button:hover {
   border-color: rgba(94, 234, 212, 0.46);
   background: rgba(20, 184, 166, 0.18);
@@ -2170,19 +2163,12 @@
   font-size: 0.93em;
 }
 
-.concept-node__review,
 .concept-node__locked-note {
   border-radius: 10px;
   padding: 6px 8px;
   font-size: 10.5px;
   font-weight: 780;
   line-height: 1.3;
-}
-
-.concept-node__review {
-  border: 1px solid rgba(251, 191, 36, 0.22);
-  background: rgba(251, 191, 36, 0.08);
-  color: #fde68a;
 }
 
 .concept-node__locked-note {
@@ -2286,7 +2272,7 @@
   }
 
   .workspace-panel {
-    max-height: 320px;
+    max-height: min(640px, 56vh);
     border-right: 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
@@ -2317,7 +2303,7 @@
 
 @media (max-width: 520px) {
   .workspace-panel {
-    max-height: 280px;
+    max-height: min(520px, 58vh);
   }
 
   .graph-info-panel {

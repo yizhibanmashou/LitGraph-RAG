@@ -8,7 +8,7 @@ from .pipeline import DEFAULT_WORK_ROOT, build_from_markdown_dir, build_from_ocr
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Build Formula Atlas frontend data from a formula textbook PDF.")
+    parser = argparse.ArgumentParser(description="Build Knowstellation frontend data from a formula-heavy book or paper PDF.")
     subparsers = parser.add_subparsers(dest="command", required=True)
 
     capture = subparsers.add_parser("capture", help="Submit a PDF or URL to PaddleOCR AIStudio and save JSONL output.")

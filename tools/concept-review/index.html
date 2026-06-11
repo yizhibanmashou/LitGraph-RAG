@@ -1,0 +1,942 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Knowstellation Concept Review</title>
+    <style>
+      :root {
+        color-scheme: dark;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        background: #071018;
+        color: #e6edf3;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        min-width: 1080px;
+        background: #071018;
+      }
+
+      button,
+      input,
+      select,
+      textarea {
+        font: inherit;
+      }
+
+      button {
+        cursor: pointer;
+      }
+
+      .layout {
+        display: grid;
+        grid-template-columns: 230px minmax(460px, 1fr) 410px;
+        min-height: 100vh;
+      }
+
+      .sidebar,
+      .main,
+      .detail {
+        min-height: 0;
+        border-right: 1px solid rgba(148, 163, 184, 0.14);
+        background: #0b1520;
+      }
+
+      .main {
+        display: grid;
+        grid-template-rows: auto auto minmax(0, 1fr);
+        background: #08111b;
+      }
+
+      .detail {
+        overflow: auto;
+        border-right: 0;
+      }
+
+      .topbar,
+      .sidebar-header,
+      .detail-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 12px;
+        min-height: 64px;
+        border-bottom: 1px solid rgba(148, 163, 184, 0.14);
+        padding: 14px;
+      }
+
+      .eyebrow {
+        margin: 0;
+        color: #5eead4;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+      }
+
+      h1,
+      h2 {
+        margin: 2px 0 0;
+        color: #f8fafc;
+        font-size: 21px;
+        line-height: 1.15;
+      }
+
+      .sidebar-list,
+      .review-list {
+        overflow: auto;
+      }
+
+      .sidebar-list {
+        display: grid;
+        align-content: start;
+        gap: 6px;
+        height: calc(100vh - 64px);
+        padding: 10px;
+      }
+
+      .chapter-button,
+      .row-button,
+      .action-button,
+      .status-button,
+      .candidate-button {
+        border: 1px solid rgba(148, 163, 184, 0.15);
+        border-radius: 8px;
+        background: rgba(15, 23, 42, 0.76);
+        color: #dce9f7;
+      }
+
+      .chapter-button {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        min-height: 40px;
+        padding: 9px 10px;
+        text-align: left;
+      }
+
+      .chapter-button.is-active,
+      .row-button.is-active {
+        border-color: rgba(94, 234, 212, 0.55);
+        background: rgba(20, 184, 166, 0.16);
+      }
+
+      .chapter-button span,
+      .row-title {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+      }
+
+      .chapter-button small,
+      .muted {
+        color: #8ca1b7;
+        font-size: 11px;
+      }
+
+      .actions,
+      .filters,
+      .stats {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 8px;
+      }
+
+      .filters,
+      .stats {
+        border-bottom: 1px solid rgba(148, 163, 184, 0.1);
+        padding: 12px 14px;
+      }
+
+      .stats {
+        align-items: stretch;
+      }
+
+      .stat {
+        min-width: 112px;
+        border: 1px solid rgba(148, 163, 184, 0.11);
+        border-radius: 8px;
+        background: rgba(15, 23, 42, 0.56);
+        padding: 9px 10px;
+        color: #94a3b8;
+        font-size: 12px;
+      }
+
+      .stat strong {
+        display: block;
+        color: #f8fafc;
+        font-size: 18px;
+      }
+
+      .action-button,
+      .status-button,
+      .candidate-button {
+        min-height: 36px;
+        padding: 0 11px;
+        font-size: 12px;
+        font-weight: 800;
+      }
+
+      .action-button:disabled,
+      .status-button:disabled {
+        cursor: not-allowed;
+        opacity: 0.45;
+      }
+
+      .filters input,
+      .filters select,
+      .field input,
+      .field select,
+      .field textarea {
+        min-height: 38px;
+        border: 1px solid rgba(148, 163, 184, 0.16);
+        border-radius: 8px;
+        background: rgba(2, 6, 23, 0.7);
+        color: #f8fafc;
+        outline: none;
+      }
+
+      .filters input {
+        flex: 1 1 240px;
+        padding: 0 11px;
+      }
+
+      .filters select {
+        padding: 0 9px;
+      }
+
+      .review-list {
+        display: grid;
+        align-content: start;
+        gap: 8px;
+        padding: 14px;
+      }
+
+      .row-button {
+        display: grid;
+        grid-template-columns: 72px minmax(0, 1fr) minmax(52px, auto);
+        align-items: center;
+        gap: 10px;
+        min-height: 56px;
+        padding: 9px;
+        text-align: left;
+      }
+
+      .row-title {
+        display: block;
+        color: #f8fafc;
+        font-size: 14px;
+        font-weight: 850;
+      }
+
+      .row-symbol,
+      code {
+        color: #c4b5fd;
+        font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+        font-size: 12px;
+      }
+
+      .status {
+        display: inline-flex;
+        min-height: 26px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 999px;
+        background: rgba(148, 163, 184, 0.14);
+        color: #cbd5e1;
+        font-size: 11px;
+        font-weight: 900;
+      }
+
+      .status.approved,
+      .status.reviewed {
+        background: rgba(34, 197, 94, 0.15);
+        color: #86efac;
+      }
+
+      .status.edited {
+        background: rgba(20, 184, 166, 0.15);
+        color: #5eead4;
+      }
+
+      .status.ambiguous,
+      .status.needs_revision {
+        background: rgba(245, 158, 11, 0.17);
+        color: #fcd34d;
+      }
+
+      .status.rejected {
+        background: rgba(244, 63, 94, 0.17);
+        color: #fda4af;
+      }
+
+      .detail-body {
+        display: grid;
+        gap: 14px;
+        padding: 14px;
+      }
+
+      .symbol-box,
+      .candidate-panel,
+      .evidence article {
+        border: 1px solid rgba(148, 163, 184, 0.13);
+        border-radius: 8px;
+        background: rgba(15, 23, 42, 0.58);
+        padding: 11px;
+      }
+
+      .symbol-box {
+        display: grid;
+        gap: 7px;
+        border-color: rgba(196, 181, 253, 0.2);
+        background: rgba(88, 28, 135, 0.15);
+      }
+
+      .field {
+        display: grid;
+        gap: 6px;
+      }
+
+      .field span,
+      .section-label {
+        color: #94a3b8;
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+      }
+
+      .field input,
+      .field select,
+      .field textarea {
+        width: 100%;
+        padding: 9px 10px;
+        line-height: 1.45;
+      }
+
+      .field textarea {
+        resize: vertical;
+      }
+
+      .status-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 8px;
+      }
+
+      .candidate-panel {
+        display: grid;
+        gap: 8px;
+        border-color: rgba(94, 234, 212, 0.18);
+        background: rgba(13, 148, 136, 0.09);
+      }
+
+      .candidate-panel header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .candidate-item {
+        display: grid;
+        gap: 7px;
+        border-top: 1px solid rgba(148, 163, 184, 0.12);
+        padding-top: 8px;
+      }
+
+      .candidate-button {
+        width: 100%;
+        text-align: left;
+      }
+
+      .chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+      }
+
+      .chip {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        border: 1px solid rgba(148, 163, 184, 0.12);
+        border-radius: 999px;
+        background: rgba(2, 6, 23, 0.42);
+        padding: 4px 8px;
+        color: #b7c6d7;
+        font-size: 11px;
+      }
+
+      .chip.current {
+        border-color: rgba(94, 234, 212, 0.45);
+        color: #99f6e4;
+      }
+
+      .evidence {
+        display: grid;
+        gap: 8px;
+      }
+
+      .evidence article {
+        display: grid;
+        gap: 4px;
+        color: #a6b3c9;
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .empty,
+      .error {
+        margin: 14px;
+        border: 1px solid rgba(244, 63, 94, 0.24);
+        border-radius: 8px;
+        background: rgba(127, 29, 29, 0.22);
+        padding: 12px;
+        color: #fecdd3;
+        font-size: 13px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <div>
+            <p class="eyebrow">Concept Review</p>
+            <h2 id="chapterCount">Loading</h2>
+          </div>
+        </div>
+        <div id="chapters" class="sidebar-list"></div>
+      </aside>
+
+      <main class="main">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Symbol Concept Map</p>
+            <h1 id="currentChapter">Loading</h1>
+          </div>
+          <div class="actions">
+            <button id="exportPatch" class="action-button" type="button" disabled>导出 patch</button>
+            <button id="exportMap" class="action-button" type="button" disabled>导出 map</button>
+          </div>
+        </header>
+        <section>
+          <div id="stats" class="stats"></div>
+          <div class="filters">
+            <input id="query" type="search" placeholder="概念、符号、公式或定义" />
+            <select id="statusFilter">
+              <option value="all">全部状态</option>
+              <option value="unreviewed">未审</option>
+              <option value="approved">通过</option>
+              <option value="edited">已改</option>
+              <option value="ambiguous">存疑</option>
+              <option value="needs_revision">需修订</option>
+              <option value="rejected">拒绝</option>
+            </select>
+            <select id="roleFilter">
+              <option value="all">全部角色</option>
+              <option value="defined">defined</option>
+              <option value="used">used</option>
+            </select>
+            <select id="qualityFilter">
+              <option value="all">全部质量</option>
+              <option value="low-confidence">低置信</option>
+              <option value="flagged">带标记</option>
+              <option value="merge-candidate">合并候选</option>
+            </select>
+            <button id="clearDrafts" class="action-button" type="button" disabled>清空草稿</button>
+          </div>
+        </section>
+        <div id="list" class="review-list"></div>
+      </main>
+
+      <aside class="detail">
+        <div class="detail-header">
+          <div>
+            <p class="eyebrow">Review Detail</p>
+            <h2 id="detailTitle">No item</h2>
+          </div>
+          <button id="resetDraft" class="action-button" type="button" disabled>重置</button>
+        </div>
+        <div id="detailBody" class="detail-body"></div>
+      </aside>
+    </div>
+
+    <script type="module">
+      const REVIEW_LABELS = {
+        unreviewed: '未审',
+        approved: '通过',
+        edited: '已改',
+        ambiguous: '存疑',
+        needs_revision: '需修订',
+        rejected: '拒绝',
+        reviewed: '已审',
+      };
+
+      const REASON_LABELS = {
+        exact_normalized_name: '同名',
+        synonym_normalized_name: '近义',
+        alias_overlap: '别名',
+        lexical_similarity: '词面',
+        embedding_similarity: '向量',
+      };
+
+      const state = {
+        index: null,
+        map: null,
+        merge: null,
+        selectedChapterId: '',
+        selectedKey: '',
+        drafts: {},
+        filters: {
+          query: '',
+          status: 'all',
+          role: 'all',
+          quality: 'all',
+        },
+      };
+
+      const elements = {
+        chapters: document.querySelector('#chapters'),
+        chapterCount: document.querySelector('#chapterCount'),
+        currentChapter: document.querySelector('#currentChapter'),
+        stats: document.querySelector('#stats'),
+        list: document.querySelector('#list'),
+        detailTitle: document.querySelector('#detailTitle'),
+        detailBody: document.querySelector('#detailBody'),
+        exportPatch: document.querySelector('#exportPatch'),
+        exportMap: document.querySelector('#exportMap'),
+        clearDrafts: document.querySelector('#clearDrafts'),
+        resetDraft: document.querySelector('#resetDraft'),
+        query: document.querySelector('#query'),
+        statusFilter: document.querySelector('#statusFilter'),
+        roleFilter: document.querySelector('#roleFilter'),
+        qualityFilter: document.querySelector('#qualityFilter'),
+      };
+
+      boot().catch((error) => {
+        elements.list.innerHTML = `<div class="error">${escapeHtml(error.message)}</div>`;
+      });
+
+      async function boot() {
+        const [index, merge] = await Promise.all([
+          loadJson('/data/concept_graph/concept_graph_index.json'),
+          loadJson('/data/concept_graph/concept_merge_candidates.json').catch(() => null),
+        ]);
+        state.index = index;
+        state.merge = merge;
+        state.selectedChapterId = index.chapters.find((chapter) => chapter.chapter_id === 'chapter6')?.chapter_id || index.chapters[0]?.chapter_id || '';
+        await loadChapter(state.selectedChapterId);
+        bindEvents();
+        render();
+      }
+
+      function bindEvents() {
+        elements.chapters.addEventListener('click', async (event) => {
+          const button = event.target.closest('[data-chapter]');
+          if (!button) return;
+          await loadChapter(button.dataset.chapter);
+          render();
+        });
+
+        elements.list.addEventListener('click', (event) => {
+          const button = event.target.closest('[data-key]');
+          if (!button) return;
+          state.selectedKey = button.dataset.key;
+          render();
+        });
+
+        elements.detailBody.addEventListener('change', (event) => {
+          const target = event.target;
+          const concept = selectedConcept();
+          if (!concept || !target.name) return;
+          const status = target.name === 'review_notes' ? concept.review_status : 'edited';
+          updateDraft(concept, { [target.name]: target.value, review_status: status });
+        });
+
+        elements.detailBody.addEventListener('click', (event) => {
+          const concept = selectedConcept();
+          if (!concept) return;
+          const statusButton = event.target.closest('[data-status]');
+          if (statusButton) {
+            const status = statusButton.dataset.status;
+            updateDraft(concept, { review_status: status, review_flags: flagsForStatus(status) });
+            return;
+          }
+          const candidateButton = event.target.closest('[data-canonical-id]');
+          if (candidateButton) {
+            updateDraft(concept, {
+              canonical_concept_id: candidateButton.dataset.canonicalId,
+              canonical_concept_name: candidateButton.dataset.canonicalName,
+              review_status: 'edited',
+            });
+          }
+        });
+
+        elements.exportPatch.addEventListener('click', exportPatch);
+        elements.exportMap.addEventListener('click', exportMap);
+        elements.clearDrafts.addEventListener('click', () => {
+          state.drafts = {};
+          persistDrafts();
+          render();
+        });
+        elements.resetDraft.addEventListener('click', () => {
+          const concept = selectedConcept();
+          if (!concept) return;
+          delete state.drafts[stableKey(concept)];
+          persistDrafts();
+          render();
+        });
+
+        elements.query.addEventListener('input', () => {
+          state.filters.query = elements.query.value;
+          render();
+        });
+        elements.statusFilter.addEventListener('change', () => {
+          state.filters.status = elements.statusFilter.value;
+          render();
+        });
+        elements.roleFilter.addEventListener('change', () => {
+          state.filters.role = elements.roleFilter.value;
+          render();
+        });
+        elements.qualityFilter.addEventListener('change', () => {
+          state.filters.quality = elements.qualityFilter.value;
+          render();
+        });
+      }
+
+      async function loadChapter(chapterId) {
+        const meta = state.index.chapters.find((chapter) => chapter.chapter_id === chapterId);
+        if (!meta) return;
+        state.selectedChapterId = chapterId;
+        state.selectedKey = '';
+        state.drafts = readDrafts(chapterId);
+        state.map = await loadJson(`/data/concept_graph/${meta.symbol_concept_map || `${chapterId}_symbol_concept_map.json`}`);
+      }
+
+      function render() {
+        const concepts = currentConcepts();
+        const visible = visibleConcepts(concepts);
+        if (!state.selectedKey && visible[0]) state.selectedKey = stableKey(visible[0]);
+        const selected = selectedConcept(visible);
+        renderChapters();
+        renderStats(concepts);
+        renderList(visible);
+        renderDetail(selected);
+        elements.chapterCount.textContent = String(state.index?.summary?.chapters || 0);
+        elements.currentChapter.textContent = state.selectedChapterId || 'Loading';
+        elements.exportPatch.disabled = Object.keys(state.drafts).length === 0;
+        elements.exportMap.disabled = !state.map;
+        elements.clearDrafts.disabled = Object.keys(state.drafts).length === 0;
+        elements.resetDraft.disabled = !selected || !state.drafts[stableKey(selected)];
+      }
+
+      function renderChapters() {
+        elements.chapters.innerHTML = (state.index?.chapters || []).map((chapter) => {
+          const summary = chapter.review_summary;
+          const reviewed = summary?.reviewed_entries || 0;
+          const total = summary?.symbol_concept_entries || chapter.symbol_concept_entries || 0;
+          return `
+            <button class="chapter-button ${chapter.chapter_id === state.selectedChapterId ? 'is-active' : ''}" type="button" data-chapter="${escapeAttr(chapter.chapter_id)}">
+              <span>${escapeHtml(chapter.chapter_id)}</span>
+              <small>${reviewed}/${total}</small>
+            </button>
+          `;
+        }).join('');
+      }
+
+      function renderStats(concepts) {
+        const summary = recomputeSummary(concepts);
+        elements.stats.innerHTML = [
+          stat('已审', summary.reviewed),
+          stat('未审', summary.unreviewed),
+          stat('低置信', summary.lowConfidence),
+          stat('草稿', Object.keys(state.drafts).length),
+          stat('合并候选', mergeGroupsForChapter().length),
+        ].join('');
+      }
+
+      function renderList(concepts) {
+        if (!concepts.length) {
+          elements.list.innerHTML = '<div class="empty">没有符合筛选条件的条目</div>';
+          return;
+        }
+        elements.list.innerHTML = concepts.map((concept) => {
+          const key = stableKey(concept);
+          const status = concept.review_status || 'unreviewed';
+          return `
+            <button class="row-button ${key === state.selectedKey ? 'is-active' : ''}" type="button" data-key="${escapeAttr(key)}">
+              <span class="status ${escapeAttr(status)}">${escapeHtml(REVIEW_LABELS[status] || status)}</span>
+              <span>
+                <span class="row-title">${escapeHtml(concept.concept_name)}</span>
+                <span class="muted">${escapeHtml(concept.formula_label)} · ${escapeHtml(concept.role)} · ${Math.round(Number(concept.confidence || 0) * 100)}%</span>
+              </span>
+              <code class="row-symbol">${escapeHtml(concept.symbol)}</code>
+            </button>
+          `;
+        }).join('');
+      }
+
+      function renderDetail(concept) {
+        if (!concept) {
+          elements.detailTitle.textContent = 'No item';
+          elements.detailBody.innerHTML = '<div class="empty">正在载入审核条目...</div>';
+          return;
+        }
+        const key = stableKey(concept);
+        const status = concept.review_status || 'unreviewed';
+        const mergeGroups = mergeGroupsForConcept(key);
+        elements.detailTitle.textContent = concept.concept_name;
+        elements.detailBody.innerHTML = `
+          <div class="symbol-box">
+            <code>${escapeHtml(concept.symbol)}</code>
+            <span class="muted">${escapeHtml(concept.formula_label)} · ${escapeHtml(concept.role)} · ${escapeHtml(status)}</span>
+          </div>
+          ${field('Concept name', 'concept_name', concept.concept_name)}
+          ${selectField('Concept type', 'concept_type', concept.concept_type, ['quantity_concept', 'math_concept', 'domain_concept', 'theorem_or_principle', 'operator_or_function', 'unknown'])}
+          ${textareaField('Definition', 'definition', concept.definition || '', 5)}
+          ${textareaField('中文定义', 'definition_zh', concept.definition_zh || '', 4)}
+          ${field('Canonical concept', 'canonical_concept_name', concept.canonical_concept_name || '')}
+          ${renderMergeGroups(mergeGroups, key)}
+          <div class="status-grid">
+            <button class="status-button" type="button" data-status="approved">通过</button>
+            <button class="status-button" type="button" data-status="needs_revision">需修订</button>
+            <button class="status-button" type="button" data-status="ambiguous">存疑</button>
+            <button class="status-button" type="button" data-status="rejected">拒绝</button>
+          </div>
+          ${textareaField('Review notes', 'review_notes', concept.review_notes || '', 4)}
+          <section class="evidence">
+            <div class="section-label">Evidence</div>
+            ${(concept.evidence || []).slice(0, 3).map((item) => `
+              <article>
+                <strong>${escapeHtml(item.block_type || '')}</strong>
+                <span>${escapeHtml(item.chunk_id || '')} · #${escapeHtml(String(item.block_index ?? ''))}</span>
+                ${item.sentence ? `<span>${escapeHtml(item.sentence)}</span>` : ''}
+              </article>
+            `).join('')}
+          </section>
+        `;
+      }
+
+      function renderMergeGroups(groups, currentKey) {
+        if (!groups.length) return '';
+        return `
+          <section class="candidate-panel">
+            <header>
+              <span class="section-label">合并候选</span>
+              <span class="muted">${groups.length}</span>
+            </header>
+            ${groups.map((group) => `
+              <div class="candidate-item">
+                <button
+                  class="candidate-button"
+                  type="button"
+                  data-canonical-id="${escapeAttr(group.canonical_candidate?.concept_id || '')}"
+                  data-canonical-name="${escapeAttr(group.canonical_candidate?.concept_name || '')}"
+                >
+                  ${escapeHtml(group.canonical_candidate?.concept_name || '')}
+                </button>
+                <span class="muted">${escapeHtml(group.review_priority || '')} · ${Math.round(Number(group.score || 0) * 100)}% · ${(group.reasons || []).map((reason) => escapeHtml(REASON_LABELS[reason] || reason)).join(' / ')}</span>
+                <div class="chips">
+                  ${(group.members || []).slice(0, 6).map((member) => `
+                    <span class="chip ${member.stable_key === currentKey ? 'current' : ''}">
+                      <code>${escapeHtml(member.symbol || '')}</code>
+                      ${escapeHtml(member.formula_label || '')}
+                    </span>
+                  `).join('')}
+                  ${(group.members || []).length > 6 ? `<span class="chip">+${group.members.length - 6}</span>` : ''}
+                </div>
+              </div>
+            `).join('')}
+          </section>
+        `;
+      }
+
+      function currentConcepts() {
+        return (state.map?.symbol_concepts || []).map((concept) => ({
+          ...concept,
+          ...(state.drafts[stableKey(concept)] || {}),
+        }));
+      }
+
+      function visibleConcepts(concepts) {
+        const term = state.filters.query.trim().toLowerCase();
+        return concepts.filter((concept) => {
+          if (state.filters.status !== 'all' && (concept.review_status || 'unreviewed') !== state.filters.status) return false;
+          if (state.filters.role !== 'all' && concept.role !== state.filters.role) return false;
+          if (state.filters.quality === 'low-confidence' && Number(concept.confidence || 0) >= 0.72) return false;
+          if (state.filters.quality === 'flagged' && !(concept.review_flags || []).length) return false;
+          if (state.filters.quality === 'merge-candidate' && !mergeGroupsForConcept(stableKey(concept)).length) return false;
+          if (!term) return true;
+          return [concept.concept_name, concept.symbol, concept.formula_label, concept.definition, concept.definition_zh]
+            .some((value) => String(value || '').toLowerCase().includes(term));
+        });
+      }
+
+      function selectedConcept(visible = visibleConcepts(currentConcepts())) {
+        return visible.find((concept) => stableKey(concept) === state.selectedKey) || visible[0] || null;
+      }
+
+      function recomputeSummary(concepts) {
+        const reviewed = concepts.filter((concept) => (concept.review_status || 'unreviewed') !== 'unreviewed').length;
+        return {
+          reviewed,
+          unreviewed: concepts.length - reviewed,
+          lowConfidence: concepts.filter((concept) => Number(concept.confidence || 0) < 0.72).length,
+        };
+      }
+
+      function updateDraft(concept, updates) {
+        const key = stableKey(concept);
+        const current = state.drafts[key] || {};
+        state.drafts[key] = {
+          ...current,
+          ...updates,
+          reviewed_by: updates.review_status && updates.review_status !== 'unreviewed' ? 'local_reviewer' : current.reviewed_by,
+          reviewed_at: updates.review_status && updates.review_status !== 'unreviewed' ? new Date().toISOString() : current.reviewed_at,
+        };
+        state.selectedKey = key;
+        persistDrafts();
+        render();
+      }
+
+      function flagsForStatus(status) {
+        if (status === 'approved') return [];
+        if (status === 'needs_revision') return ['needs_review'];
+        if (status === 'ambiguous') return ['ambiguous'];
+        if (status === 'rejected') return ['rejected'];
+        return [];
+      }
+
+      function mergeGroupsForChapter() {
+        return state.merge?.chapters?.[state.selectedChapterId]?.groups || [];
+      }
+
+      function mergeGroupsForConcept(key) {
+        return mergeGroupsForChapter().filter((group) => (group.member_keys || []).includes(key)).slice(0, 5);
+      }
+
+      function exportPatch() {
+        const entries = Object.entries(state.drafts).map(([key, draft]) => {
+          const original = (state.map?.symbol_concepts || []).find((concept) => stableKey(concept) === key);
+          return {
+            stable_key: key,
+            chapter_id: original?.chapter_id || state.selectedChapterId,
+            formula_id: original?.formula_id,
+            symbol: original?.symbol,
+            role: original?.role,
+            ...draft,
+          };
+        });
+        downloadJson(`${state.selectedChapterId}_symbol_concept_review_patch.json`, {
+          chapter_id: state.selectedChapterId,
+          updated_at: new Date().toISOString(),
+          entries,
+        });
+      }
+
+      function exportMap() {
+        const concepts = currentConcepts();
+        downloadJson(`${state.selectedChapterId}_symbol_concept_map.json`, {
+          ...state.map,
+          summary: {
+            ...(state.map?.summary || {}),
+            reviewed_entries: recomputeSummary(concepts).reviewed,
+            unreviewed_entries: recomputeSummary(concepts).unreviewed,
+          },
+          symbol_concepts: concepts,
+        });
+      }
+
+      function readDrafts(chapterId) {
+        try {
+          return JSON.parse(localStorage.getItem(storageKey(chapterId)) || '{}');
+        } catch {
+          return {};
+        }
+      }
+
+      function persistDrafts() {
+        localStorage.setItem(storageKey(state.selectedChapterId), JSON.stringify(state.drafts));
+      }
+
+      function storageKey(chapterId) {
+        return `knowstellation:concept-review:${chapterId}`;
+      }
+
+      function stableKey(concept) {
+        return [concept.chapter_id, concept.formula_id, concept.role, concept.symbol].join('::');
+      }
+
+      function field(label, name, value) {
+        return `
+          <label class="field">
+            <span>${escapeHtml(label)}</span>
+            <input name="${escapeAttr(name)}" value="${escapeAttr(value || '')}" />
+          </label>
+        `;
+      }
+
+      function selectField(label, name, value, options) {
+        return `
+          <label class="field">
+            <span>${escapeHtml(label)}</span>
+            <select name="${escapeAttr(name)}">
+              ${options.map((option) => `<option value="${escapeAttr(option)}" ${option === value ? 'selected' : ''}>${escapeHtml(option)}</option>`).join('')}
+            </select>
+          </label>
+        `;
+      }
+
+      function textareaField(label, name, value, rows) {
+        return `
+          <label class="field">
+            <span>${escapeHtml(label)}</span>
+            <textarea name="${escapeAttr(name)}" rows="${rows}">${escapeHtml(value || '')}</textarea>
+          </label>
+        `;
+      }
+
+      function stat(label, value) {
+        return `<div class="stat"><strong>${escapeHtml(String(value))}</strong>${escapeHtml(label)}</div>`;
+      }
+
+      async function loadJson(url) {
+        const response = await fetch(url, { cache: 'no-store' });
+        if (!response.ok) throw new Error(`${response.status} ${url}`);
+        return response.json();
+      }
+
+      function downloadJson(fileName, payload) {
+        const blob = new Blob([`${JSON.stringify(payload, null, 2)}\n`], { type: 'application/json' });
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        link.click();
+        URL.revokeObjectURL(url);
+      }
+
+      function escapeHtml(value) {
+        return String(value)
+          .replaceAll('&', '&amp;')
+          .replaceAll('<', '&lt;')
+          .replaceAll('>', '&gt;')
+          .replaceAll('"', '&quot;')
+          .replaceAll("'", '&#039;');
+      }
+
+      function escapeAttr(value) {
+        return escapeHtml(value);
+      }
+    </script>
+  </body>
+</html>

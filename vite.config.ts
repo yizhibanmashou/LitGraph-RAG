@@ -8,6 +8,9 @@ export default defineConfig(({ mode }) => {
 
   return {
     plugins: [react()],
+    optimizeDeps: {
+      entries: ['index.html'],
+    },
     server: {
       port: 5173,
       proxy: {

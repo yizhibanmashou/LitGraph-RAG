@@ -86,6 +86,145 @@ function estimateCalloutBox(note: string, symbol = '', containerWidth = 320): { 
   return { width, height };
 }
 
+function normalizeDisplayText(value = ''): string {
+  return value
+    .replace(/[\u200b-\u200d\ufeff]/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function regexEscape(value: string): string {
+  return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function stripMathEcho(text = '', symbol = ''): string {
+  let next = normalizeDisplayText(text);
+  if (!next || !symbol) return next;
+
+  for (const variant of symbolTextVariants(symbol)) {
+    if (!variant) continue;
+    const escaped = regexEscape(variant);
+    next = next
+      .replace(new RegExp(`^${escaped}\\s+${escaped}\\b`, 'iu'), variant)
+      .replace(new RegExp(`^${escaped}(?:\\s+|[，,：:：;；]+)`, 'iu'), '')
+      .trim();
+  }
+  return next;
+}
+
+function symbolTextVariants(symbol = ''): string[] {
+  const compact = normalizeDisplayText(symbol);
+  const plain = compact
+    .replace(/\\/g, '')
+    .replace(/[{}]/g, '')
+    .replace(/\s+/g, '');
+  const underscored = plain
+    .replace(/_([^_^]+)/g, '_$1')
+    .replace(/\^([^_^]+)/g, '^$1');
+  const readable = plain
+    .replace(/([A-Za-zΑ-Ωα-ω])_\{?([^{}]+)\}?/gu, '$1 $2')
+    .replace(/([A-Za-zΑ-Ωα-ω])\^\{?([^{}]+)\}?/gu, '$1 $2');
+  const compactReadable = readable.replace(/\s+/g, '');
+  return [...new Set([compact, plain, underscored, readable, compactReadable].filter(Boolean))]
+    .sort((a, b) => b.length - a.length);
+}
+
+function heuristicSymbolLabel(symbol = ''): string {
+  const compact = symbol.replace(/\s+/g, '');
+  if (/^\\Delta\s*p$|^\\Deltap$/.test(compact)) return '频率变化量';
+  if (/^\\Delta/.test(compact)) return '变化量';
+  if (/\\sigma/.test(compact) && /\^\{?2\}?/.test(compact)) {
+    if (/\\widehat\{?p/.test(compact)) return '频率估计方差';
+    if (/\\widehat\{?\\delta/.test(compact)) return '频率变化方差';
+    if (/_[{]?B[}]?/i.test(compact)) return '群体间方差项';
+    if (/_[{]?a[}]?/i.test(compact)) return '加性方差项';
+    return '方差项';
+  }
+  if (/^[A-Za-z]_\{?[0-9A-Za-z]+\}?\^\{\([^)]+\)\}$/.test(compact)) return '索引效应项';
+  if (compact === 'B') return '尺度参数';
+  if (compact === 'n') return '数量参数';
+  return '';
+}
+
+function cleanCalloutNote(symbol: string, note = ''): string {
+  let next = normalizeDisplayText(note);
+  for (const variant of symbolTextVariants(symbol)) {
+    const escaped = regexEscape(variant);
+    next = next.replace(new RegExp(`^${escaped}\\s*(?:表示|是)\\s*`, 'i'), '').trim();
+  }
+
+  if (
+    !next
+    || /^[A-Za-z0-9_\\^{}()[\].,\-\s]+$/.test(next)
+    || /\.\.\./.test(next)
+    || /^if\s/i.test(next)
+  ) {
+    return heuristicSymbolLabel(symbol) || next;
+  }
+  return next;
+}
+
+function stripRepeatedLead(text = '', lead = ''): string {
+  let next = normalizeDisplayText(text);
+  const normalizedLead = normalizeDisplayText(lead);
+  if (!next || !normalizedLead) return next;
+
+  const escapedLead = regexEscape(normalizedLead);
+  const leadPattern = new RegExp(`^${escapedLead}(?:[，,：:；;\\s]+|$)`, 'iu');
+  for (let index = 0; index < 3; index += 1) {
+    const stripped = next.replace(leadPattern, '').trim();
+    if (stripped === next) break;
+    next = stripped;
+  }
+  return next === normalizedLead ? '' : next;
+}
+
+function stripSymbolLead(text: string, note: string, symbol = ''): string {
+  let next = normalizeDisplayText(text);
+  const variants = symbolTextVariants(symbol);
+  const notes = [note, ...variants.map((variant) => `${variant} 表示 ${note}`)].filter(Boolean);
+
+  for (const variant of variants) {
+    const escapedSymbol = regexEscape(variant);
+    const escapedNote = regexEscape(note);
+    next = next
+      .replace(new RegExp(`^${escapedSymbol}\\s*(?:表示|是)\\s*${escapedNote}(?:[，,：:；;\\s]+|$)`, 'iu'), '')
+      .trim();
+  }
+
+  if (note) {
+    const escapedNote = regexEscape(note);
+    next = next
+      .replace(new RegExp(`^(?:表示|是)\\s*${escapedNote}`, 'iu'), '')
+      .trim();
+  }
+
+  for (const lead of notes) {
+    next = stripRepeatedLead(next, lead);
+  }
+  return next;
+}
+
+function isGenericCalloutTail(text: string): boolean {
+  return /^(?:先用这个短标签定位它在本式中的角色|先结合附近文字读它的定义|可以先按这段话定位它的含义|是这个公式直接使用的符号)[。；;.,，\s]*$/u.test(text);
+}
+
+function cleanCalloutText(note: string, text = '', symbol = ''): string {
+  const withoutSymbolEcho = stripMathEcho(text, symbol);
+  const cleaned = stripSymbolLead(withoutSymbolEcho, note, symbol)
+    .replace(/^.*?是这个公式直接使用的符号。先结合附近文字读它的定义：/u, '')
+    .replace(/^.*?出现在当前公式附近的教材语境中，可以先按这段话定位它的含义：/u, '')
+    .replace(/^.*?；先用这个短标签定位它在本式中的角色。?$/u, '')
+    .replace(/^[，,：:；;\s]+/u, '')
+    .trim();
+  const latinLetters = (cleaned.match(/[A-Za-z]/g) || []).length;
+  const cjkLetters = (cleaned.match(/[\u4e00-\u9fff]/g) || []).length;
+  if (latinLetters > cjkLetters * 2 && cleaned.length > 56) return '';
+  if (isGenericCalloutTail(cleaned)) return '';
+  if (!cleaned || normalizeDisplayText(cleaned) === normalizeDisplayText(note)) return '';
+  return cleaned;
+}
+
 export const FormulaNode = React.memo(
   ({ id, data, selected }: NodeProps) => {
     const nodeRef = React.useRef<HTMLDivElement | null>(null);
@@ -108,17 +247,20 @@ export const FormulaNode = React.memo(
           ? symbolNotes
               .map((prereq) => {
                 const symbol = prereq.symbol || prereq.via_symbol || prereq.target || '';
-                const note = resolveSymbolShortLabel(prereq, {
-                  shortLabel: prereq.shortLabel,
-                  llmText: prereq.llmText,
-                });
+                const rawNote = prereq.kind === 'formula'
+                  ? '整式结构导读'
+                  : resolveSymbolShortLabel(prereq, {
+                      shortLabel: prereq.shortLabel,
+                      llmText: prereq.llmText,
+                    });
+                const note = cleanCalloutNote(symbol, rawNote);
                 const text = resolveSymbolMeaning(prereq, {
                   llmText: prereq.llmText,
                 });
                 return {
                   symbol,
                   note,
-                  text,
+                  text: cleanCalloutText(note, text, symbol),
                   kind: prereq.kind || 'symbol',
                   target: prereq.target,
                   status: prereq.llmStatus,

@@ -227,7 +227,7 @@ export function buildCompoundFocusAnnotations(formula?: Pick<ChapterFormula, 'la
     addCompound(seen, items, symbol, describeCompound(symbol, latex), context);
   }
 
-  const poweredGroupPattern = /(?:\\left)?\(\s*([^()]{1,90}[+\-][^()]{1,90})\s*(?:\\right)?\)(?:\^\{([^{}]+)\}|\^([A-Za-z0-9])|([A-Z]))/g;
+  const poweredGroupPattern = /(?:\\left)?\(\s*([^()]{1,90}[+\-][^()]{1,90})\s*(?:\\right)?\)(?:\^\{([^{}]+)\}|\^([A-Za-z0-9])|(T)(?=\\|[\s,;=+\-)]|$))/g;
   while ((match = poweredGroupPattern.exec(latex)) && items.length < MAX_COMPOUND_NOTES) {
     const inner = stripOuterBraces(match[1] || '');
     if (/^1\s*-/.test(inner)) continue;
@@ -259,11 +259,12 @@ export function buildCompoundFocusAnnotations(formula?: Pick<ChapterFormula, 'la
 export function buildFormulaWideFocusAnnotation(formula?: Pick<ChapterFormula, 'latex' | 'context_text'> | null): FocusAnnotationNote | null {
   if (!formula?.latex) return null;
   const meaning = `整条公式的结构提示：${compactContext(formula.context_text || '先从等号两侧和括号组合项读起，判断每一项是在定义、递推还是缩放。', 96)}`;
+  const readableMeaning = '把整条公式作为一个关系来读：先看等号左侧正在定义或预测的量，再看右侧由哪些函数、条件和小量项共同决定。';
   return {
     type: 'variable_definition',
     symbol: formula.latex,
-    meaning,
-    definition: meaning,
+    meaning: readableMeaning || meaning,
+    definition: readableMeaning || meaning,
     source: 'formula_structure',
     source_excerpt: formula.context_text,
     confidence: 0.6,
