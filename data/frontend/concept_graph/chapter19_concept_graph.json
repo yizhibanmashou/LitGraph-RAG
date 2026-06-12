@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter19",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:03.774Z",
+  "generated_at": "2026-06-11T11:39:26.959Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter19_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter19.jsonl",
@@ -95,7 +95,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "The resulting covariance matrix, for the vector of observations, becomes (19.2a) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_2a_used_sigma_e_2",
@@ -163,7 +163,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Because our focus is generally on breeding values, any dominance variance gets swept into.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_2b_used_h_2",
@@ -242,8 +242,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Boldsymbol-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Boldsymbol-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Boldsymbol-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "Boldsymbol-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -298,8 +298,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_3b_used_widehat_boldsymbol_beta",
@@ -387,7 +387,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "He BLUEs, BLUPs are simply functions of as, while scales as.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -587,7 +587,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence My=(I-H)y=y- widehat y =y- m Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Beta Vector-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Beta Vector-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_3f_used_hat_boldsymbol",
@@ -599,7 +599,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence My=(I-H)y=y- widehat y =y- m Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Boldsymbol-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Boldsymbol-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -686,8 +686,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Y Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Y Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Y Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "Y Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -798,8 +798,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_4_used_lambda",
@@ -810,8 +810,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_4_used_widehat_beta",
@@ -834,8 +834,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_4_used_b",
@@ -1058,7 +1058,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Sampling variance-covariance matrices for and also follow from the mixed-model equations.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5a_used_t",
@@ -1082,7 +1082,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5a_used_lambda",
@@ -1094,7 +1094,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5a_used_f",
@@ -1346,7 +1346,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "These are the variances and covariances among the vector of prediction errors, and they are given by the matrix (19.5c) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1401,8 +1401,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5d_used_sigma_e_2",
@@ -1425,8 +1425,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "A Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "A Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1505,7 +1505,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "He BLUEs, BLUPs are simply functions of as, while scales as.",
-              "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -1547,7 +1547,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "These are the variances and covariances among the vector of prediction errors, and they are given by the matrix (19.5c) Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -1600,8 +1600,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Y Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Y Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Y Matrix-hat names the biological object or model condition being used in this formula.",
+              "definition_zh": "Y Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1617,7 +1617,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Following Equation 19.3c, Kennedy and Trus (1993) showed that we can also express Equation 19.5c as (19.5e) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5e_used_widehat_mathbf_a",
@@ -1629,7 +1629,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Following Equation 19.3c, Kennedy and Trus (1993) showed that we can also express Equation 19.5c as (19.5e) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5e_used_sigma_e_2_mathbf_z_t_mathbf_m_mathbf_z_lambda_mathbf_a_1",
@@ -1641,7 +1641,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Following Equation 19.3c, Kennedy and Trus (1993) showed that we can also express Equation 19.5c as (19.5e) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "Sigma Sub E Power 2(z Matrix Power Tm Matrixz Matrix+lambdaa Matrix Power -1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub E Power 2(z Matrix Power Tm Matrixz Matrix+lambdaa Matrix Power -1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -1777,7 +1777,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Finally, the covariances between estimated fixed effects and prediction errors are (19.5f) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_5f_used_widehat_mathbf_a_mathbf_a",
@@ -1789,7 +1789,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Finally, the covariances between estimated fixed effects and prediction errors are (19.5f) Analysis of Short-term Selection Experiments: 2.",
-          "definition_zh": "A Matrix-hat-a Matrix 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "A Matrix-hat-a Matrix 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1946,7 +1946,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Finally, the covariances between estimated fixed effects and prediction errors are (19.5f) Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -2034,7 +2034,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tor includes the values for all measured individuals from generation, including those culled as well as those that were allowed to reproduce.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_7a_used_mu",
@@ -2339,7 +2339,7 @@
               "confidence": 0.81,
               "concept_type": "domain_concept",
               "definition": "Sampling variance-covariance matrices for and also follow from the mixed-model equations.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_5a_used_t",
@@ -2363,7 +2363,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -2415,7 +2415,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Is no genetic covariance between residuals.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_7c_used_e",
@@ -2427,7 +2427,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Is no genetic covariance between residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_7c_used_b",
@@ -2486,8 +2486,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Response Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Response Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         }
       ],
       "edges": [
@@ -2674,7 +2674,7 @@
               "confidence": 0.81,
               "concept_type": "domain_concept",
               "definition": "Sampling variance-covariance matrices for and also follow from the mixed-model equations.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_5a_used_t",
@@ -2698,7 +2698,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -2737,8 +2737,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_7d_used_b",
@@ -2892,7 +2892,7 @@
       "concept_id": "concept_chapter19_formula_19_8a_defined_widehat_overline_a_k",
       "name": "Mean Coefficient",
       "definition": "He estimated mean breeding value in generation (or, alternatively, at time point) is simply obtained by calculating the average of individual breeding-value estimates for that generation.",
-      "definition_zh": "Mean Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Mean Coefficient 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_19.8a",
       "defined_symbol": "\\widehat{\\overline{a}}_{k}",
@@ -2926,7 +2926,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "He estimated mean breeding value in generation (or, alternatively, at time point) is simply obtained by calculating the average of individual breeding-value estimates for that generation.",
-          "definition_zh": "Mean Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Coefficient 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_8a_used_n_k",
@@ -3000,7 +3000,7 @@
       "concept_id": "concept_chapter19_formula_19_8b_defined_widehat_overline_mathbf_a",
       "name": "Response At Generation K",
       "definition": "Because the predicted mean breeding value in generation 0 (the unselected base population) is zero by construction , the total (cumulative) response at generation k is.",
-      "definition_zh": "Response At Generation K 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Response At Generation K 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_19.8b",
       "defined_symbol": "\\widehat{\\overline{\\mathbf{a}}}",
@@ -3033,8 +3033,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Coefficient places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Coefficient summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Coefficient 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_8b_used_widehat_mathbf_a",
@@ -3045,8 +3045,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "A Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "A Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3158,7 +3158,7 @@
               "confidence": 0.81,
               "concept_type": "domain_concept",
               "definition": "Sampling variance-covariance matrices for and also follow from the mixed-model equations.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_5a_used_t",
@@ -3182,7 +3182,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -3251,8 +3251,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Lambda names the biological object or model condition being used in this formula.",
+              "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_7d_used_b",
@@ -3291,8 +3291,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "A Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "A Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "A Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "A Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3396,7 +3396,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Ng selected and control populations (or contrasting populations selected in opposite directions).",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_9_used_k",
@@ -3420,7 +3420,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ng selected and control populations (or contrasting populations selected in opposite directions).",
-          "definition_zh": "E Sub J,tk 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub J,tk 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_9_used_mu",
@@ -3559,8 +3559,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Coefficient places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Coefficient summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Coefficient 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_10_used_overline_y_c_t",
@@ -3571,8 +3571,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Response Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Response Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_10_used_s",
@@ -3607,8 +3607,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_10_used_e_c_t",
@@ -3619,8 +3619,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub C,t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub C,t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub C,t names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub C,t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_10_used_e_s_t",
@@ -3631,8 +3631,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub S,t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub S,t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub S,t names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub S,t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3739,8 +3739,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_11_used_b_t",
@@ -3763,8 +3763,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub Tk places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub Tk 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub Tk names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub Tk 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_11_used_mu",
@@ -3868,7 +3868,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Vector of all observations from line.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_12a_used_b_t",
@@ -3916,7 +3916,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Vector of all observations from line.",
-          "definition_zh": "E Sub K,ti 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub K,ti 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_12a_used_mu",
@@ -4047,8 +4047,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_12b_used_b_k_t",
@@ -4095,8 +4095,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub K,ti places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub K,ti 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub K,ti names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub K,ti 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_12b_used_mu",
@@ -4224,7 +4224,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Generation t onward (say, to generation T), and the relationship matrix is adjusted to assume that generation t is the base population.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -4327,8 +4327,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Coefficient places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Coefficient summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Coefficient 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_14_used_t",
@@ -4568,7 +4568,7 @@
           "confidence": 0.77,
           "concept_type": "domain_concept",
           "definition": "Its variance, for individual i is also independent of parental breeding values, but it does depend on the average inbreeding, of its parents, such that",
-          "definition_zh": "Mean Function 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Function 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_15b_used_sigma_a_2",
@@ -4579,8 +4579,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -4661,7 +4661,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "I (1 - f i) i k j i A kk = (1 + f k) $ denotes the kth diagonal element of the relationship matrix, A.",
-          "definition_zh": "Mean Function 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Function 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_16_used_f_j",
@@ -5142,7 +5142,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Bf a b) = sigma a 2 I Var(s) = (sigma a 2 / 2) F a b s Lambda 0.5(1 - f) $ when both parents are known.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -5227,8 +5227,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5317,8 +5317,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(1) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(1) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_19_used_sigma_a_2_2",
@@ -5329,8 +5329,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -5525,8 +5525,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -5613,8 +5613,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -5701,8 +5701,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -5833,7 +5833,7 @@
               "confidence": 0.81,
               "concept_type": "domain_concept",
               "definition": "Sampling variance-covariance matrices for and also follow from the mixed-model equations.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_5a_used_t",
@@ -5857,7 +5857,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Henderson (1975) showed that the covariance matrix for the BLUE vector Analysis of Short-term Selection Experiments: 2.",
-              "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -5872,8 +5872,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_20c_used_sigma_e_2",
@@ -6114,8 +6114,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -6168,8 +6168,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -6222,8 +6222,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_20b_used_sigma_e_2",
@@ -6322,8 +6322,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_21a_used_widehat_beta",
@@ -6346,8 +6346,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_21a_used_b",
@@ -6574,8 +6574,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_21b_used_sigma_e_2",
@@ -7233,8 +7233,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_24a_used_lambda",
@@ -7245,8 +7245,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_24a_used_widehat_beta",
@@ -7269,8 +7269,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_24a_used_b",
@@ -7441,7 +7441,7 @@
               "confidence": 0.81,
               "concept_type": "domain_concept",
               "definition": "I (1 - f i) i k j i A kk = (1 + f k) $ denotes the kth diagonal element of the relationship matrix, A.",
-              "definition_zh": "Mean Function 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Mean Function 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_16_used_f_j",
@@ -7963,8 +7963,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_25b_used_sigma_d_2",
@@ -8094,8 +8094,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_25b_used_sigma_d_2",
@@ -8254,8 +8254,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_25b_used_sigma_d_2",
@@ -8529,7 +8529,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ance effects for (noninbred) individuals i and j is the product of the dominance genetic variance and the coefficient of fraternity,.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_26a_used_theta_gk",
@@ -8541,7 +8541,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ance effects for (noninbred) individuals i and j is the product of the dominance genetic variance and the coefficient of fraternity,.",
-          "definition_zh": "Theta Sub Gk 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub Gk 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_26a_used_theta_gl",
@@ -8553,7 +8553,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ance effects for (noninbred) individuals i and j is the product of the dominance genetic variance and the coefficient of fraternity,.",
-          "definition_zh": "Theta Sub Gl 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub Gl 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_26a_used_theta_hk",
@@ -8565,7 +8565,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ance effects for (noninbred) individuals i and j is the product of the dominance genetic variance and the coefficient of fraternity,.",
-          "definition_zh": "Theta Sub Hk 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub Hk 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_26a_used_theta_hl",
@@ -8577,7 +8577,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ance effects for (noninbred) individuals i and j is the product of the dominance genetic variance and the coefficient of fraternity,.",
-          "definition_zh": "Theta Sub Hl 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub Hl 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8788,7 +8788,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is usually not a serious problem unless the pedigree is highly inbred.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_27_used_widehat_beta",
@@ -8859,8 +8859,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8992,7 +8992,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "First, there may be inbreeding depression.",
-          "definition_zh": "Benefit 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Benefit 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_28_used_a_ti",
@@ -9028,7 +9028,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "First, there may be inbreeding depression.",
-          "definition_zh": "E Sub Ti 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub Ti 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_28_used_mu",
@@ -9343,8 +9343,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_31a_used_p",
@@ -9367,8 +9367,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -9432,7 +9432,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "Enerate a new value, drawing from the conditional distribution based on the value,.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_31b_used_y_i",
@@ -9444,7 +9444,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Enerate a new value, drawing from the conditional distribution based on the value,.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_31b_used_p",
@@ -9534,8 +9534,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_chapter19_formula_19_31a_used_p",
@@ -9558,8 +9558,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -9574,8 +9574,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_32a_used_f",
@@ -9687,7 +9687,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E Carlo (MC) estimate of, as as.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_32b_used_f",
@@ -10001,8 +10001,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_33a_used_beta",
@@ -10106,7 +10106,7 @@
           "confidence": 0.8,
           "concept_type": "quantity_concept",
           "definition": "The infinitesimal model is assumed, with the distribution of breeding values, given the relationship matrix, A, and additive genetic variance, being multivariate normal",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter19_formula_19_33b_used_v",
@@ -10141,8 +10141,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [

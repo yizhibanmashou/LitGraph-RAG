@@ -112,6 +112,10 @@ const UNSAFE_CONCEPT_COPY_PATTERNS = [
   /supporting formula/i,
   /local mathematical quantity/i,
   /local formula context/i,
+  /帮你把符号/,
+  /标记的是/,
+  /places the symbol back/i,
+  /marks the object/i,
 ];
 
 const args = parseArgs(process.argv.slice(2));

@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter14",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:03.120Z",
+  "generated_at": "2026-06-11T11:39:26.085Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter14_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter14.jsonl",
@@ -166,8 +166,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_2a_used_x_p",
@@ -190,8 +190,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Uleq X Sub [p] places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Uleq X Sub [p] 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Uleq X Sub [p] names the biological object or model condition being used in this formula.",
+          "definition_zh": "Uleq X Sub [p] 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -263,7 +263,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Here denotes a unit normal random variable.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_2b_used_x_1_p",
@@ -299,7 +299,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Here denotes a unit normal random variable.",
-          "definition_zh": "U>x Sub [1-p] 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "U>x Sub [1-p] 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -349,7 +349,7 @@
       "concept_id": "concept_chapter14_formula_14_3a_defined_bar_imath",
       "name": "Expected Selection Intensity",
       "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-      "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_14.3a",
       "defined_symbol": "\\bar\\imath",
@@ -565,7 +565,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-          "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter14_formula_14_1_statement",
@@ -646,7 +646,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Equation 14.3a can be approximated by (14.3b) a result due to Smith (1969).",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_3b_used_p",
@@ -728,7 +728,7 @@
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
           "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-          "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter14_formula_14_1_statement",
@@ -856,8 +856,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_4a_used_y_p",
@@ -868,8 +868,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Y_p places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Y_p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Y_p names the biological object or model condition being used in this formula.",
+          "definition_zh": "Y_p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -971,7 +971,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-          "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter14_formula_14_1_statement",
@@ -1076,7 +1076,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Lindgren and Nilsson (1985) found this approximation to be quite accurate for.",
-          "definition_zh": "Imath-bar Sub (n,m) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar Sub (n,m) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_4b_used_m",
@@ -1087,8 +1087,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1174,7 +1174,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-          "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter14_formula_14_1_statement",
@@ -1267,7 +1267,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "En and Nilsson (1985) found this approximation to be quite accurate for.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1352,7 +1352,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-              "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             }
           ],
           "introduced_concepts": [
@@ -1390,7 +1390,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Lindgren and Nilsson (1985) found this approximation to be quite accurate for.",
-              "definition_zh": "Imath-bar Sub (n,m) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Imath-bar Sub (n,m) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_4b_used_m",
@@ -1401,8 +1401,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "M names the biological object or model condition being used in this formula.",
+              "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -1419,7 +1419,7 @@
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
           "definition": "It immediately follows that, and Equation 14.1 yields the expected selection intensity as",
-          "definition_zh": "Expected Selection Intensity 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Selection Intensity 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter14_formula_14_1_statement",
@@ -1512,7 +1512,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This important result for certain types of family selection is revisited in more detail in Chapter 21.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_5_used_p",
@@ -1535,8 +1535,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_5_used_n_2",
@@ -1678,8 +1678,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "U names the biological object or model condition being used in this formula.",
+              "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_2a_used_x_p",
@@ -1702,8 +1702,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Uleq X Sub [p] places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Uleq X Sub [p] 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Uleq X Sub [p] names the biological object or model condition being used in this formula.",
+              "definition_zh": "Uleq X Sub [p] 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1898,8 +1898,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_7_used_h_2",
@@ -2213,8 +2213,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Q_t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Q_t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Q_t names the biological object or model condition being used in this formula.",
+          "definition_zh": "Q_t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_8b_used_d",
@@ -2436,8 +2436,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Q_t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Q_t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Q_t names the biological object or model condition being used in this formula.",
+          "definition_zh": "Q_t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_9_used_x_1_q_t",
@@ -3199,8 +3199,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_12_used_alpha",
@@ -3223,8 +3223,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Uleq X places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Uleq X 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Uleq X names the biological object or model condition being used in this formula.",
+          "definition_zh": "Uleq X 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_12_used_x",
@@ -3339,8 +3339,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_13a_used_mu_i",
@@ -3468,7 +3468,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Here is an individual's breeding value and the are fixed effects (such as adjustments for age and sex, whose values in individual are given by the).",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3548,7 +3548,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Here is an individual's breeding value and the are fixed effects (such as adjustments for age and sex, whose values in individual are given by the).",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_13c_used_mu",
@@ -3779,8 +3779,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_14b_used_z",
@@ -3803,8 +3803,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3891,8 +3891,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_14c_used_z",
@@ -3927,8 +3927,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Power -1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Power -1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Power -1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Power -1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_14c_used_x_k_i",
@@ -4124,8 +4124,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_14c_used_z",
@@ -4189,7 +4189,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E simple logistic function, (Equation 14.10a).",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_15a_used_l",
@@ -4201,7 +4201,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E simple logistic function, (Equation 14.10a).",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_15a_used_i",
@@ -4408,8 +4408,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_15b_used_l",
@@ -4420,8 +4420,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_15b_used_i",
@@ -4553,7 +4553,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Motivated by the previous treatment of binary traits, one might imagine some underlying liability Short-term Changes in the Mean: 2.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_16_used_y",
@@ -4564,8 +4564,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_16_used_e_lambda",
@@ -4576,8 +4576,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_16_used_k",
@@ -4812,7 +4812,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Oper expectation for a Poisson.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_17b_used_x_k_i",
@@ -4848,7 +4848,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Oper expectation for a Poisson.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_17b_used_mu",
@@ -4980,7 +4980,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "To compute thes Short-term Changes in the Mean: 2.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_18_used_mu",
@@ -5003,8 +5003,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5096,7 +5096,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "To compute these expectations, recall that the expression is the moment-generating function of the random variable, x (Johnson and Kotz 1970a).",
-          "definition_zh": "E Power Tx 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power Tx 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_19a_used_t",
@@ -5204,7 +5204,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "In this case, with a mean, equal to zero and variance of, setting t = 1 yields (14.19b) Short-term Changes in the Mean: 2.",
-          "definition_zh": "E Power X 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power X 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5299,7 +5299,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "To compute thes Short-term Changes in the Mean: 2.",
-              "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_18_used_mu",
@@ -5326,8 +5326,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_20a_used_sigma_e_2",
@@ -5350,8 +5350,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_20a_used_mu",
@@ -5477,8 +5477,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_20a_used_sigma_e_2",
@@ -5501,8 +5501,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_20a_used_mu",
@@ -5640,8 +5640,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_20a_used_sigma_e_2",
@@ -5664,8 +5664,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter14_formula_14_20a_used_mu",
@@ -5693,7 +5693,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Applying Equation 14.20a, the response on the phenotypic scale becomes (14.21) Short-term Changes in the Mean: 2.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_21_used_s",
@@ -5716,8 +5716,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter14_formula_14_21_used_mu",

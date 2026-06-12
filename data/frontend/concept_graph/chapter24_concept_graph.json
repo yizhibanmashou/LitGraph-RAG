@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter24",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:07.261Z",
+  "generated_at": "2026-06-11T11:39:29.595Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter24_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter24.jsonl",
@@ -24,8 +24,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_1a_defined_delta_sigma_a_2",
       "name": "Changesigma Sub a Power 2",
-      "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+      "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.1a",
       "defined_symbol": "\\Delta\\sigma_{a}^{2}",
@@ -70,8 +70,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_1a_used_sigma_a_2_t",
@@ -82,8 +82,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -178,8 +178,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_1b_used_kappa",
@@ -190,8 +190,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_1b_used_d",
@@ -226,8 +226,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -301,7 +301,7 @@
       "concept_id": "concept_chapter24_formula_24_1c_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "They remove all of the initial genic variance (, and hence) after sufficient time (generations, ignoring new mutation).",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.1c",
       "defined_symbol": "\\sigma_{a}^{2}",
@@ -324,8 +324,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -361,8 +361,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_1a_used_sigma_a_2_t",
@@ -373,8 +373,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -414,7 +414,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They remove all of the initial genic variance (, and hence) after sufficient time (generations, ignoring new mutation).",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_1c_used_sigma_a_2_t",
@@ -426,7 +426,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They remove all of the initial genic variance (, and hence) after sufficient time (generations, ignoring new mutation).",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -487,8 +487,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_2a_defined_delta_sigma_a_2",
       "name": "Changesigma Sub a Power 2",
-      "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+      "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.2a",
       "defined_symbol": "\\Delta\\sigma_{a}^{2}",
@@ -534,7 +534,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2a_used_kappa",
@@ -545,8 +545,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2a_used_h_2",
@@ -581,8 +581,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -702,7 +702,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2b_used_kappa",
@@ -713,8 +713,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2b_used_d",
@@ -761,8 +761,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -878,7 +878,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Hlight the changes that occur when we assume a finite number of loci and/or finite population size.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2c_used_kappa",
@@ -890,7 +890,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hlight the changes that occur when we assume a finite number of loci and/or finite population size.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2c_used_d",
@@ -938,7 +938,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hlight the changes that occur when we assume a finite number of loci and/or finite population size.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -1040,8 +1040,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -1078,7 +1078,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2a_used_kappa",
@@ -1089,8 +1089,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1118,7 +1118,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decaying to zero (in the absence of mutation).",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2d_used_sigma_a_2",
@@ -1129,8 +1129,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_2d_used_h_2",
@@ -1165,8 +1165,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -1267,8 +1267,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -1305,7 +1305,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2a_used_kappa",
@@ -1316,8 +1316,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -1371,7 +1371,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_used_kappa",
@@ -1382,8 +1382,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1398,8 +1398,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1487,8 +1487,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -1516,8 +1516,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1533,7 +1533,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_4_used_kappa",
@@ -1545,7 +1545,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_4_used_h_2",
@@ -1664,7 +1664,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_4_used_kappa",
@@ -1676,7 +1676,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_4_used_h_2",
@@ -1719,8 +1719,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -1748,8 +1748,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -1765,7 +1765,7 @@
           "confidence": 0.8,
           "concept_type": "quantity_concept",
           "definition": "One direct application of Equation 24.4 involves the distribution of the additive genetic variance within the population.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5a_used_s",
@@ -1788,8 +1788,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "F names the biological object or model condition being used in this formula.",
+          "definition_zh": "F 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5a_used_kappa",
@@ -1800,8 +1800,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5a_used_sigma_2_fs",
@@ -1812,8 +1812,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(fs) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(fs) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(fs) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(fs) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5a_used_fs",
@@ -1824,8 +1824,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Fs places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Fs 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Fs names the biological object or model condition being used in this formula.",
+          "definition_zh": "Fs 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5a_used_h_2",
@@ -1940,7 +1940,7 @@
       "concept_id": "concept_chapter24_formula_24_5b_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "One direct application of Equation 24.4 involves the distribution of the additive genetic variance within the population.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.5b",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -1993,7 +1993,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_4_used_kappa",
@@ -2005,7 +2005,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "That the dynamics of the genic variance and the disequilibrium operate on rather different time scales.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_4_used_h_2",
@@ -2048,8 +2048,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -2077,8 +2077,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -2106,7 +2106,7 @@
           "confidence": 0.88,
           "concept_type": "quantity_concept",
           "definition": "One direct application of Equation 24.4 involves the distribution of the additive genetic variance within the population.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5b_used_t",
@@ -2142,7 +2142,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "D sigma a 2 $ and d Change on Different Time Scales",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5b_used_kappa",
@@ -2154,7 +2154,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "D sigma a 2 $ and d Change on Different Time Scales",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5b_used_l",
@@ -2166,7 +2166,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "D sigma a 2 $ and d Change on Different Time Scales",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_5b_used_f",
@@ -2490,8 +2490,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7a_used_t",
@@ -2686,8 +2686,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2798,8 +2798,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7c_used_r_ij",
@@ -2987,8 +2987,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "T+1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7c_used_r_ij",
@@ -3015,8 +3015,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7d_used_tilde_delta",
@@ -3027,8 +3027,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tildedelta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tildedelta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tildedelta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tildedelta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7d_used_tilde_h",
@@ -3039,8 +3039,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tildeh places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tildeh 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tildeh names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tildeh 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7d_used_tilde_h_4",
@@ -3051,8 +3051,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tildeh Power 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tildeh Power 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tildeh Power 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tildeh Power 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_7d_used_n",
@@ -3233,8 +3233,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7d_used_tilde_delta",
@@ -3245,8 +3245,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Tildedelta places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Tildedelta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Tildedelta names the biological object or model condition being used in this formula.",
+              "definition_zh": "Tildedelta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7d_used_tilde_h",
@@ -3257,8 +3257,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Tildeh places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Tildeh 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Tildeh names the biological object or model condition being used in this formula.",
+              "definition_zh": "Tildeh 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7d_used_tilde_h_4",
@@ -3269,8 +3269,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Tildeh Power 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Tildeh Power 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Tildeh Power 4 names the biological object or model condition being used in this formula.",
+              "definition_zh": "Tildeh Power 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3285,8 +3285,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_8a_used_t",
@@ -3309,8 +3309,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildedelta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildedelta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widetildedelta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildedelta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_8a_used_widetilde_h",
@@ -3321,8 +3321,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildeh places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildeh 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widetildeh names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildeh 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_8a_used_widetilde_h_4",
@@ -3333,8 +3333,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildeh Power 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildeh Power 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widetildeh Power 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildeh Power 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_8a_used_n",
@@ -3369,8 +3369,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildec Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildec Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widetildec Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildec Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3596,8 +3596,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_9_used_h_2",
@@ -3676,8 +3676,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_11c_used_t",
@@ -3712,8 +3712,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_11c_used_r_ij",
@@ -3816,8 +3816,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_10_used_i",
@@ -3912,8 +3912,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_11b_used_t",
@@ -3936,8 +3936,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_11b_used_r_ij",
@@ -4045,7 +4045,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Of the phenotypic distribution, gradients for the skew and higher moments will generally be negligible.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_12a_used_s",
@@ -4140,8 +4140,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_12b_used_s_2",
@@ -4283,8 +4283,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_10_used_i",
@@ -4362,7 +4362,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Of the phenotypic distribution, gradients for the skew and higher moments will generally be negligible.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12a_used_s",
@@ -4425,8 +4425,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_13a_used_c_h_ell",
@@ -4437,8 +4437,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_13a_used_t",
@@ -4473,8 +4473,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_13a_used_l",
@@ -4485,8 +4485,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_13a_used_d",
@@ -4656,8 +4656,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_11c_used_t",
@@ -4692,8 +4692,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "T+1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -4734,8 +4734,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12b_used_s_2",
@@ -4775,7 +4775,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "D in terms of second-order covariances.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14a_used_s_2",
@@ -4834,8 +4834,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4961,8 +4961,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_11c_used_t",
@@ -4997,8 +4997,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "T+1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -5013,8 +5013,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14b_used_c_ij",
@@ -5025,8 +5025,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14b_used_s_2",
@@ -5061,8 +5061,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14b_used_delta_2",
@@ -5260,7 +5260,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "D in terms of second-order covariances.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14a_used_s_2",
@@ -5337,8 +5337,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7a_used_t",
@@ -5377,8 +5377,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -5389,8 +5389,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -5750,7 +5750,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "How do the moments of G depend on the distribution of allelic effects at individual loci?",
-          "definition_zh": "X Sub Fa,i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X Sub Fa,i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_16_used_x_mo_i",
@@ -5762,7 +5762,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "How do the moments of G depend on the distribution of allelic effects at individual loci?",
-          "definition_zh": "X Sub Mo,i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X Sub Mo,i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5877,8 +5877,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_17_used_o",
@@ -5913,8 +5913,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_17_used_f",
@@ -6477,8 +6477,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_17_used_o",
@@ -6553,8 +6553,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6664,8 +6664,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_17_used_o",
@@ -6705,7 +6705,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Sum of allelic effects over all loci.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19b_used_c_ij",
@@ -6717,7 +6717,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Sum of allelic effects over all loci.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19b_used_n",
@@ -6740,8 +6740,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6824,8 +6824,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19c_used_mu_3_g",
@@ -6848,8 +6848,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19c_used_n",
@@ -6872,8 +6872,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6998,8 +6998,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -7010,8 +7010,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -7051,7 +7051,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Partitioning the kurtosis requires a little more care.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19d_used_mu_4_g",
@@ -7075,7 +7075,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Loci (respectively) are in gametic-phase equilibrium.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_19d_used_sigma_a_4",
@@ -7110,8 +7110,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7222,8 +7222,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub 5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7305,8 +7305,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "K Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "K Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "K Sub 5 names the biological object or model condition being used in this formula.",
+              "definition_zh": "K Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -7334,7 +7334,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Density function, plus correction terms.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21a_used_h_3",
@@ -7345,8 +7345,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21a_used_h_4",
@@ -7357,8 +7357,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21a_used_h_5",
@@ -7369,8 +7369,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21a_used_k_3",
@@ -7381,8 +7381,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21a_used_k_5",
@@ -7393,8 +7393,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub 5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7501,8 +7501,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21b_used_h_3",
@@ -7513,8 +7513,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21b_used_h_4",
@@ -7525,8 +7525,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_21b_used_h_5",
@@ -7537,8 +7537,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7621,8 +7621,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_22a_used_sigma_z_3",
@@ -7645,8 +7645,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub 3,z Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub 3,z Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub 3,z Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub 3,z Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7763,8 +7763,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -7775,8 +7775,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -7827,8 +7827,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_22b_used_sigma_z_4",
@@ -7851,8 +7851,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub 4,z Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub 4,z Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub 4,z Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub 4,z Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7975,7 +7975,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Of the phenotypic distribution, gradients for the skew and higher moments will generally be negligible.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12a_used_s",
@@ -8026,8 +8026,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_23a_used_sigma_z",
@@ -8166,8 +8166,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_23b_used_h_2",
@@ -8190,8 +8190,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(1-h Power 2imath-bar(imath-bar-z Sub P)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(1-h Power 2imath-bar(imath-bar-z Sub P)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(1-h Power 2imath-bar(imath-bar-z Sub P)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(1-h Power 2imath-bar(imath-bar-z Sub P)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -8354,8 +8354,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,a Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,a Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,a Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,a Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_24a_used_k_i_z",
@@ -8366,8 +8366,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,z Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,z Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,z Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,z Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8514,8 +8514,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,a places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,a 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,a names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,a 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_24b_used_k_i_a_2",
@@ -8526,8 +8526,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,a Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,a Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,a Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,a Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8666,8 +8666,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,a places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,a 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,a names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,a 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_24c_used_k_i_z",
@@ -8678,8 +8678,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub I,z Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub I,z Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub I,z Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub I,z Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8798,8 +8798,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_25a_used_k",
@@ -8822,8 +8822,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8880,8 +8880,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_25b_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_24.25b",
       "defined_symbol": "\\Delta",
@@ -8941,8 +8941,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_25a_used_k",
@@ -9088,8 +9088,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_25a_used_k",
@@ -9240,8 +9240,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_25a_used_k",
@@ -9304,8 +9304,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_25c_used_k",
@@ -9328,8 +9328,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -9406,8 +9406,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_25d_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_24.25d",
       "defined_symbol": "\\Delta",
@@ -9464,8 +9464,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -9572,8 +9572,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -9711,8 +9711,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "M Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "M Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "M Sub 1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "M Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -9915,8 +9915,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -10047,8 +10047,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_26c_used_i",
@@ -10189,8 +10189,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -10201,8 +10201,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -10265,8 +10265,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_27_used_mu_2_z",
@@ -10289,8 +10289,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_27_used_delta",
@@ -10301,8 +10301,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_27_used_sigma_a_4",
@@ -10325,8 +10325,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -10487,8 +10487,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -10499,8 +10499,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -10539,8 +10539,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28a_used_s",
@@ -10575,8 +10575,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28a_used_delta_2",
@@ -10623,8 +10623,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -10785,8 +10785,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -10797,8 +10797,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -10837,8 +10837,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28b_used_sigma_z_2",
@@ -10849,8 +10849,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28b_used_s",
@@ -10873,8 +10873,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28b_used_delta_2",
@@ -10909,8 +10909,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28b_used_m_4",
@@ -10921,8 +10921,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "M Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "M Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -11092,8 +11092,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28c_used_s",
@@ -11128,8 +11128,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28c_used_delta",
@@ -11140,8 +11140,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_28c_used_delta_2",
@@ -11329,8 +11329,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -11358,8 +11358,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -11400,8 +11400,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C names the biological object or model condition being used in this formula.",
+              "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_26c_used_i",
@@ -11485,8 +11485,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -11497,8 +11497,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -11537,8 +11537,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_29a_used_mu_2_i",
@@ -11698,8 +11698,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -11727,8 +11727,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -11788,8 +11788,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_c_ij",
@@ -11800,8 +11800,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_14c_used_s_2",
@@ -11969,8 +11969,8 @@
               "confidence": 0.82,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+              "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2b_statement",
@@ -11998,8 +11998,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C Sub V Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C Sub V Power 2 names the biological object or model condition being used in this formula.",
+              "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -12038,8 +12038,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30a_used_sigma_z_2",
@@ -12050,8 +12050,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30a_used_delta",
@@ -12062,8 +12062,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30a_used_sigma_a_4",
@@ -12086,8 +12086,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12173,7 +12173,7 @@
       "concept_id": "concept_chapter24_formula_24_30b_defined_delta",
       "name": "Change",
       "definition": "E expressed in terms of the mean and variance, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_24.30b",
       "defined_symbol": "\\Delta",
@@ -12234,7 +12234,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Of the phenotypic distribution, gradients for the skew and higher moments will generally be negligible.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12a_used_s",
@@ -12287,8 +12287,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12b_used_s_2",
@@ -12398,7 +12398,7 @@
       "concept_id": "concept_chapter24_formula_24_30c_defined_delta_sigma_a_2_simeq_frac_h_4_2n_e_left",
       "name": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft",
       "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-      "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.30c",
       "defined_symbol": "\\Delta\\sigma_{A}^{2}\\simeq\\frac{h^{4}}{2n_{e}}\\left",
@@ -12459,7 +12459,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Of the phenotypic distribution, gradients for the skew and higher moments will generally be negligible.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12a_used_s",
@@ -12512,8 +12512,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_12b_used_s_2",
@@ -12578,8 +12578,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Cost names the biological object or model condition being used in this formula.",
+              "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_7a_used_t",
@@ -12619,7 +12619,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30c_used_sigma_z_2",
@@ -12631,7 +12631,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30c_used_delta",
@@ -12643,7 +12643,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30c_used_delta_2",
@@ -12703,7 +12703,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-          "definition_zh": "Delta(sigma Sub Z Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Delta(sigma Sub Z Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -12844,8 +12844,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Changesigma Sub a Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Changesigma Sub a Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Changesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Changesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -12882,7 +12882,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Under the infinitesimal model, there is no selection-induced change in allele frequencies, leaving the genic variance unchanged by selection.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_2a_used_kappa",
@@ -12893,8 +12893,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -12909,8 +12909,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30d_used_delta",
@@ -12921,8 +12921,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30d_used_kappa",
@@ -12933,8 +12933,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30d_used_h_2",
@@ -13027,8 +13027,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_30e_defined_delta_sigma_a_2_simeq_frac_h_4_2n_e_left",
       "name": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft",
-      "definition": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft describes spread or joint movement among variables.",
+      "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.30e",
       "defined_symbol": "\\Delta\\sigma_{a}^{2}\\simeq\\frac{h^{4}}{2n_{e}}\\left",
@@ -13052,7 +13052,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-          "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Changesigma Sub a Power 2simeqfrach Power 42n Sub Eleft 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter24_formula_24_12a_statement",
@@ -13111,7 +13111,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_30c_used_sigma_z_2",
@@ -13123,7 +13123,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_30c_used_delta",
@@ -13135,7 +13135,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Nce, only gradients measuring selection on the mean and variance will appear, and these equations will be exact.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_30c_used_delta_2",
@@ -13162,8 +13162,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30e_used_sigma_z_2",
@@ -13174,8 +13174,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30e_used_s_2",
@@ -13198,8 +13198,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30e_used_delta_2",
@@ -13222,8 +13222,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_30e_used_h_2",
@@ -13258,8 +13258,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Delta(sigma Sub Z Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Delta(sigma Sub Z Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Delta(sigma Sub Z Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Delta(sigma Sub Z Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -13407,7 +13407,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nic variance contributed by locus is (as there are two alleles per locus).",
-          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_31a_used_c_v_2",
@@ -13419,7 +13419,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nic variance contributed by locus is (as there are two alleles per locus).",
-          "definition_zh": "C Sub V Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "C Sub V Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13502,8 +13502,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "2mu_2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "2mu_2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "2mu_2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "2mu_2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_31b_used_i",
@@ -13538,8 +13538,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(2mu Sub 2,i) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(2mu Sub 2,i) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -13654,8 +13654,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(2mu Sub 2,i) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(2mu Sub 2,i) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(2mu Sub 2,i) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -13705,7 +13705,7 @@
       "concept_id": "concept_chapter24_formula_24_31d_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "Ch locus we get the total additive genic variance,.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.31d",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -13973,8 +13973,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_25a_used_k",
@@ -14148,8 +14148,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C names the biological object or model condition being used in this formula.",
+              "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_26c_used_i",
@@ -14212,8 +14212,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32b_used_sigma_z_2",
@@ -14224,8 +14224,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32b_used_t",
@@ -14260,8 +14260,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "D names the biological object or model condition being used in this formula.",
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32b_used_g",
@@ -14272,8 +14272,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32b_used_delta",
@@ -14284,8 +14284,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32b_used_xi",
@@ -14296,8 +14296,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Xi places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Xi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Xi names the biological object or model condition being used in this formula.",
+          "definition_zh": "Xi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14483,8 +14483,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_32b_used_sigma_z_2",
@@ -14495,8 +14495,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -14536,7 +14536,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Notice that, thus directly coupling changes in the mean and skew.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32c_used_sigma_z_2",
@@ -14548,7 +14548,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Notice that, thus directly coupling changes in the mean and skew.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32c_used_delta",
@@ -14560,7 +14560,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Notice that, thus directly coupling changes in the mean and skew.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32c_used_c",
@@ -14572,7 +14572,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Notice that, thus directly coupling changes in the mean and skew.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_32c_used_xi",
@@ -14583,8 +14583,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Xi places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Xi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Xi names the biological object or model condition being used in this formula.",
+          "definition_zh": "Xi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14715,8 +14715,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub Z,i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub Z,i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub Z,i names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub Z,i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14758,7 +14758,7 @@
       "concept_id": "concept_chapter24_formula_24_33b_defined_delta",
       "name": "Change",
       "definition": "Turelli and Barton presented general expressions for the change in all cumulants of the distribution.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_24.33b",
       "defined_symbol": "\\Delta",
@@ -14779,8 +14779,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_l_1",
@@ -14803,8 +14803,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_3",
@@ -14815,8 +14815,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_4",
@@ -14827,8 +14827,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_5",
@@ -14839,8 +14839,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14932,8 +14932,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_l_1",
@@ -14956,8 +14956,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_3",
@@ -14968,8 +14968,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_4",
@@ -14980,8 +14980,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33b_used_k_g_5",
@@ -14992,8 +14992,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -15083,7 +15083,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "Turelli and Barton presented general expressions for the change in all cumulants of the distribution.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -15095,8 +15095,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_33b_used_l_1",
@@ -15119,8 +15119,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "G names the biological object or model condition being used in this formula.",
+              "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_33b_used_k_g_3",
@@ -15131,8 +15131,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "K Sub G,3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "K Sub G,3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "K Sub G,3 names the biological object or model condition being used in this formula.",
+              "definition_zh": "K Sub G,3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -15161,8 +15161,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_33b_used_l_1",
@@ -15185,8 +15185,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "G names the biological object or model condition being used in this formula.",
+              "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_33b_used_k_g_3",
@@ -15197,8 +15197,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "K Sub G,3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "K Sub G,3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "K Sub G,3 names the biological object or model condition being used in this formula.",
+              "definition_zh": "K Sub G,3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15213,8 +15213,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_l_1",
@@ -15237,8 +15237,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_sigma_a_4",
@@ -15261,8 +15261,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_k_g_3_2",
@@ -15273,8 +15273,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,3 Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,3 Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,3 Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,3 Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_k_g_4",
@@ -15285,8 +15285,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_k_g_5",
@@ -15297,8 +15297,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,5 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_33c_used_k_g_6",
@@ -15309,8 +15309,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K Sub G,6 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K Sub G,6 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "K Sub G,6 names the biological object or model condition being used in this formula.",
+          "definition_zh": "K Sub G,6 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -15423,8 +15423,8 @@
       "chapter_id": "chapter24",
       "concept_id": "concept_chapter24_formula_24_34_defined_delta_mu_z_simeq_sigma_a_2_left",
       "name": "Changemu Sub Zsimeqsigma Sub a Power 2left",
-      "definition": "Changemu Sub Zsimeqsigma Sub a Power 2left is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Changemu Sub Zsimeqsigma Sub a Power 2left 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Changemu Sub Zsimeqsigma Sub a Power 2left describes spread or joint movement among variables.",
+      "definition_zh": "Changemu Sub Zsimeqsigma Sub a Power 2left 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_24.34",
       "defined_symbol": "\\Delta\\mu_{z}\\simeq\\sigma_{a}^{2}\\left",
@@ -15460,8 +15460,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_3",
@@ -15472,8 +15472,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 3 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_4",
@@ -15484,8 +15484,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 4 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_5",
@@ -15496,8 +15496,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 5 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15536,8 +15536,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_34_used_mu_z_3",
@@ -15560,8 +15560,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_34_used_sigma_a_4",
@@ -15596,8 +15596,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_34_used_h_3",
@@ -15608,8 +15608,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_34_used_sigma_a_2_frac_partial_ln_overline_w_partial_mu_z",
@@ -15620,8 +15620,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(fracpartiallnw-barpartialmu Sub Z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(fracpartiallnw-barpartialmu Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(fracpartiallnw-barpartialmu Sub Z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(fracpartiallnw-barpartialmu Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -15767,8 +15767,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_3",
@@ -15779,8 +15779,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 3 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_4",
@@ -15791,8 +15791,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 4 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter24_formula_24_21b_used_h_5",
@@ -15803,8 +15803,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "H Sub 5 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "H Sub 5 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "H Sub 5 names the biological object or model condition being used in this formula.",
+              "definition_zh": "H Sub 5 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15843,8 +15843,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_35_used_sigma_z_2",
@@ -15855,8 +15855,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_35_used_s",
@@ -15891,8 +15891,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_35_used_widetilde_delta",
@@ -15903,8 +15903,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildedelta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildedelta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widetildedelta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildedelta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter24_formula_24_35_used_r",
@@ -15927,8 +15927,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [

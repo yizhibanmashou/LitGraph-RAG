@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter8",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:11.335Z",
+  "generated_at": "2026-06-11T11:39:34.019Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter8_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter8.jsonl",
@@ -152,8 +152,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -307,8 +307,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -335,8 +335,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -489,7 +489,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ombination determine the magnitude of this effect.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -517,7 +517,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ombination determine the magnitude of this effect.",
-          "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -633,7 +633,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Efore presenting more accurate results.",
-          "definition_zh": "E Power -ct 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power -ct 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -764,7 +764,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Efore presenting more accurate results.",
-              "definition_zh": "E Power -ct 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Power -ct 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -810,7 +810,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Introduced into the population as a single copy and is destined to become fixed, its approximate time to fixation is.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -824,7 +824,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Introduced into the population as a single copy and is destined to become fixed, its approximate time to fixation is.",
-          "definition_zh": "E Power -ctau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power -ctau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -838,7 +838,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Introduced into the population as a single copy and is destined to become fixed, its approximate time to fixation is.",
-          "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1011,7 +1011,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Efore presenting more accurate results.",
-              "definition_zh": "E Power -ct 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Power -ct 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1070,8 +1070,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Infty places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Infty names the biological object or model condition being used in this formula.",
+          "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1213,8 +1213,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Change names the biological object or model condition being used in this formula.",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1260,7 +1260,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1288,7 +1288,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "For the change in A are given in Example 8.2.",
-          "definition_zh": "0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1465,8 +1465,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Change names the biological object or model condition being used in this formula.",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1526,7 +1526,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1713,8 +1713,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Infty places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Infty names the biological object or model condition being used in this formula.",
+              "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1806,7 +1806,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1852,7 +1852,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ysis leading to Equation 8.2c underestimated the effect of a sweep, as it scaled as the power, inflating the importance of recombination (Example 8.2 details why this occurs).",
-          "definition_zh": "E Power Aln(x) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power Aln(x) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2083,7 +2083,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2282,7 +2282,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2555,7 +2555,7 @@
               "confidence": 0.8,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2879,8 +2879,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Infty places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Infty names the biological object or model condition being used in this formula.",
+              "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3128,7 +3128,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Y of the favored allele A at time t.",
-          "definition_zh": "E Power St 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power St 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3237,7 +3237,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Y of the favored allele A at time t.",
-              "definition_zh": "E Power St 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Power St 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3282,8 +3282,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3381,7 +3381,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Taking, the required time starting from a single copy to reach a frequency very close to one is (8.4c) Hitchhiking and Selective Sweeps: Introduction Allele-frequency Change",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3548,7 +3548,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Y of the favored allele A at time t.",
-              "definition_zh": "E Power St 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Power St 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3607,8 +3607,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3774,7 +3774,7 @@
               "confidence": 0.8,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3820,7 +3820,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "For, this reduces to (8.5b) whic Hitchhiking and Selective Sweeps: Introduction Allele-frequency Change",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3862,7 +3862,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "For, this reduces to (8.5b) whic Hitchhiking and Selective Sweeps: Introduction Allele-frequency Change",
-          "definition_zh": "0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4120,8 +4120,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4148,8 +4148,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4504,7 +4504,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "A more accurate expression for the amount of variation remaining after a very recent sweep follows from the expected allele-frequency change (Equation 8.3a).",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4626,7 +4626,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Using these results, the expected allele-frequency change is",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4751,7 +4751,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "A more accurate expression for the amount of variation remaining after a very recent sweep follows from the expected allele-frequency change (Equation 8.3a).",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4856,8 +4856,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4982,7 +4982,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "A more accurate expression for the amount of variation remaining after a very recent sweep follows from the expected allele-frequency change (Equation 8.3a).",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5129,8 +5129,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5143,8 +5143,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Mathbbe places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mathbbe 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Mathbbe names the biological object or model condition being used in this formula.",
+          "definition_zh": "Mathbbe 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5321,8 +5321,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Change names the biological object or model condition being used in this formula.",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5650,7 +5650,7 @@
               "confidence": 0.8,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6342,7 +6342,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "The details for a deterministic analysis accounting for the change in A are given in Example 8.2.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -7331,7 +7331,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Al sites back to their equilibrium value before the sweep.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7979,8 +7979,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "N_e places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "N_e 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "N_e names the biological object or model condition being used in this formula.",
+          "definition_zh": "N_e 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7993,8 +7993,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "V_0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "V_0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "V_0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "V_0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8007,8 +8007,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -t/(2n_e) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -t/(2n_e) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E Power -t/(2n_e) names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -t/(2n_e) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8196,8 +8196,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Change names the biological object or model condition being used in this formula.",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -8256,8 +8256,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8270,8 +8270,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Phi places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Phi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Phi names the biological object or model condition being used in this formula.",
+          "definition_zh": "Phi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8542,8 +8542,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8723,8 +8723,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Epsilon names the biological object or model condition being used in this formula.",
+              "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8784,7 +8784,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Impact of a single partial sweep on.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8798,7 +8798,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Impact of a single partial sweep on.",
-          "definition_zh": "Zeta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Zeta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9046,8 +9046,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9269,8 +9269,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9494,8 +9494,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9749,7 +9749,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9776,8 +9776,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9968,7 +9968,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10028,7 +10028,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Roughly such mutations must appear to have a reasonable chance of one becoming fixed.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10193,7 +10193,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10224,8 +10224,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10379,7 +10379,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10425,7 +10425,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When is small, the waiting time for a mutation that is destined to become fixed is quite long.",
-          "definition_zh": "Operatorname 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Operatorname 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10439,7 +10439,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When is small, the waiting time for a mutation that is destined to become fixed is quite long.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10480,8 +10480,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10727,8 +10727,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Theta names the biological object or model condition being used in this formula.",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10816,7 +10816,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10861,8 +10861,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11021,7 +11021,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11228,8 +11228,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11256,8 +11256,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11460,7 +11460,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11612,7 +11612,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "In particular, an upper bound for the probability of a multiple-origin soft sweep (two or more independent lineages in our sample of size n) is",
-          "definition_zh": "Soft 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Soft 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11639,8 +11639,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11860,7 +11860,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11920,7 +11920,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11934,7 +11934,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11948,7 +11948,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-          "definition_zh": "Number of New Favorable Mutations That Arise 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Number of New Favorable Mutations That Arise 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12213,7 +12213,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-              "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -12287,7 +12287,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -12430,8 +12430,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12652,7 +12652,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-              "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -12725,8 +12725,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12739,8 +12739,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12922,7 +12922,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Although this is the total number of recurrent favorable mutations that arise, each has only a probability of of increasing (Chapter 7).",
-              "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -12996,7 +12996,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, the fixation probability under the new fitnesses can also be obtained using diffusion results (Chapter 7).",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -13055,8 +13055,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -13181,8 +13181,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13195,8 +13195,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13209,8 +13209,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -13334,8 +13334,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13348,8 +13348,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -13381,7 +13381,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Region of interest, and there is a constant,.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13395,7 +13395,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Region of interest, and there is a constant,.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13409,7 +13409,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Region of interest, and there is a constant,.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13423,7 +13423,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Region of interest, and there is a constant,.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -13530,8 +13530,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13544,8 +13544,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13558,8 +13558,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13586,8 +13586,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Pi Sub 0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Pi Sub 0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -13719,8 +13719,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13733,8 +13733,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -13821,8 +13821,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13835,8 +13835,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Kappa names the biological object or model condition being used in this formula.",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13849,8 +13849,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13877,8 +13877,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Pi Sub 0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Pi Sub 0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -14236,7 +14236,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Librium is (Kimura and Maruyama 1966).",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -14322,7 +14322,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hudson and Kaplan (1995) extended these results by allowing for recombination.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14336,7 +14336,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hudson and Kaplan (1995) extended these results by allowing for recombination.",
-          "definition_zh": "-fracu2s+cright 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "-fracu2s+cright 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14350,7 +14350,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hudson and Kaplan (1995) extended these results by allowing for recombination.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -14460,7 +14460,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Mu c o s C gg s $), (8.29b) and thus the decline in heterozygosity is approximately independent of the strength of selection.",
-          "definition_zh": "-frac2muc Sub 0right 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "-frac2muc Sub 0right 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14595,7 +14595,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Region of interest, and there is a constant,.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14609,7 +14609,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Region of interest, and there is a constant,.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14623,7 +14623,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Region of interest, and there is a constant,.",
-              "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -14655,7 +14655,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The exponential approximation for recurrent sweeps (Equation 8.24c).",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14789,8 +14789,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14803,8 +14803,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Kappa places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Kappa names the biological object or model condition being used in this formula.",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -14850,7 +14850,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "That both background selection and recurrent sweeps operate at some level.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14864,7 +14864,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "That both background selection and recurrent sweeps operate at some level.",
-          "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -14878,7 +14878,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "That both background selection and recurrent sweeps operate at some level.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15055,7 +15055,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Impact of a single partial sweep on.",
-              "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -15069,7 +15069,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Impact of a single partial sweep on.",
-              "definition_zh": "Zeta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Zeta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -15147,7 +15147,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "That both background selection and recurrent sweeps operate at some level.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -15161,7 +15161,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "That both background selection and recurrent sweeps operate at some level.",
-              "definition_zh": "Kappa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Kappa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -15299,7 +15299,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ugh not as dramatically as for a completed hard sweep.",
-          "definition_zh": "Pi Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Pi Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -15429,7 +15429,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ming multiplicative fitnesses) and allow for a distribution of fitness effects over different classes of sites.",
-          "definition_zh": "Phi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Phi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15457,7 +15457,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ming multiplicative fitnesses) and allow for a distribution of fitness effects over different classes of sites.",
-          "definition_zh": "C Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15589,7 +15589,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "With a large amount of genomic dat Hitchhiking and Selective Sweeps: Introduction Background Selection: Reduction in Variation Under Low Recombination or Selfing",
-          "definition_zh": "Phi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Phi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15631,7 +15631,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Eems unduly complex, it allows us to sum over sites with different effects, such as potential replacement sites and known conserved regions.",
-          "definition_zh": "C Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15742,8 +15742,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15756,8 +15756,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildep places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildep 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildep names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildep 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15770,8 +15770,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Zeta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Zeta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Zeta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Zeta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15784,8 +15784,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "2gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "2gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "2gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "2gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }

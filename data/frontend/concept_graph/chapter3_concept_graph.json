@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter3",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:10.154Z",
+  "generated_at": "2026-06-11T11:39:32.605Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter3_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter3.jsonl",
@@ -47,7 +47,7 @@
           "confidence": 0.85,
           "concept_type": "quantity_concept",
           "definition": "Using this definition of, many of the results in the previous chapter can be generalized, at least to a first-order approximation.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_1_used_n_e",
@@ -1820,8 +1820,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tau names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_13_used_b_i",
@@ -2011,8 +2011,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Phi places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Phi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Phi names the biological object or model condition being used in this formula.",
+          "definition_zh": "Phi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_15_used_i",
@@ -2035,8 +2035,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau Sub F places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau Sub F 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tau Sub F names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau Sub F 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_15_used_tau_m",
@@ -2047,8 +2047,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau Sub M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau Sub M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Tau Sub M names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau Sub M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2171,8 +2171,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_16_used_i",
@@ -2294,8 +2294,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "E names the biological object or model condition being used in this formula.",
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter3_formula_3_16_used_i",
@@ -2335,7 +2335,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Sity after t generations as a population with variable size over the same period.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_17_used_i",
@@ -2705,8 +2705,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "4-3beta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "4-3beta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "4-3beta names the biological object or model condition being used in this formula.",
+          "definition_zh": "4-3beta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2813,7 +2813,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Sity after t generations as a population with variable size over the same period.",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter3_formula_3_17_used_i",
@@ -2910,8 +2910,8 @@
       "chapter_id": "chapter3",
       "concept_id": "concept_chapter3_formula_3_23a_defined_f_t",
       "name": "Inbreeding Coefficient",
-      "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+      "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_3.23a",
       "defined_symbol": "f_{t}",
@@ -3333,7 +3333,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E two examples for the propagule-pool model.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_27a_used_d",
@@ -3441,7 +3441,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "And although, it approaches the latter value as unless is tiny.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_27b_used_d",
@@ -3541,7 +3541,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Al expression for the effective size of a metapopulation under the island model was derived by Whitlock and Barton (1997).",
-          "definition_zh": "1+4n M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "1+4n M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_28_used_d",
@@ -3577,7 +3577,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Al expression for the effective size of a metapopulation under the island model was derived by Whitlock and Barton (1997).",
-          "definition_zh": "Sigma Sub K Power 2(1+2m) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub K Power 2(1+2m) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -4166,7 +4166,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "With free recombination, but with complete linkage, returning us to Equation 3.30a.",
-          "definition_zh": "4n S 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "4n S 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_31_used_n",
@@ -4306,7 +4306,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Fitness is after discounting by averaging over both parents.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_32_used_e_2us",
@@ -4318,7 +4318,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Fitness is after discounting by averaging over both parents.",
-          "definition_zh": "E Power -2us 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -2us 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_32_used_n_e",
@@ -4437,8 +4437,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "C Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_33_used_e",
@@ -4449,8 +4449,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4541,8 +4541,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_34_used_e_u_2s",
@@ -4553,8 +4553,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -u/(2s) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -u/(2s) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -u/(2s) names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -u/(2s) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4653,8 +4653,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_35a_used_e_u_2s_c",
@@ -4665,8 +4665,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -u/(2s+c) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -u/(2s+c) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -u/(2s+c) names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -u/(2s+c) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4796,8 +4796,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "U names the biological object or model condition being used in this formula.",
+              "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -4825,7 +4825,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Loci in the immediate vicinity of the neutral locus.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_35b_used_e_u_c",
@@ -4837,7 +4837,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Loci in the immediate vicinity of the neutral locus.",
-          "definition_zh": "E Power -u/c 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -u/c 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter3_formula_3_35b_used_n_e",

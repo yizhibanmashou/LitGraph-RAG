@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter20",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:04.226Z",
+  "generated_at": "2026-06-11T11:39:27.146Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter20_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter20.jsonl",
@@ -83,7 +83,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Direct and Correlated Responses",
-          "definition_zh": "Sigma Power 2(z Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -179,7 +179,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Direct and Correlated Responses",
-          "definition_zh": "Sigma Power 2(a Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_1b_used_g_11",
@@ -190,8 +190,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 11 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 11 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub 11 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 11 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_1b_used_g_12",
@@ -202,8 +202,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 12 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 12 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G Sub 12 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 12 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -300,7 +300,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "S simply Fisher's model (we will resist the temptation of referring to this as the Fisher-Price toy model).",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_2_used_n",
@@ -787,7 +787,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "S simply Fisher's model (we will resist the temptation of referring to this as the Fisher-Price toy model).",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_2_used_n",
@@ -862,8 +862,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_4b_used_n",
@@ -1010,8 +1010,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_5_used_alpha",
@@ -1034,8 +1034,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(fractheta-mu+alphasigma Sub N Power 2omega Power 2+sigma Sub Z Power 2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(fractheta-mu+alphasigma Sub N Power 2omega Power 2+sigma Sub Z Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(fractheta-mu+alphasigma Sub N Power 2omega Power 2+sigma Sub Z Power 2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(fractheta-mu+alphasigma Sub N Power 2omega Power 2+sigma Sub Z Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_5_used_mu",
@@ -1193,8 +1193,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -1357,8 +1357,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1704,7 +1704,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "On whether unmeasured variables are potentially influencing response.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_8a_used_sigma_e_2",
@@ -1728,7 +1728,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "On whether unmeasured variables are potentially influencing response.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_8a_used_r",
@@ -2002,7 +2002,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "On whether unmeasured variables are potentially influencing response.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_8a_used_sigma_e_2",
@@ -2042,7 +2042,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Heorem (his 1966 version; Equation 6.25a).",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_8b_used_z",
@@ -2066,7 +2066,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Heorem (his 1966 version; Equation 6.25a).",
-          "definition_zh": "E Sub S 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub S 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2220,7 +2220,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "On whether unmeasured variables are potentially influencing response.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_8a_used_sigma_e_2",
@@ -2259,8 +2259,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_9a_used_sigma_e_2",
@@ -2283,8 +2283,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_9a_used_z",
@@ -2419,8 +2419,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_9b_used_z",
@@ -2516,7 +2516,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_10a_used_sigma_e_2",
@@ -2540,7 +2540,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_10a_used_beta_a",
@@ -2636,7 +2636,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Sigma Sub a Power 2(beta Sub Z+beta Sub A) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(beta Sub Z+beta Sub A) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -2743,7 +2743,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Direct and Correlated Responses",
-              "definition_zh": "Sigma Power 2(z Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(z Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -2759,7 +2759,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "In the notation of Equation 20.1a, $ sigma 2(z 1) beta 1 = s Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_11a_used_sigma_e_2",
@@ -2783,7 +2783,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "In the notation of Equation 20.1a, $ sigma 2(z 1) beta 1 = s Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_11a_used_z_1",
@@ -2819,7 +2819,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "In the notation of Equation 20.1a, $ sigma 2(z 1) beta 1 = s Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Sigma Power 2(z Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -2970,7 +2970,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Direct and Correlated Responses",
-              "definition_zh": "Sigma Power 2(z Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(z Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -2986,7 +2986,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "In the notation of Equation 20.1a, giving (20.11b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_11b_used_sigma_e_2",
@@ -3225,7 +3225,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "In the notation of Equation 20.1a, giving (20.11b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_11b_used_sigma_e_2",
@@ -3289,7 +3289,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "If we match the terms in Equations 20.11b and 20.12a, (20.12b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_12b_used_sigma_e_2",
@@ -3394,8 +3394,8 @@
       "chapter_id": "chapter20",
       "concept_id": "concept_chapter20_formula_20_13a_defined_h_2_sigma_z_2_beta_z",
       "name": "H Power 2sigma Sub Z Power 2beta Sub Z",
-      "definition": "H Power 2sigma Sub Z Power 2beta Sub Z is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "H Power 2sigma Sub Z Power 2beta Sub Z describes spread or joint movement among variables.",
+      "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_20.13a",
       "defined_symbol": "h^{2}\\sigma_{z}^{2}\\beta_{z}",
@@ -3432,7 +3432,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_10a_used_sigma_e_2",
@@ -3456,7 +3456,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_10a_used_beta_a",
@@ -3483,8 +3483,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_13a_used_sigma_e_2",
@@ -3507,8 +3507,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_13a_used_s",
@@ -3671,7 +3671,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "If there are no genotype-environment correlations, then (20.10a) and (20.10b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-              "definition_zh": "Sigma Sub a Power 2(beta Sub Z+beta Sub A) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Sub a Power 2(beta Sub Z+beta Sub A) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -3735,7 +3735,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Substituting this expression for into Equation 20.10b yields (20.13b) Selection Response in Natural Populations: Introduction Complications in the Absence of Environmental Change",
-          "definition_zh": "Sigma Sub a Power 2(1-h Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(1-h Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -3869,8 +3869,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9a_used_sigma_e_2",
@@ -3893,8 +3893,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -3935,8 +3935,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9b_used_z",
@@ -3976,8 +3976,8 @@
           "confidence": 0.82,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z describes spread or joint movement among variables.",
+          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter20_formula_20_10a_statement",
@@ -4005,8 +4005,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_sigma_e_2",
@@ -4029,8 +4029,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_s",
@@ -4105,8 +4105,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(1-h Power 2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(1-h Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(1-h Power 2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(1-h Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -4264,8 +4264,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9a_used_sigma_e_2",
@@ -4288,8 +4288,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -4330,8 +4330,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9b_used_z",
@@ -4371,8 +4371,8 @@
           "confidence": 0.82,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z describes spread or joint movement among variables.",
+          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter20_formula_20_10a_statement",
@@ -4400,8 +4400,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_sigma_e_2",
@@ -4424,8 +4424,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_s",
@@ -4464,8 +4464,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_15a_used_s",
@@ -4659,8 +4659,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9a_used_sigma_e_2",
@@ -4683,8 +4683,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -4712,7 +4712,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Environmental correlation between characters), then while.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_15b_used_s",
@@ -4846,8 +4846,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_9b_used_z",
@@ -5008,8 +5008,8 @@
           "confidence": 0.82,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "H Power 2sigma Sub Z Power 2beta Sub Z describes spread or joint movement among variables.",
+          "definition_zh": "H Power 2sigma Sub Z Power 2beta Sub Z 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter20_formula_20_10a_statement",
@@ -5037,8 +5037,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_sigma_e_2",
@@ -5061,8 +5061,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_13a_used_s",
@@ -5138,7 +5138,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under what conditions should the breeder’s equation and Robertson’s theorem agree?",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_16a_used_h_2",
@@ -5162,7 +5162,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under what conditions should the breeder’s equation and Robertson’s theorem agree?",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -5305,8 +5305,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_16b_used_sigma_2_a_z",
@@ -5317,8 +5317,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub Z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a Sub Z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -5376,7 +5376,7 @@
       "concept_id": "concept_chapter20_formula_20_16c_defined_h_2_sigma",
       "name": "H Power 2sigma",
       "definition": "The ability to obtain an unbiased estimate of, a subject discussed in detail below.",
-      "definition_zh": "H Power 2sigma 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "H Power 2sigma 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_20.16c",
       "defined_symbol": "h^{2}\\sigma",
@@ -5448,8 +5448,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -5635,8 +5635,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -5782,8 +5782,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -5999,8 +5999,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -6017,7 +6017,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The ability to obtain an unbiased estimate of, a subject discussed in detail below.",
-          "definition_zh": "H Power 2sigma 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "H Power 2sigma 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter20_formula_20_16b_statement",
@@ -6345,8 +6345,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -6557,8 +6557,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -6598,7 +6598,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Rausher's Consistency Criteria",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_19b_used_sigma_2_e",
@@ -6610,7 +6610,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Rausher's Consistency Criteria",
-          "definition_zh": "Sigma Power 2(e) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(e) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_19b_used_sigma_2_z",
@@ -6622,7 +6622,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Rausher's Consistency Criteria",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_19b_used_h_2",
@@ -6881,7 +6881,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E Rausher-Simms equality test (Rausher and Simms 1989; Rausher 1992).",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7012,8 +7012,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -7065,7 +7065,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21a_used_sigma_2_e_z",
@@ -7077,7 +7077,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(e Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(e Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21a_used_e_w",
@@ -7089,7 +7089,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The breeding value, with similarly defined.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7225,7 +7225,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21b_used_sigma_2_e_z",
@@ -7237,7 +7237,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(e Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(e Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21b_used_e_w",
@@ -7248,8 +7248,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7373,7 +7373,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21c_used_sigma_2_e_z",
@@ -7385,7 +7385,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Morrissey et al.'s Consistency Criteria",
-          "definition_zh": "Sigma Power 2(e Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(e Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_21c_used_e_w",
@@ -7396,8 +7396,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7576,8 +7576,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -7664,8 +7664,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23a_used_x",
@@ -7787,8 +7787,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_23a_used_x",
@@ -7851,8 +7851,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -7948,7 +7948,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Obviously, is (at a minimum) a function of the allele frequencies at.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8031,7 +8031,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Obviously, is (at a minimum) a function of the allele frequencies at.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -8222,7 +8222,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Obviously, is (at a minimum) a function of the allele frequencies at.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -8274,7 +8274,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Summing Equation 20.23c over all loci yields (20.23f) Selection Response in Natural Populations: Introduction Obtaining the Relationship Matrix: Marker Data",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8394,7 +8394,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Rearranging yields the Day-Williams estimator (20.23g) Selection Response in Natural Populations: Introduction Obtaining the Relationship Matrix: Marker Data",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23g_used_widehat_theta_xy_dw",
@@ -8406,7 +8406,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Rearranging yields the Day-Williams estimator (20.23g) Selection Response in Natural Populations: Introduction Obtaining the Relationship Matrix: Marker Data",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -8513,7 +8513,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Obviously, is (at a minimum) a function of the allele frequencies at.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -8540,8 +8540,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23h_used_b_x_ell",
@@ -8652,8 +8652,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23i_used_b_ell",
@@ -8792,8 +8792,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23j_used_c",
@@ -8804,8 +8804,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23j_used_t_x",
@@ -8816,8 +8816,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T_x places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T_x 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T_x names the biological object or model condition being used in this formula.",
+          "definition_zh": "T_x 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23j_used_ell",
@@ -8828,8 +8828,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Ell places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Ell 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Ell names the biological object or model condition being used in this formula.",
+          "definition_zh": "Ell 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23j_used_t_y",
@@ -8840,8 +8840,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T_y places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T_y 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T_y names the biological object or model condition being used in this formula.",
+          "definition_zh": "T_y 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23j_used_r",
@@ -9023,8 +9023,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C names the biological object or model condition being used in this formula.",
+              "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_23i_used_b_ell",
@@ -9101,8 +9101,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -9153,8 +9153,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23k_used_t_x",
@@ -9165,8 +9165,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T_x places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T_x 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T_x names the biological object or model condition being used in this formula.",
+          "definition_zh": "T_x 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23k_used_ell",
@@ -9177,8 +9177,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Ell places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Ell 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Ell names the biological object or model condition being used in this formula.",
+          "definition_zh": "Ell 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23k_used_t_y",
@@ -9189,8 +9189,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T_y places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T_y 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "T_y names the biological object or model condition being used in this formula.",
+          "definition_zh": "T_y 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_23k_used_b_x_ell",
@@ -9539,8 +9539,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "C names the biological object or model condition being used in this formula.",
+              "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -9662,7 +9662,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Summing over uncorrelated SNPs returns (20.231) Selection Response in Natural Populations: Introduction Obtaining the Relationship Matrix: Marker Data",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_231_used_f",
@@ -9837,8 +9837,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_a",
@@ -9849,8 +9849,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_epsilon",
@@ -9861,8 +9861,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(epsilon) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(epsilon) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(epsilon) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(epsilon) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_widehat_a",
@@ -9873,8 +9873,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_widehat_a_a",
@@ -9885,8 +9885,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat-a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat-a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat-a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat-a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24a_used_widehat_a",
@@ -9972,7 +9972,7 @@
       "concept_id": "concept_chapter20_formula_20_24b_defined_rho",
       "name": "Correlation",
       "definition": "Second, the definition of a correlation yields the accuracy as",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_20.24b",
       "defined_symbol": "\\rho",
@@ -10005,8 +10005,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24b_used_sigma_2_widehat_a",
@@ -10017,8 +10017,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24b_used_widehat_a",
@@ -10119,7 +10119,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Second, the definition of a correlation yields the accuracy as",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24c_used_sigma_2_a",
@@ -10130,8 +10130,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24c_used_sigma_2_widehat_a",
@@ -10142,8 +10142,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24c_used_widehat_a",
@@ -10261,8 +10261,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Epsilon names the biological object or model condition being used in this formula.",
+              "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_a",
@@ -10273,8 +10273,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_epsilon",
@@ -10285,8 +10285,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(epsilon) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(epsilon) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(epsilon) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(epsilon) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -10337,8 +10337,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Operatorname places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Operatorname 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Operatorname names the biological object or model condition being used in this formula.",
+          "definition_zh": "Operatorname 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_rho",
@@ -10349,8 +10349,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_sigma_2_a",
@@ -10361,8 +10361,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_sigma_2_widehat_a",
@@ -10373,8 +10373,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_sigma_2_z",
@@ -10385,8 +10385,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_c",
@@ -10397,8 +10397,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24d_used_widehat_a",
@@ -10568,8 +10568,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Epsilon names the biological object or model condition being used in this formula.",
+              "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_a",
@@ -10580,8 +10580,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24a_used_sigma_2_epsilon",
@@ -10592,8 +10592,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(epsilon) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(epsilon) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(epsilon) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(epsilon) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -10620,8 +10620,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24e_used_rho",
@@ -10632,8 +10632,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24e_used_sigma_2_a",
@@ -10644,8 +10644,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24e_used_sigma_2_epsilon",
@@ -10656,8 +10656,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(epsilon) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(epsilon) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(epsilon) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(epsilon) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24e_used_sigma_2_widehat_a_a",
@@ -10668,8 +10668,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a-hat-a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a-hat-a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a-hat-a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a-hat-a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24e_used_widehat_a",
@@ -10800,8 +10800,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24f_used_rho",
@@ -10812,8 +10812,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24f_used_sigma_2_a",
@@ -10824,8 +10824,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24f_used_sigma_2_epsilon",
@@ -10836,8 +10836,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(epsilon) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(epsilon) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(epsilon) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(epsilon) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24f_used_widehat_a",
@@ -10961,7 +10961,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E PEVs for each of the estimated breeding values (also see Meyer 1989; Tosh and Wilton 1994).",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_24g_used_sigma_2_a",
@@ -10973,7 +10973,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "E PEVs for each of the estimated breeding values (also see Meyer 1989; Tosh and Wilton 1994).",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -11022,8 +11022,8 @@
       "chapter_id": "chapter20",
       "concept_id": "concept_chapter20_formula_20_24h_defined_rho_i_2",
       "name": "Correlation",
-      "definition": "Correlation is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Correlation describes spread or joint movement among variables.",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_20.24h",
       "defined_symbol": "\\rho_{i}^{2}",
@@ -11068,8 +11068,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -11183,8 +11183,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -11327,7 +11327,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Rausher's Consistency Criteria",
-              "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_19b_used_sigma_2_e",
@@ -11339,7 +11339,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Rausher's Consistency Criteria",
-              "definition_zh": "Sigma Power 2(e) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(e) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -11367,7 +11367,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "However, when using predicted breeding values Selection Response in Natural Populations: Introduction Consistency Tests: Accuracy, Reliability, and Caveats when Using PBVs",
-          "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_25a_used_sigma_2_z",
@@ -11379,7 +11379,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "However, when using predicted breeding values Selection Response in Natural Populations: Introduction Consistency Tests: Accuracy, Reliability, and Caveats when Using PBVs",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_25a_used_h_2",
@@ -11546,7 +11546,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "Second, the definition of a correlation yields the accuracy as",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24c_used_sigma_2_a",
@@ -11557,8 +11557,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24c_used_sigma_2_widehat_a",
@@ -11569,8 +11569,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         },
@@ -11587,7 +11587,7 @@
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
           "definition": "Second, the definition of a correlation yields the accuracy as",
-          "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -11611,8 +11611,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24b_used_sigma_2_widehat_a",
@@ -11623,8 +11623,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a-hat) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_24b_used_widehat_a",
@@ -11676,7 +11676,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ame when relative fitness is regressed on either breeding (A) or phenotypic (z) value.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_25b_used_sigma_2_widehat_a",
@@ -11688,7 +11688,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ame when relative fitness is regressed on either breeding (A) or phenotypic (z) value.",
-          "definition_zh": "Sigma Power 2(a-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_25b_used_sigma_2_z",
@@ -11700,7 +11700,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ame when relative fitness is regressed on either breeding (A) or phenotypic (z) value.",
-          "definition_zh": "Sigma Power 2(z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_25b_used_hat_a",
@@ -11985,8 +11985,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub J) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub J) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a Sub J) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub J) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_26b_used_sigma_2_e_j",
@@ -11997,8 +11997,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(e Sub J) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(e Sub J) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(e Sub J) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(e Sub J) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -12153,8 +12153,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27a_used_e",
@@ -12165,8 +12165,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27a_used_b",
@@ -12503,8 +12503,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub W) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a Sub W) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27c_used_sigma_2_a_z",
@@ -12515,8 +12515,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub Z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a Sub Z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -12587,8 +12587,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(e Sub W) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(e Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(e Sub W) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(e Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27d_used_sigma_2_e_z",
@@ -12599,8 +12599,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(e Sub Z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(e Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(e Sub Z) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(e Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27d_used_e_w",
@@ -12611,8 +12611,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_27d_used_e_z",
@@ -12623,8 +12623,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12673,8 +12673,8 @@
       "chapter_id": "chapter20",
       "concept_id": "concept_chapter20_formula_20_27e_defined_sigma_mathbf_a_z_mathbf_a_w_mathbf_e_z_mathbf_e_w",
       "name": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W",
-      "definition": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W describes spread or joint movement among variables.",
+      "definition_zh": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_20.27e",
       "defined_symbol": "\\sigma{{{\\mathbf{a}_{z}}}} \\\\{{{\\mathbf{a}_{w}}}} \\\\{{{\\mathbf{e}_{z}}}} \\\\{{{\\mathbf{e}_{w}}}}",
@@ -12758,7 +12758,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Ideally, this is done within a Bayesian setting, so that the posterior distribution reflects all of the model uncertainty (from pedigree estimation on down).",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_28a_used_w",
@@ -12782,7 +12782,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Example, is the expected selection response under the 1968 version of Robertson's theorem (Equation 6.24a).",
-          "definition_zh": "E Sub Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12906,7 +12906,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Ideally, this is done within a Bayesian setting, so that the posterior distribution reflects all of the model uncertainty (from pedigree estimation on down).",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12984,8 +12984,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W describes spread or joint movement among variables.",
+          "definition_zh": "Sigmaa Matrix Sub Z a Matrix Sub W E Matrix Sub Z E Matrix Sub W 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13038,8 +13038,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a Sub W) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a Sub W) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_27c_used_sigma_2_a_z",
@@ -13050,8 +13050,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Power 2(a Sub Z) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Sigma Power 2(a Sub Z) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -13165,8 +13165,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_29b_used_l",
@@ -13177,8 +13177,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_29b_used_b",
@@ -13225,8 +13225,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13378,7 +13378,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The ability to obtain an unbiased estimate of, a subject discussed in detail below.",
-              "definition_zh": "H Power 2sigma 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition_zh": "H Power 2sigma 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_17b_statement",
@@ -13497,7 +13497,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Morrissey et al.'s Consistency Criteria",
-              "definition_zh": "Sigma Power 2(a Sub Z) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(a Sub Z) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -13537,7 +13537,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Llow us to use the more general consistency condition given by Equation 20.21b.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter20_formula_20_29c_used_e_z",
@@ -13549,7 +13549,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Llow us to use the more general consistency condition given by Equation 20.21b.",
-          "definition_zh": "E Sub Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13677,7 +13677,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The ability to obtain an unbiased estimate of, a subject discussed in detail below.",
-              "definition_zh": "H Power 2sigma 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition_zh": "H Power 2sigma 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter20_formula_20_17b_statement",
@@ -13769,8 +13769,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [

@@ -28,6 +28,10 @@ const unsafePublicCopyPatterns = [
   /local mathematical quantity/i,
   /supporting formula/i,
   /local formula context/i,
+  /帮你把符号/,
+  /标记的是/,
+  /places the symbol back/i,
+  /marks the object/i,
 ];
 
 const internalPublicFields = [
@@ -165,10 +169,28 @@ function sanitizePublicCopy(item, source = item) {
   const formulaLabel = source.formula_label || source.supporting_formula_label || source.label || 'the formula';
 
   if (isUnsafePublicCopy(next.definition)) {
-    next.definition = `${name} is the concept represented by ${symbol} in ${formulaLabel}.`;
+    next.definition = readableFallbackDefinition(name, symbol, formulaLabel, false);
   }
   if (isUnsafePublicCopy(next.definition_zh)) {
-    next.definition_zh = `${name} 表示 ${formulaLabel} 中符号 ${symbol} 对应的概念。`;
+    next.definition_zh = readableFallbackDefinition(name, symbol, formulaLabel, true);
   }
   return stripUndefined(next);
+}
+
+function readableFallbackDefinition(name, symbol, formulaLabel, zh) {
+  const label = String(name || symbol || 'Concept').replace(/\s+/g, ' ').trim();
+  const formula = String(formulaLabel || 'the formula').replace(/\s+/g, ' ').trim();
+  const lower = label.toLowerCase();
+  if (zh) {
+    if (/probability|density|likelihood/.test(lower)) return `${label} 表示 ${formula} 中的可能性或概率权重。`;
+    if (/frequency|allele/.test(lower)) return `${label} 表示 ${formula} 中被追踪的群体比例或等位基因状态。`;
+    if (/variance|sigma|covariance|correlation/.test(lower)) return `${label} 描述 ${formula} 中变量的离散程度或共同变化。`;
+    if (/mean|average|expectation|expected/.test(lower)) return `${label} 表示 ${formula} 中一组取值的中心水平。`;
+    return `${label} 是 ${formula} 中需要先定位的量，用来读清它和核心关系的连接方式。`;
+  }
+  if (/probability|density|likelihood/.test(lower)) return `${label} describes probability weight in ${formula}.`;
+  if (/frequency|allele/.test(lower)) return `${label} is the population proportion or allele state tracked in ${formula}.`;
+  if (/variance|sigma|covariance|correlation/.test(lower)) return `${label} describes spread or joint movement in ${formula}.`;
+  if (/mean|average|expectation|expected/.test(lower)) return `${label} is the center of a set of values in ${formula}.`;
+  return `${label} is a quantity to locate first when reading its relationship to the main term in ${formula}.`;
 }

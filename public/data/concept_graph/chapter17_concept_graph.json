@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter17",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:03.478Z",
+  "generated_at": "2026-06-11T11:39:26.549Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter17_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter17.jsonl",
@@ -72,8 +72,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -203,7 +203,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction The Multiplicative Model",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -216,8 +216,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -312,7 +312,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Changes in the Environmental Variance: Introduction The Multiplicative Model",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -325,8 +325,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "E names the biological object or model condition being used in this formula.",
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -372,7 +372,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "LW Equation 22.13b; Volume 3), and was also used by Wagner et al.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -386,7 +386,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "LW Equation 22.13b; Volume 3), and was also used by Wagner et al.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -514,7 +514,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction The Multiplicative Model",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -630,7 +630,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under this extension, the mean environmental variance becomes (17.2d) Short-term Changes in the Variance: 2.",
-          "definition_zh": "D Sub V 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "D Sub V 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -774,7 +774,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They did so by modeling E using an exponential model (17.3a) Short-term Changes in the Variance: 2.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -994,7 +994,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the environmental variance is a constant multiplied by a scaling factor that is an exponential function Short-term Changes in the Variance: 2.",
-          "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1008,7 +1008,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the environmental variance is a constant multiplied by a scaling factor that is an exponential function Short-term Changes in the Variance: 2.",
-          "definition_zh": "Sigma Power 2(exp(a Sub V/2)cdotemida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(exp(a Sub V/2)cdotemida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1021,8 +1021,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1169,7 +1169,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the environmental variance is a constant multiplied by a scaling factor that is an exponential function Short-term Changes in the Variance: 2.",
-              "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1215,7 +1215,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction The Exponential Model",
-          "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1350,7 +1350,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the environmental variance is a constant multiplied by a scaling factor that is an exponential function Short-term Changes in the Variance: 2.",
-              "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1531,7 +1531,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the environmental variance is a constant multiplied by a scaling factor that is an exponential function Short-term Changes in the Variance: 2.",
-              "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1591,7 +1591,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Our last formulation for modeling genetic variation in E was suggested by Hill and Zhang (2004) and Mulder et al.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1741,7 +1741,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is the additive model, as the environmental variance for an individual with breeding value is simply (17.4b) with the constraint on the breeding value being that.",
-          "definition_zh": "Sigma Power 2(emida Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(emida Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1970,7 +1970,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Under the additive-model framework (Equation 17.4a), they show that the appropriate transformation is the square, of phenotypic value.",
-          "definition_zh": "U Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "U Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1984,7 +1984,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Under the additive-model framework (Equation 17.4a), they show that the appropriate transformation is the square, of phenotypic value.",
-          "definition_zh": "Sigma Power 2(a Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(a Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2129,7 +2129,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Under the additive-model framework (Equation 17.4a), they show that the appropriate transformation is the square, of phenotypic value.",
-          "definition_zh": "Sigma Power 2(z Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(z Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2223,7 +2223,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Under the additive-model framework (Equation 17.4a), they show that the appropriate transformation is the square, of phenotypic value.",
-          "definition_zh": "Sigma Power 2(a Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(a Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2345,7 +2345,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Te the change in the mean breeding value (for the environmental variance) of the selected parents from the mean breeding value of the entire population.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2359,7 +2359,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The resulting change in becomes (17.6a) Short-term Changes in the Variance: 2.",
-          "definition_zh": "Sigma Sub E Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub E Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2373,7 +2373,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The resulting change in becomes (17.6a) Short-term Changes in the Variance: 2.",
-          "definition_zh": "Sigma Sub E Power 2(t+1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub E Power 2(t+1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2548,8 +2548,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2562,8 +2562,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub E Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub E Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub E Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub E Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2576,8 +2576,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub E Power 2(t+1) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub E Power 2(t+1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub E Power 2(t+1) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub E Power 2(t+1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2832,7 +2832,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction Translating the Response in Into Response in",
-          "definition_zh": "Sigma Sub E Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub E Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2846,7 +2846,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction Translating the Response in Into Response in",
-          "definition_zh": "Sigma Sub E Power 2(t+1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub E Power 2(t+1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2873,8 +2873,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3156,7 +3156,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Noting that, the expected fitness as a function of and becomes (17.7b) Short-term Changes in the Variance: 2.",
-          "definition_zh": "Operatorname 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Operatorname 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3170,7 +3170,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Lace by and take the expectation over.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3184,7 +3184,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Lace by and take the expectation over.",
-          "definition_zh": "E Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3600,7 +3600,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Taking the expectation over environmental values, Gavrilets and Hastings (1994c) found that (17.9b) Short-term Changes in the Variance: 2.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3666,7 +3666,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Keeping only first-order terms in and yields (17.10a) Short-term Changes in the Variance: 2.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3694,7 +3694,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Keeping only first-order terms in and yields (17.10a) Short-term Changes in the Variance: 2.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3875,8 +3875,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4039,7 +4039,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Our last formulation for modeling genetic variation in E was suggested by Hill and Zhang (2004) and Mulder et al.",
-              "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4145,7 +4145,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Keeping only first-order terms in and yields (17.10a) Short-term Changes in the Variance: 2.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -4173,7 +4173,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Keeping only first-order terms in and yields (17.10a) Short-term Changes in the Variance: 2.",
-              "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -4247,7 +4247,7 @@
               "confidence": 0.8,
               "concept_type": "domain_concept",
               "definition": "Under the additive-model framework (Equation 17.4a), they show that the appropriate transformation is the square, of phenotypic value.",
-              "definition_zh": "Sigma Power 2(a Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Power 2(a Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4279,7 +4279,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Changes in the Environmental Variance: Introduction Response From Directional Selection on z",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4293,7 +4293,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Changes in the Environmental Variance: Introduction Response From Directional Selection on z",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4465,7 +4465,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Natural selection can also act in a repeated-r Short-term Changes in the Variance: 2.",
-          "definition_zh": "Z-bar_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Z-bar_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4523,7 +4523,7 @@
       "concept_id": "concept_chapter17_formula_17_12_defined_r_a_v_simeq_bar_imath_frac_sigma_2",
       "name": "Index, V,",
       "definition": "Substitution into Equation 17.6c provides the expected response in.",
-      "definition_zh": "Index, V, 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Index, V, 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_17.12",
       "defined_symbol": "R_{A_{v}}\\simeq\\bar{\\imath}\\frac{\\sigma^{2}",
@@ -4652,7 +4652,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Substitution into Equation 17.6c provides the expected response in.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4666,7 +4666,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Substitution into Equation 17.6c provides the expected response in.",
-          "definition_zh": "Sigma Power 2(a Sub V) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(a Sub V) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },

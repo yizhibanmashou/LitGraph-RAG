@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter4",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:10.284Z",
+  "generated_at": "2026-06-11T11:39:32.789Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter4_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter4.jsonl",
@@ -269,8 +269,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(theta-hat Sub Pi) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(theta-hat Sub Pi) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(theta-hat Sub Pi) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(theta-hat Sub Pi) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -673,8 +673,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(theta-hat Sub S) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(theta-hat Sub S) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(theta-hat Sub S) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(theta-hat Sub S) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -885,7 +885,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Knows with certainty the genealogical relationships of the sequences and the numbers of mutations and generations on each branch of the genealogy.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_5_used_n",
@@ -909,7 +909,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Knows with certainty the genealogical relationships of the sequences and the numbers of mutations and generations on each branch of the genealogy.",
-          "definition_zh": "Sigma Power 2(theta-hat Sub Ml) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(theta-hat Sub Ml) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -1018,7 +1018,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Such an estimator is attractive for two reasons.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_6a_used_l",
@@ -1137,7 +1137,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Frequencies are expected to most closely reflect the pattern expected under neutrality even when such mutations are nonneutral (Messer 2009).",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_6b_used_n",
@@ -1161,7 +1161,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Frequencies are expected to most closely reflect the pattern expected under neutrality even when such mutations are nonneutral (Messer 2009).",
-          "definition_zh": "Sigma Power 2(widehattheta Sub 1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(widehattheta Sub 1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_6b_used_widehat_theta_1",
@@ -1173,7 +1173,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Frequencies are expected to most closely reflect the pattern expected under neutrality even when such mutations are nonneutral (Messer 2009).",
-          "definition_zh": "Widehattheta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Widehattheta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1247,8 +1247,8 @@
       "chapter_id": "chapter4",
       "concept_id": "concept_chapter4_formula_4_7_defined_widehat_rho_l",
       "name": "Correlation",
-      "definition": "Correlation is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Correlation describes spread or joint movement among variables.",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_4.7",
       "defined_symbol": "\\widehat{\\rho}_{L}",
@@ -1472,8 +1472,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_8b_used_d",
@@ -1663,7 +1663,7 @@
       "concept_id": "concept_chapter4_formula_4_10_defined_widehat_rho_l",
       "name": "Correlation",
       "definition": "Idehat d r' $, the fraction of recombination events that lead to uniquely observable recombinants.",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_4.10",
       "defined_symbol": "\\widehat{\\rho}_{L}",
@@ -1686,8 +1686,8 @@
           "confidence": 0.87,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Correlation is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter4_formula_4_3b_defined_a_n",
@@ -1762,7 +1762,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Idehat d r' $, the fraction of recombination events that lead to uniquely observable recombinants.",
-          "definition_zh": "Updated Distance 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Updated Distance 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_10_used_widehat_r_min",
@@ -1831,8 +1831,8 @@
       "chapter_id": "chapter4",
       "concept_id": "concept_chapter4_formula_4_11_defined_widehat_sigma_k_2",
       "name": "Sigma-hat_k^2",
-      "definition": "Sigma-hat_k^2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Sigma-hat_k^2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Sigma-hat_k^2 describes spread or joint movement among variables.",
+      "definition_zh": "Sigma-hat_k^2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_4.11",
       "defined_symbol": "\\widehat{\\sigma}_k^2",
@@ -2000,8 +2000,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E Power -theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E Power -theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "E Power -theta names the biological object or model condition being used in this formula.",
+              "definition_zh": "E Power -theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_8b_used_d",
@@ -2052,8 +2052,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub 1d places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub 1d 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub 1d names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub 1d 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2152,8 +2152,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_13a_used_rho_l",
@@ -2164,8 +2164,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -2248,8 +2248,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_13b_used_theta_2",
@@ -2260,8 +2260,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2324,8 +2324,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_14_used_r_l_2",
@@ -2370,8 +2370,8 @@
       "chapter_id": "chapter4",
       "concept_id": "concept_chapter4_formula_4_15_defined_widehat_rho_l",
       "name": "Correlation",
-      "definition": "Correlation is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Correlation describes spread or joint movement among variables.",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_4.15",
       "defined_symbol": "\\widehat{\\rho}_{L}",
@@ -2407,8 +2407,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Correlation describes spread or joint movement among variables.",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_14_used_r_l_2",
@@ -2459,8 +2459,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widehatr Sub L Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widehatr Sub L Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widehatr Sub L Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widehatr Sub L Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2572,7 +2572,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Otal conversion rate per site is (Langley et al.",
-          "definition_zh": "E Power -l/t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -l/t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_16a_used_x",
@@ -2596,7 +2596,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Otal conversion rate per site is (Langley et al.",
-          "definition_zh": "C Sub L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "C Sub L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2695,8 +2695,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C Sub L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C Sub L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C Sub L names the biological object or model condition being used in this formula.",
+          "definition_zh": "C Sub L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2775,8 +2775,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C Sub L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C Sub L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C Sub L names the biological object or model condition being used in this formula.",
+          "definition_zh": "C Sub L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2851,8 +2851,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F-hat Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F-hat Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "F-hat Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "F-hat Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2919,8 +2919,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "F Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "F Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_17b_used_widehat_p_0",
@@ -2931,8 +2931,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widehatp Sub 0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widehatp Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widehatp Sub 0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widehatp Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_17b_used_widehat_p_1",
@@ -2943,8 +2943,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widehatp Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widehatp Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Widehatp Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widehatp Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3042,8 +3042,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "F-hat Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "F-hat Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "F-hat Sub 1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "F-hat Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -3084,8 +3084,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "F Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "F Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "F Sub 1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "F Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_17b_used_widehat_p_0",
@@ -3096,8 +3096,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Widehatp Sub 0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Widehatp Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Widehatp Sub 0 names the biological object or model condition being used in this formula.",
+              "definition_zh": "Widehatp Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_17b_used_widehat_p_1",
@@ -3108,8 +3108,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Widehatp Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Widehatp Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Widehatp Sub 1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "Widehatp Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3148,8 +3148,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "F-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "F-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3482,8 +3482,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "F-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "F-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "F-hat names the biological object or model condition being used in this formula.",
+              "definition_zh": "F-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3535,7 +3535,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "So the utility of the overall approach becomes diminishingly small in populations with large effective sizes.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_19_used_tilde_n",
@@ -3547,7 +3547,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "So the utility of the overall approach becomes diminishingly small in populations with large effective sizes.",
-          "definition_zh": "Tilden 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Tilden 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_19_used_tilde_n_2",
@@ -3559,7 +3559,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "So the utility of the overall approach becomes diminishingly small in populations with large effective sizes.",
-          "definition_zh": "Tilden Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Tilden Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_19_used_r",
@@ -3842,8 +3842,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(u-hat) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(u-hat) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(u-hat) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(u-hat) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_20b_used_n",
@@ -3946,8 +3946,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -m places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -m 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -m names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -m 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_21_used_m",
@@ -4001,7 +4001,7 @@
       "concept_id": "concept_chapter4_formula_4_22a_defined_f_t",
       "name": "Inbreeding Coefficient",
       "definition": "Ntical for cells that are mutant and nonmutant).",
-      "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_4.22a",
       "defined_symbol": "f_{t}",
@@ -4047,7 +4047,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ntical for cells that are mutant and nonmutant).",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_22a_used_f_0",
@@ -4151,7 +4151,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "And then survey the frequency of mutants at the end point of each culture.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_22b_used_t",
@@ -4274,7 +4274,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "And then survey the frequency of mutants at the end point of each culture.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_22b_used_t",
@@ -4325,8 +4325,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_22c_used_n_0",
@@ -4456,8 +4456,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_22c_used_n_0",
@@ -4496,8 +4496,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_22d_used_n_t",
@@ -4708,8 +4708,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_23a_used_c",
@@ -4720,8 +4720,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_23a_used_h",
@@ -4837,7 +4837,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "So the selective disadvantage at equilibrium is simply the ratio of the rates of gain and loss of associated fitness load per generation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_23b_used_h",
@@ -4932,8 +4932,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -5027,8 +5027,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E Power -theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E Power -theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "E Power -theta names the biological object or model condition being used in this formula.",
+              "definition_zh": "E Power -theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter4_formula_4_8b_used_d",
@@ -5103,8 +5103,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_24a_used_delta",
@@ -5115,8 +5115,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_24a_used_d",
@@ -5267,8 +5267,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter4_formula_4_24b_used_h",

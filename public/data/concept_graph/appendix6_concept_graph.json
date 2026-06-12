@@ -1,7 +1,7 @@
 {
   "chapter_id": "appendix6",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:02.022Z",
+  "generated_at": "2026-06-11T11:39:25.089Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/appendix6_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/appendix6.jsonl",
@@ -363,8 +363,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "-frac12right places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "-frac12right 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "-frac12right names the biological object or model condition being used in this formula.",
+          "definition_zh": "-frac12right 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -630,8 +630,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -730,8 +730,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -758,8 +758,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "U Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "U Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -992,8 +992,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1020,8 +1020,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1212,8 +1212,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "U Matrix-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "U Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1321,8 +1321,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "U Matrix-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "U Matrix-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "U Matrix-hat names the biological object or model condition being used in this formula.",
+              "definition_zh": "U Matrix-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1353,8 +1353,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Beta Vector-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Beta Vector-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Beta Vector-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "Beta Vector-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1367,8 +1367,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Boldsymbol-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Boldsymbol-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Boldsymbol-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "Boldsymbol-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1535,7 +1535,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "In univariate calculus, the local extrema of a function occur when its slope (first derivative) is zero.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1648,8 +1648,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1743,7 +1743,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Occasionally, we wish to find the maximum or minimum of a function subject to a constraint.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1757,7 +1757,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Occasionally, we wish to find the maximum or minimum of a function subject to a constraint.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1859,7 +1859,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Occasionally, we wish to find the maximum or minimum of a function subject to a constraint.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1873,7 +1873,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The solution is to use Lagrange multipliers.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1975,7 +1975,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Occasionally, we wish to find the maximum or minimum of a function subject to a constraint.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1989,7 +1989,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Occasionally, we wish to find the maximum or minimum of a function subject to a constraint.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2003,7 +2003,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The solution is to use Lagrange multipliers.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },

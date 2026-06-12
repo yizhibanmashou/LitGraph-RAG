@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter11",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:02.533Z",
+  "generated_at": "2026-06-11T11:39:25.503Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter11_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter11.jsonl",
@@ -23,7 +23,7 @@
       "concept_id": "concept_chapter11_formula_11_1_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "Expression is readily extended to a multilocus trait with a purely additive genetic basis.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.1",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -101,7 +101,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Expression is readily extended to a multilocus trait with a purely additive genetic basis.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -253,7 +253,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Moreover, under the assumption of neutrality, there should be no correlation between allele frequency and effect, so, substituting from Equation 2.5, (11.2) as obtained by Wright (1951).",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -267,7 +267,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Moreover, under the assumption of neutrality, there should be no correlation between allele frequency and effect, so, substituting from Equation 2.5, (11.2) as obtained by Wright (1951).",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -342,8 +342,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_3a_defined_f_t",
       "name": "Inbreeding Coefficient",
-      "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+      "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.3a",
       "defined_symbol": "f_{t}",
@@ -632,8 +632,8 @@
           "confidence": 0.95,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -663,8 +663,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -691,8 +691,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildechange Sub T+1 Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildechange Sub T+1 Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildechange Sub T+1 Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildechange Sub T+1 Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -705,8 +705,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildechange Sub T Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildechange Sub T Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildechange Sub T Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildechange Sub T Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -719,8 +719,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildegamma Sub T+1 Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildegamma Sub T+1 Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildegamma Sub T+1 Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildegamma Sub T+1 Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -733,8 +733,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildegamma Sub T Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildegamma Sub T Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildegamma Sub T Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildegamma Sub T Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -747,8 +747,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildef Sub T+1 Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildef Sub T+1 Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildef Sub T+1 Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildef Sub T+1 Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -885,8 +885,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -899,8 +899,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1046,7 +1046,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Is until the following section.",
-          "definition_zh": "Phi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Phi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1162,7 +1162,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under complete inbreeding, the change in the mean from inbreeding depression (as under random mating).",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1176,7 +1176,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under complete inbreeding, the change in the mean from inbreeding depression (as under random mating).",
-          "definition_zh": "Iota Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Iota Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1190,7 +1190,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under complete inbreeding, the change in the mean from inbreeding depression (as under random mating).",
-          "definition_zh": "Iota Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Iota Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1204,7 +1204,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Under complete inbreeding, the change in the mean from inbreeding depression (as under random mating).",
-          "definition_zh": "Widetildef 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Widetildef 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1365,8 +1365,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1379,8 +1379,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1393,8 +1393,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1407,8 +1407,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildef places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildef 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildef names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildef 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1546,8 +1546,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1574,8 +1574,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1588,8 +1588,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1602,8 +1602,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1630,8 +1630,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildef places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildef 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildef names the biological object or model condition being used in this formula.",
+          "definition_zh": "Widetildef 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1729,7 +1729,7 @@
       "concept_id": "concept_chapter11_formula_11_7a_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "The assumption that all of the two-locus identities.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.7a",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -1752,8 +1752,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -1798,7 +1798,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1812,7 +1812,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1826,7 +1826,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1914,7 +1914,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter11_formula_11_3a_defined_f_t",
@@ -1928,8 +1928,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -1959,7 +1959,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1973,7 +1973,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1987,7 +1987,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2005,8 +2005,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2050,8 +2050,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub Aa Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub Aa Power 2(0) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2064,8 +2064,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub Aa Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub Aa Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub Aa Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub Aa Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2132,8 +2132,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_7c_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
-      "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.7c",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -2156,8 +2156,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2215,8 +2215,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub Aa Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub Aa Power 2(0) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2229,8 +2229,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(0) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2243,8 +2243,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2340,7 +2340,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter11_formula_11_3a_defined_f_t",
@@ -2354,8 +2354,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2385,7 +2385,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2399,7 +2399,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2413,7 +2413,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2559,7 +2559,7 @@
       "concept_id": "concept_chapter11_formula_11_9a_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "Stasis involving additive effects influencing the trait (Barton and Turelli 2004; Hill et al.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.9a",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -2583,7 +2583,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter11_formula_11_3a_defined_f_t",
@@ -2597,8 +2597,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2628,7 +2628,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2642,7 +2642,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2656,7 +2656,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2690,7 +2690,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2706,8 +2706,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2736,8 +2736,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub Aa Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub Aa Power 2(0) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2750,8 +2750,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub Aa Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub Aa Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub Aa Power 2(t) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub Aa Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2769,8 +2769,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2815,7 +2815,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Stasis involving additive effects influencing the trait (Barton and Turelli 2004; Hill et al.",
-          "definition_zh": "Sigma Sub Aaa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aaa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2829,7 +2829,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Stasis involving additive effects influencing the trait (Barton and Turelli 2004; Hill et al.",
-          "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2843,7 +2843,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Stasis involving additive effects influencing the trait (Barton and Turelli 2004; Hill et al.",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2857,7 +2857,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Stasis involving additive effects influencing the trait (Barton and Turelli 2004; Hill et al.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2977,7 +2977,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The assumption that all of the two-locus identities.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter11_formula_11_3a_defined_f_t",
@@ -2991,8 +2991,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3022,7 +3022,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3036,7 +3036,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3050,7 +3050,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3084,7 +3084,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The assumption that all of the two-locus identities.",
-              "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3100,8 +3100,8 @@
               "confidence": 0.95,
               "relation": "defines_symbol",
               "concept_type": "quantity_concept",
-              "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+              "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3130,8 +3130,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub Aa Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub Aa Power 2(0) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3144,8 +3144,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub Aa Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub Aa Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub Aa Power 2(t) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub Aa Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3163,8 +3163,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -3209,7 +3209,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Overs Equations 11.7a and 11.7b, and with x as high as 3, we obtain (11.9a) (11.9b) (11.9c) with the dots denoting potential contributions from higher-order effects.",
-          "definition_zh": "Sigma Sub Aaa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aaa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3223,7 +3223,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Overs Equations 11.7a and 11.7b, and with x as high as 3, we obtain (11.9a) (11.9b) (11.9c) with the dots denoting potential contributions from higher-order effects.",
-          "definition_zh": "Sigma Sub Aa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3237,7 +3237,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Overs Equations 11.7a and 11.7b, and with x as high as 3, we obtain (11.9a) (11.9b) (11.9c) with the dots denoting potential contributions from higher-order effects.",
-          "definition_zh": "Sigma Sub Aa Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub Aa Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3348,8 +3348,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -3393,8 +3393,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub Aaa Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub Aaa Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub Aaa Power 2(0) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub Aaa Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3407,8 +3407,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub Aaa Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub Aaa Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub Aaa Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub Aaa Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3514,7 +3514,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Variation is difficult, but some general results have been obtained for characters with a purely additive genetic basis.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3623,7 +3623,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Variation is difficult, but some general results have been obtained for characters with a purely additive genetic basis.",
-              "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3668,8 +3668,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(sigma Sub a Power 2(t)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(sigma Sub a Power 2(t)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(sigma Sub a Power 2(t)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(sigma Sub a Power 2(t)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3682,8 +3682,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(sigma-hat Sub a Power 2(t)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(sigma-hat Sub a Power 2(t)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(sigma-hat Sub a Power 2(t)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(sigma-hat Sub a Power 2(t)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3696,8 +3696,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(sigma-hat Sub Hw(t)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(sigma-hat Sub Hw(t)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(sigma-hat Sub Hw(t)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(sigma-hat Sub Hw(t)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3710,8 +3710,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(sigma-hat Sub L(t)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(sigma-hat Sub L(t)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(sigma-hat Sub L(t)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(sigma-hat Sub L(t)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3724,8 +3724,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3876,8 +3876,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3890,8 +3890,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(sigma Sub a Power 2(t)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(sigma Sub a Power 2(t)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(sigma Sub a Power 2(t)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(sigma Sub a Power 2(t)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3904,8 +3904,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3994,8 +3994,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4022,8 +4022,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4036,8 +4036,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4050,8 +4050,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4064,8 +4064,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4078,8 +4078,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4243,7 +4243,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Coefficient of coancestry, the probability that two genes, one drawn from and the other from are identical by descent.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4299,8 +4299,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -4330,8 +4330,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4358,8 +4358,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4386,8 +4386,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4526,8 +4526,8 @@
           "confidence": 0.95,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -4557,8 +4557,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4599,8 +4599,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Inbreeding Coefficient is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Inbreeding Coefficient 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Inbreeding Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Inbreeding Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4627,8 +4627,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4641,8 +4641,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma_g places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma_g 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma_g describes spread or joint movement among variables.",
+          "definition_zh": "Sigma_g 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4669,8 +4669,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F_j places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "F_j names the biological object or model condition being used in this formula.",
+          "definition_zh": "F_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4683,8 +4683,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "X_t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "X_t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "X_t names the biological object or model condition being used in this formula.",
+          "definition_zh": "X_t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4817,8 +4817,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4859,8 +4859,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4887,8 +4887,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma_g places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma_g 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma_g describes spread or joint movement among variables.",
+          "definition_zh": "Sigma_g 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4901,8 +4901,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Y_j places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Y_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Y_j names the biological object or model condition being used in this formula.",
+          "definition_zh": "Y_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5071,8 +5071,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5174,8 +5174,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5202,8 +5202,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5216,8 +5216,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Change names the biological object or model condition being used in this formula.",
+              "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5248,8 +5248,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5276,8 +5276,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5318,8 +5318,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5332,8 +5332,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Iota Power * places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Iota Power * 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Iota Power * names the biological object or model condition being used in this formula.",
+          "definition_zh": "Iota Power * 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5472,8 +5472,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Change places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Change 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Change names the biological object or model condition being used in this formula.",
+          "definition_zh": "Change 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5523,7 +5523,7 @@
       "concept_id": "concept_chapter11_formula_11_20a_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "Of loci contributing to the trait, and is the average squared heterozygous effect of a new mutation on the phenotypic value (LW Chapter 12).",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.20a",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -5587,7 +5587,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Of loci contributing to the trait, and is the average squared heterozygous effect of a new mutation on the phenotypic value (LW Chapter 12).",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5601,7 +5601,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Of loci contributing to the trait, and is the average squared heterozygous effect of a new mutation on the phenotypic value (LW Chapter 12).",
-          "definition_zh": "Sigma Sub a Power 2(t-1) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Sub a Power 2(t-1) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5660,8 +5660,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_20b_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
-      "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.20b",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -5724,8 +5724,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(0) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5738,8 +5738,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(t) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(t) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(t) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(t) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5798,8 +5798,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_20c_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
-      "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.20c",
       "defined_symbol": "\\sigma_{A}^{2}",
@@ -5848,8 +5848,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Infty places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Infty names the biological object or model condition being used in this formula.",
+          "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5862,8 +5862,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(infty) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(infty) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub a Power 2(infty) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(infty) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5876,8 +5876,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildesigma Sub a Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildesigma Sub a Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Widetildesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5960,8 +5960,8 @@
           "confidence": 0.9,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -6015,8 +6015,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub a Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub a Power 2(0) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6089,8 +6089,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildesigma Sub a Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildesigma Sub a Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Widetildesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6185,8 +6185,8 @@
           "confidence": 0.9,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -6240,8 +6240,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Sigma Sub a Power 2(0) places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Sigma Sub a Power 2(0) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Sigma Sub a Power 2(0) describes spread or joint movement among variables.",
+              "definition_zh": "Sigma Sub a Power 2(0) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6314,8 +6314,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildesigma Sub a Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildesigma Sub a Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Widetildesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6425,8 +6425,8 @@
               "confidence": 0.9,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6517,8 +6517,8 @@
               "confidence": 0.9,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6621,8 +6621,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H names the biological object or model condition being used in this formula.",
+          "definition_zh": "H 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6689,8 +6689,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_22a_defined_widetilde_sigma_a_2_simeq_frac_2n_e_sigma_m_2",
       "name": "Widetildesigma Sub a Power 2simeqfrac2n Sub Esigma Sub M Power 2",
-      "definition": "Widetildesigma Sub a Power 2simeqfrac2n Sub Esigma Sub M Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Widetildesigma Sub a Power 2simeqfrac2n Sub Esigma Sub M Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Widetildesigma Sub a Power 2simeqfrac2n Sub Esigma Sub M Power 2 describes spread or joint movement among variables.",
+      "definition_zh": "Widetildesigma Sub a Power 2simeqfrac2n Sub Esigma Sub M Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.22a",
       "defined_symbol": "\\widetilde{\\sigma}_{A}^{2}\\simeq\\frac{2N_{e}\\sigma_{m}^{2}",
@@ -6725,8 +6725,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Index places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Index 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Mean Index summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Index 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6739,8 +6739,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "3+2k-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "3+2k-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "3+2k-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "3+2k-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6753,8 +6753,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub M Power 2(3+2k-bar) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub M Power 2(3+2k-bar) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub M Power 2(3+2k-bar) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub M Power 2(3+2k-bar) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6767,8 +6767,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildesigma Sub a Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildesigma Sub a Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildesigma Sub a Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Widetildesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6827,8 +6827,8 @@
       "chapter_id": "chapter11",
       "concept_id": "concept_chapter11_formula_11_22b_defined_widetilde_sigma_d_2_simeq_frac_2n_e_sigma_m_2",
       "name": "Widetildesigma Sub D Power 2simeqfrac2n Sub Esigma Sub M Power 2",
-      "definition": "Widetildesigma Sub D Power 2simeqfrac2n Sub Esigma Sub M Power 2 is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Widetildesigma Sub D Power 2simeqfrac2n Sub Esigma Sub M Power 2 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Widetildesigma Sub D Power 2simeqfrac2n Sub Esigma Sub M Power 2 describes spread or joint movement among variables.",
+      "definition_zh": "Widetildesigma Sub D Power 2simeqfrac2n Sub Esigma Sub M Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.22b",
       "defined_symbol": "\\widetilde{\\sigma}_{D}^{2}\\simeq\\frac{2N_{e}\\sigma_{m}^{2}",
@@ -6877,8 +6877,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Index places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Index 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Mean Index summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Index 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6891,8 +6891,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub M Power 2(k-bar Power 2+sigma Sub K Power 2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub M Power 2(k-bar Power 2+sigma Sub K Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Sub M Power 2(k-bar Power 2+sigma Sub K Power 2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub M Power 2(k-bar Power 2+sigma Sub K Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6905,8 +6905,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Widetildesigma Sub D Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Widetildesigma Sub D Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Widetildesigma Sub D Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "Widetildesigma Sub D Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6919,8 +6919,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "K-bar Power 2+sigma Sub K Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "K-bar Power 2+sigma Sub K Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "K-bar Power 2+sigma Sub K Power 2 describes spread or joint movement among variables.",
+          "definition_zh": "K-bar Power 2+sigma Sub K Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7023,8 +7023,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Tau names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7037,8 +7037,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub a places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub a 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E Sub a names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub a 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7150,8 +7150,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Tau names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7338,7 +7338,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tion in the same population.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7351,8 +7351,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7394,7 +7394,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tion in the same population.",
-          "definition_zh": "Widetildesigma Sub a Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Widetildesigma Sub a Power 2 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7478,7 +7478,7 @@
       "concept_id": "concept_chapter11_formula_11_26_defined_sigma_a_2",
       "name": "Additive Genetic Variance",
       "definition": "Using this general strategy, the expressions for given in Chapter 3 can be used to obtain results for a variety of other types of population structures.",
-      "definition_zh": "Additive Genetic Variance 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_11.26",
       "defined_symbol": "\\sigma_{A}^{2}",

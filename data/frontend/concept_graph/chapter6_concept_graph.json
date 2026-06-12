@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter6",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:10.762Z",
+  "generated_at": "2026-06-11T11:39:33.368Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter6_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter6.jsonl",
@@ -140,7 +140,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -210,8 +210,8 @@
       "chapter_id": "chapter6",
       "concept_id": "concept_chapter6_formula_6_2b_defined_q_i_prime",
       "name": "Updated Frequency",
-      "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+      "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_6.2b",
       "defined_symbol": "q_{i}^{\\prime}",
@@ -244,8 +244,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         }
       ],
       "edges": [
@@ -370,8 +370,8 @@
           "confidence": 0.92,
           "relation": "defines_symbol",
           "concept_type": "quantity_concept",
-          "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -395,8 +395,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             }
           ]
         }
@@ -527,8 +527,8 @@
           "confidence": 0.92,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -552,8 +552,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             }
           ]
         }
@@ -616,8 +616,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_4_used_overline_delta_i",
@@ -753,7 +753,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "Both these terms can be expressed in a more transparent form.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -777,7 +777,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Both these terms can be expressed in a more transparent form.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -860,8 +860,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_5b_used_q_i_prime",
@@ -872,8 +872,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Updated Frequency is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Updated Frequency 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_5b_used_overline_delta_i",
@@ -988,8 +988,8 @@
               "confidence": 0.92,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
             }
           ],
           "introduced_concepts": [
@@ -1081,7 +1081,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -1105,7 +1105,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -1146,8 +1146,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5b_used_q_i_prime",
@@ -1158,8 +1158,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Frequency is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Frequency 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5b_used_overline_delta_i",
@@ -1198,8 +1198,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_6_used_z_i",
@@ -1403,8 +1403,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_6_used_z_i",
@@ -1444,7 +1444,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -1468,7 +1468,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-          "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -1616,8 +1616,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_6_used_z_i",
@@ -1656,8 +1656,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_7b_used_z_i",
@@ -1829,8 +1829,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7b_used_z_i",
@@ -1869,8 +1869,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_7c_used_overline_delta_i",
@@ -1989,7 +1989,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -2013,7 +2013,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -2059,7 +2059,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -2083,7 +2083,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -2122,8 +2122,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_8_used_z_i",
@@ -2147,7 +2147,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Theorems of Natural Selection: Results of Price, Fisher, and Robertson: Introduction The Life and Times of George Price",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_8_used_overline_z_i",
@@ -2170,8 +2170,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Updated Frequency is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Updated Frequency 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_8_used_s",
@@ -2206,8 +2206,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2387,7 +2387,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Is the trait value for the th offspring from midparent, giving the mean value of offspring from as.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_9a_used_mu",
@@ -2515,7 +2515,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Inbreeding, the decay of linkage disequilibr Theorems of Natural Selection: Results of Price, Fisher, and Robertson: Introduction The Life and Times of George Price",
-          "definition_zh": "Overlinedelta Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Overlinedelta Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_38_used_i",
@@ -2679,8 +2679,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_6_used_z_i",
@@ -2847,8 +2847,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2973,8 +2973,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_9b_used_s",
@@ -3056,7 +3056,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -3080,7 +3080,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3095,8 +3095,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_12_used_s",
@@ -3143,8 +3143,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3283,8 +3283,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_13a_used_b",
@@ -3307,8 +3307,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3427,7 +3427,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -3451,7 +3451,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3466,8 +3466,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_13b_used_z_i",
@@ -3514,8 +3514,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_13b_used_b",
@@ -3538,8 +3538,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3692,8 +3692,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7c_used_overline_delta_i",
@@ -3750,8 +3750,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_13b_used_z_i",
@@ -3833,7 +3833,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -3857,7 +3857,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3884,8 +3884,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_13c_used_z_i_2",
@@ -3920,8 +3920,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_13c_used_b",
@@ -4092,8 +4092,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4215,8 +4215,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "E Sub I names the biological object or model condition being used in this formula.",
+              "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -4244,7 +4244,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Number of copies of allele in individual (values of 0, 1, or 2), so that (for a diploid), the frequency of allele.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_15a_used_b_j",
@@ -4359,7 +4359,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -4383,7 +4383,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         }
@@ -4422,8 +4422,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Updated Coefficient places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Updated Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Updated Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Updated Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_15b_used_delta",
@@ -4435,7 +4435,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "At some time in the future, the values of both (the allele frequency) and (its average effect) may change to new values",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_15b_used_b_j",
@@ -4651,8 +4651,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_6_used_z_i",
@@ -4722,7 +4722,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -4746,7 +4746,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -4761,8 +4761,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_9b_used_s",
@@ -4809,8 +4809,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_9b_used_mu",
@@ -4965,8 +4965,8 @@
               "confidence": 0.92,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
             }
           ],
           "introduced_concepts": [
@@ -5055,8 +5055,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Updated Coefficient places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Updated Coefficient 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Updated Coefficient controls the strength, direction, or scaling of the relationship.",
+          "definition_zh": "Updated Coefficient 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。"
         }
       ],
       "edges": [
@@ -5163,8 +5163,8 @@
               "confidence": 0.92,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Updated Frequency is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Updated Frequency 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。"
+              "definition": "Updated Frequency is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Updated Frequency 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。"
             }
           ],
           "introduced_concepts": [
@@ -5256,7 +5256,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -5280,7 +5280,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         }
@@ -5320,7 +5320,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "We write the new mean as and the same logic leading to Equation 6.4 allows us to decompose the total change as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_15d_used_b_j",
@@ -5406,7 +5406,7 @@
       "concept_id": "concept_chapter6_formula_6_16a_defined_p_prime",
       "name": "Updated Probability",
       "definition": "W(p) = 1 + p 2 p' q Qq qq R = h 2 S $",
-      "definition_zh": "Updated Probability 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_6.16a",
       "defined_symbol": "p^{\\prime}",
@@ -5487,8 +5487,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_16b_used_mu",
@@ -5563,8 +5563,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_16c_used_sigma_d_2",
@@ -5667,7 +5667,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -5881,8 +5881,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_16b_used_mu",
@@ -5923,8 +5923,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_16c_used_sigma_d_2",
@@ -6183,7 +6183,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -6246,8 +6246,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma^2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma^2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma^2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma^2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -6350,7 +6350,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -6401,8 +6401,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma^2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma^2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma^2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma^2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_17b_used_sigma_a_2_w",
@@ -6413,8 +6413,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma_a^2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma_a^2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma_a^2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma_a^2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_17b_used_h_w_2",
@@ -6425,8 +6425,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H_w^2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H_w^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H_w^2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H_w^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6537,7 +6537,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -6561,7 +6561,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -6591,7 +6591,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -6655,7 +6655,7 @@
           "confidence": 0.81,
           "concept_type": "quantity_concept",
           "definition": "Expressed in terms of relative fitnesses, (6.17c) recovering the classical view of Fisher’s theorem.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_17c_used_w_2",
@@ -6679,7 +6679,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Expressed in terms of relative fitnesses, (6.17c) recovering the classical view of Fisher’s theorem.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_17c_used_r_w",
@@ -6703,7 +6703,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Expressed in terms of relative fitnesses, (6.17c) recovering the classical view of Fisher’s theorem.",
-          "definition_zh": "Sigma Sub a Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Sub a Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -6850,7 +6850,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -6874,7 +6874,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -6904,7 +6904,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Suppose that the members of category i leave a total of descendants (the absolute fitness, for that category).",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_2a_used_q_i",
@@ -6956,7 +6956,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "One can also use a population-genetics framework to motivate Fisher’s theorem in terms of allele-frequency change.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -7063,7 +7063,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -7087,7 +7087,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         }
@@ -7114,8 +7114,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_18b_used_p_delta_p",
@@ -7126,8 +7126,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "P+change P places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "P+change P 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "P+change P names the biological object or model condition being used in this formula.",
+          "definition_zh": "P+change P 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_18b_used_d",
@@ -7250,7 +7250,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -7274,7 +7274,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         }
@@ -7313,8 +7313,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_18c_used_d",
@@ -7603,8 +7603,8 @@
       "chapter_id": "chapter6",
       "concept_id": "concept_chapter6_formula_6_18f_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_6.18f",
       "defined_symbol": "\\Delta",
@@ -7680,8 +7680,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_18c_used_d",
@@ -7941,8 +7941,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_18c_used_d",
@@ -8202,8 +8202,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_18c_used_d",
@@ -8332,8 +8332,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "1-p places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "1-p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "1-p names the biological object or model condition being used in this formula.",
+          "definition_zh": "1-p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_18g_used_sigma_a_2_w",
@@ -8344,8 +8344,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -8472,8 +8472,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "O places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "O 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "O names the biological object or model condition being used in this formula.",
+          "definition_zh": "O 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_19_used_sigma_a_2_w",
@@ -8484,8 +8484,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -8675,8 +8675,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7c_used_overline_delta_i",
@@ -8734,7 +8734,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -8758,7 +8758,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -8785,8 +8785,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_20b_used_a_w",
@@ -8833,8 +8833,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_20b_used_sigma_a_2_w",
@@ -8845,8 +8845,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -8993,7 +8993,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -9017,7 +9017,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -9102,7 +9102,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "We write the new mean as and the same logic leading to Equation 6.4 allows us to decompose the total change as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_15d_used_b_j",
@@ -9130,8 +9130,8 @@
           "confidence": 0.87,
           "relation": "defines_symbol",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter6_formula_6_18c_defined_r_w",
@@ -9443,7 +9443,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_5a_used_z_i",
@@ -9467,7 +9467,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Both these terms can be expressed in a more transparent form.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         },
@@ -9483,8 +9483,8 @@
           "confidence": 0.87,
           "relation": "defines_symbol",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter6_formula_6_18c_defined_r_w",
@@ -9688,8 +9688,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(w) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(w) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -9820,8 +9820,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub W) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Power 2(a Sub W) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -9885,7 +9885,7 @@
           "confidence": 0.81,
           "concept_type": "operator_or_function",
           "definition": "Discussion of this point was offered by Frank and Slatkin (1992), who pointed out that the change in mean fitness over a generation is also influenced by the change in “environment,” E.",
-          "definition_zh": "Updated Expectation 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Updated Expectation 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_22a_used_overline_w",
@@ -9908,8 +9908,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         }
       ],
       "edges": [
@@ -9989,8 +9989,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "operator_or_function",
-          "definition": "Updated Expectation is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Updated Expectation 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Updated Expectation is the operation or transformation rule used by the equation.",
+          "definition_zh": "Updated Expectation 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_22b_used_overline_w_prime",
@@ -10001,8 +10001,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         }
       ],
       "edges": [
@@ -10049,7 +10049,7 @@
       "concept_id": "concept_chapter6_formula_6_23_defined_h_w_2",
       "name": "Variance Components for Z",
       "definition": "The heritability of fitness can be expressed in terms of the variance components for z as follows:",
-      "definition_zh": "Variance Components for Z 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Variance Components for Z 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_6.23",
       "defined_symbol": "h_W^2",
@@ -10071,7 +10071,7 @@
           "confidence": 0.88,
           "concept_type": "quantity_concept",
           "definition": "As Example 6.6 highlights, a trait that is under selection can still have a high trait additive variance even when the additive genetic variance in fitness is near zero.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_23_used_sigma_e_2",
@@ -10107,7 +10107,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nce (environmental and genetic), makes the additive variance in fitness.",
-          "definition_zh": "Beta^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Beta^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_23_used_h_z_2",
@@ -10119,7 +10119,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nce (environmental and genetic), makes the additive variance in fitness.",
-          "definition_zh": "H_z^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "H_z^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -10333,8 +10333,8 @@
           "confidence": 0.87,
           "relation": "defines_symbol",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter6_formula_6_18c_defined_r_w",
@@ -10651,7 +10651,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Z A w A z A w R z = sigma A (w, z) $",
-          "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -10774,7 +10774,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Z A w A z A w R z = sigma A (w, z) $",
-              "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -10942,8 +10942,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_16c_used_sigma_d_2",
@@ -11019,7 +11019,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "To see this connection, taking the regression of breeding value on phenotype as and substituting into Equation 6.25a yields and we recover the breeder’s equation when.",
-          "definition_zh": "E Sub a 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub a 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_25b_used_mu",
@@ -11252,7 +11252,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Z A w A z A w R z = sigma A (w, z) $",
-              "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -11303,8 +11303,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -11412,7 +11412,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "E covariance between and, in other words, the additive genetic covariance between relative fitness and the focal trait.",
-          "definition_zh": "Benefit 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Benefit 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_26_used_z",
@@ -11555,8 +11555,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "O places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "O 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "O names the biological object or model condition being used in this formula.",
+          "definition_zh": "O 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -11666,8 +11666,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7b_used_z_i",
@@ -11757,7 +11757,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Z A w A z A w R z = sigma A (w, z) $",
-              "definition_zh": "Sigma Power 2(a Sub W) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Sigma Power 2(a Sub W) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -11809,7 +11809,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "If we let z in Equation 6.7b denote the breeding value of the trait of interest, the between-generation change in the mean breeding value for our focal trait is",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_28_used_overline_delta",
@@ -12065,7 +12065,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "If we let z in Equation 6.7b denote the breeding value of the trait of interest, the between-generation change in the mean breeding value for our focal trait is",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
             }
           ]
         }
@@ -12105,7 +12105,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Ning that is not zero but is still small, then Robertson's (1966a) theorem is a good approximation for the response to selection.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_29_used_overline_a_z",
@@ -12141,7 +12141,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Since we are following breeding values, represents the difference between parent and offspring breeding values.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_29_used_w",
@@ -12318,8 +12318,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7c_used_overline_delta_i",
@@ -12377,7 +12377,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_7a_used_overline_delta_i",
@@ -12401,7 +12401,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Several equivalent expressions for the Price equation are useful in that they emphasize different features.",
-              "definition_zh": "W Sub Idelta-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "W Sub Idelta-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -12416,8 +12416,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30a_used_overline_z_i",
@@ -12541,7 +12541,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_beta",
@@ -12565,7 +12565,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_mu",
@@ -12669,7 +12669,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_beta",
@@ -12693,7 +12693,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_mu",
@@ -12797,7 +12797,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_beta",
@@ -12821,7 +12821,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_mu",
@@ -12925,7 +12925,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_beta",
@@ -12949,7 +12949,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_mu",
@@ -13053,7 +13053,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_beta",
@@ -13077,7 +13077,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decomposed into contributions from two biologically interpretable linear regressions and their corresponding residuals.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30b_used_mu",
@@ -13146,8 +13146,8 @@
       "chapter_id": "chapter6",
       "concept_id": "concept_chapter6_formula_6_30c_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_6.30c",
       "defined_symbol": "w_{i}",
@@ -13180,8 +13180,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_30c_used_s",
@@ -13216,8 +13216,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W,i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W,i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W,i names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W,i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13332,8 +13332,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E_overlinez places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E_overlinez 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E_overlinez names the biological object or model condition being used in this formula.",
+          "definition_zh": "E_overlinez 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_31a_used_e_w",
@@ -13344,8 +13344,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub W places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub W 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub W names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub W 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13598,8 +13598,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_30a_used_overline_z_i",
@@ -13799,7 +13799,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Ndency between two variables (say x and y) once the effects of a third (z) is removed.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33a_used_z",
@@ -13886,8 +13886,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33b_used_z",
@@ -13910,8 +13910,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Y||z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Y||z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Y||z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Y||z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33b_used_x",
@@ -13934,8 +13934,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub X places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub X 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub X names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub X 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33b_used_e_y",
@@ -13946,8 +13946,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub Y places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub Y 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Sub Y names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub Y 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14049,8 +14049,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_33b_used_z",
@@ -14073,8 +14073,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Y||z places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Y||z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Y||z names the biological object or model condition being used in this formula.",
+              "definition_zh": "Y||z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_33b_used_x",
@@ -14137,8 +14137,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33c_used_x",
@@ -14241,8 +14241,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33d_used_y",
@@ -14253,8 +14253,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33d_used_z",
@@ -14277,8 +14277,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Y||z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Y||z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Y||z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Y||z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_33d_used_x",
@@ -14384,8 +14384,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_33d_used_y",
@@ -14396,8 +14396,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Response Variable names the biological object or model condition being used in this formula.",
+              "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_33d_used_z",
@@ -14420,8 +14420,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Y||z places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Y||z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Y||z names the biological object or model condition being used in this formula.",
+              "definition_zh": "Y||z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -14879,8 +14879,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_35_used_z",
@@ -15126,8 +15126,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Overlinez Power Circ places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Overlinez Power Circ 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Overlinez Power Circ names the biological object or model condition being used in this formula.",
+          "definition_zh": "Overlinez Power Circ 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -15230,8 +15230,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_36b_used_w",
@@ -15278,8 +15278,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z-bar||z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z-bar||z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Z-bar||z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z-bar||z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -15563,8 +15563,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_35_used_z",
@@ -15654,7 +15654,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Inbreeding, the decay of linkage disequilibr Theorems of Natural Selection: Results of Price, Fisher, and Robertson: Introduction The Life and Times of George Price",
-              "definition_zh": "Overlinedelta Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Overlinedelta Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -16028,8 +16028,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter6_formula_6_35_used_z",
@@ -16180,8 +16180,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter6_formula_6_41_used_w",

@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter25",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:07.467Z",
+  "generated_at": "2026-06-11T11:39:29.835Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter25_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter25.jsonl",
@@ -170,8 +170,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -498,7 +498,7 @@
       "concept_id": "concept_chapter25_formula_25_2a_defined_sigma_a",
       "name": "Total Response, Scaled",
       "definition": "Using these expressions yields Robertson's (1970a) result for the total response, scaled by the square root of the initial additive variance, as",
-      "definition_zh": "Total Response, Scaled 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Total Response, Scaled 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_25.2a",
       "defined_symbol": "\\sigma_A",
@@ -701,7 +701,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Using these expressions yields Robertson's (1970a) result for the total response, scaled by the square root of the initial additive variance, as",
-          "definition_zh": "Total Response, Scaled 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Total Response, Scaled 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -876,7 +876,7 @@
       "concept_id": "concept_chapter25_formula_25_2b_defined_sigma_a",
       "name": "Sigma_a",
       "definition": "Taking the ratio of these two limits yields frac R H R L = frac sqrt 2n(1-p 0)/p 0 sqrt 2np 0 /(1-p 0) = frac 1-p 0 p 0 p 0 $",
-      "definition_zh": "Sigma_a 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Sigma_a 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_25.2b",
       "defined_symbol": "\\sigma_A",
@@ -966,7 +966,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Using these expressions yields Robertson's (1970a) result for the total response, scaled by the square root of the initial additive variance, as",
-          "definition_zh": "Total Response, Scaled 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Total Response, Scaled 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -1365,8 +1365,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_2e_used_r_h",
@@ -1445,8 +1445,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub a Power 2(frac1r Sub H+frac1r Sub L) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub a Power 2(frac1r Sub H+frac1r Sub L) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub a Power 2(frac1r Sub H+frac1r Sub L) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub a Power 2(frac1r Sub H+frac1r Sub L) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -1526,7 +1526,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "T interactions are negligible.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_3_used_sigma_z",
@@ -1561,8 +1561,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         }
       ],
       "edges": [
@@ -1689,7 +1689,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "T interactions are negligible.",
-              "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_3_used_sigma_z",
@@ -1729,7 +1729,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "That, namely, one plus terms of order s and sh.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_4_used_sigma_z",
@@ -1896,7 +1896,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "T interactions are negligible.",
-              "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_3_used_sigma_z",
@@ -1947,8 +1947,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_5_used_overline_imath",
@@ -1959,8 +1959,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_5_used_sigma_z",
@@ -1995,8 +1995,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "C Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2082,7 +2082,7 @@
       "concept_id": "concept_chapter25_formula_25_6_defined_delta",
       "name": "Change",
       "definition": "Consider the change in the major allele-frequency, p, first.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_25.6",
       "defined_symbol": "\\Delta",
@@ -2116,7 +2116,7 @@
           "confidence": 0.81,
           "concept_type": "quantity_concept",
           "definition": "Using the mean and marginal fitnesses from, Wright's formula (Equation 5.5b) yields the expected change as (25.6) with the second step following upon differentiation of the mean fitness.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         }
       ],
       "edges": [
@@ -2189,7 +2189,7 @@
           "confidence": 0.81,
           "concept_type": "quantity_concept",
           "definition": "Using the mean and marginal fitnesses from, Wright's formula (Equation 5.5b) yields the expected change as (25.6) with the second step following upon differentiation of the mean fitness.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         }
       ],
       "edges": [
@@ -2223,7 +2223,7 @@
       "concept_id": "concept_chapter25_formula_25_7a_defined_delta",
       "name": "Change",
       "definition": "Consider the change in the major allele-frequency, p, first.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_25.7a",
       "defined_symbol": "\\Delta",
@@ -2408,8 +2408,8 @@
       "chapter_id": "chapter25",
       "concept_id": "concept_chapter25_formula_25_7b_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_25.7b",
       "defined_symbol": "\\Delta",
@@ -2454,8 +2454,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -2582,8 +2582,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -2734,8 +2734,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Mu+alpha Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mu+alpha Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mu+alpha Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "Mu+alpha Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8a_used_mu",
@@ -2846,8 +2846,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8b_used_p_i",
@@ -2882,8 +2882,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8b_used_varphi",
@@ -3074,8 +3074,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8c_used_w",
@@ -3209,7 +3209,7 @@
       "concept_id": "concept_chapter25_formula_25_8d_defined_delta",
       "name": "Change",
       "definition": "From Equations 25.7b and 25.8b, the expected change in the polygenic mean becomes From, the new mean becomes",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_25.8d",
       "defined_symbol": "\\Delta",
@@ -3232,8 +3232,8 @@
           "confidence": 0.87,
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -3269,8 +3269,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -3335,8 +3335,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -3389,8 +3389,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_8b_used_p_i",
@@ -3441,8 +3441,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8d_used_p",
@@ -3580,8 +3580,8 @@
           "confidence": 0.87,
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -3617,8 +3617,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -3683,8 +3683,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_7b_used_p",
@@ -3737,8 +3737,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_8b_used_p_i",
@@ -3789,8 +3789,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8d_used_p",
@@ -3934,7 +3934,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "From Equations 25.7b and 25.8b, the expected change in the polygenic mean becomes From, the new mean becomes",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。"
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_8e_used_alpha_1",
@@ -4007,8 +4007,8 @@
       "chapter_id": "chapter25",
       "concept_id": "concept_chapter25_formula_25_9a_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_25.9a",
       "defined_symbol": "\\Delta",
@@ -4029,8 +4029,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9a_used_beta",
@@ -4097,8 +4097,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9a_used_beta",
@@ -4232,8 +4232,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Mean Absolute Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Mean Absolute Fitness summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9b_used_o",
@@ -4280,8 +4280,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9b_used_f",
@@ -4480,8 +4480,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4652,7 +4652,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Primarily polygenic, even if B is fixed.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -4724,7 +4724,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Primarily polygenic, even if B is fixed.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_9d_used_e",
@@ -4736,7 +4736,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Primarily polygenic, even if B is fixed.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4903,8 +4903,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -talpha places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -talpha 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -talpha names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -talpha 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5497,7 +5497,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Primarily polygenic, even if B is fixed.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -5768,7 +5768,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Primarily polygenic, even if B is fixed.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -5795,8 +5795,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Benefit places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Benefit 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Benefit names the biological object or model condition being used in this formula.",
+          "definition_zh": "Benefit 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_12b_used_widehat_p",
@@ -5831,8 +5831,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_12b_used_f",
@@ -5991,8 +5991,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_13_used_1_p",
@@ -6003,8 +6003,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "1+p places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "1+p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "1+p names the biological object or model condition being used in this formula.",
+          "definition_zh": "1+p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6061,8 +6061,8 @@
       "chapter_id": "chapter25",
       "concept_id": "concept_chapter25_formula_25_14_defined_p_prime_prime",
       "name": "Updated Probability",
-      "definition": "Updated Probability is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Updated Probability 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+      "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_25.14",
       "defined_symbol": "p^{\\prime\\prime}",
@@ -6139,7 +6139,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Primarily polygenic, even if B is fixed.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -6178,8 +6178,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Benefit places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Benefit 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Benefit names the biological object or model condition being used in this formula.",
+          "definition_zh": "Benefit 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_14_used_t",
@@ -6226,8 +6226,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_14_used_operatorname",
@@ -6238,8 +6238,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Operatorname places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Operatorname 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Operatorname names the biological object or model condition being used in this formula.",
+          "definition_zh": "Operatorname 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_14_used_e",
@@ -6250,8 +6250,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_14_used_f",
@@ -6430,8 +6430,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -6550,7 +6550,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Primarily polygenic, even if B is fixed.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -6589,8 +6589,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Benefit places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Benefit 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Benefit names the biological object or model condition being used in this formula.",
+          "definition_zh": "Benefit 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_15b_used_widehat_p",
@@ -6613,8 +6613,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_15b_used_f",
@@ -6793,7 +6793,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "Primarily polygenic, even if B is fixed.",
-              "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             },
             {
               "concept_id": "concept_chapter25_formula_25_9d_used_o",
@@ -6857,7 +6857,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Atural selection, is fixed.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_16_used_sigma_z",
@@ -7024,8 +7024,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17a_used_mu",
@@ -7132,8 +7132,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17b_used_sigma_z_4",
@@ -7240,8 +7240,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17c_used_bar_imath",
@@ -7252,8 +7252,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17c_used_sigma_z",
@@ -7380,8 +7380,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17d_used_overline_imath",
@@ -7392,8 +7392,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_17d_used_sigma_z",
@@ -7563,8 +7563,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -7592,7 +7592,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Setting Equation 25.17d equal to zero and solving for the limiting mean yields (25.18a) or a total response of, a result first obtained by James (1962).",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18a_used_bar_imath",
@@ -7604,7 +7604,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Setting Equation 25.17d equal to zero and solving for the limiting mean yields (25.18a) or a total response of, a result first obtained by James (1962).",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18a_used_sigma_z",
@@ -7755,8 +7755,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
             }
           ]
         }
@@ -7783,8 +7783,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18b_used_s",
@@ -7807,8 +7807,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18b_used_sigma_z",
@@ -7943,8 +7943,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Additive Genetic Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Additive Genetic Variance describes spread or joint movement among variables.",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18c_used_sigma_z_2",
@@ -7955,8 +7955,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18c_used_r_1",
@@ -7979,8 +7979,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Infty places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Infty 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Infty names the biological object or model condition being used in this formula.",
+          "definition_zh": "Infty 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18c_used_h_2",
@@ -8092,7 +8092,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "The half-life of response (in generations) is (25.18d) as found by James (1962) and Zeng and Hill (1986).",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_chapter25_formula_25_18d_used_h_2",

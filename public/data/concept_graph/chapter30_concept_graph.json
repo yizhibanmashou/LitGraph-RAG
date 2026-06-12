@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter30",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:10.022Z",
+  "generated_at": "2026-06-11T11:39:32.441Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter30_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter30.jsonl",
@@ -152,8 +152,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Imath-bar Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -310,8 +310,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Beta^t places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Beta^t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Beta^t names the biological object or model condition being used in this formula.",
+          "definition_zh": "Beta^t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -324,8 +324,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Beta_j places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Beta_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Beta_j names the biological object or model condition being used in this formula.",
+          "definition_zh": "Beta_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -338,8 +338,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -352,8 +352,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z_j places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Z_j names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -493,7 +493,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Among the members of this set, a character under no directional selection has a value of.",
-          "definition_zh": "Beta_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Beta_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -507,7 +507,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Among the members of this set, a character under no directional selection has a value of.",
-          "definition_zh": "Beta_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Beta_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -663,8 +663,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma_i describes spread or joint movement among variables.",
+          "definition_zh": "Sigma_i 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -941,7 +941,7 @@
           "confidence": 0.81,
           "concept_type": "quantity_concept",
           "definition": "Let us consider the landscape first.",
-          "definition_zh": "Mean Absolute Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Mean Absolute Fitness 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1498,8 +1498,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3199,7 +3199,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Ase for S, the fact that is a covariance immediately allows us to bound its range using the opportunity for selection (Chapter 29).",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3269,7 +3269,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ase for S, the fact that is a covariance immediately allows us to bound its range using the opportunity for selection (Chapter 29).",
-          "definition_zh": "Sigma Power 2(w) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(w) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3283,7 +3283,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ase for S, the fact that is a covariance immediately allows us to bound its range using the opportunity for selection (Chapter 29).",
-          "definition_zh": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3444,8 +3444,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3458,8 +3458,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2((z Sub I-mu Sub I)(z Sub J-mu Sub J)) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3562,8 +3562,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3590,8 +3590,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3707,7 +3707,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "As was the case with S, these indirect effects can also be removed by a regression.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3908,8 +3908,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4386,8 +4386,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4648,8 +4648,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4694,8 +4694,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4895,7 +4895,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ts and indirect effects resulting from selection on phenotypically correlated traits.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5103,8 +5103,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub Z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub Z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H Sub Z names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub Z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5217,8 +5217,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5320,7 +5320,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ypic selection alters the additive-genetic covariance matrix.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5503,7 +5503,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ts and indirect effects resulting from selection on phenotypically correlated traits.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5591,7 +5591,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "First, consider the within-generation change in the phenotypic variance.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5619,7 +5619,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "First, consider the within-generation change in the phenotypic variance.",
-          "definition_zh": "Sigma Power 2(z Sub I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(z Sub I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5633,7 +5633,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "First, consider the within-generation change in the phenotypic variance.",
-          "definition_zh": "Sigma Power 2(z Sub I Power *) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(z Sub I Power *) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5818,8 +5818,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5832,8 +5832,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(z Sub I) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(z Sub I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(z Sub I) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(z Sub I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5952,7 +5952,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ypic selection alters the additive-genetic covariance matrix.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6011,8 +6011,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6039,8 +6039,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub I) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(a Sub I) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6171,7 +6171,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ypic selection alters the additive-genetic covariance matrix.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6291,7 +6291,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "What about the effect of correlational selection (?",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6304,8 +6304,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6563,8 +6563,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6695,7 +6695,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ypic selection alters the additive-genetic covariance matrix.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6755,7 +6755,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They are selected in opposite directions, this increases the correlation.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6769,7 +6769,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They are selected in opposite directions, this increases the correlation.",
-          "definition_zh": "Sigma Power 2(a Sub I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(a Sub I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6783,7 +6783,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "They are selected in opposite directions, this increases the correlation.",
-          "definition_zh": "Sigma Power 2(a Sub J) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(a Sub J) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6913,7 +6913,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Variate quadratic fitness regressions have a rather rich geometric structure.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7093,7 +7093,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Variate quadratic fitness regressions have a rather rich geometric structure.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7125,7 +7125,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We start our exploration of this geometry by considering the gradient of this best-fitting quadratic fitness surface.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7214,8 +7214,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7346,7 +7346,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Variate quadratic fitness regressions have a rather rich geometric structure.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7378,7 +7378,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When is nonsingular, (30.21a) is the unique stationary point of this quadratic surface.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7483,7 +7483,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Variate quadratic fitness regressions have a rather rich geometric structure.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7707,8 +7707,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7767,8 +7767,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7916,7 +7916,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Re scaled in the transformed system.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8086,8 +8086,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8100,8 +8100,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Gamma names the biological object or model condition being used in this formula.",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8114,8 +8114,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8403,8 +8403,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8550,7 +8550,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "For fitness data, this assumption is usually problematic).",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8591,8 +8591,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "F Sub 1-alpha,k,n-p places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "F Sub 1-alpha,k,n-p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "F Sub 1-alpha,k,n-p names the biological object or model condition being used in this formula.",
+          "definition_zh": "F Sub 1-alpha,k,n-p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8804,8 +8804,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Gamma places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Gamma names the biological object or model condition being used in this formula.",
+              "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8865,7 +8865,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "S is multivariate normal and also in the more general Barton-Turelli expression (Equation 24.26) for when normality is not assumed.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8965,7 +8965,7 @@
       "concept_id": "concept_chapter30_formula_30_31_defined_rho",
       "name": "Correlation",
       "definition": "Hersch and Phillips showed that when multiple (potentially correlated) traits are considered, the adjusted version of the trait-fitness correlation, used in power calculations becomes",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_30.31",
       "defined_symbol": "\\rho",
@@ -9042,7 +9042,7 @@
       "concept_id": "concept_chapter30_formula_30_31_defined_rho_2",
       "name": "Correlation",
       "definition": "Hersch and Phillips showed that when multiple (potentially correlated) traits are considered, the adjusted version of the trait-fitness correlation, used in power calculations becomes",
-      "definition_zh": "Correlation 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_30.31",
       "defined_symbol": "\\rho^{2}",
@@ -9183,7 +9183,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Xamine if this is the case, Siepielski et al.",
-          "definition_zh": "Gamma 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Gamma 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9300,7 +9300,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Among the members of this set, a character under no directional selection has a value of.",
-              "definition_zh": "Beta_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Beta_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -9314,7 +9314,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Among the members of this set, a character under no directional selection has a value of.",
-              "definition_zh": "Beta_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Beta_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9374,7 +9374,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Likewise, let be the total impact over all connecting paths of the effect of i on trait j (see Example 30.10 for details).",
-          "definition_zh": "Phi Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Phi Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9535,7 +9535,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, let be the total impact over all connecting paths of the effect of i on trait j (see Example 30.10 for details).",
-              "definition_zh": "Phi Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Phi Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9667,7 +9667,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Likewise, let be the total impact over all connecting paths of the effect of i on trait j (see Example 30.10 for details).",
-              "definition_zh": "Phi Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Phi Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9768,8 +9768,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9796,8 +9796,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9810,8 +9810,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9884,8 +9884,8 @@
       "chapter_id": "chapter30",
       "concept_id": "concept_chapter30_formula_30_35a_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_30.35a",
       "defined_symbol": "w_{i}",
@@ -9949,7 +9949,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tive to using group means is to model neighbor interactions that influence fitness (e.g., Equation 22.59a).",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10024,8 +10024,8 @@
           "confidence": 0.95,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -10080,7 +10080,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Tive to using group means is to model neighbor interactions that influence fitness (e.g., Equation 22.59a).",
-              "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10154,7 +10154,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "D to the model using the standard selection on group model by noting that when i interacts with n - 1 neighbors.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10419,7 +10419,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "For example, suppose an investigator assumes that group selection might be important, and therefore only includes group means in the analysis.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10518,7 +10518,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Motivated by Equation 30.36, Price suggested that group selection implies a nonzero covariance between the mean trait value and mean fitness of groups, namely,.",
-          "definition_zh": "Sigma Power 2(z-bar Sub I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(z-bar Sub I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10631,7 +10631,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10752,7 +10752,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10888,7 +10888,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-              "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10948,7 +10948,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11095,7 +11095,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11239,7 +11239,7 @@
               "confidence": 0.72,
               "concept_type": "domain_concept",
               "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-              "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11285,7 +11285,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "Under soft selection, there is no variation in mean fitness across groups and.",
-          "definition_zh": "E Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11438,7 +11438,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is an example of what Kirkpatrick and Lande (1989) called maternal selection (Chapter 15).",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11452,7 +11452,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This case its mother) in the previous generation.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11466,7 +11466,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is an example of what Kirkpatrick and Lande (1989) called maternal selection (Chapter 15).",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11686,7 +11686,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "R with a trait for increased foraging enhances the survival of her offspring, but also increases her own risk of predation.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11700,7 +11700,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "R with a trait for increased foraging enhances the survival of her offspring, but also increases her own risk of predation.",
-          "definition_zh": "Mathsfa 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mathsfa 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11714,7 +11714,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "R with a trait for increased foraging enhances the survival of her offspring, but also increases her own risk of predation.",
-          "definition_zh": "Mathsfe 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mathsfe 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11728,7 +11728,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "R with a trait for increased foraging enhances the survival of her offspring, but also increases her own risk of predation.",
-          "definition_zh": "Mathsff 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mathsff 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11742,7 +11742,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "R with a trait for increased foraging enhances the survival of her offspring, but also increases her own risk of predation.",
-          "definition_zh": "Mathsfl 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mathsfl 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12338,8 +12338,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub M) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub M) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(a Sub M) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub M) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12352,8 +12352,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(z Sub M) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(z Sub M) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(z Sub M) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(z Sub M) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12522,8 +12522,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12682,8 +12682,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Epsilon places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Epsilon 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Epsilon names the biological object or model condition being used in this formula.",
+          "definition_zh": "Epsilon 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12696,8 +12696,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T-1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T-1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "T-1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T-1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13028,7 +13028,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Of the mother), and by in Equation 30.40b (the cost to the offspring).",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13469,8 +13469,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },

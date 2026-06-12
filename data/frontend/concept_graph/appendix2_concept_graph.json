@@ -1,7 +1,7 @@
 {
   "chapter_id": "appendix2",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:01.343Z",
+  "generated_at": "2026-06-11T11:39:24.616Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/appendix2_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/appendix2.jsonl",
@@ -370,7 +370,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Bayes' theorem flips the conditioning variable, allowing us to move from to.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_4_used_f",
@@ -744,8 +744,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_7_used_g",
@@ -756,8 +756,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_7_used_l",
@@ -768,8 +768,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_7_used_i",
@@ -972,8 +972,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_8_used_l",
@@ -984,8 +984,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_8_used_d",
@@ -1382,8 +1382,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_11_used_e",
@@ -1394,8 +1394,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_11_used_l",
@@ -1406,8 +1406,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_11_used_posterior",
@@ -1418,8 +1418,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Posterior places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Posterior 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Posterior names the biological object or model condition being used in this formula.",
+          "definition_zh": "Posterior 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_11_used_d",
@@ -2117,8 +2117,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Sub Alpha/2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Sub Alpha/2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "H Sub Alpha/2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Sub Alpha/2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2296,8 +2296,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_18_used_d",
@@ -2332,8 +2332,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta>theta Sub 0 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta>theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta>theta Sub 0 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta>theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -2536,7 +2536,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the prior probabilities influence hypothesis testing.",
-          "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_19_used_theta_1",
@@ -2548,7 +2548,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the prior probabilities influence hypothesis testing.",
-          "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_19_used_d",
@@ -2771,7 +2771,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the prior probabilities influence hypothesis testing.",
-          "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_20_used_theta_1",
@@ -2783,7 +2783,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the prior probabilities influence hypothesis testing.",
-          "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_20_used_pi_1",
@@ -2795,7 +2795,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hence, the prior probabilities influence hypothesis testing.",
-          "definition_zh": "Pi Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_20_used_d",
@@ -2982,7 +2982,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_20_used_theta_1",
@@ -2994,7 +2994,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3021,8 +3021,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Pi Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Pi Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Pi Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Pi Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3145,7 +3145,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_20_used_theta_1",
@@ -3157,7 +3157,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3257,7 +3257,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When the hypotheses are simple (i.e., single values), say vs.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_23_used_i",
@@ -3293,7 +3293,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When the hypotheses are simple (i.e., single values), say vs.",
-          "definition_zh": "Pi Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_23_used_f",
@@ -3456,7 +3456,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_20_used_theta_1",
@@ -3468,7 +3468,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -3495,8 +3495,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_24_used_pi_1",
@@ -3507,8 +3507,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Pi Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Pi Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Pi Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Pi Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3595,8 +3595,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -3700,7 +3700,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Pi Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_26_used_f",
@@ -3903,7 +3903,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Theta Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_27_used_pi_i",
@@ -3915,7 +3915,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Pi Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4062,7 +4062,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_20_used_theta_1",
@@ -4074,7 +4074,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Hence, the prior probabilities influence hypothesis testing.",
-              "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         },
@@ -4192,7 +4192,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Theta Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_28_used_theta_1",
@@ -4204,7 +4204,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Theta Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_28_used_pi_1",
@@ -4216,7 +4216,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "When hypotheses are composite (containing multiple elements), the situation is slightly more complicated.",
-          "definition_zh": "Pi Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4488,7 +4488,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "This conveys that we have no a priori reason to favor any particular parameter value over another.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4556,7 +4556,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Jeffreys (1961) proposed a general prior based on the Fisher information information, I, of the likelihood.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -4639,7 +4639,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Jeffreys (1961) proposed a general prior based on the Fisher information information, I, of the likelihood.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -4738,8 +4738,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Theta names the biological object or model condition being used in this formula.",
+          "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_33_used_i",
@@ -4881,8 +4881,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Theta places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Theta 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Theta names the biological object or model condition being used in this formula.",
+              "definition_zh": "Theta 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_33_used_i",
@@ -4989,8 +4989,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_35_used_sigma_2",
@@ -5112,8 +5112,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_35_used_sigma_2",
@@ -5164,8 +5164,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_36_used_sigma_2",
@@ -5319,8 +5319,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_35_used_sigma_2",
@@ -5383,8 +5383,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_37_used_n",
@@ -5612,7 +5612,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "A useful device when calculating the posterior distribution is to ignore terms that are constants with respect to the unknown parameters.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_39_used_f",
@@ -5700,7 +5700,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "A useful device when calculating the posterior distribution is to ignore terms that are constants with respect to the unknown parameters.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -5770,8 +5770,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_35_used_sigma_2",
@@ -5835,7 +5835,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Suppose x denotes the data and is a vector of known model parameters, while is a vector of unknown parameters.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_41_used_p",
@@ -5997,8 +5997,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_35_used_sigma_2",
@@ -6061,8 +6061,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_42_used_mu_2",
@@ -6181,8 +6181,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_43_used_mu_2",
@@ -6368,8 +6368,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_44_used_mu",
@@ -6416,8 +6416,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Sub * Power 2(fracmu Sub 0sigma Sub 0 Power 2+fracnx-barsigma Power 2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Sub * Power 2(fracmu Sub 0sigma Sub 0 Power 2+fracnx-barsigma Power 2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Sigma Sub * Power 2(fracmu Sub 0sigma Sub 0 Power 2+fracnx-barsigma Power 2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Sub * Power 2(fracmu Sub 0sigma Sub 0 Power 2+fracnx-barsigma Power 2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         }
       ],
       "edges": [
@@ -6579,8 +6579,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_44_used_mu",
@@ -6762,8 +6762,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_44_used_mu",
@@ -6925,8 +6925,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_44_used_mu",
@@ -7108,8 +7108,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "domain_concept",
-              "definition": "Mean Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition": "Mean Variable summarizes individual values into a comparable population-level center.",
+              "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
             },
             {
               "concept_id": "concept_appendix2_formula_a2_44_used_mu",
@@ -7149,7 +7149,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "We are now in a position to inquire about the relative importance of the prior versus the data.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_48_used_mu",
@@ -7280,8 +7280,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -betax places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -betax 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -betax names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -betax 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_49_used_f",
@@ -7416,8 +7416,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_50_used_e_x_lambda",
@@ -7428,8 +7428,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -x/lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -x/lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -x/lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -x/lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_50_used_x",
@@ -7525,7 +7525,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The sum of exponentials with the same rate (or scale) parameter is called an Erlang distribution, and it was initially developed for certain problems in telephone queuing theory.",
-          "definition_zh": "E Power -betax 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -betax 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_51_used_x",
@@ -7680,8 +7680,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -betax places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -betax 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -betax names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -betax 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_52_used_f",
@@ -7852,8 +7852,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -betax places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -betax 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -betax names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -betax 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_53_used_x",
@@ -7960,8 +7960,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_54_used_e_x_lambda",
@@ -7972,8 +7972,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -x/lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -x/lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -x/lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -x/lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_54_used_x",
@@ -8076,8 +8076,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_55_used_e_x_lambda",
@@ -8088,8 +8088,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -x/lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -x/lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -x/lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -x/lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_55_used_x",
@@ -8287,8 +8287,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Lambda places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Lambda 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Lambda names the biological object or model condition being used in this formula.",
+          "definition_zh": "Lambda 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_56_used_d",
@@ -8725,8 +8725,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_58_used_alpha",
@@ -8749,8 +8749,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -y places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -y 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -y names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -y 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_58_used_d",
@@ -8997,7 +8997,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-          "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_59_used_n",
@@ -9188,7 +9188,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -9204,7 +9204,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-          "definition_zh": "E Power -x/2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -x/2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_60_used_n",
@@ -9304,7 +9304,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-          "definition_zh": "E Power -x/2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E Power -x/2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_61_used_n",
@@ -9459,7 +9459,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -9510,8 +9510,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -beta/x places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -beta/x 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -beta/x names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -beta/x 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_62_used_f",
@@ -9965,8 +9965,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -beta/x places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -beta/x 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -beta/x names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -beta/x 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_64_used_x",
@@ -10117,7 +10117,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -10144,8 +10144,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -1/(2x) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -1/(2x) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E Power -1/(2x) names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -1/(2x) 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_65_used_n",
@@ -10431,8 +10431,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_67_used_n",
@@ -10506,7 +10506,7 @@
       "concept_id": "concept_appendix2_formula_a2_68_defined_x_sim_chi",
       "name": "Scaled Inverse Chi-square Distribution",
       "definition": "The scaled inverse chi-square distribution thus involves two parameters and, and is denoted by or.",
-      "definition_zh": "Scaled Inverse Chi-square Distribution 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Scaled Inverse Chi-square Distribution 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_A2.68",
       "defined_symbol": "x\\sim\\chi_{",
@@ -10563,8 +10563,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Chi Sub N Power -2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Chi Sub N Power -2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Chi Sub N Power -2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Chi Sub N Power -2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -10743,8 +10743,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_70_used_n",
@@ -10880,7 +10880,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Notice that since we condition on x and (i.e., their values are known), is a constant.",
-          "definition_zh": "Nu Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Nu Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_71_used_mu",
@@ -11185,7 +11185,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Equation A2.30a shows the resulting posterior is also a scaled inverse distribution with parameters and.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_72_used_l",
@@ -11197,7 +11197,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Equation A2.30a shows the resulting posterior is also a scaled inverse distribution with parameters and.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_72_used_d",
@@ -11401,7 +11401,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "The final distribution needed for a Bayesian analysis of a Gaussian likelihood is the (or Student's) distribution.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_73_used_t_n_1",
@@ -11425,7 +11425,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The final distribution needed for a Bayesian analysis of a Gaussian likelihood is the (or Student's) distribution.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_73_used_n",
@@ -11473,7 +11473,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Likewise, the sample variance, follows a scaled chi-square distribution, with (LW Equation A5.14c).",
-          "definition_zh": "Chi Sub N-1 Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Chi Sub N-1 Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -11604,8 +11604,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "U places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "U 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "U names the biological object or model condition being used in this formula.",
+          "definition_zh": "U 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_74_used_chi_nu_2",
@@ -11616,8 +11616,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Chi Sub Nu Power 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Chi Sub Nu Power 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Chi Sub Nu Power 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "Chi Sub Nu Power 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12189,7 +12189,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -12516,7 +12516,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If we put all these pieces together, the posterior density for draws from a normal with unknown mean and variance is obtained as follows.",
-          "definition_zh": "Kappa Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_79_used_nu_0",
@@ -12528,7 +12528,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If we put all these pieces together, the posterior density for draws from a normal with unknown mean and variance is obtained as follows.",
-          "definition_zh": "Nu Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Nu Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_79_used_chi",
@@ -12539,8 +12539,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Chi places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Chi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Chi names the biological object or model condition being used in this formula.",
+          "definition_zh": "Chi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12767,7 +12767,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub N 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub N 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_80_used_chi",
@@ -12779,7 +12779,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Chi 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Chi 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12899,7 +12899,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_81_used_kappa_n",
@@ -12911,7 +12911,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub N 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub N 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_81_used_nu_0",
@@ -12923,7 +12923,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Nu Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Nu Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -12995,7 +12995,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_82_used_mu_0",
@@ -13031,7 +13031,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_82_used_kappa_n",
@@ -13043,7 +13043,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub N 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub N 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13123,7 +13123,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_83_used_nu_n",
@@ -13159,7 +13159,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Mean Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Mean Variable 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_83_used_mu_0",
@@ -13195,7 +13195,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_83_used_kappa_n",
@@ -13207,7 +13207,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Kappa Sub N 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Kappa Sub N 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_83_used_nu_0",
@@ -13219,7 +13219,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We write the variance for the conditional mean prior in this way because is known (as we condition on it) and we scale by the hyperparameter,.",
-          "definition_zh": "Nu Sub 0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Nu Sub 0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13530,8 +13530,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_84_used_d",
@@ -13590,8 +13590,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Cdots N Sub K places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cdots N Sub K 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Cdots N Sub K names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cdots N Sub K 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -13794,7 +13794,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -13822,7 +13822,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "Alpha_0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_alpha_1",
@@ -13834,7 +13834,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "Alpha_1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_alpha_k",
@@ -13846,7 +13846,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "Alpha_k 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_k 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_x_1",
@@ -13858,7 +13858,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "X_1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X_1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_x_1_alpha_1_1",
@@ -13870,7 +13870,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "X_1 Power Alpha_1-1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X_1 Power Alpha_1-1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_x_k",
@@ -13882,7 +13882,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "X_k 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X_k 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_85_used_x_k_alpha_k_1",
@@ -13894,7 +13894,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "X_k Power Alpha_k-1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X_k Power Alpha_k-1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         }
       ],
       "edges": [
@@ -14089,7 +14089,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "The conjugate prior for the multinomial likelihood is the Dirichlet distribution.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_86_used_t",
@@ -14396,7 +14396,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。"
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_alpha_0",
@@ -14408,7 +14408,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "Alpha_0 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_0 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_alpha_0_2",
@@ -14420,7 +14420,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "Alpha_0^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_0^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_alpha_i",
@@ -14432,7 +14432,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_alpha_j",
@@ -14444,7 +14444,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "Alpha_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Alpha_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_sigma_2_x_i",
@@ -14456,7 +14456,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "Sigma^2(x_i) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Sigma^2(x_i) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_x_j",
@@ -14468,7 +14468,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "At first glance, this looks like the multinomial density function (with).",
-          "definition_zh": "X_j 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "X_j 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_87_used_d",
@@ -14691,7 +14691,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15229,7 +15229,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15257,7 +15257,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The Wishart is the sampling distribution for covariance matrices (just like the is associated with the distribution of a sample variance for data drawn from a normal; Chapter 11).",
-          "definition_zh": "Pi Power -k(k-1)/k 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition_zh": "Pi Power -k(k-1)/k 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_91_used_i",
@@ -15452,7 +15452,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "This is the generalization of the factorial function from the integers to any positive number.",
-              "definition_zh": "Alpha+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+              "definition_zh": "Alpha+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
             }
           ]
         }
@@ -15479,8 +15479,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Pi Power -k(k-1)/k places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Pi Power -k(k-1)/k 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。"
+          "definition": "Pi Power -k(k-1)/k names the biological object or model condition being used in this formula.",
+          "definition_zh": "Pi Power -k(k-1)/k 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。"
         },
         {
           "concept_id": "concept_appendix2_formula_a2_92_used_i",

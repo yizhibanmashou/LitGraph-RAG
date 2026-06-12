@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter15",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:03.279Z",
+  "generated_at": "2026-06-11T11:39:26.280Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter15_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter15.jsonl",
@@ -87,7 +87,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -101,7 +101,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -115,7 +115,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "E_o 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E_o 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -129,7 +129,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "E_p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E_p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -143,7 +143,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "Z_o 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Z_o 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -157,7 +157,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Hat predicted by the breeder's equation.",
-          "definition_zh": "Z_p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Z_p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -285,7 +285,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Why, then, is so much attention focused on?",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -444,8 +444,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -560,8 +560,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -588,8 +588,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Tau names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -602,8 +602,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H Power 2+(1-c places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H Power 2+(1-c 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H Power 2+(1-c names the biological object or model condition being used in this formula.",
+          "definition_zh": "H Power 2+(1-c 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -735,8 +735,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -763,8 +763,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Tau names the biological object or model condition being used in this formula.",
+              "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -938,8 +938,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -966,8 +966,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Tau names the biological object or model condition being used in this formula.",
+              "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -998,8 +998,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1054,8 +1054,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1278,8 +1278,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1348,8 +1348,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1485,8 +1485,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1545,8 +1545,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1619,8 +1619,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1730,7 +1730,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ction stops, the epistatic contribution decays to zero.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1744,7 +1744,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ction stops, the epistatic contribution decays to zero.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1875,8 +1875,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1991,8 +1991,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2223,8 +2223,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2339,8 +2339,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2448,8 +2448,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -2523,7 +2523,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Decays by one third in each generation (and this is assumed in obtaining Equation 15.10b).",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2773,7 +2773,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "We usual Short-term Changes in the Mean: 3.",
-          "definition_zh": "Sigma Power 2(z Sub T) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(z Sub T) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3477,8 +3477,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3519,8 +3519,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Power I) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Power I) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(a Power I) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Power I) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3533,8 +3533,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Tau places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Tau names the biological object or model condition being used in this formula.",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3691,7 +3691,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Recalling Equation 15.5b, (15.13b) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3882,8 +3882,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3977,7 +3977,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If shared environmental e Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4064,7 +4064,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "If shared environmental e Short-term Changes in the Mean: 3.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4109,8 +4109,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4166,7 +4166,7 @@
       "concept_id": "concept_chapter15_formula_15_16a_defined_delta_mu_t",
       "name": "Mean After Selection",
       "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-      "definition_zh": "Mean After Selection 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Mean After Selection 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_15.16a",
       "defined_symbol": "\\Delta\\mu_{t}&",
@@ -4202,7 +4202,7 @@
           "confidence": 0.8,
           "concept_type": "operator_or_function",
           "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4230,7 +4230,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ing the mean after selection as, (15.15) and defining the change in mean as yields (15.16a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4311,7 +4311,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-          "definition_zh": "Mean After Selection 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Mean After Selection 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -4338,7 +4338,7 @@
               "confidence": 0.8,
               "concept_type": "operator_or_function",
               "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -4366,7 +4366,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ing the mean after selection as, (15.15) and defining the change in mean as yields (15.16a) Short-term Changes in the Mean: 3.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4411,8 +4411,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4425,8 +4425,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4529,7 +4529,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-              "definition_zh": "Mean After Selection 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Mean After Selection 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4572,8 +4572,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -4586,8 +4586,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Correlation describes spread or joint movement among variables.",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -4689,7 +4689,7 @@
           "confidence": 0.8,
           "concept_type": "operator_or_function",
           "definition": "The change in the character mean due to previous selection decays, countering the gain from selection in the current generation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4703,7 +4703,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Summing over Equation 15.16b, the total response to selection after generations is (15.16c) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4717,7 +4717,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Summing over Equation 15.16b, the total response to selection after generations is (15.16c) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Rho^i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Rho^i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4904,7 +4904,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Recalling the partial sum of a geometric series (Equation 15.5b), this reduces to (15.17a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5009,8 +5009,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Correlation describes spread or joint movement among variables.",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5078,7 +5078,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-          "definition_zh": "Mean After Selection 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Mean After Selection 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -5105,7 +5105,7 @@
               "confidence": 0.8,
               "concept_type": "operator_or_function",
               "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5133,7 +5133,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Ing the mean after selection as, (15.15) and defining the change in mean as yields (15.16a) Short-term Changes in the Mean: 3.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5167,7 +5167,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Rewriting the mean after selection as, and defining the change in mean as yields",
-              "definition_zh": "Mean After Selection 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Mean After Selection 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5210,8 +5210,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5224,8 +5224,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Correlation places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Correlation describes spread or joint movement among variables.",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5257,7 +5257,7 @@
           "confidence": 0.8,
           "concept_type": "operator_or_function",
           "definition": "Thus, no matter how long selection is applied, the mean can never change by more than.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5271,7 +5271,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If we substitute these values of into Equation 15.16a and use Equation 15.16b, the expected change in generation is (15.18) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5285,7 +5285,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If we substitute these values of into Equation 15.16a and use Equation 15.16b, the expected change in generation is (15.18) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5447,7 +5447,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Using this result, by generation, the cumulative response is (15.19a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5461,7 +5461,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Using this result, by generation, the cumulative response is (15.19a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5475,7 +5475,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Using this result, by generation, the cumulative response is (15.19a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5489,7 +5489,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Using this result, by generation, the cumulative response is (15.19a) Short-term Changes in the Mean: 3.",
-          "definition_zh": "T+tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "T+tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5653,7 +5653,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Recalling the partial sum of a geometric series (Equation 15.5b), this reduces to (15.17a) Short-term Changes in the Mean: 3.",
-              "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5699,7 +5699,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Using this identity, and applying Equation 15.15b with and, yields (15.19b) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5713,7 +5713,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Using this identity, and applying Equation 15.15b with and, yields (15.19b) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5856,7 +5856,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Using this result, by generation, the cumulative response is (15.19a) Short-term Changes in the Mean: 3.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5888,7 +5888,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The half-life, of the decay in response follows from solving, or (15.19c) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Correlation 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Correlation 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5957,8 +5957,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5971,8 +5971,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5985,8 +5985,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6065,8 +6065,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6079,8 +6079,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6093,8 +6093,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub D names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6107,8 +6107,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub M names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6204,8 +6204,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "G names the biological object or model condition being used in this formula.",
+              "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6218,8 +6218,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "M names the biological object or model condition being used in this formula.",
+              "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6232,8 +6232,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "E names the biological object or model condition being used in this formula.",
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6264,8 +6264,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6278,8 +6278,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "M names the biological object or model condition being used in this formula.",
+          "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6292,8 +6292,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6536,8 +6536,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6730,8 +6730,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7129,8 +7129,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7328,8 +7328,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "T+1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -7388,8 +7388,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "T+1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7610,8 +7610,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "T+1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "T+1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "T+1 names the biological object or model condition being used in this formula.",
+              "definition_zh": "T+1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -7670,8 +7670,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7684,8 +7684,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H^2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H^2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7890,7 +7890,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-          "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7903,8 +7903,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8073,7 +8073,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-              "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8086,8 +8086,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -8335,8 +8335,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -8423,8 +8423,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8600,8 +8600,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -8647,7 +8647,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "S mo (t) = S t geq 1 |m|<1 $) converges to (15.28b) Short-term Changes in the Mean: 3.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8964,7 +8964,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "Hence, after a sufficient number of generations, the per-generation change is constant.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9295,8 +9295,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9448,7 +9448,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Thus, the selection response continues even after the cessation of selection (Figure 15.3), a feature that Kirkpatrick and Lande (1989) called Short-term Changes in the Mean: 3.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9462,7 +9462,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Thus, the selection response continues even after the cessation of selection (Figure 15.3), a feature that Kirkpatrick and Lande (1989) called Short-term Changes in the Mean: 3.",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9476,7 +9476,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Thus, the selection response continues even after the cessation of selection (Figure 15.3), a feature that Kirkpatrick and Lande (1989) called Short-term Changes in the Mean: 3.",
-          "definition_zh": "T+tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "T+tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9736,7 +9736,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Thus, the selection response continues even after the cessation of selection (Figure 15.3), a feature that Kirkpatrick and Lande (1989) called Short-term Changes in the Mean: 3.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9796,7 +9796,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-          "definition_zh": "Tau 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Tau 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9837,8 +9837,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -9974,7 +9974,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-          "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9988,7 +9988,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-          "definition_zh": "M^t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "M^t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10159,7 +10159,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "S mo (t) = S t geq 1 |m|<1 $) converges to (15.28b) Short-term Changes in the Mean: 3.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10328,7 +10328,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-              "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10342,7 +10342,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Permanent Versus Transient Response: Introduction Selection Response Under Falconer's Dilution Model",
-              "definition_zh": "M^t 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "M^t 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10374,7 +10374,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "If is opposite in sign to S, there is some erosion of the cumulative response upon relaxation of selection (we have already se Short-term Changes in the Mean: 3.",
-          "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10415,8 +10415,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10738,8 +10738,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "G names the biological object or model condition being used in this formula.",
+              "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10752,8 +10752,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "M places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "M names the biological object or model condition being used in this formula.",
+              "definition_zh": "M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10766,8 +10766,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "E names the biological object or model condition being used in this formula.",
+              "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10813,7 +10813,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "As the maternal trait, a more general model allows us to separate the direct and maternal traits, e.g., weight in an offspring and milk production in its mother.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10841,7 +10841,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "As the maternal trait, a more general model allows us to separate the direct and maternal traits, e.g., weight in an offspring and milk production in its mother.",
-          "definition_zh": "G Sub D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -10976,8 +10976,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11115,7 +11115,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Additionally, there can be a component of response due to the effects of previous selection.",
-          "definition_zh": "G Sub Dd 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub Dd 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11129,7 +11129,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Additionally, there can be a component of response due to the effects of previous selection.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11252,8 +11252,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11266,8 +11266,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Mm places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Mm 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Mm names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Mm 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11390,8 +11390,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11565,8 +11565,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+              "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11626,7 +11626,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tion differentials following the start of selection, so that (after the first generation) terms involving (changes in) are zero.",
-          "definition_zh": "G Sub Dd 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub Dd 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11640,7 +11640,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tion differentials following the start of selection, so that (after the first generation) terms involving (changes in) are zero.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11654,7 +11654,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Tion differentials following the start of selection, so that (after the first generation) terms involving (changes in) are zero.",
-          "definition_zh": "G Sub Mm 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub Mm 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11831,7 +11831,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Tion differentials following the start of selection, so that (after the first generation) terms involving (changes in) are zero.",
-              "definition_zh": "G Sub Dd 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "G Sub Dd 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11862,8 +11862,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11876,8 +11876,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Mm places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Mm 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Mm names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Mm 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -11968,8 +11968,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Dd places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Dd 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Dd names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Dd 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11982,8 +11982,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11996,8 +11996,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Mm places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Mm 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Mm names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Mm 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12084,8 +12084,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12112,8 +12112,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12126,8 +12126,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Mm places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Mm 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Mm names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Mm 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12222,8 +12222,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12236,8 +12236,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Dd places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Dd 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Dd names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Dd 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12250,8 +12250,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Md places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Md 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Md names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Md 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12264,8 +12264,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub M places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub M 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub M names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub M 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12278,8 +12278,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub D) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub D) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(a Sub D) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub D) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12292,8 +12292,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma Power 2(a Sub M) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma Power 2(a Sub M) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma Power 2(a Sub M) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma Power 2(a Sub M) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12441,7 +12441,7 @@
       "concept_id": "concept_chapter15_formula_15_39a_defined_w_i",
       "name": "Class Fitness",
       "definition": "Function of its current phenotype, and the phenotype of the same trait, in its mother.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_15.39a",
       "defined_symbol": "w_{i}",
@@ -12519,7 +12519,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Function of its current phenotype, and the phenotype of the same trait, in its mother.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -12628,8 +12628,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12657,7 +12657,7 @@
           "confidence": 0.8,
           "concept_type": "domain_concept",
           "definition": "Here, is expected change in relative offspring fitness from a one-unit change in the maternal phenotype while holding the offspring phenotype constant (the impact from maternal selection).",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12803,8 +12803,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -12835,8 +12835,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12863,8 +12863,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Beta_z places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Beta_z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Beta_z names the biological object or model condition being used in this formula.",
+          "definition_zh": "Beta_z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12891,8 +12891,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "H^2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "H^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "H^2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "H^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12905,8 +12905,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Sigma_a^2(beta_z+beta Sub Msh^2/2) places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Sigma_a^2(beta_z+beta Sub Msh^2/2) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Sigma_a^2(beta_z+beta Sub Msh^2/2) describes spread or joint movement among variables.",
+          "definition_zh": "Sigma_a^2(beta_z+beta Sub Msh^2/2) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -13050,8 +13050,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13083,7 +13083,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "Ulting in an equilibrium mother-offspring phenotypic covariance of (LW Chapter 23).",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13125,7 +13125,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ulting in an equilibrium mother-offspring phenotypic covariance of (LW Chapter 23).",
-          "definition_zh": "Beta_z 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Beta_z 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13153,7 +13153,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Ulting in an equilibrium mother-offspring phenotypic covariance of (LW Chapter 23).",
-          "definition_zh": "Sigma_a^2(fracm2-m) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma_a^2(fracm2-m) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13255,7 +13255,7 @@
       "concept_id": "concept_chapter15_formula_15_40_defined_w_i",
       "name": "Class Fitness",
       "definition": "Mple, suppose that fitness is a function of the height, and weight, of an individual and the weight, of its mother.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_15.40",
       "defined_symbol": "w_{i}",
@@ -13347,7 +13347,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Mple, suppose that fitness is a function of the height, and weight, of an individual and the weight, of its mother.",
-          "definition_zh": "E Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }

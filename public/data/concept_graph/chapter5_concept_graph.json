@@ -1,7 +1,7 @@
 {
   "chapter_id": "chapter5",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:10.523Z",
+  "generated_at": "2026-06-11T11:39:33.068Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/chapter5_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/chapter5.jsonl",
@@ -95,7 +95,7 @@
       "concept_id": "concept_chapter5_formula_5_1b_defined_delta",
       "name": "Change",
       "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_5.1b",
       "defined_symbol": "\\Delta",
@@ -144,8 +144,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -243,8 +243,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "quantity_concept",
-          "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -287,8 +287,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_1c_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_5.1c",
       "defined_symbol": "\\Delta",
@@ -312,7 +312,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -352,8 +352,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -412,8 +412,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -551,7 +551,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -591,8 +591,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -651,8 +651,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -765,8 +765,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_2b_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_5.2b",
       "defined_symbol": "\\Delta",
@@ -801,8 +801,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "O places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "O 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "O names the biological object or model condition being used in this formula.",
+          "definition_zh": "O 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -873,8 +873,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "O places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "O 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "O names the biological object or model condition being used in this formula.",
+          "definition_zh": "O 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -933,8 +933,8 @@
           "confidence": 0.87,
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_1b_defined_delta",
@@ -949,7 +949,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1044,7 +1044,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1290,8 +1290,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E Power -st places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E Power -st 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E Power -st names the biological object or model condition being used in this formula.",
+          "definition_zh": "E Power -st 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1373,8 +1373,8 @@
               "confidence": 0.87,
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1981,8 +1981,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2087,8 +2087,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2159,8 +2159,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2242,7 +2242,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2282,8 +2282,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2342,8 +2342,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2479,7 +2479,7 @@
       "concept_id": "concept_chapter5_formula_5_5b_defined_delta",
       "name": "Change",
       "definition": "A more compact and insightful way to express allele-frequency change was presented by Sewall Wright, one of the founding fathers (with Fisher and Haldane) of modern selection theory.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_5.5b",
       "defined_symbol": "\\Delta",
@@ -2503,7 +2503,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2543,8 +2543,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2603,8 +2603,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2725,7 +2725,7 @@
           "relation": "explicit_reference",
           "concept_type": "operator_or_function",
           "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -2765,8 +2765,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -2825,8 +2825,8 @@
               "clickable": false,
               "confidence": 0.73,
               "concept_type": "quantity_concept",
-              "definition": "Updated Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Updated Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Updated Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "Updated Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -3037,8 +3037,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Response Variable places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Response Variable names the biological object or model condition being used in this formula.",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3051,8 +3051,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3065,8 +3065,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3365,7 +3365,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3761,7 +3761,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -3949,8 +3949,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_6e_defined_delta_p_i",
       "name": "Frequency of Allele",
-      "definition": "Frequency of Allele is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Frequency of Allele 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Frequency of Allele is a population-level proportion used to track how a state changes over time.",
+      "definition_zh": "Frequency of Allele 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.6e",
       "defined_symbol": "\\Delta p_{i}",
@@ -4197,8 +4197,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4327,8 +4327,8 @@
           "confidence": 0.82,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Frequency of Allele is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Frequency of Allele 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Frequency of Allele is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Frequency of Allele 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_6b_statement",
@@ -4477,8 +4477,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4541,8 +4541,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_7a_defined_p_prime_i",
       "name": "Requency of Allele in Survivors",
-      "definition": "Requency of Allele in Survivors is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Requency of Allele in Survivors 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Requency of Allele in Survivors is a population-level proportion used to track how a state changes over time.",
+      "definition_zh": "Requency of Allele in Survivors 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.7a",
       "defined_symbol": "p^{\\prime}_i",
@@ -4577,8 +4577,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4701,8 +4701,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_7b_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.7b",
       "defined_symbol": "W_i",
@@ -4796,7 +4796,7 @@
       "concept_id": "concept_chapter5_formula_5_7c_defined_delta_p_i",
       "name": "Expected Allele-frequency Change",
       "definition": "Finally, if, the frequency of will be unchanged.",
-      "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.7c",
       "defined_symbol": "\\Delta p_{i}",
@@ -4819,8 +4819,8 @@
           "confidence": 0.87,
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
-          "definition": "Requency of Allele in Survivors is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-          "definition_zh": "Requency of Allele in Survivors 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition": "Requency of Allele in Survivors is a population-level proportion used to track how a state changes over time.",
+          "definition_zh": "Requency of Allele in Survivors 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [],
           "introduced_concepts": [
             {
@@ -4846,8 +4846,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -4893,7 +4893,7 @@
           "confidence": 0.89,
           "concept_type": "quantity_concept",
           "definition": "Finally, if, the frequency of will be unchanged.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4935,7 +4935,7 @@
           "confidence": 0.76,
           "concept_type": "operator_or_function",
           "definition": "Finally, if, the frequency of will be unchanged.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -4998,8 +4998,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_7d_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.7d",
       "defined_symbol": "W_{i}",
@@ -5104,8 +5104,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "L places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "L names the biological object or model condition being used in this formula.",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5271,7 +5271,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Finally, if, the frequency of will be unchanged.",
-          "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_7a_defined_p_prime_i",
@@ -5285,8 +5285,8 @@
               "confidence": 0.87,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Requency of Allele in Survivors is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Requency of Allele in Survivors 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Requency of Allele in Survivors is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Requency of Allele in Survivors 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5302,7 +5302,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5344,7 +5344,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5361,8 +5361,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5448,7 +5448,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Finally, if, the frequency of will be unchanged.",
-          "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_7a_defined_p_prime_i",
@@ -5462,8 +5462,8 @@
               "confidence": 0.87,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Requency of Allele in Survivors is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Requency of Allele in Survivors 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Requency of Allele in Survivors is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Requency of Allele in Survivors 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5479,7 +5479,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -5521,7 +5521,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -5567,7 +5567,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "Like, is a function of allele frequencies, and thus changes as these change.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -5658,8 +5658,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5760,8 +5760,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_9b_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.9b",
       "defined_symbol": "W_{i}",
@@ -5948,8 +5948,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6043,7 +6043,7 @@
       "concept_id": "concept_chapter5_formula_5_10_defined_delta_p_i",
       "name": "Allele-frequency Change",
       "definition": "Substituting Equation 5.9d into Equation 5.7c gives the allele-frequency change as",
-      "definition_zh": "Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.10",
       "defined_symbol": "\\Delta p_{i}",
@@ -6067,7 +6067,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Finally, if, the frequency of will be unchanged.",
-          "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_7a_defined_p_prime_i",
@@ -6081,8 +6081,8 @@
               "confidence": 0.87,
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
-              "definition": "Requency of Allele in Survivors is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-              "definition_zh": "Requency of Allele in Survivors 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition": "Requency of Allele in Survivors is a population-level proportion used to track how a state changes over time.",
+              "definition_zh": "Requency of Allele in Survivors 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6098,7 +6098,7 @@
               "confidence": 0.89,
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6140,7 +6140,7 @@
               "confidence": 0.76,
               "concept_type": "operator_or_function",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6171,8 +6171,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6260,7 +6260,7 @@
           "confidence": 0.72,
           "concept_type": "operator_or_function",
           "definition": "Substituting Equation 5.9d into Equation 5.7c gives the allele-frequency change as",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6379,7 +6379,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "Substituting Equation 5.9d into Equation 5.7c gives the allele-frequency change as",
-          "definition_zh": "Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_7c_defined_delta_p_i",
@@ -6394,7 +6394,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6455,7 +6455,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Substituting Equation 5.9d into Equation 5.7c gives the allele-frequency change as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -6514,8 +6514,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "operator_or_function",
-          "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-          "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+          "definition": "Change is the operation or transformation rule used by the equation.",
+          "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6542,8 +6542,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6708,8 +6708,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_12a_defined_delta",
       "name": "Change",
-      "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-      "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+      "definition": "Change is the operation or transformation rule used by the equation.",
+      "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
       "concept_type": "operator_or_function",
       "defined_by_formula_id": "formula_5.12a",
       "defined_symbol": "\\Delta",
@@ -6748,7 +6748,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Substituting Equation 5.9d into Equation 5.7c gives the allele-frequency change as",
-              "definition_zh": "Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -6791,8 +6791,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "operator_or_function",
-              "definition": "Change is the operation that turns the input terms into the output used by the equation.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition": "Change is the operation or transformation rule used by the equation.",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7058,8 +7058,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "D names the biological object or model condition being used in this formula.",
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7072,8 +7072,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7100,8 +7100,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7114,8 +7114,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7240,8 +7240,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "D names the biological object or model condition being used in this formula.",
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7254,8 +7254,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7282,8 +7282,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7296,8 +7296,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 2 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 2 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7310,8 +7310,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7458,8 +7458,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "D names the biological object or model condition being used in this formula.",
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7486,8 +7486,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7500,8 +7500,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 3 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 3 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 3 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 3 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7514,8 +7514,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7662,8 +7662,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "D names the biological object or model condition being used in this formula.",
+          "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7690,8 +7690,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7704,8 +7704,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -7820,7 +7820,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -7940,8 +7940,8 @@
           "clickable": false,
           "confidence": 0.81,
           "concept_type": "quantity_concept",
-          "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+          "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7996,8 +7996,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8010,8 +8010,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub J places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub J 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub J names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub J 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8171,8 +8171,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "D places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "D 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "D names the biological object or model condition being used in this formula.",
+              "definition_zh": "D 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8185,8 +8185,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "C names the biological object or model condition being used in this formula.",
+              "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -8337,8 +8337,8 @@
               "clickable": false,
               "confidence": 0.81,
               "concept_type": "quantity_concept",
-              "definition": "State Probability is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "State Probability 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "State Probability describes how much probability weight the model assigns to an event, state, or continuous value.",
+              "definition_zh": "State Probability 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8383,8 +8383,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "D-hat places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "D-hat 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "D-hat names the biological object or model condition being used in this formula.",
+          "definition_zh": "D-hat 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8397,8 +8397,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "C places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "C 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "C names the biological object or model condition being used in this formula.",
+          "definition_zh": "C 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8412,7 +8412,7 @@
           "confidence": 0.72,
           "concept_type": "domain_concept",
           "definition": "What is most interesting is that when, the marginal gametic fitnesses are not equal, and equilibrium mean fitness is not at a local maximum.",
-          "definition_zh": "G Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8453,8 +8453,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Eta Sub I places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Eta Sub I 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Eta Sub I names the biological object or model condition being used in this formula.",
+          "definition_zh": "Eta Sub I 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8467,8 +8467,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 1 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 1 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 1 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 1 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8481,8 +8481,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub 4 places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub 4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub 4 names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub 4 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -8654,7 +8654,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -8830,8 +8830,8 @@
       "chapter_id": "chapter5",
       "concept_id": "concept_chapter5_formula_5_15b_defined_w_i",
       "name": "Class Fitness",
-      "definition": "Class Fitness is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.15b",
       "defined_symbol": "W_{i}",
@@ -8870,7 +8870,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -9191,7 +9191,7 @@
       "concept_id": "concept_chapter5_formula_5_17a_defined_w_i",
       "name": "Class Fitness",
       "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-      "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_5.17a",
       "defined_symbol": "w_{i}",
@@ -9276,7 +9276,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -9504,7 +9504,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -9596,8 +9596,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9638,8 +9638,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -9749,7 +9749,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-          "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_16a_defined_p_i",
@@ -9874,8 +9874,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -9916,8 +9916,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+              "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -9951,7 +9951,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10072,7 +10072,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Nsion provides a useful approximation, often without having to completely specify the phenotypic distribution and/or fitness function.",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10213,7 +10213,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10257,7 +10257,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Like, is a function of allele frequencies, and thus changes as these change.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10276,7 +10276,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-          "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_16a_defined_p_i",
@@ -10401,8 +10401,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10443,8 +10443,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+              "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10478,7 +10478,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10599,7 +10599,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Typic distribution and/or fitness function.",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -10752,7 +10752,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10796,7 +10796,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Like, is a function of allele frequencies, and thus changes as these change.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -10815,7 +10815,7 @@
           "relation": "explicit_reference",
           "concept_type": "quantity_concept",
           "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-          "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [
             {
               "concept_id": "concept_chapter5_formula_5_16a_defined_p_i",
@@ -10940,8 +10940,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -10982,8 +10982,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+              "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11017,7 +11017,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -11123,8 +11123,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11151,8 +11151,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11318,7 +11318,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "Finally, if, the frequency of will be unchanged.",
-              "definition_zh": "Expected Allele-frequency Change 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Expected Allele-frequency Change 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11362,7 +11362,7 @@
               "confidence": 0.72,
               "concept_type": "operator_or_function",
               "definition": "Like, is a function of allele frequencies, and thus changes as these change.",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -11396,7 +11396,7 @@
               "relation": "explicit_reference",
               "concept_type": "operator_or_function",
               "definition": "From these new genotypic frequencies, the frequency of A after selection is and applying the results in gives the expected change in the frequency of A as",
-              "definition_zh": "Change 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。",
+              "definition_zh": "Change 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -11502,8 +11502,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+          "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11530,8 +11530,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+          "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11771,8 +11771,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -11944,7 +11944,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-              "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -12007,8 +12007,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -12035,8 +12035,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+              "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -12067,8 +12067,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12283,8 +12283,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12325,8 +12325,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Imath-bar places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Imath-bar 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Imath-bar names the biological object or model condition being used in this formula.",
+          "definition_zh": "Imath-bar 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -12992,8 +12992,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13081,7 +13081,7 @@
           "confidence": 0.8,
           "concept_type": "quantity_concept",
           "definition": "For a random-mating population under linkage equilibrium, the first double sum is simply the additive genetic variance of this trait (LW Equation 4.23a).",
-          "definition_zh": "Additive Genetic Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Additive Genetic Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -13305,8 +13305,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13618,8 +13618,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -13734,8 +13734,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G Sub Ij places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G Sub Ij 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G Sub Ij names the biological object or model condition being used in this formula.",
+          "definition_zh": "G Sub Ij 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -14741,7 +14741,7 @@
               "relation": "explicit_reference",
               "concept_type": "quantity_concept",
               "definition": "The approximation given by Equation 5.16a motivates two alternative expressions for the relative fitness,.",
-              "definition_zh": "Class Fitness 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14804,8 +14804,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Class Fitness is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Class Fitness 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Class Fitness identifies a term, category, or state position in the equation.",
+              "definition_zh": "Class Fitness 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14832,8 +14832,8 @@
               "clickable": false,
               "confidence": 0.68,
               "concept_type": "domain_concept",
-              "definition": "Alpha_i places the symbol back in the model context: it marks the object, class, or condition being described.",
-              "definition_zh": "Alpha_i 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition": "Alpha_i names the biological object or model condition being used in this formula.",
+              "definition_zh": "Alpha_i 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -14864,8 +14864,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -14924,8 +14924,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15145,8 +15145,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -15206,7 +15206,7 @@
           "confidence": 0.84,
           "concept_type": "quantity_concept",
           "definition": "The term measures the effect of selection on the variance.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15248,7 +15248,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The term measures the effect of selection on the variance.",
-          "definition_zh": "Sigma_z^4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma_z^4 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15262,7 +15262,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The term measures the effect of selection on the variance.",
-          "definition_zh": "D^2 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "D^2 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15414,8 +15414,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -15474,8 +15474,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -15652,8 +15652,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -15769,7 +15769,7 @@
           "confidence": 0.8,
           "concept_type": "quantity_concept",
           "definition": "More generally, however, if selection is also acting directly on the trait variance (such as, but not limited to, stabilizing or disruptive selection), departs from (Chapter 29).",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -16040,7 +16040,7 @@
           "confidence": 0.8,
           "concept_type": "quantity_concept",
           "definition": "More generally, however, if selection is also acting directly on the trait variance (such as, but not limited to, stabilizing or disruptive selection), departs from (Chapter 29).",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -16371,7 +16371,7 @@
               "confidence": 0.84,
               "concept_type": "quantity_concept",
               "definition": "The term measures the effect of selection on the variance.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -16413,7 +16413,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "The term measures the effect of selection on the variance.",
-              "definition_zh": "Sigma_z^4 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "Sigma_z^4 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             }
@@ -16430,8 +16430,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -16650,8 +16650,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "Z-mu places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Z-mu 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Z-mu names the biological object or model condition being used in this formula.",
+          "definition_zh": "Z-mu 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -16780,8 +16780,8 @@
               "clickable": false,
               "confidence": 0.76,
               "concept_type": "quantity_concept",
-              "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-              "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+              "definition": "Trait Variance describes spread or joint movement among variables.",
+              "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -16840,8 +16840,8 @@
           "clickable": false,
           "confidence": 0.76,
           "concept_type": "quantity_concept",
-          "definition": "Trait Variance is a supporting symbol in this equation; read it through its relationship to the main quantity.",
-          "definition_zh": "Trait Variance 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。",
+          "definition": "Trait Variance describes spread or joint movement among variables.",
+          "definition_zh": "Trait Variance 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },

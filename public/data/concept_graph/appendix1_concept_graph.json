@@ -1,7 +1,7 @@
 {
   "chapter_id": "appendix1",
   "version": 1,
-  "generated_at": "2026-06-11T09:34:01.051Z",
+  "generated_at": "2026-06-11T11:39:24.423Z",
   "source": {
     "formula_dependency_graph": "data/frontend/dependency/appendix1_dependencies.json",
     "symbol_sense_prompts": "data/frontend/symbol_sense/prompts/appendix1.jsonl",
@@ -305,7 +305,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Consider a continuous random variable, indexed by continuous time,.",
-          "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -854,8 +854,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "E places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "E 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "E names the biological object or model condition being used in this formula.",
+          "definition_zh": "E 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1002,7 +1002,7 @@
               "confidence": 0.76,
               "concept_type": "domain_concept",
               "definition": "Consider a continuous random variable, indexed by continuous time,.",
-              "definition_zh": "L 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+              "definition_zh": "L 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
               "prerequisite_concepts": [],
               "introduced_concepts": []
             },
@@ -1118,7 +1118,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "For completeness, we present a derivation of Equation A1.6, using the diffusion-approximation assumptions (Equations A1.1a–A1.1c).",
-          "definition_zh": "T+delta Sub T 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "T+delta Sub T 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -1269,8 +1269,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "X-a places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "X-a 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "X-a names the biological object or model condition being used in this formula.",
+          "definition_zh": "X-a 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -1856,8 +1856,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "X-delta Sub X places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "X-delta Sub X 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "X-delta Sub X names the biological object or model condition being used in this formula.",
+          "definition_zh": "X-delta Sub X 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -2520,7 +2520,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The first identity follows from the fact that the integral over a probability distribution is equal to one, and the second is simply our first diffusion assumption (Equation A1.1a).",
-          "definition_zh": "Sigma Power 2(delta Sub X) 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Sigma Power 2(delta Sub X) 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -2882,7 +2882,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The last step follows because the contribution from the squared change in the mean is, and we sweep all such terms into a single expression.",
-          "definition_zh": "T+delta Sub T 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "T+delta Sub T 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3035,8 +3035,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "T+delta Sub T places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "T+delta Sub T 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "T+delta Sub T names the biological object or model condition being used in this formula.",
+          "definition_zh": "T+delta Sub T 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -3923,8 +3923,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Cost places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Cost 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Cost names the biological object or model condition being used in this formula.",
+          "definition_zh": "Cost 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -3951,8 +3951,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4307,8 +4307,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4451,8 +4451,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "G places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "G names the biological object or model condition being used in this formula.",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4606,7 +4606,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "The time for a process to reach a specified value (or values) is called the sojourn time.",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -4947,8 +4947,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Time places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Mean Time summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5247,7 +5247,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Is called a Green's function, and it will prove very useful in solving a variety of problems.",
-          "definition_zh": "Response Variable 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Response Variable 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5261,7 +5261,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "Is called a Green's function, and it will prove very useful in solving a variety of problems.",
-          "definition_zh": "G 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "G 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -5594,8 +5594,8 @@
       "chapter_id": "appendix1",
       "concept_id": "concept_appendix1_formula_a1_36_defined_bar_t",
       "name": "Mean Time",
-      "definition": "Mean Time is the main quantity to read from this equation; the right-hand side shows which terms determine it.",
-      "definition_zh": "Mean Time 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition": "Mean Time summarizes individual values into a comparable population-level center.",
+      "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_A1.36",
       "defined_symbol": "\\bar{t}",
@@ -5616,8 +5616,8 @@
           "clickable": false,
           "confidence": 0.73,
           "concept_type": "domain_concept",
-          "definition": "Mean Time places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "Mean Time summarizes individual values into a comparable population-level center.",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6233,7 +6233,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation.",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6393,7 +6393,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "Similarly, the conditional fixation times are obtained using Equations A1.23a and A1.23b, with for those paths leading to loss, and for those paths leading to fixation.",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6539,7 +6539,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "These results were first obtained by Kimura and Ohta (1969a, 1969b).",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6740,8 +6740,8 @@
           "clickable": false,
           "confidence": 0.68,
           "concept_type": "domain_concept",
-          "definition": "1-p places the symbol back in the model context: it marks the object, class, or condition being described.",
-          "definition_zh": "1-p 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition": "1-p names the biological object or model condition being used in this formula.",
+          "definition_zh": "1-p 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         }
@@ -6821,7 +6821,7 @@
           "confidence": 0.81,
           "concept_type": "domain_concept",
           "definition": "If we use these approximations, Equation A1.25 reduces to Appendix: Introduction Time to Fixation",
-          "definition_zh": "Mean Time 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -6879,7 +6879,7 @@
       "concept_id": "concept_appendix1_formula_a1_45_defined_bar_t_l",
       "name": "Mean Time",
       "definition": "Similarly, Equations A1.27 and A1.28 become and Appendix: Introduction Time to Fixation",
-      "definition_zh": "Mean Time 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_A1.45",
       "defined_symbol": "\\bar{t}_{L}",
@@ -6951,7 +6951,7 @@
       "concept_id": "concept_appendix1_formula_a1_46_defined_bar_t_f",
       "name": "Mean Time",
       "definition": "Similarly, Equations A1.27 and A1.28 become and Appendix: Introduction Time to Fixation",
-      "definition_zh": "Mean Time 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。",
+      "definition_zh": "Mean Time 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。",
       "concept_type": "quantity_concept",
       "defined_by_formula_id": "formula_A1.46",
       "defined_symbol": "\\bar{t}_{F}",
@@ -7699,7 +7699,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The general solution under Brownian motion starting at is that namely, the distribution of is normal, with a mean of and a variance of.",
-          "definition_zh": "Bt 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "Bt 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -7741,7 +7741,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The general solution under Brownian motion starting at is that namely, the distribution of is normal, with a mean of and a variance of.",
-          "definition_zh": "X Sub 0+at 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "X Sub 0+at 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8033,7 +8033,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The Ornstein-Uhlenbeck process is an extension of the Brownian-motion model to include a linear restoring force back to the origin.",
-          "definition_zh": "E Power -2at 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power -2at 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8047,7 +8047,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "The Ornstein-Uhlenbeck process is an extension of the Brownian-motion model to include a linear restoring force back to the origin.",
-          "definition_zh": "E Power -at 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power -at 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },
@@ -8237,7 +8237,7 @@
           "confidence": 0.76,
           "concept_type": "domain_concept",
           "definition": "See Karlin and Taylor (1981) for a derivation.",
-          "definition_zh": "E Power -at 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。",
+          "definition_zh": "E Power -at 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。",
           "prerequisite_concepts": [],
           "introduced_concepts": []
         },

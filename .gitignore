@@ -28,3 +28,5 @@ docs/*
 .understand-anything/
 .cursor/
 tmp/
+data/book/
+data/book_ocr/
