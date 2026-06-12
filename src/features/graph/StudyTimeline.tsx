@@ -4,7 +4,7 @@ import type { SearchFormula } from '../../shared/types/formula';
 import type { ChapterLayer, StudyContext } from '../../shared/types/learning';
 import { rawFormulaNumber } from '../../shared/utils/constants';
 import { getStudyFormulaIds } from '../learning/learningNavigator';
-import { DEFAULT_LANGUAGE, getUiCopy } from '../../shared/utils/uiCopy';
+import { DEFAULT_LANGUAGE, formatChapterTitle, getUiCopy } from '../../shared/utils/uiCopy';
 
 interface StudyTimelineProps {
   studyContext: StudyContext;
@@ -19,7 +19,16 @@ export function StudyTimeline({ studyContext, searchIndex }: StudyTimelineProps)
   const [params] = useSearchParams();
   const lookup = useMemo(() => new Map(searchIndex.map((item) => [item.id, item])), [searchIndex]);
   const formulaIds = getStudyFormulaIds(studyContext);
-  const title = studyContext.type === 'chapter' ? studyContext.chapter.title_zh || studyContext.chapter.title_en : studyContext.type === 'theme' ? studyContext.route.title_zh || studyContext.route.title_en : '';
+  const title = studyContext.type === 'chapter'
+    ? formatChapterTitle({
+        chapterId: studyContext.chapter.chapter_id,
+        chapter: studyContext.chapter.chapter,
+        titleEn: studyContext.chapter.title_en,
+        titleZh: studyContext.chapter.title_zh,
+      })
+    : studyContext.type === 'theme'
+      ? studyContext.route.title_zh || studyContext.route.title_en
+      : '';
 
   if (!formulaIds.length) return null;
 

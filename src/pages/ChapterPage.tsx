@@ -4,15 +4,29 @@ import { ArrowRight, ChevronLeft } from 'lucide-react';
 import type { FormulaDataState } from '../features/learning/useFormulaData';
 import { SearchBar } from '../features/search/SearchBar';
 import { StarField } from '../features/starfield/StarField';
-import { buildFormulaStarNodes, type StarNode } from '../features/starfield/starNavigation';
-import { getChapterById, resolveRecommendedChapterFormulaId } from '../features/learning/learningNavigator';
-import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../shared/utils/uiCopy';
+import { buildConceptStarNodes, buildFormulaStarNodes, type StarNode } from '../features/starfield/starNavigation';
+import { getChapterById } from '../features/learning/learningNavigator';
+import { buildReadableFormulaCopy } from '../features/graph/formulaInfo';
+import { MathFormula } from '../shared/components/MathFormula';
+import { DEFAULT_LANGUAGE, formatChapterDescription, formatChapterLabel, formatChapterTitle, formatConceptTitle, formatFormulaReferenceLabel, getUiCopy } from '../shared/utils/uiCopy';
 
-function entryHint(index: number, isRecommended: boolean): string {
-  if (isRecommended) return '推荐先从这里进入：它最适合作为本章公式网络的第一颗锚点。';
-  if (index === 0) return '这一式通常承担开场定义，适合先用来熟悉本章符号。';
-  if (index <= 2) return '这一式能把前面的符号放进推导关系里，适合顺着主线继续读。';
-  return '当你已经掌握前几步后，再用这一式检查本章的延伸关系。';
+function formulaEntryDescription(node: StarNode): string {
+  const copy = buildReadableFormulaCopy({
+    formulaId: node.id,
+    language: DEFAULT_LANGUAGE,
+    context: node.context,
+    latex: node.latex,
+    formulaLabel: node.fullLabel || node.title,
+    formulaNumber: node.label,
+    section: node.section,
+  });
+  return copy.takeaway || copy.plainMeaning || node.context || node.subtitle;
+}
+
+function conceptEntryDescription(node: StarNode): string {
+  const text = (node.context || node.subtitle || '').replace(/\s+/g, ' ').trim();
+  if (!text) return '从这个概念进入本章术语地图，再回到相关公式理解它的用法。';
+  return text.endsWith('。') || text.endsWith('.') ? text : `${text}。`;
 }
 
 interface ChapterPageProps {
@@ -28,35 +42,89 @@ export function ChapterPage({ data }: ChapterPageProps) {
     () => (chapter ? buildFormulaStarNodes({ chapter, searchIndex: data.searchIndex, featured: data.featured }) : []),
     [chapter, data.featured, data.searchIndex],
   );
-  const startingNodes = useMemo(() => formulaNodes.filter((node) => node.isBackbone).slice(0, 8), [formulaNodes]);
-  const recommendedFormulaId = useMemo(
-    () => (chapter ? resolveRecommendedChapterFormulaId(chapter, data.searchIndex) : null),
-    [chapter, data.searchIndex],
+  const conceptNodes = useMemo(
+    () => (chapter ? buildConceptStarNodes({ chapter, conceptIndex: data.conceptIndex }) : []),
+    [chapter, data.conceptIndex],
   );
+  const starNodes = useMemo(() => [...formulaNodes, ...conceptNodes], [conceptNodes, formulaNodes]);
+  const startingFormulaNodes = useMemo(() => formulaNodes.filter((node) => node.isBackbone), [formulaNodes]);
+  const startingConceptNodes = conceptNodes;
+  const entryCount = startingConceptNodes.length + startingFormulaNodes.length;
+  const chapterTitle = chapter
+    ? formatChapterTitle({
+        chapterId: chapter.chapter_id,
+        chapter: chapter.chapter,
+        titleEn: chapter.title_en,
+        titleZh: chapter.title_zh,
+      })
+    : copy.chapter.fallbackTitle;
+  const chapterDescription = chapter
+    ? formatChapterDescription({
+        chapterId: chapter.chapter_id,
+        chapter: chapter.chapter,
+        descriptionEn: chapter.description_en,
+        descriptionZh: chapter.description_zh,
+        formulaCount: chapter.full_formula_ids.length,
+        sectionHint: chapter.section_hint,
+      })
+    : copy.chapter.fallbackDescription;
 
   const enterNode = (node: StarNode) => {
     if (node.kind === 'formula') {
       const entry = node.isBackbone ? '&entry=chapter' : '';
-      navigate(`/graph/${node.id}?study=chapter&chapterId=${chapterId}&layer=backbone${entry}`);
+      navigate(`/graph/${node.id}?mode=guided&study=chapter&chapterId=${chapterId}&layer=backbone${entry}`);
     }
-  };
-  const enterRecommendedFormula = () => {
-    if (recommendedFormulaId) navigate(`/graph/${recommendedFormulaId}?study=chapter&chapterId=${chapterId}&layer=backbone&entry=chapter`);
+    if (node.kind === 'concept' && node.formulaId && node.conceptId) {
+      navigate(`/graph/${node.formulaId}?chapterId=${node.chapterId || chapterId}&conceptId=${node.conceptId}&selected=${node.formulaId}`);
+    }
   };
   const entryPanel = chapter ? (
     <>
       <div className="chapter-entry-panel__header">
         <p>{copy.chapter.entryPoints}</p>
-        <span>{chapter.backbone_formula_ids.length} {copy.chapter.roots}</span>
+        <span>{entryCount} {copy.chapter.roots}</span>
       </div>
       <div className="chapter-entry-panel__list">
-        {startingNodes.map((node, index) => (
-          <button key={node.id} type="button" onClick={() => (node.id === recommendedFormulaId ? enterRecommendedFormula() : enterNode(node))} className="chapter-entry-panel__item">
+        {startingConceptNodes.length ? (
+          <div className="chapter-entry-panel__section-label">
+            <span>概念起点</span>
+            <small>{startingConceptNodes.length}</small>
+          </div>
+        ) : null}
+        {startingConceptNodes.map((node, index) => (
+          <button key={node.id} type="button" onClick={() => enterNode(node)} className="chapter-entry-panel__item chapter-entry-panel__item--concept">
+            <span className="chapter-entry-panel__number">{String(index + 1).padStart(2, '0')}</span>
+            <div className="chapter-entry-panel__content chapter-entry-panel__content--concept">
+              <div className="chapter-entry-panel__concept-head">
+                <strong>{formatConceptTitle(node.title, node.symbol)}</strong>
+                {node.formulaLabel ? <span className="chapter-entry-panel__source-chip">{formatFormulaReferenceLabel(node.formulaLabel)}</span> : null}
+              </div>
+              <em>{conceptEntryDescription(node)}</em>
+              <div className="chapter-entry-panel__concept-meta">
+                {node.symbol ? (
+                  <div className="chapter-entry-panel__symbol-chip">
+                    <MathFormula latex={node.symbol} inline />
+                  </div>
+                ) : null}
+                <span>概念图谱</span>
+              </div>
+            </div>
+            <ArrowRight size={16} className="chapter-entry-panel__arrow chapter-entry-panel__arrow--concept" />
+          </button>
+        ))}
+        {startingFormulaNodes.length ? (
+          <div className="chapter-entry-panel__section-label">
+            <span>公式起点</span>
+            <small>{startingFormulaNodes.length}</small>
+          </div>
+        ) : null}
+        {startingFormulaNodes.map((node, index) => (
+          <button key={node.id} type="button" onClick={() => enterNode(node)} className="chapter-entry-panel__item">
             <span className="chapter-entry-panel__number">{String(index + 1).padStart(2, '0')}</span>
             <span className="chapter-entry-panel__content">
               <strong>{node.label}</strong>
-              <span>{node.title}</span>
-              <em>{entryHint(index, node.id === recommendedFormulaId)}</em>
+              <span>{formatFormulaReferenceLabel(node.title)}</span>
+              <em>{formulaEntryDescription(node)}</em>
             </span>
             <ArrowRight size={16} className="text-cyan-500/40" />
           </button>
@@ -67,7 +135,7 @@ export function ChapterPage({ data }: ChapterPageProps) {
 
   return (
     <section className="chapter-shell relative min-h-screen w-full overflow-y-auto overflow-x-hidden bg-[#02040a] text-white font-['Space_Grotesk'] lg:h-screen lg:overflow-hidden">
-      <StarField nodes={formulaNodes} visible={Boolean(chapter)} onEnterNode={enterNode} rightReserveClassName="chapter-starfield-reserve" />
+      <StarField nodes={starNodes} visible={Boolean(chapter)} onEnterNode={enterNode} rightReserveClassName="chapter-starfield-reserve" />
 
       {/* HUD Elements */}
       <div className="pointer-events-none absolute inset-0 z-20 border-[24px] border-white/[0.01]" />
@@ -95,10 +163,10 @@ export function ChapterPage({ data }: ChapterPageProps) {
           </p>
         </div>
         <h1 className="text-balance text-5xl font-bold leading-[1.1] tracking-tight text-white md:text-7xl animate-[fadeSlideUp_0.7s_ease_0.25s_both]">
-          {chapter?.title_zh || chapter?.title_en.replace(' Formula Navigator', '') || copy.chapter.fallbackTitle}
+          {chapterTitle}
         </h1>
         <p className="mt-7 max-w-lg text-lg leading-relaxed text-slate-400 animate-[fadeSlideUp_0.7s_ease_0.45s_both]">
-          {chapter ? chapter.description_zh || copy.chapter.description : copy.chapter.fallbackDescription}
+          {chapterDescription}
         </p>
         {chapter ? (
           <div className="mt-10 flex flex-wrap gap-4 text-xs font-bold tracking-widest uppercase text-slate-500 animate-[fadeSlideUp_0.7s_ease_0.65s_both]">
@@ -106,9 +174,15 @@ export function ChapterPage({ data }: ChapterPageProps) {
               <span className="h-1.5 w-1.5 rounded-full bg-blue-500 shadow-[0_0_8px_rgba(59,130,246,0.6)]" />
               <span>{formulaNodes.length} {copy.chapter.nodesDiscovered}</span>
             </div>
+            {conceptNodes.length ? (
+              <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-teal-400/10 bg-teal-400/[0.035] text-teal-300/90 backdrop-blur-md">
+                <span className="h-1.5 w-1.5 rounded-full bg-teal-300 shadow-[0_0_8px_rgba(45,212,191,0.6)]" />
+                <span>{conceptNodes.length} 个概念起点</span>
+              </div>
+            ) : null}
             <div className="flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/10 bg-cyan-500/[0.03] text-cyan-400/90 backdrop-blur-md">
               <span className="h-1.5 w-1.5 rounded-full bg-cyan-400 shadow-[0_0_8px_rgba(34,211,238,0.6)]" />
-              <span>{chapter.backbone_formula_ids.length} {copy.chapter.backboneRoots}</span>
+              <span>{startingFormulaNodes.length} {copy.chapter.backboneRoots}</span>
             </div>
           </div>
         ) : null}

@@ -7,7 +7,17 @@ import { useDependencyGraph } from './useDependencyGraph';
 import { generateChapterOverview, generateFormulaNotes, type ChapterOverviewResponse, type FormulaNoteResponse } from '../../shared/services/llmClient';
 import { rawFormulaNumber } from '../../shared/utils/constants';
 import { buildReadableFormulaCopy } from './formulaInfo';
-import { DEFAULT_LANGUAGE, formatChapterLabel, formatSectionLabel, getUiCopy, joinMeta } from '../../shared/utils/uiCopy';
+import {
+  DEFAULT_LANGUAGE,
+  formatChapterDescription,
+  formatChapterLabel,
+  formatChapterTitle,
+  formatConceptTitle,
+  formatFormulaReferenceLabel,
+  formatSectionLabel,
+  getUiCopy,
+  joinMeta,
+} from '../../shared/utils/uiCopy';
 import { MathFormula } from '../../shared/components/MathFormula';
 import { RichMathText } from '../../shared/components/RichMathText';
 
@@ -33,8 +43,22 @@ interface LlmChapterState {
 function getStudyContextText(studyContext: StudyContext, language: LanguageCode) {
   if (studyContext.type === 'chapter') {
     return {
-      title: language === 'zh' ? studyContext.chapter.title_zh : studyContext.chapter.title_en,
-      description: language === 'zh' ? studyContext.chapter.description_zh : studyContext.chapter.description_en,
+      title: formatChapterTitle({
+        chapterId: studyContext.chapter.chapter_id,
+        chapter: studyContext.chapter.chapter,
+        titleEn: studyContext.chapter.title_en,
+        titleZh: studyContext.chapter.title_zh,
+        language,
+      }),
+      description: formatChapterDescription({
+        chapterId: studyContext.chapter.chapter_id,
+        chapter: studyContext.chapter.chapter,
+        descriptionEn: studyContext.chapter.description_en,
+        descriptionZh: studyContext.chapter.description_zh,
+        formulaCount: studyContext.chapter.full_formula_ids.length,
+        sectionHint: studyContext.chapter.section_hint,
+        language,
+      }),
     };
   }
   if (studyContext.type === 'theme') {
@@ -76,8 +100,8 @@ function ConceptReferenceList({ title, layer, items, empty, more }: ConceptRefer
                 key={`${item.concept_id || item.name}:${item.defined_by_formula_id || item.from_formula_id || symbol}`}
               >
                 <div className="graph-info-panel__concept-reference-header">
-                  <strong><RichMathText text={item.name} /></strong>
-                  <small>{item.formula_label}</small>
+                  <strong><RichMathText text={formatConceptTitle(item.name, symbol, DEFAULT_LANGUAGE)} /></strong>
+                  <small>{formatFormulaReferenceLabel(item.formula_label, DEFAULT_LANGUAGE)}</small>
                 </div>
                 {symbol ? (
                   <div className="graph-info-panel__concept-reference-symbol">
@@ -97,7 +121,12 @@ function ConceptReferenceList({ title, layer, items, empty, more }: ConceptRefer
   );
 }
 
-export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext, storylines }: GraphInfoPanelProps) {
+export function GraphInfoPanel({
+  searchIndex,
+  formulaLearningCopy,
+  studyContext,
+  storylines,
+}: GraphInfoPanelProps) {
   const { focusFormulaId = '', chapterId: routeChapterId = '' } = useParams();
   const [params] = useSearchParams();
   const { loadChapter } = useDependencyGraph();
@@ -148,16 +177,22 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
   const conceptView = isConceptMode ? selectedConceptView : null;
   const conceptMeta = conceptView
     ? joinMeta([
-        conceptView.supporting_formula_label,
+        formatFormulaReferenceLabel(conceptView.supporting_formula_label, language),
         formatChapterLabel(conceptView.chapter_id, undefined, language),
         formatSectionLabel(conceptView.formula_section, language),
       ])
     : '';
   const chapterOverviewFallback =
     studyContext.type === 'chapter'
-      ? language === 'zh'
-        ? studyContext.chapter.description_zh
-        : studyContext.chapter.description_en
+      ? formatChapterDescription({
+          chapterId: studyContext.chapter.chapter_id,
+          chapter: studyContext.chapter.chapter,
+          descriptionEn: studyContext.chapter.description_en,
+          descriptionZh: studyContext.chapter.description_zh,
+          formulaCount: studyContext.chapter.full_formula_ids.length,
+          sectionHint: studyContext.chapter.section_hint,
+          language,
+        })
       : studyContextText?.description || '';
   const chapterOverviewText = chapterOverviewState.value?.overview || chapterOverviewFallback;
   const chapterOverviewFormulas = useMemo(() => {
@@ -192,9 +227,13 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
     latex: formula?.latex_preview,
     chapterTitle:
       studyContext.type === 'chapter'
-        ? language === 'zh'
-          ? studyContext.chapter.title_zh
-          : studyContext.chapter.title_en
+        ? formatChapterTitle({
+            chapterId: studyContext.chapter.chapter_id,
+            chapter: studyContext.chapter.chapter,
+            titleEn: studyContext.chapter.title_en,
+            titleZh: studyContext.chapter.title_zh,
+            language,
+          })
         : formatChapterLabel(formula?.chapter_id, formula?.chapter, language),
     formulaLabel: formula?.label,
     formulaNumber: formula?.number || formulaNumber,
@@ -213,9 +252,13 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
         latex: formula?.latex_preview,
         chapterTitle:
           studyContext.type === 'chapter'
-            ? language === 'zh'
-              ? studyContext.chapter.title_zh
-              : studyContext.chapter.title_en
+            ? formatChapterTitle({
+                chapterId: studyContext.chapter.chapter_id,
+                chapter: studyContext.chapter.chapter,
+                titleEn: studyContext.chapter.title_en,
+                titleZh: studyContext.chapter.title_zh,
+                language,
+              })
             : formatChapterLabel(formula?.chapter_id, formula?.chapter, language),
         formulaLabel: formula?.label,
         formulaNumber: formula?.number || formulaNumber,
@@ -308,8 +351,22 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
     }));
     generateChapterOverview({
       chapterId: chapter.chapter_id,
-      chapterTitle: language === 'zh' ? chapter.title_zh : chapter.title_en,
-      chapterDescription: language === 'zh' ? chapter.description_zh : chapter.description_en,
+      chapterTitle: formatChapterTitle({
+        chapterId: chapter.chapter_id,
+        chapter: chapter.chapter,
+        titleEn: chapter.title_en,
+        titleZh: chapter.title_zh,
+        language,
+      }),
+      chapterDescription: formatChapterDescription({
+        chapterId: chapter.chapter_id,
+        chapter: chapter.chapter,
+        descriptionEn: chapter.description_en,
+        descriptionZh: chapter.description_zh,
+        formulaCount: chapter.full_formula_ids.length,
+        sectionHint: chapter.section_hint,
+        language,
+      }),
       formulas: chapterOverviewFormulas,
       language,
     })
@@ -330,7 +387,7 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
         <p className="graph-info-panel__eyebrow">{isChapterGraph ? copy.chapterGraph : conceptView ? copy.conceptEyebrow : copy.eyebrow}</p>
         <h1>
           {conceptView && !isChapterGraph ? (
-            <RichMathText text={conceptView.name} />
+            <RichMathText text={formatConceptTitle(conceptView.name, conceptView.defined_symbol, language)} />
           ) : (
             isChapterGraph ? studyContextText?.title || formatChapterLabel(routeChapterId, undefined, language) : formula?.label || `Formula ${formulaNumber}`
           )}
@@ -386,7 +443,7 @@ export function GraphInfoPanel({ searchIndex, formulaLearningCopy, studyContext,
           <details className="graph-info-panel__copy-block graph-info-panel__copy-block--formula-evidence">
             <summary className="graph-info-panel__copy-heading">
               <span>{copy.supportingFormula}已折叠</span>
-              <small>{conceptView.supporting_formula_label}</small>
+              <small>{formatFormulaReferenceLabel(conceptView.supporting_formula_label, language)}</small>
             </summary>
             <MathFormula latex={conceptView.supporting_formula_latex} />
           </details>

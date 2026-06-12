@@ -55,11 +55,11 @@ function AppShell() {
               <Route path="/storyline/:storylineId" element={<StorylinePage data={data} />} />
               <Route
                 path="/graph/chapter/:chapterId"
-                element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
+                element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} conceptIndex={data.conceptIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
               />
               <Route
                 path="/graph/:focusFormulaId"
-                element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
+                element={<GraphPage chapterNavigator={data.chapterNavigator} themeRoutes={data.themeRoutes} searchIndex={data.searchIndex} conceptIndex={data.conceptIndex} formulaLearningCopy={data.formulaLearningCopy} storylines={data.storylines} />}
               />
             </Routes>
           </Suspense>

@@ -527,6 +527,53 @@
   min-width: max-content;
 }
 
+.graph-info-panel__copy-block--concept-continuity {
+  border-color: rgba(94, 234, 212, 0.24);
+  background:
+    radial-gradient(circle at 100% 0%, rgba(45, 212, 191, 0.1), transparent 44%),
+    linear-gradient(135deg, rgba(20, 184, 166, 0.09), rgba(15, 23, 42, 0.62)),
+    var(--graph-panel-muted);
+}
+
+.graph-info-panel__copy-block--concept-continuity p {
+  color: rgba(226, 232, 240, 0.88);
+  font-size: 13px;
+  font-weight: 620;
+}
+
+.graph-info-panel__continuity-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.graph-info-panel__continuity-actions button {
+  min-height: 34px;
+  border-radius: 999px;
+  padding: 7px 11px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 850;
+  transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+}
+
+.graph-info-panel__continuity-actions button:hover {
+  transform: translateY(-1px);
+}
+
+.graph-info-panel__continuity-primary {
+  border: 1px solid rgba(94, 234, 212, 0.34);
+  background: rgba(20, 184, 166, 0.14);
+  color: #ccfbf1;
+}
+
+.graph-info-panel__continuity-secondary {
+  border: 1px solid rgba(125, 211, 252, 0.18);
+  background: rgba(15, 23, 42, 0.54);
+  color: #bae6fd;
+}
+
 .graph-info-panel__copy-block--concept-layer {
   border-color: rgba(148, 163, 184, 0.12);
   background:
@@ -726,7 +773,8 @@
   padding: 15px 15px 15px 21px;
   box-shadow: 0 18px 44px rgba(0, 0, 0, 0.36);
   backdrop-filter: blur(10px);
-  cursor: pointer;
+  cursor: grab;
+  touch-action: none;
   transition: transform 240ms cubic-bezier(0.22, 1, 0.36, 1), border-color 240ms ease, box-shadow 300ms ease;
 }
 
@@ -834,6 +882,12 @@
   transform: translateY(-2px) scale(1.02);
   border-color: rgba(56, 189, 248, 0.35);
   box-shadow: 0 24px 54px rgba(0, 0, 0, 0.5), 0 0 18px color-mix(in srgb, var(--chapter-color, #38bdf8) 22%, transparent);
+}
+
+.react-flow__node.dragging .formula-node,
+.react-flow__node.dragging .concept-node {
+  cursor: grabbing;
+  transform: none;
 }
 
 .formula-node--focused, .formula-node--selected {
@@ -1296,26 +1350,33 @@
   transform: translateY(-1px);
 }
 
-.graph-toolbar-button--return {
+.graph-toolbar-button--concept-nav {
   max-width: min(260px, 34vw);
-  border-color: rgba(94, 234, 212, 0.22);
+  border-color: rgba(94, 234, 212, 0.26);
   background:
-    linear-gradient(180deg, rgba(20, 184, 166, 0.12), rgba(15, 23, 42, 0.76)),
+    linear-gradient(180deg, rgba(20, 184, 166, 0.15), rgba(15, 23, 42, 0.78)),
     rgba(15, 23, 42, 0.78);
   color: #ccfbf1 !important;
 }
 
-.graph-toolbar-button--return span {
+.graph-toolbar-button--concept-nav span {
   min-width: 0;
   overflow: hidden;
+  color: #ccfbf1;
+  font-size: inherit;
+  font-weight: inherit;
   text-overflow: ellipsis;
   white-space: nowrap;
 }
 
-.graph-toolbar-button--return:hover {
+.graph-toolbar-button--concept-nav svg {
+  color: #ccfbf1;
+}
+
+.graph-toolbar-button--concept-nav:hover {
   border-color: rgba(94, 234, 212, 0.46);
-  background: rgba(20, 184, 166, 0.15);
-  color: #99f6e4 !important;
+  background: rgba(20, 184, 166, 0.18);
+  color: #ccfbf1 !important;
 }
 
 .graph-toolbar-button,
@@ -1363,6 +1424,105 @@
 .graph-mode-controls__button:disabled {
   cursor: not-allowed;
   opacity: 0.42;
+}
+
+.graph-concept-learning-bar {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 18px;
+  z-index: 22;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: 12px;
+  border: 1px solid rgba(94, 234, 212, 0.24);
+  border-radius: 18px;
+  background:
+    radial-gradient(circle at 0% 0%, rgba(45, 212, 191, 0.13), transparent 42%),
+    linear-gradient(180deg, rgba(15, 23, 42, 0.9), rgba(5, 13, 26, 0.92));
+  padding: 10px 12px;
+  box-shadow: 0 18px 44px rgba(0, 0, 0, 0.42), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(18px);
+}
+
+.graph-concept-learning-bar__header {
+  display: grid;
+  min-width: 128px;
+  align-content: center;
+  gap: 3px;
+}
+
+.graph-concept-learning-bar__header span {
+  color: rgba(153, 246, 228, 0.76);
+  font-size: 10px;
+  font-weight: 850;
+  letter-spacing: 0.04em;
+}
+
+.graph-concept-learning-bar__header strong {
+  color: #f8fafc;
+  font-size: 13px;
+  font-weight: 900;
+  line-height: 1.25;
+}
+
+.graph-concept-learning-bar__track {
+  display: flex;
+  min-width: 0;
+  gap: 8px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.graph-concept-learning-bar__step {
+  display: inline-flex;
+  min-width: 132px;
+  max-width: 180px;
+  height: 38px;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid rgba(148, 163, 184, 0.14);
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.62);
+  color: rgba(203, 213, 225, 0.86);
+  padding: 7px 10px;
+  cursor: pointer;
+  font-size: 12px;
+  font-weight: 820;
+  transition: transform 180ms ease, border-color 180ms ease, background-color 180ms ease;
+}
+
+.graph-concept-learning-bar__step span {
+  display: inline-flex;
+  width: 22px;
+  height: 22px;
+  flex: 0 0 22px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: rgba(94, 234, 212, 0.1);
+  color: rgba(153, 246, 228, 0.86);
+  font-size: 10px;
+  font-weight: 900;
+}
+
+.graph-concept-learning-bar__step strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.graph-concept-learning-bar__step:hover {
+  transform: translateY(-1px);
+  border-color: rgba(94, 234, 212, 0.34);
+  background: rgba(20, 184, 166, 0.12);
+}
+
+.graph-concept-learning-bar__step--active {
+  border-color: rgba(94, 234, 212, 0.54);
+  background: rgba(20, 184, 166, 0.18);
+  color: #ccfbf1;
 }
 
 .graph-atlas-panel {
@@ -1730,6 +1890,7 @@
     inset 0 1px 0 rgba(255, 255, 255, 0.05);
   text-wrap: pretty;
   cursor: grab;
+  touch-action: none;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 220ms ease, opacity 180ms ease;
 }
 
@@ -2573,6 +2734,21 @@
 
   .study-timeline__step-formula {
     font-size: 12px;
+  }
+
+  .graph-concept-learning-bar {
+    left: 12px;
+    right: 12px;
+    bottom: 70px;
+    grid-template-columns: 1fr;
+  }
+
+  .graph-concept-learning-bar__header {
+    min-width: 0;
+  }
+
+  .graph-concept-learning-bar__step {
+    min-width: 118px;
   }
 
   .graph-atlas-panel {

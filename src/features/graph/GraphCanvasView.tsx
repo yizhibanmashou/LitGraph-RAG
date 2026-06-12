@@ -9,6 +9,7 @@ import {
 } from '@xyflow/react';
 import type { DependencyEdgeData } from '../../shared/types/graph';
 import { formatChapterLabel, type getUiCopy } from '../../shared/utils/uiCopy';
+import type { ConceptLearningNav } from './conceptLearning';
 import { standaloneGraphCopy } from './formulaInfo';
 import { ConceptNode } from './ConceptNode';
 import { DependencyEdge } from './DependencyEdge';
@@ -48,12 +49,17 @@ interface GraphCanvasViewProps {
   edges: Edge[];
   chapterGraphModeClass: string;
   conceptBackLabel?: string | null;
+  conceptLearningNav?: ConceptLearningNav | null;
   onBackToConcept?: () => void;
   onBackToStoryline: () => void;
   onHome: () => void;
+  onOpenNextConcept?: () => void;
+  onOpenConceptStep?: (conceptId: string) => void;
   onExpand: () => void;
   onDismissHint: () => void;
   onNodesChange: (changes: NodeChange[]) => void;
+  onNodeDragStart: () => void;
+  onNodeDragStop: () => void;
   onEdgesChange: (changes: EdgeChange[]) => void;
   onNodeClick: (event: React.MouseEvent, node: Node) => void;
   onSetEdges: React.Dispatch<React.SetStateAction<Edge[]>>;
@@ -102,18 +108,24 @@ export function GraphCanvasView({
   edges,
   chapterGraphModeClass,
   conceptBackLabel,
+  conceptLearningNav,
   onBackToConcept,
   onBackToStoryline,
   onHome,
+  onOpenNextConcept,
+  onOpenConceptStep,
   onExpand,
   onDismissHint,
   onNodesChange,
+  onNodeDragStart,
+  onNodeDragStop,
   onEdgesChange,
   onNodeClick,
   onSetEdges,
   onSelectFormula,
 }: GraphCanvasViewProps) {
   const visibleEdges = decorateVisibleEdges(edges, selectedFormulaId, selectedConceptId);
+  const currentConcept = conceptLearningNav?.current;
 
   return (
     <div className="relative h-full w-full overflow-hidden bg-transparent">
@@ -122,6 +134,7 @@ export function GraphCanvasView({
         mode={mode}
         toolbar={toolbar}
         conceptBackLabel={conceptBackLabel}
+        conceptLearningNav={conceptLearningNav}
         storylineId={storylineId}
         storylineTitle={storylineTitle}
         isChapterGraph={isChapterGraph}
@@ -129,6 +142,7 @@ export function GraphCanvasView({
         onBackToConcept={onBackToConcept}
         onBackToStoryline={onBackToStoryline}
         onHome={onHome}
+        onOpenNextConcept={onOpenNextConcept}
         onExpand={onExpand}
         onDismissHint={onDismissHint}
       />
@@ -145,6 +159,8 @@ export function GraphCanvasView({
         nodeTypes={nodeTypes}
         edgeTypes={edgeTypes}
         onNodesChange={onNodesChange}
+        onNodeDragStart={onNodeDragStart}
+        onNodeDragStop={onNodeDragStop}
         onEdgesChange={onEdgesChange}
         onNodeClick={onNodeClick}
         onConnect={(connection) => onSetEdges((current) => addEdge(connection, current))}
@@ -176,6 +192,31 @@ export function GraphCanvasView({
       {isChapterGraph ? (
         <div className="graph-pan-hint pointer-events-none absolute left-6 top-[74px] z-10 rounded-md px-3 py-2 text-xs font-semibold">
           拖拽浏览全章，滚轮缩放；双击公式进入引导学习。
+        </div>
+      ) : null}
+      {mode === 'concept' && conceptLearningNav ? (
+        <div className="graph-concept-learning-bar" aria-label="本章全部概念导航">
+          <div className="graph-concept-learning-bar__header">
+            <span>本章全部概念</span>
+            <strong>{conceptLearningNav.steps.length} 个概念</strong>
+          </div>
+          <div className="graph-concept-learning-bar__track">
+            {conceptLearningNav.steps.map((step) => {
+              const active = step.conceptId === selectedConceptId || step.conceptId === currentConcept?.conceptId;
+              return (
+                <button
+                  key={step.conceptId || step.node.id}
+                  type="button"
+                  className={active ? 'graph-concept-learning-bar__step graph-concept-learning-bar__step--active' : 'graph-concept-learning-bar__step'}
+                  onClick={() => step.conceptId && onOpenConceptStep?.(step.conceptId)}
+                  title={`${step.title}${step.formulaLabel ? ` · ${step.formulaLabel}` : ''}`}
+                >
+                  <span>{step.index + 1}</span>
+                  <strong>{step.title}</strong>
+                </button>
+              );
+            })}
+          </div>
         </div>
       ) : null}
     </div>

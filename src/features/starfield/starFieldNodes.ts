@@ -22,20 +22,22 @@ export function createStarNodeObjects(constellation: THREE.Group, starNodes: Sta
     const isAppendix = /^appendix/i.test(node.chapterId || node.id);
     const color = node.isBackbone
       ? new THREE.Color(0xc7e7ff)
-      : node.kind === 'chapter'
-        ? new THREE.Color(isAppendix ? 0xd4c5b9 : 0xffffff)
-        : new THREE.Color(0xdbeafe);
+      : node.kind === 'concept'
+        ? new THREE.Color(0x7dd3c7)
+        : node.kind === 'chapter'
+          ? new THREE.Color(isAppendix ? 0xd4c5b9 : 0xffffff)
+          : new THREE.Color(0xdbeafe);
     const material = new THREE.MeshStandardMaterial({
       color,
       emissive: color,
-      emissiveIntensity: node.isBackbone ? 0.48 : 0.4,
+      emissiveIntensity: node.isBackbone ? 0.48 : node.kind === 'concept' ? 0.36 : 0.4,
       roughness: 0.34,
       metalness: 0,
       toneMapped: false,
     });
     const mesh = new THREE.Mesh(nodeGeometry, material) as unknown as NodeMesh;
     mesh.position.copy(nodePoints[index]);
-    const baseScale = node.isBackbone ? 1.16 : node.kind === 'chapter' ? 1.45 : 1;
+    const baseScale = node.isBackbone ? 1.16 : node.kind === 'chapter' ? 1.45 : node.kind === 'concept' ? 0.88 : 1;
     mesh.scale.setScalar(baseScale);
 
     const ring = new THREE.Mesh(
@@ -43,7 +45,7 @@ export function createStarNodeObjects(constellation: THREE.Group, starNodes: Sta
       new THREE.MeshBasicMaterial({
         color,
         transparent: true,
-        opacity: node.isBackbone ? 0.16 : 0.12,
+        opacity: node.isBackbone ? 0.16 : node.kind === 'concept' ? 0.14 : 0.12,
         blending: THREE.AdditiveBlending,
         depthWrite: false,
         toneMapped: false,
@@ -51,12 +53,12 @@ export function createStarNodeObjects(constellation: THREE.Group, starNodes: Sta
     );
     ring.position.copy(mesh.position);
 
-    const labelFontSize = node.kind === 'chapter' ? 30 : 24;
+    const labelFontSize = node.kind === 'chapter' ? 30 : node.kind === 'concept' ? 22 : 24;
     const label = makeLabelSprite(node.displayLabel || node.label, labelFontSize);
     const labelAnchor = new THREE.Object3D();
     labelAnchor.position.copy(mesh.position);
     label.position.set(0, 0, NODE_VISUAL_RADIUS * baseScale + 0.004);
-    label.scale.setScalar(node.kind === 'chapter' ? 0.16 : 0.13);
+    label.scale.setScalar(node.kind === 'chapter' ? 0.16 : node.kind === 'concept' ? 0.115 : 0.13);
     labelAnchor.add(label);
 
     const hitTarget = new THREE.Mesh(hitGeometry, hitMaterial) as unknown as HitTargetMesh;

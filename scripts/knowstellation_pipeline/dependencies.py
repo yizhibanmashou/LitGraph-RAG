@@ -1324,13 +1324,19 @@ def build_chapter_navigator(chapter_payloads: dict[str, dict[str, Any]]) -> dict
         full_ids = [formula["id"] for formula in sorted(formulas, key=lambda item: (int(item.get("position", 0)), formula_sort_key(item["id"])))]
         representative_ids = backbone_ids[:5] or full_ids[:5]
         difficulty = next((group["difficulty"] for group in CHAPTER_GROUPS if group["min"] <= rank <= group["max"]), "intermediate")
+        if label.startswith("Chapter "):
+            chapter_title_zh = f"第 {label.removeprefix('Chapter ')} 章"
+        elif label.startswith("Appendix "):
+            chapter_title_zh = f"附录 {label.removeprefix('Appendix ')}"
+        else:
+            chapter_title_zh = label
         entries_by_rank[rank] = {
             "chapter": rank,
             "chapter_id": chapter_id,
             "title_en": f"{label} Formula Navigator",
-            "title_zh": f"{label} 公式导航",
+            "title_zh": f"{chapter_title_zh}公式导航",
             "description_en": f"{label} contains {len(formulas)} formulas. Start from the highlighted roots, then expand the local dependency map one step at a time.",
-            "description_zh": f"{label} 包含 {len(formulas)} 个公式。建议先看高亮起始公式，再逐步展开章内依赖图谱。",
+            "description_zh": f"本章包含 {len(formulas)} 个公式。建议先从概念起点建立术语地图，再进入公式起点展开依赖图谱。",
             "section_hint": first_section,
             "backbone_formula_ids": backbone_ids,
             "full_formula_ids": full_ids,

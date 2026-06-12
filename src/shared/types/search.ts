@@ -33,6 +33,9 @@ export interface ConceptSearchResult {
   aliases?: string[];
   matchReason?: string;
   searchScore?: number;
+  occurrenceCount?: number;
+  relatedFormulaLabels?: string[];
+  primaryFormulaId?: string;
 }
 
 export type SearchResult = FormulaSearchResult | ChapterSearchResult | ConceptSearchResult;

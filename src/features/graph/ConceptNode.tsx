@@ -3,19 +3,20 @@ import type { NodeProps } from '@xyflow/react';
 import { Handle, Position } from '@xyflow/react';
 import { ArrowRight, ChevronDown, ChevronUp } from 'lucide-react';
 import type { ConceptNodeData, ConceptRevealGroup } from '../../shared/types/graph';
-import { formatSectionLabel } from '../../shared/utils/uiCopy';
+import { DEFAULT_LANGUAGE, formatConceptTitle, formatFormulaReferenceLabel, formatSectionLabel } from '../../shared/utils/uiCopy';
 import { MathFormula } from '../../shared/components/MathFormula';
 import { RichMathText } from '../../shared/components/RichMathText';
 
 export const ConceptNode = React.memo(({ data }: NodeProps) => {
   const nodeData = data as unknown as ConceptNodeData;
-  const [evidenceOpen, setEvidenceOpen] = React.useState(false);
+  const evidenceOpen = Boolean(nodeData.evidenceOpen);
   const view = nodeData.view;
   const reference = nodeData.reference;
   const role = nodeData.role;
-  const title = role === 'focus' ? view.name : reference?.name || view.name;
+  const rawTitle = role === 'focus' ? view.name : reference?.name || view.name;
   const symbol = role === 'focus' ? view.defined_symbol : reference?.symbol || reference?.via_symbol || '';
-  const formulaLabel = role === 'focus' ? view.supporting_formula_label : reference?.formula_label || view.supporting_formula_label;
+  const title = formatConceptTitle(rawTitle, symbol, DEFAULT_LANGUAGE);
+  const formulaLabel = formatFormulaReferenceLabel(role === 'focus' ? view.supporting_formula_label : reference?.formula_label || view.supporting_formula_label, DEFAULT_LANGUAGE);
   const formulaId = role === 'focus' ? view.defined_by_formula_id : reference?.defined_by_formula_id || reference?.from_formula_id || '';
   const clickable = role === 'prerequisite' && nodeData.clickable && Boolean(reference?.concept_id);
   const canExpandPrerequisites = role === 'prerequisite' && Boolean(nodeData.canExpandPrerequisites && reference);
@@ -52,14 +53,13 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
 
   const toggleEvidence = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
-    setEvidenceOpen((current) => !current);
+    nodeData.onToggleEvidence?.();
   };
 
   const prerequisiteCount = nodeData.conceptCounts?.prerequisites || 0;
   const introducedCount = nodeData.conceptCounts?.introduced || 0;
   const prerequisitesRevealed = Boolean(nodeData.revealedGroups?.prerequisites);
   const introducedRevealed = Boolean(nodeData.revealedGroups?.introduced);
-  const revealedCount = Number(prerequisitesRevealed) + Number(introducedRevealed);
 
   return (
     <div
@@ -159,7 +159,7 @@ export const ConceptNode = React.memo(({ data }: NodeProps) => {
           </div>
           <div className={evidenceOpen ? 'concept-node__evidence concept-node__evidence--open' : 'concept-node__evidence'}>
             <div className="concept-node__evidence-heading">
-              <span>{evidenceOpen ? '公式证据' : `公式证据已折叠 · 已展开 ${revealedCount}/2 层`}</span>
+              <span>{evidenceOpen ? '当前公式证据' : '公式证据待展开'}</span>
               <div className="concept-node__evidence-actions">
                 <button type="button" className="nodrag nopan" onClick={toggleEvidence}>
                   {evidenceOpen ? '收起' : '展开'}

@@ -2,18 +2,24 @@ import { useEffect, useMemo, useState } from 'react';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import type { FormulaLearningCopyPayload, SearchFormula, StorylineEntry } from '../../shared/types/formula';
 import type { ChapterNavigatorPayload, ThemeRoute } from '../../shared/types/learning';
+import type { ConceptSearchResult } from '../../shared/types/search';
 import { useStudyContext } from '../learning/useStudyContext';
+import { getChapterById } from '../learning/learningNavigator';
+import type { ConceptView } from '../../shared/types/conceptGraph';
 import { GraphCanvas } from './GraphCanvas';
 import { GraphInfoPanel } from './GraphInfoPanel';
 import { GraphModeControls, type GraphStudyMode } from './GraphModeControls';
 import { StudyTimeline } from './StudyTimeline';
 import { WorkspacePanel } from './WorkspacePanel';
 import { DEFAULT_LANGUAGE, getUiCopy } from '../../shared/utils/uiCopy';
+import { buildChapterConceptLearningNodes } from '../starfield/starNavigation';
+import { buildConceptLearningNav, type ConceptLearningNav } from './conceptLearning';
 
 interface GraphWorkspaceProps {
   chapterNavigator: ChapterNavigatorPayload;
   themeRoutes: ThemeRoute[];
   searchIndex: SearchFormula[];
+  conceptIndex: ConceptSearchResult[];
   formulaLearningCopy: FormulaLearningCopyPayload['items'];
   storylines: StorylineEntry[];
 }
@@ -25,12 +31,13 @@ function getInitialLeftPanelState(): WorkspacePanelState {
   return window.matchMedia('(orientation: landscape) and (max-height: 520px) and (max-width: 960px)').matches ? 'collapsed' : 'open';
 }
 
-export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, formulaLearningCopy, storylines }: GraphWorkspaceProps) {
+export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, conceptIndex, formulaLearningCopy, storylines }: GraphWorkspaceProps) {
   const { chapterId: routeChapterId = '', focusFormulaId = '' } = useParams();
   const [params, setParams] = useSearchParams();
   const navigate = useNavigate();
   const copy = getUiCopy(DEFAULT_LANGUAGE).graph;
   const [leftState, setLeftState] = useState<WorkspacePanelState>(getInitialLeftPanelState);
+  const [activeConceptView, setActiveConceptView] = useState<ConceptView | null>(null);
   const studyContext = useStudyContext({ chapterNavigator, themeRoutes });
   const mode = useMemo<GraphStudyMode>(() => {
     const requested = params.get('mode');
@@ -39,6 +46,33 @@ export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, for
     if (requested === 'explore') return 'explore';
     return 'concept';
   }, [params, routeChapterId]);
+  const conceptLearningNav = useMemo<ConceptLearningNav | null>(() => {
+    if (routeChapterId || mode !== 'concept') return null;
+    const chapterId = params.get('chapterId') || searchIndex.find((item) => item.id === focusFormulaId)?.chapter_id || '';
+    const chapter = chapterId ? getChapterById(chapterNavigator, chapterId) : null;
+    if (!chapter) return null;
+    const nodes = buildChapterConceptLearningNodes({ chapter, conceptIndex, maxConcepts: Number.POSITIVE_INFINITY });
+    if (!nodes.length) return null;
+    return buildConceptLearningNav({
+      chapterId,
+      nodes,
+      routeConceptId: params.get('conceptId'),
+      selectedFormulaId: params.get('selected') || focusFormulaId,
+      currentView: activeConceptView,
+    });
+  }, [activeConceptView, chapterNavigator, conceptIndex, focusFormulaId, mode, params, routeChapterId, searchIndex]);
+  useEffect(() => {
+    if (routeChapterId || mode !== 'concept') {
+      setActiveConceptView(null);
+      return;
+    }
+    const listener = (event: Event) => {
+      const detail = (event as CustomEvent<{ conceptView?: ConceptView }>).detail;
+      setActiveConceptView(detail?.conceptView || null);
+    };
+    window.addEventListener('litgraph:concept-details', listener);
+    return () => window.removeEventListener('litgraph:concept-details', listener);
+  }, [mode, routeChapterId]);
 
   useEffect(() => {
     if (params.get('mode') !== 'focus') return;
@@ -91,7 +125,12 @@ export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, for
   return (
     <div className={workspaceClassName}>
       <WorkspacePanel side="left" label={copy.panelLabel} state={leftState} onStateChange={setLeftState}>
-        <GraphInfoPanel searchIndex={searchIndex} studyContext={studyContext} formulaLearningCopy={formulaLearningCopy} storylines={storylines} />
+        <GraphInfoPanel
+          searchIndex={searchIndex}
+          studyContext={studyContext}
+          formulaLearningCopy={formulaLearningCopy}
+          storylines={storylines}
+        />
       </WorkspacePanel>
       <section className="graph-workspace__main">
         <div className="graph-space-decor" aria-hidden="true">
@@ -99,7 +138,14 @@ export function GraphWorkspace({ chapterNavigator, themeRoutes, searchIndex, for
           <span className="graph-space-decor__meteor graph-space-decor__meteor--two" />
           <span className="graph-space-decor__meteor graph-space-decor__meteor--three" />
         </div>
-        <GraphCanvas searchIndex={searchIndex} mode={mode} studyContext={studyContext} storylines={storylines} toolbar={<GraphModeControls mode={mode} onModeChange={setMode} />} />
+        <GraphCanvas
+          searchIndex={searchIndex}
+          mode={mode}
+          studyContext={studyContext}
+          storylines={storylines}
+          conceptLearningNav={conceptLearningNav}
+          toolbar={mode === 'concept' ? null : <GraphModeControls mode={mode} onModeChange={setMode} />}
+        />
         <StudyTimeline studyContext={studyContext} searchIndex={searchIndex} />
       </section>
     </div>

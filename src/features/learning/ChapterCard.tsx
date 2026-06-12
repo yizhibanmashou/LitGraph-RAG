@@ -4,7 +4,7 @@ import type { SearchFormula } from '../../shared/types/formula';
 import type { ChapterLearningEntry } from '../../shared/types/learning';
 import { rawFormulaNumber } from '../../shared/utils/constants';
 import { inferChapterTitleFromSearchIndex, resolveRecommendedChapterFormulaId } from './learningNavigator';
-import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../shared/utils/uiCopy';
+import { DEFAULT_LANGUAGE, formatChapterDescription, formatChapterLabel, formatChapterTitle, getUiCopy } from '../../shared/utils/uiCopy';
 
 interface ChapterCardProps {
   chapter: ChapterLearningEntry;
@@ -16,18 +16,31 @@ export function ChapterCard({ chapter, searchIndex }: ChapterCardProps) {
   const navigate = useNavigate();
   const copy = getUiCopy(DEFAULT_LANGUAGE).navigator;
   const first = resolveRecommendedChapterFormulaId(chapter, searchIndex);
-  const chapterTitle = chapter.description_zh || chapter.section_hint || inferChapterTitleFromSearchIndex(chapter.chapter, searchIndex) || chapter.title_zh || chapter.title_en;
+  const chapterTitle = formatChapterTitle({
+    chapterId: chapter.chapter_id,
+    chapter: chapter.chapter,
+    titleEn: chapter.title_en,
+    titleZh: chapter.title_zh,
+  });
+  const chapterDescription = formatChapterDescription({
+    chapterId: chapter.chapter_id,
+    chapter: chapter.chapter,
+    descriptionEn: chapter.description_en,
+    descriptionZh: chapter.description_zh,
+    formulaCount: chapter.full_formula_ids.length,
+    sectionHint: chapter.section_hint || inferChapterTitleFromSearchIndex(chapter.chapter, searchIndex) || undefined,
+  });
 
   return (
     <article className={`learning-card ${open ? 'learning-card--open' : ''}`}>
       <button type="button" className="learning-card__summary" onClick={() => setOpen((value) => !value)}>
         <span className="learning-card__eyebrow">{formatChapterLabel(chapter.chapter_id, chapter.chapter)}</span>
-        <strong>{chapter.title_zh || chapter.title_en.replace(' Formula Navigator', '')}</strong>
+        <strong>{chapterTitle}</strong>
         <span>{chapter.backbone_formula_ids.length} {copy.roots} · {chapter.full_formula_ids.length} {copy.formulas}</span>
       </button>
       {open ? (
         <div className="learning-card__preview">
-          <p>{chapterTitle}</p>
+          <p>{chapterDescription}</p>
           <div className="learning-card__sequence">
             {chapter.representative_formula_ids.map((id) => (
               <span key={id}>{rawFormulaNumber(id)}</span>

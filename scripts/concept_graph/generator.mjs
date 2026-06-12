@@ -34,22 +34,40 @@ function conceptDefinitionZh(name, role, conceptType) {
   const key = normalizeSpaces(name).toLowerCase();
   const stable = CONCEPT_DEFINITIONS_ZH.get(key);
   if (stable) return stable;
-  if (conceptType === 'operator_or_function') return `${name} 负责把括号里的输入量转换成公式要使用的输出量，先按“运算规则”来理解。`;
-  if (conceptType === 'math_concept') return `${name} 是这条公式借用的数学工具，用来把多个数量整理成更容易比较或计算的形式。`;
-  if (conceptType === 'domain_concept') return `${name} 帮你把符号放回模型语境中：它标记的是公式正在描述的对象、类别或条件。`;
-  if (role === 'defined') return `${name} 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。`;
-  return `${name} 是这条公式里的辅助符号，读公式时先看它和左侧核心量之间的关系。`;
+  const label = normalizeSpaces(name) || '这个量';
+  if (conceptType === 'operator_or_function') return `${label} 表示本式中的运算或转换规则，读式子时先看它把哪些输入量变成输出量。`;
+  if (/probability|likelihood|density|chance|risk/.test(key)) return `${label} 表示事件、状态或连续变量取值的可能性，用来读出模型给出的概率权重。`;
+  if (/frequency|allele/.test(key)) return `${label} 表示群体中某类等位基因或状态所占的比例，是追踪变化方向的核心量。`;
+  if (/heterozygosity|diversity/.test(key)) return `${label} 衡量遗传多样性；数值越高，随机抽到不同等位基因的机会越大。`;
+  if (/variance|sigma|covariance|correlation/.test(key)) return `${label} 描述变量之间的离散程度或共同变化，用来判断变化有多宽、是否一起移动。`;
+  if (/mean|average|expectation|expected/.test(key)) return `${label} 表示一组取值的中心水平，用来把个体差异汇总成可比较的总体量。`;
+  if (/time|generation|age|scale|length|distance/.test(key)) return `${label} 给出过程发生的时间或尺度位置，帮助判断变化已经推进到哪一步。`;
+  if (/index|count|number|category|class/.test(key)) return `${label} 用来区分求和项、类别或状态位置，先把它当作读公式的定位标记。`;
+  if (/coefficient|gradient|parameter|rate|effect/.test(key)) return `${label} 是调节关系强弱或方向的参数，用来判断右侧条件如何影响目标量。`;
+  if (conceptType === 'math_concept') return `${label} 是本式借用的数学结构，用来把多个量整理成便于比较、缩放或计算的形式。`;
+  if (conceptType === 'domain_concept') return `${label} 表示本式讨论的生物学对象或模型条件，读公式时先确认它对应哪一类群体、性状或过程。`;
+  if (role === 'defined') return `${label} 是这条公式要读出的核心量；等号右侧说明它由哪些条件和符号共同决定。`;
+  return `${label} 是本式中的辅助量，读公式时先看它和核心量之间是相加、相乘、缩放还是作为条件出现。`;
 }
 
 function conceptDefinitionEn(name, role, conceptType) {
   const key = normalizeSpaces(name).toLowerCase();
   const stable = CONCEPT_DEFINITIONS.get(key);
   if (stable) return stable;
-  if (conceptType === 'operator_or_function') return `${name} is the operation that turns the input terms into the output used by the equation.`;
-  if (conceptType === 'math_concept') return `${name} is a mathematical tool the equation uses to organize, transform, or compare quantities.`;
-  if (conceptType === 'domain_concept') return `${name} places the symbol back in the model context: it marks the object, class, or condition being described.`;
-  if (role === 'defined') return `${name} is the main quantity to read from this equation; the right-hand side shows which terms determine it.`;
-  return `${name} is a supporting symbol in this equation; read it through its relationship to the main quantity.`;
+  const label = normalizeSpaces(name) || 'This quantity';
+  if (conceptType === 'operator_or_function') return `${label} is the operation or transformation rule used by the equation.`;
+  if (/probability|likelihood|density|chance|risk/.test(key)) return `${label} describes how much probability weight the model assigns to an event, state, or continuous value.`;
+  if (/frequency|allele/.test(key)) return `${label} is a population-level proportion used to track how a state changes over time.`;
+  if (/heterozygosity|diversity/.test(key)) return `${label} measures genetic diversity through the chance that two sampled alleles differ.`;
+  if (/variance|sigma|covariance|correlation/.test(key)) return `${label} describes spread or joint movement among variables.`;
+  if (/mean|average|expectation|expected/.test(key)) return `${label} summarizes individual values into a comparable population-level center.`;
+  if (/time|generation|age|scale|length|distance/.test(key)) return `${label} locates the process on a time or scale axis.`;
+  if (/index|count|number|category|class/.test(key)) return `${label} identifies a term, category, or state position in the equation.`;
+  if (/coefficient|gradient|parameter|rate|effect/.test(key)) return `${label} controls the strength, direction, or scaling of the relationship.`;
+  if (conceptType === 'math_concept') return `${label} is a mathematical structure used to organize, transform, or compare quantities.`;
+  if (conceptType === 'domain_concept') return `${label} names the biological object or model condition being used in this formula.`;
+  if (role === 'defined') return `${label} is the main quantity to read from this equation; the right-hand side shows which terms determine it.`;
+  return `${label} is a supporting quantity in this equation; read how it combines with the main term.`;
 }
 
 

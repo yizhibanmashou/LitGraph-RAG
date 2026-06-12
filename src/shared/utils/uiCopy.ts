@@ -29,7 +29,7 @@ const UI_COPY = {
       description:
         '先从推荐起点进入，再逐步展开这个章节中的公式、变量和前置关系。',
       nodesDiscovered: '个公式节点',
-      backboneRoots: '个推荐起点',
+      backboneRoots: '个公式起点',
       entryPoints: '推荐学习起点',
       roots: '个起点',
       backToHome: '返回章节星图',
@@ -62,11 +62,11 @@ const UI_COPY = {
       close: '关闭公式卡片',
       tooltipEyebrow: '演化公式',
       tooltipHint: '单击查看 · 双击打开图谱',
-    },
-    graph: {
-      panelLabel: '公式',
+      },
+      graph: {
+        panelLabel: '公式',
       home: 'Home',
-      expand: 'Expand',
+      expand: '展开公式',
       atlas: '缩略图',
       fullChapter: '全章',
       focus: '焦点',
@@ -85,8 +85,8 @@ const UI_COPY = {
         guided: '引导学习：先点公式卡片理解符号，再选择看前置概念或后续公式。',
         explore: '自由探索：点击公式，在当前章节里展开它的前置和后续关系。',
       },
-      modes: {
-        concept: {
+        modes: {
+          concept: {
           label: 'Concept',
           description: '以概念为入口查看一跳前置关系',
         },
@@ -198,7 +198,7 @@ const UI_COPY = {
       description:
         'Start from a recommended entry point, then expand formulas, variables, and prerequisites in this chapter.',
       nodesDiscovered: 'nodes',
-      backboneRoots: 'backbone roots',
+      backboneRoots: 'formula roots',
       entryPoints: 'Backbone Entry Points',
       roots: 'roots',
       backToHome: 'Back to chapter star map',
@@ -343,6 +343,24 @@ export function formatChapterLabel(chapterId?: string, fallbackChapter?: number 
   return language === 'zh' ? '章节' : 'Chapter';
 }
 
+export function formatChapterTitle(input: {
+  chapterId?: string;
+  chapter?: number | string;
+  titleEn?: string;
+  titleZh?: string;
+  language?: LanguageCode;
+}): string {
+  const language = input.language || DEFAULT_LANGUAGE;
+  const preferred = language === 'zh' ? input.titleZh : input.titleEn;
+  const fallback = language === 'zh' ? input.titleEn : input.titleZh;
+  const title = (preferred || fallback || '').replace(/\s+/g, ' ').trim();
+  const placeholder = /\b(?:Chapter|Appendix)\s+\d+\s+Formula Navigator\b/i.test(title) || /公式导航$/.test(title);
+  if (!placeholder) return title || formatChapterLabel(input.chapterId, input.chapter, language);
+  const label = formatChapterLabel(input.chapterId, input.chapter, language);
+  if (language !== 'zh') return `${label} Formula Navigator`;
+  return /章$/.test(label) ? `${label}公式导航` : `${label} 公式导航`;
+}
+
 export function formatSectionLabel(section?: string, language: LanguageCode = DEFAULT_LANGUAGE): string {
   const value = (section || '').replace(/\s+/g, ' ').trim();
   if (!value) return '';
@@ -350,6 +368,41 @@ export function formatSectionLabel(section?: string, language: LanguageCode = DE
 
   const normalized = value.toLowerCase();
   const mappings: Array<[RegExp, string]> = [
+    [/short[- ]term changes in the mean.*breeder/, '育种者方程与短期响应'],
+    [/short[- ]term changes in the mean.*truncation.*threshold/, '截断选择与阈值选择'],
+    [/short[- ]term changes in the mean.*permanent.*transient/, '永久响应与暂态响应'],
+    [/short[- ]term changes in the mean/, '性状均值的短期变化'],
+    [/relative power of mutation and genetic drift/, '突变与遗传漂变的相对作用'],
+    [/single[- ]locus selection.*two alleles/, '单基因座选择：双等位基因'],
+    [/price['’]s general theorem of selection/, 'Price 选择基本定理'],
+    [/the behavior of a neutral locus linked to a selected site/, '连锁于被选择位点的中性位点行为'],
+    [/short[- ]term changes in the variance.*additive variance/, '方差的短期变化：1. 加性方差的变化'],
+    [/short[- ]term changes in the variance.*environmental variance/, '方差的短期变化：2. 环境方差的变化'],
+    [/variance in short[- ]term response/, '短期响应中的方差'],
+    [/analysis of short[- ]term selection experiments.*mixed[- ]model and bayesian approaches/, '短期选择实验分析：2. 混合模型与贝叶斯方法'],
+    [/evolution in natural populations.*target of selection/, '自然种群中的进化：选择的目标'],
+    [/theory of expected single[- ]cycle response/, '期望单轮响应理论'],
+    [/basic issues in selection response under inbreeding/, '近交下选择响应的基本问题'],
+    [/gaussian continuum[- ]of[- ]alleles models/, '高斯连续等位基因模型'],
+    [/deterministic single[- ]locus theory/, '确定性单基因座理论'],
+    [/long[- ]term response/, '长期响应'],
+    [/overview.*maintenance of variation/, '变异维持概览'],
+    [/episodes of selection and the assignment of fitness/, '选择事件与适应度分配'],
+    [/selection on multivariate phenotypes.*differentials and gradients/, '多变量表型上的选择：选择差与梯度'],
+    [/appendix(?:: introduction)?/, '附录导论'],
+    [/brief overview.*divergence[- ]based tests|divergence[- ]based tests.*overview/, '基于分化检验概览'],
+    [/hka.*mcdonald|mcdonald.*kreitman|kreitman/, 'HKA 与 McDonald-Kreitman 检验'],
+    [/estimating parameters.*adaptive evolution|fraction.*adaptive substitutions|adaptive substitutions/, '适应性进化参数估计'],
+    [/molecular data.*detect selection|signatures.*historical events|detect selection/, '分子数据中的选择信号'],
+    [/allele[- ]frequency change.*single population/, '单群体等位基因频率变化'],
+    [/divergence between populations|two[- ]population comparisons/, '群体间分化比较'],
+    [/response.*within[- ]population genetic variance.*drift/, '漂变下群体内遗传方差响应'],
+    [/neutral divergence.*quantitative traits/, '数量性状的中性分化'],
+    [/truncation selection/, '截断选择'],
+    [/direct versus associative effects/, '直接效应与关联效应'],
+    [/maintenance of variation/, '变异维持概览'],
+    [/multivariate phenotypes|differentials and gradients/, '多变量表型选择梯度'],
+    [/geometry of vectors and matrices/, '向量与矩阵几何'],
     [/neutral evolution.*two-locus.*introduction/, '中性演化导论'],
     [/wright-fisher/, 'Wright-Fisher 模型'],
     [/selection.*mutation/, '选择与突变'],
@@ -369,6 +422,90 @@ export function formatSectionLabel(section?: string, language: LanguageCode = DE
   return compact.length > 34 ? `${compact.slice(0, 34).replace(/\s+\S*$/, '')}...` : compact;
 }
 
+export function formatChapterTopic(sectionHint?: string, language: LanguageCode = DEFAULT_LANGUAGE): string {
+  return formatSectionLabel(sectionHint, language) || (language === 'zh' ? '本章核心公式网络' : 'the chapter formula network');
+}
+
+export function formatChapterDescription(input: {
+  chapterId?: string;
+  chapter?: number | string;
+  descriptionEn?: string;
+  descriptionZh?: string;
+  formulaCount?: number;
+  sectionHint?: string;
+  language?: LanguageCode;
+}): string {
+  const language = input.language || DEFAULT_LANGUAGE;
+  const description = (language === 'zh' ? input.descriptionZh : input.descriptionEn) || (language === 'zh' ? input.descriptionEn : input.descriptionZh) || '';
+  const normalizedDescription = description.replace(/\s+/g, ' ').trim();
+  const generatedPlaceholder =
+    /建议先看高亮起始公式/.test(normalizedDescription) ||
+    /Start from the highlighted roots/i.test(normalizedDescription) ||
+    /包含\s*\d+\s*个公式/.test(normalizedDescription);
+
+  if (language !== 'zh') {
+    if (!generatedPlaceholder && normalizedDescription) return normalizedDescription;
+    const topic = formatChapterTopic(input.sectionHint, language);
+    const count = input.formulaCount ?? 0;
+    return `This chapter centers on ${topic} and contains ${count} formulas. Start from concept entry points to build the terminology map, then enter formula roots to expand dependencies.`;
+  }
+
+  const topic = formatChapterTopic(input.sectionHint, language);
+  const count = input.formulaCount ?? 0;
+  if (!generatedPlaceholder && normalizedDescription && !/^[A-Za-z0-9\s:,'().-]+$/.test(normalizedDescription)) {
+    return normalizedDescription;
+  }
+  return `本章主要围绕「${topic}」展开，包含 ${count} 个公式。建议先从概念起点建立术语地图，再进入公式起点展开依赖图谱。`;
+}
+
 export function joinMeta(parts: Array<string | number | undefined | null>): string {
   return parts.filter((part) => part !== undefined && part !== null && String(part).trim()).join(' · ');
+}
+
+export function formatFormulaReferenceLabel(label?: string, language: LanguageCode = DEFAULT_LANGUAGE): string {
+  const value = (label || '').replace(/\s+/g, ' ').trim();
+  if (!value) return '';
+  if (language !== 'zh') return value;
+  return value.replace(/^Formula\s+/i, '公式 ');
+}
+
+export function formatConceptTitle(title?: string, symbol?: string, language: LanguageCode = DEFAULT_LANGUAGE): string {
+  const value = (title || symbol || '').replace(/\s+/g, ' ').trim();
+  if (!value || language !== 'zh') return value;
+  const compactSymbol = (symbol || '').replace(/\s+/g, '');
+  const normalized = value.toLowerCase();
+  const mappings: Array<[RegExp, string]> = [
+    [/^change$/, '变化规则'],
+    [/^class fitness$/, '类别适合度'],
+    [/^selection coefficient$/, '选择系数'],
+    [/^mean trait value$/, '性状均值'],
+    [/^mean$/, '均值参数'],
+    [/^fitness$/, '适合度'],
+    [/^additive genetic variance$/, '加性遗传方差'],
+    [/^inbreeding coefficient$/, '近交系数'],
+    [/^probability density$/, '概率密度'],
+    [/^likelihood$/, '似然函数'],
+    [/^expectation$/, '期望值'],
+    [/^variance$/, '方差'],
+    [/^covariance$/, '协方差'],
+    [/^selection differential$/, '选择差'],
+    [/^selection gradient$/, '选择梯度'],
+    [/^effective population size$/, '有效群体大小'],
+    [/^replacement[- ]site polymorphism$/, '替换位点多态性'],
+    [/^silent[- ]site polymorphism$/, '沉默位点多态性'],
+    [/^replacement[- ]site divergence$/, '替换位点分化'],
+    [/^silent[- ]site divergence$/, '沉默位点分化'],
+    [/^adaptive substitution/, '适应性替换'],
+    [/^neutrality index$/, '中性指数'],
+    [/^formula\s+\S+\s+relationship$/, '公式关系'],
+    [/^formula\s+\S+\s+mean$/, '均值参数'],
+  ];
+  const mapped = mappings.find(([pattern]) => pattern.test(normalized))?.[1];
+  if (mapped) return mapped;
+  if (/^\\Delta$/.test(compactSymbol)) return '变化量';
+  if (/^s$/.test(compactSymbol)) return '选择系数';
+  if (/^W$|^\\overline\{?W\}?/.test(compactSymbol)) return '适合度';
+  if (/^O$/.test(compactSymbol)) return '生物学对象';
+  if (/^[A-Za-z0-9\\_{}^]+$/.test(value)) return value;
+  return value;
 }

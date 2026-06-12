@@ -22,6 +22,12 @@ function readableSearchContext(result: SearchResult): string {
   if (result.resultType === 'concept') {
     const context = result.context.replace(/\s+/g, ' ').trim();
     const meta = [result.formula_label, formatSectionLabel(result.formula_section)].filter(Boolean).join(' · ');
+    if ((result.occurrenceCount || 0) > 1) {
+      const labels = (result.relatedFormulaLabels || []).slice(0, 4).join('、');
+      const occurrence = `出现在 ${result.occurrenceCount} 个公式中`;
+      const representatives = labels ? `代表公式：${labels}` : meta;
+      return [occurrence, representatives, context].filter(Boolean).join(' · ');
+    }
     return context ? `${meta ? `${meta} · ` : ''}${context}` : meta || '打开概念图查看定义、前置概念和支撑公式。';
   }
   const context = result.context.replace(/\s+/g, ' ').trim();

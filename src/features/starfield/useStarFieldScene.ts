@@ -3,7 +3,6 @@ import * as THREE from 'three';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { BokehPass } from 'three/examples/jsm/postprocessing/BokehPass.js';
 import type { StarNode } from './starNavigation';
 import { useStarFieldStore } from './starFieldStore';
 import {
@@ -11,6 +10,7 @@ import {
   DOUBLE_CLICK_MISS_THRESHOLD,
   DOUBLE_CLICK_WINDOW_MS,
   NODE_RADIUS,
+  SINGLE_CLICK_CARD_DELAY_MS,
 } from './starFieldConstants';
 import { createBiologicalFilaments, createDust, fibonacciSphere } from './starFieldScene';
 import { createStarNodeObjects } from './starFieldNodes';
@@ -27,6 +27,10 @@ interface UseStarFieldSceneParams {
   setRenderError: Dispatch<SetStateAction<string | null>>;
   starNodes: StarNode[];
   visibleRef: MutableRefObject<boolean>;
+}
+
+function isMobileViewport(): boolean {
+  return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
 }
 
 export function useStarFieldScene({
@@ -61,25 +65,23 @@ export function useStarFieldScene({
       return;
     }
     renderer.setClearColor(0x030611, 0);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    const targetPixelRatio = isMobileViewport() ? 1.15 : Math.min(window.devicePixelRatio, 1.45);
+    renderer.setPixelRatio(targetPixelRatio);
     renderer.setSize(mount.clientWidth, mount.clientHeight);
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.42;
     mount.appendChild(renderer.domElement);
 
-    const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768;
+    const isMobile = isMobileViewport();
     let composer: EffectComposer | null = null;
     let bloomPass: UnrealBloomPass | null = null;
-    let bokehPass: BokehPass | null = null;
 
     if (!isMobile) {
       composer = new EffectComposer(renderer);
       const renderPass = new RenderPass(scene, camera);
-      bloomPass = new UnrealBloomPass(new THREE.Vector2(mount.clientWidth, mount.clientHeight), 1.62, 0.64, 0.14);
-      bokehPass = new BokehPass(scene, camera, { focus: 8.22, aperture: 0.00026, maxblur: 0.009 });
+      bloomPass = new UnrealBloomPass(new THREE.Vector2(mount.clientWidth, mount.clientHeight), 1.22, 0.46, 0.18);
       composer.addPass(renderPass);
-      composer.addPass(bokehPass);
       composer.addPass(bloomPass);
     }
 
@@ -93,7 +95,7 @@ export function useStarFieldScene({
     const constellation = new THREE.Group();
     scene.add(constellation);
 
-    const coreGeometry = new THREE.SphereGeometry(2.1, 96, 96);
+    const coreGeometry = new THREE.SphereGeometry(2.1, isMobile ? 56 : 72, isMobile ? 56 : 72);
     const coreMaterial = new THREE.MeshStandardMaterial({
       color: 0x071728,
       roughness: 0.74,
@@ -114,8 +116,8 @@ export function useStarFieldScene({
     const filamentBaseOpacities = filamentLines.map((line) => Number(line.userData.baseOpacity || 0.07));
     filamentLines.forEach((line) => constellation.add(line));
 
-    const dust = createDust(4200, 0.018, 0.58, 5, 18, -4);
-    const fineDust = createDust(3200, 0.009, 0.42, 7, 24, -7);
+    const dust = createDust(isMobile ? 2200 : 3200, 0.018, 0.5, 5, 18, -4);
+    const fineDust = createDust(isMobile ? 1200 : 2200, 0.009, 0.36, 7, 24, -7);
     scene.add(dust, fineDust);
 
     const raycaster = new THREE.Raycaster();
@@ -130,6 +132,10 @@ export function useStarFieldScene({
     let clickTimer: number | null = null;
     let lastClick: { node: StarNode; nodeId: string; time: number; x: number; y: number } | null = null;
     let running = false;
+    let hoverFrame: number | null = null;
+    let latestHoverEvent: PointerEvent | null = null;
+    let lastHoverNodeId: string | null = null;
+    let lastCursor = 'grab';
 
     const clearSelection = () => {
       if (pinnedMesh) pinnedMesh.userData.targetScale = pinnedMesh.userData.baseScale;
@@ -141,6 +147,13 @@ export function useStarFieldScene({
     const releaseHover = () => {
       if (hoveredMesh && hoveredMesh !== pinnedMesh) hoveredMesh.userData.targetScale = hoveredMesh.userData.baseScale;
       hoveredMesh = null;
+      lastHoverNodeId = null;
+      latestHoverEvent = null;
+      if (hoverFrame !== null) {
+        window.cancelAnimationFrame(hoverFrame);
+        hoverFrame = null;
+      }
+      updateCursor('grab');
       setHoverNode(null);
     };
 
@@ -165,18 +178,38 @@ export function useStarFieldScene({
       return hit?.userData.node;
     };
 
+    const updateCursor = (cursor: string) => {
+      if (lastCursor === cursor) return;
+      lastCursor = cursor;
+      renderer.domElement.style.cursor = cursor;
+    };
+
     const setHoverFromEvent = (event: PointerEvent) => {
       if (asleepRef.current || !visibleRef.current || dragging) return;
       const hit = pickNode(event);
       if (hoveredMesh && hoveredMesh !== hit && hoveredMesh !== pinnedMesh) hoveredMesh.userData.targetScale = hoveredMesh.userData.baseScale;
       hoveredMesh = hit || null;
-      renderer.domElement.style.cursor = hoveredMesh ? 'pointer' : 'grab';
+      updateCursor(hoveredMesh ? 'pointer' : 'grab');
       if (hoveredMesh) {
         if (hoveredMesh !== pinnedMesh) hoveredMesh.userData.targetScale = hoveredMesh.userData.baseScale * 1.35;
-        setHoverNode({ node: hoveredMesh.userData.node, x: event.clientX, y: event.clientY });
-      } else {
+        const nodeId = hoveredMesh.userData.node.id;
+        if (nodeId !== lastHoverNodeId) {
+          lastHoverNodeId = nodeId;
+          setHoverNode({ node: hoveredMesh.userData.node, x: event.clientX, y: event.clientY });
+        }
+      } else if (lastHoverNodeId !== null) {
+        lastHoverNodeId = null;
         setHoverNode(null);
       }
+    };
+
+    const scheduleHover = (event: PointerEvent) => {
+      latestHoverEvent = event;
+      if (hoverFrame !== null) return;
+      hoverFrame = window.requestAnimationFrame(() => {
+        hoverFrame = null;
+        if (latestHoverEvent) setHoverFromEvent(latestHoverEvent);
+      });
     };
 
     const pointerDown = (event: PointerEvent) => {
@@ -200,20 +233,20 @@ export function useStarFieldScene({
           constellation.rotation.y += (event.clientX - lastPointer.x) * 0.0032;
           constellation.rotation.x += (event.clientY - lastPointer.y) * 0.0024;
           constellation.rotation.x = THREE.MathUtils.clamp(constellation.rotation.x, -0.62, 0.62);
-          renderer.domElement.style.cursor = 'grabbing';
+          updateCursor('grabbing');
           lastPointer.x = event.clientX;
           lastPointer.y = event.clientY;
           return;
         }
       }
-      setHoverFromEvent(event);
+      scheduleHover(event);
     };
 
     const pointerUp = (event: PointerEvent) => {
       if (!pressed || asleepRef.current || !visibleRef.current) return;
       renderer.domElement.releasePointerCapture(event.pointerId);
       pressed = false;
-      renderer.domElement.style.cursor = 'grab';
+      updateCursor('grab');
       if (dragging) {
         dragging = false;
         return;
@@ -254,7 +287,7 @@ export function useStarFieldScene({
       clickTimer = window.setTimeout(() => {
         setActiveNode({ node, x: event.clientX, y: event.clientY });
         clickTimer = null;
-      }, DOUBLE_CLICK_WINDOW_MS);
+      }, SINGLE_CLICK_CARD_DELAY_MS);
     };
 
     const resize = () => {
@@ -262,10 +295,9 @@ export function useStarFieldScene({
       camera.aspect = mount.clientWidth / mount.clientHeight;
       camera.updateProjectionMatrix();
       renderer.setSize(mount.clientWidth, mount.clientHeight);
-      if (composer && bloomPass && bokehPass) {
+      if (composer && bloomPass) {
         composer.setSize(mount.clientWidth, mount.clientHeight);
         bloomPass.setSize(mount.clientWidth, mount.clientHeight);
-        bokehPass.setSize(mount.clientWidth, mount.clientHeight);
       }
     };
 
@@ -341,6 +373,7 @@ export function useStarFieldScene({
     return () => {
       window.clearInterval(visibilityTimer);
       if (clickTimer !== null) window.clearTimeout(clickTimer);
+      if (hoverFrame !== null) window.cancelAnimationFrame(hoverFrame);
       unsubscribe();
       renderer.setAnimationLoop(null);
       renderer.domElement.removeEventListener('pointerdown', pointerDown);

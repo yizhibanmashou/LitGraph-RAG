@@ -6,7 +6,7 @@ import type { ChapterNavigatorPayload } from '../../shared/types/learning';
 import type { ChapterSearchResult, ConceptSearchResult, FormulaSearchResult, SearchResult } from '../../shared/types/search';
 import { useSearchStore } from './searchStore';
 import { flattenChapters } from '../starfield/starNavigation';
-import { DEFAULT_LANGUAGE, formatChapterLabel, getUiCopy } from '../../shared/utils/uiCopy';
+import { DEFAULT_LANGUAGE, formatChapterDescription, formatChapterLabel, formatChapterTitle, getUiCopy } from '../../shared/utils/uiCopy';
 import {
   buildSearchQueryPlan,
   isChapterSearchQuery,
@@ -28,6 +28,34 @@ interface SearchBarProps {
 }
 
 const SEARCH_SUGGESTIONS = ['2.1', '杂合度', '有效群体大小', 'selection', 'kappa'];
+
+function conceptResultGroupKey(result: ConceptSearchResult): string {
+  return [result.title, result.symbol]
+    .map((value) => value.replace(/\s+/g, ' ').trim().toLowerCase())
+    .join('::');
+}
+
+function aggregateConceptResults(results: ConceptSearchResult[]): ConceptSearchResult[] {
+  const groups = new Map<string, ConceptSearchResult & { relatedFormulaLabels: string[]; occurrenceCount: number; primaryFormulaId: string }>();
+  rankSearchResults(results).forEach((result) => {
+    const key = conceptResultGroupKey(result);
+    const current = groups.get(key);
+    if (!current) {
+      groups.set(key, {
+        ...result,
+        occurrenceCount: 1,
+        relatedFormulaLabels: result.formula_label ? [result.formula_label] : [],
+        primaryFormulaId: result.formula_id,
+      });
+      return;
+    }
+    current.occurrenceCount += 1;
+    if (result.formula_label && !current.relatedFormulaLabels.includes(result.formula_label)) {
+      current.relatedFormulaLabels.push(result.formula_label);
+    }
+  });
+  return rankSearchResults([...groups.values()]);
+}
 
 export function SearchBar({ searchIndex, conceptIndex = [], chapterNavigator, size = 'default', tone = 'dark' }: SearchBarProps) {
   const navigate = useNavigate();
@@ -53,8 +81,20 @@ export function SearchBar({ searchIndex, conceptIndex = [], chapterNavigator, si
             chapter_id: chapter.chapter_id,
             chapter: chapter.chapter,
             label: formatChapterLabel(chapter.chapter_id, chapter.chapter),
-            title: chapter.title_zh || chapter.title_en.replace(' Formula Navigator', ''),
-            context: chapter.description_zh || chapter.section_hint || chapter.description_en,
+            title: formatChapterTitle({
+              chapterId: chapter.chapter_id,
+              chapter: chapter.chapter,
+              titleEn: chapter.title_en,
+              titleZh: chapter.title_zh,
+            }),
+            context: formatChapterDescription({
+              chapterId: chapter.chapter_id,
+              chapter: chapter.chapter,
+              descriptionEn: chapter.description_en,
+              descriptionZh: chapter.description_zh,
+              formulaCount: chapter.full_formula_ids.length,
+              sectionHint: chapter.section_hint,
+            }),
             formula_count: chapter.full_formula_ids.length,
           }))
         : [],
@@ -108,7 +148,7 @@ export function SearchBar({ searchIndex, conceptIndex = [], chapterNavigator, si
         return match ? [{ ...chapter, searchScore: match.score, matchReason: match.reason }] : [];
       }),
     ).slice(0, 5);
-    const matchedConcepts = rankSearchResults(
+    const matchedConcepts = aggregateConceptResults(
       conceptIndex.flatMap((concept): ConceptSearchResult[] => {
         const match = scoreConceptSearch(concept, queryPlan);
         return match ? [toConceptSearchResult(concept, match)] : [];
